@@ -201,7 +201,7 @@ public class Evaluation extends JFrame {
 		
 		sustituto_comboBox = new JComboBox();
 		sustituto_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		sustituto_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto ", "Temporero", "Probatorio ", "Permanente "}));
+		sustituto_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto", "Temporero", "Probatorio", "Permanente"}));
 		sustituto_comboBox.setBounds(308, 845, 129, 20);
 		panel.add(sustituto_comboBox);
 		
@@ -278,7 +278,7 @@ public class Evaluation extends JFrame {
 		panel.add(separator);
 		
 		JComboBox rangoAcademico_comboBox = new JComboBox();
-		rangoAcademico_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Rango Catedratico ", "", "Rango Catedratico Asociado", "", "Rango Catedratico Auxiliar"}));
+		rangoAcademico_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Rango Catedratico", "Rango Catedratico Asociado", "Rango Catedratico Auxiliar"}));
 		rangoAcademico_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		rangoAcademico_comboBox.setBounds(264, 262, 251, 22);
 		panel.add(rangoAcademico_comboBox);

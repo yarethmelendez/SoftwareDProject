@@ -30,8 +30,8 @@ public class MainMenu extends JFrame implements ActionListener {
 		new_evaluation_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
 		new_evaluation_btnNewButton.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			Evaluation e = new Evaluation();
-			e.setVisible(true);
+			LogIn e = new LogIn();
+			e.frame.setVisible(true);
 			dispose();
 		
 			}

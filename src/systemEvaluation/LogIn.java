@@ -16,8 +16,6 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-
-
 public class LogIn implements ActionListener{
 
 	public JFrame frame;
@@ -38,6 +36,8 @@ public class LogIn implements ActionListener{
 	 */
 	private void initialize() {
 		
+
+
 		frame = new JFrame();
 		frame.setBackground(Color.GREEN);
 		frame.setBounds(-7, 0, 1920, 1080);
@@ -85,12 +85,13 @@ public class LogIn implements ActionListener{
 		JButton botonInicioSesion = new JButton("Iniciar Sesi\u00F3n");
 		botonInicioSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+			
 				
 				String userName = numeroFacultad_textField.getText();
 				String pass = passwordField.getText();
 				int found = 0;
 			
-		    MainMenu m = new MainMenu();
+		MainMenu m = new MainMenu();
 				
 			fileManager  file = new fileManager();
 			found =	file.login(userName, pass);
