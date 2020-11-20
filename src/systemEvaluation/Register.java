@@ -82,7 +82,7 @@ public class Register extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\logo-interamericana.png"));
-		lblNewLabel.setBounds(392, 611, 1475, 403);
+		lblNewLabel.setBounds(330, 613, 1475, 403);
 		contentPane.add(lblNewLabel);
 		
 		JLabel password_lblNewLabel = new JLabel("Contrase\u00F1a");
