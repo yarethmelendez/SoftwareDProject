@@ -99,7 +99,8 @@ public class LogIn implements ActionListener{
 		 
 				if (found == 1) {
 					frame.setVisible(false);
-					
+					MainMenu e = new MainMenu();
+					e.setVisible(true);
 					
 				}
 			}
