@@ -40,18 +40,25 @@ public class MainMenu extends JFrame implements ActionListener {
 		contentPane.add(new_evaluation_btnNewButton);
 		
 		JButton continue_btnNewButton = new JButton("Continuar evaluacion ");
+		continue_btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ContinuarEvaluacion W = new ContinuarEvaluacion();
+				W.setVisible(true);
+				dispose();
+			}
+		});
 		continue_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		continue_btnNewButton.setBounds(810, 462, 239, 23);
+		continue_btnNewButton.setBounds(810, 447, 239, 23);
 		contentPane.add(continue_btnNewButton);
 		
 		JButton erase_btnNewButton = new JButton("Borrar data existente");
 		erase_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		erase_btnNewButton.setBounds(810, 516, 239, 23);
+		erase_btnNewButton.setBounds(810, 494, 239, 23);
 		contentPane.add(erase_btnNewButton);
 		
 		JButton configurations_btnNewButton = new JButton("Configuraciones");
 		configurations_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		configurations_btnNewButton.setBounds(810, 573, 239, 23);
+		configurations_btnNewButton.setBounds(810, 538, 239, 23);
 		contentPane.add(configurations_btnNewButton);
 		
 		JLabel welcome_lblNewLabel = new JLabel("Que le gustaria hacer?");
@@ -64,13 +71,18 @@ public class MainMenu extends JFrame implements ActionListener {
 		lblNewLabel.setBounds(775, 242, 364, 42);
 		contentPane.add(lblNewLabel);
 		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(280, 0, 143, 31);
-		contentPane.add(menuBar);
+		JButton Salir_btnNewButton = new JButton("Salir");
+		Salir_btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				LogIn r = new LogIn();
+				r.frame.setVisible(true);
+				dispose();	
+			}
+		});
+		Salir_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
+		Salir_btnNewButton.setBounds(810, 584, 239, 23);
+		contentPane.add(Salir_btnNewButton);
 		
-		JMenu mnNewMenu = new JMenu("new menu");
-		mnNewMenu.setBounds(129, 0, 141, 29);
-		contentPane.add(mnNewMenu);
 	}
 
 

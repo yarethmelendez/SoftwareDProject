@@ -91,8 +91,6 @@ public class Evaluation extends JFrame {
 		JPanel panel = new JPanel();
 		tabbedPane.addTab("Informaci\u00F3n a Ingresar", null, panel, null);
 		panel.setLayout(null);
-		//JScrollPane scroll = new JScrollPane(panel);
-		//JScrollPane s = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		
 		JLabel unidad_academica_lblNewLabel = new JLabel("Unidad acad\u00E9mica ");
 		unidad_academica_lblNewLabel.setBounds(27, 157, 232, 15);
