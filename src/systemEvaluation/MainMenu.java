@@ -30,9 +30,9 @@ public class MainMenu extends JFrame implements ActionListener {
 		new_evaluation_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
 		new_evaluation_btnNewButton.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			Evaluation e = new Evaluation();
-			e.setVisible(true);
-			
+			LogIn e = new LogIn();
+			e.frame.setVisible(true);
+			dispose();
 		
 			}
 		});
@@ -64,14 +64,15 @@ public class MainMenu extends JFrame implements ActionListener {
 		lblNewLabel.setBounds(775, 242, 364, 42);
 		contentPane.add(lblNewLabel);
 		
-	
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(280, 0, 143, 31);
+		contentPane.add(menuBar);
 		
-		JButton salida_btnNewButton = new JButton("Salir");
-		salida_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		salida_btnNewButton.setBounds(810, 621, 239, 23);
-		contentPane.add(salida_btnNewButton);
-		
+		JMenu mnNewMenu = new JMenu("new menu");
+		mnNewMenu.setBounds(129, 0, 141, 29);
+		contentPane.add(mnNewMenu);
 	}
+
 
 	public void actionPerformed(ActionEvent arg0) {
 		
