@@ -112,8 +112,10 @@ public class LogIn implements ActionListener{
 		JButton botonRegistrarse = new JButton("Registrarse");
 		botonRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
 				Register w = new Register();
 				w.setVisible(true);
+				
 			}
 		});
 		botonRegistrarse.setFont(new Font("Tahoma", Font.BOLD, 14));

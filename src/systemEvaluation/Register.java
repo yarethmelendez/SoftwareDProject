@@ -3,6 +3,8 @@ package systemEvaluation;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,7 +28,7 @@ public class Register extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\ec18b863896963.5ac177847630c.png"));
 		setTitle("Registro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(-7, 0, 5000, 1200);
+		setBounds(-7, 0, 1920, 1200);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.YELLOW);
 		contentPane.setForeground(Color.WHITE);
@@ -62,6 +64,21 @@ public class Register extends JFrame {
 		register_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
 		register_btnNewButton.setBounds(820, 546, 226, 54);
 		contentPane.add(register_btnNewButton);
+		register_btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				String ID = textField.getText();
+				String pass = passwordField.getText();
+				String name = name_textField.getText();
+				String lastName = last_name_textField.getText(); 
+				
+				fileManager  file = new fileManager();
+			    file.register(ID, pass, name, lastName);
+			    dispose();
+			    LogIn l = new LogIn();
+			    l.frame.setVisible(true);
+			}
+		});
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.BOLD, 16));

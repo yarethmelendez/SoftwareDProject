@@ -46,7 +46,29 @@ public class fileManager {
 		return found;
 		
 		
-		
+			
+		}
+	public int register(String IDT , String passT, String name , String lastName) {
+
+		File registerCreds;
+	
+
+		try {
+			registerCreds = new File("./credencials.csv");
+			FileWriter fw = new FileWriter("./credencials.csv",true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			PrintWriter pw = new PrintWriter(bw);
+			
+			pw.println(IDT+","+passT+","+name+","+lastName);
+			pw.flush();
+			pw.close();
+			
+			
+		}catch(Exception ex) {
+			
+			System.out.print("404 "+ ex);
+		}
+		return 0;
 	}
 
 }
