@@ -53,7 +53,7 @@ public class LogIn implements ActionListener{
 		titulo_label.setForeground(new Color(255, 215, 0));
 		panel_1.add(titulo_label);
 		titulo_label.setFont(new Font("Times New Roman", Font.BOLD, 41));
-		titulo_label.setBounds(655, 193, 643, 34);
+		titulo_label.setBounds(646, 193, 643, 34);
 		
 		JLabel iniciarSesion = new JLabel("Iniciar Sesi\u00F3n");
 		iniciarSesion.setFont(new Font("Times New Roman", Font.BOLD, 25));
@@ -78,7 +78,7 @@ public class LogIn implements ActionListener{
 		
 		JLabel passwordLabel = new JLabel("Contrase\u00F1a");
 		passwordLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		passwordLabel.setBounds(691, 484, 179, 16);
+		passwordLabel.setBounds(708, 484, 179, 16);
 		panel_1.add(passwordLabel);
 		
 

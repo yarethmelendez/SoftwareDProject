@@ -30,8 +30,8 @@ public class Register extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(-7, 0, 1920, 1200);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.YELLOW);
-		contentPane.setForeground(Color.WHITE);
+		contentPane.setBackground(new Color(255, 255, 51));
+		contentPane.setForeground(new Color(0, 0, 0));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -60,7 +60,7 @@ public class Register extends JFrame {
 		
 		JButton register_btnNewButton = new JButton("Registrarse");
 		register_btnNewButton.setForeground(Color.BLACK);
-		register_btnNewButton.setBackground(Color.GREEN);
+		register_btnNewButton.setBackground(new Color(0, 153, 51));
 		register_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
 		register_btnNewButton.setBounds(820, 546, 226, 54);
 		contentPane.add(register_btnNewButton);
@@ -92,7 +92,7 @@ public class Register extends JFrame {
 		contentPane.add(numeroDeFacultad_lblNewLabel);
 		
 		JLabel titulo_lblNewLabel = new JLabel("Registro");
-		titulo_lblNewLabel.setForeground(Color.GRAY);
+		titulo_lblNewLabel.setForeground(new Color(0, 0, 0));
 		titulo_lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 82));
 		titulo_lblNewLabel.setBounds(728, 93, 620, 170);
 		contentPane.add(titulo_lblNewLabel);
