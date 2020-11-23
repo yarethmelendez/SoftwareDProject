@@ -39,20 +39,12 @@ public class Evaluation extends JFrame {
 	private JTextField departamento_textField;
 	private JTextField disiplina_textField;
 	private JTextField periodo_evaluado_textField;
-	private JTable table;
 	private JTextField codigo_textField;
 	private JTextField tutulo_del_curso_textField;
 	private JTextField modalidad_textField;
 	@SuppressWarnings("rawtypes")
 	private JComboBox contrato_comboBox;
 	private JLabel titulo_curso_lblNewLabel;
-	private JTextField calidad_a_textField;
-	private JTextField calidad_b_textField;
-	private JTextField calidad_c_textField;
-	private JTextField calidad_f_textField;
-	private JTextField calidad_g_h_textField;
-	private JTextField calidad_d_textField;
-	private JTextField calidad_e_textField;
 	private JTextField servicio_institucion_total_textField;
 	private JTextField calidad_total_textField;
 	private JTextField servicio_comunidad_total_textField;
@@ -96,95 +88,95 @@ public class Evaluation extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel unidad_academica_lblNewLabel = new JLabel("Unidad acad\u00E9mica ");
-		unidad_academica_lblNewLabel.setBounds(27, 157, 131, 20);
+		unidad_academica_lblNewLabel.setBounds(680, 167, 277, 20);
 		unidad_academica_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panel.add(unidad_academica_lblNewLabel);
 		
 		Unidadacademica_textField = new JTextField();
 		Unidadacademica_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		Unidadacademica_textField.setBounds(204, 154, 140, 30);
+		Unidadacademica_textField.setBounds(920, 162, 253, 30);
 		panel.add(Unidadacademica_textField);
 		Unidadacademica_textField.setColumns(10);
 		
 		JLabel nombre_profedor_lblNewLabel = new JLabel("Nombre del profesor");
-		nombre_profedor_lblNewLabel.setBounds(27, 203, 146, 20);
+		nombre_profedor_lblNewLabel.setBounds(680, 212, 238, 20);
 		nombre_profedor_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panel.add(nombre_profedor_lblNewLabel);
 		
 		nombre_prof_textField = new JTextField();
 		nombre_prof_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		nombre_prof_textField.setBounds(204, 202, 140, 30);
+		nombre_prof_textField.setBounds(920, 207, 253, 30);
 		panel.add(nombre_prof_textField);
 		nombre_prof_textField.setColumns(10);
 		
 		JLabel rango_lblNewLabel = new JLabel("Rango acad\u00E9mico que solicita");
-		rango_lblNewLabel.setBounds(27, 264, 207, 20);
+		rango_lblNewLabel.setBounds(680, 264, 226, 20);
 		rango_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panel.add(rango_lblNewLabel);
 		
 		JLabel departamento_lblNewLabel = new JLabel("Departamento");
-		departamento_lblNewLabel.setBounds(27, 313, 99, 20);
+		departamento_lblNewLabel.setBounds(680, 318, 185, 20);
 		departamento_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panel.add(departamento_lblNewLabel);
 		
 		departamento_textField = new JTextField();
 		departamento_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		departamento_textField.setBounds(203, 323, 140, 30);
+		departamento_textField.setBounds(920, 308, 253, 30);
 		panel.add(departamento_textField);
 		departamento_textField.setColumns(10);
 		
 		JLabel disciplina_lblNewLabel = new JLabel("Disciplina que ense\u00F1a");
 		disciplina_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		disciplina_lblNewLabel.setBounds(27, 354, 152, 20);
+		disciplina_lblNewLabel.setBounds(680, 371, 152, 20);
 		panel.add(disciplina_lblNewLabel);
 		
 		disiplina_textField = new JTextField();
 		disiplina_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		disiplina_textField.setBounds(203, 366, 140, 30);
+		disiplina_textField.setBounds(920, 366, 253, 30);
 		panel.add(disiplina_textField);
 		disiplina_textField.setColumns(10);
 		
 		JLabel objetivo_evaluacion_lblNewLabel = new JLabel("Objetivo de la evaluaci\u00F3n");
 		objetivo_evaluacion_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		objetivo_evaluacion_lblNewLabel.setBounds(27, 413, 177, 20);
+		objetivo_evaluacion_lblNewLabel.setBounds(680, 418, 185, 20);
 		panel.add(objetivo_evaluacion_lblNewLabel);
 		
 		JCheckBox formacion_chckbxNewCheckBox = new JCheckBox("Formativa ");
 		formacion_chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		formacion_chckbxNewCheckBox.setBounds(229, 410, 106, 25);
+		formacion_chckbxNewCheckBox.setBounds(1059, 416, 106, 25);
 		panel.add(formacion_chckbxNewCheckBox);
 		
 		JCheckBox sumativa_chckbxNewCheckBox = new JCheckBox("Sumativa");
 		sumativa_chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		sumativa_chckbxNewCheckBox.setBounds(364, 410, 96, 25);
+		sumativa_chckbxNewCheckBox.setBounds(927, 416, 96, 25);
 		panel.add(sumativa_chckbxNewCheckBox);
 		
 		JLabel periodo_evaluado_lblNewLabel = new JLabel("Per\u00EDodo evaluado");
 		periodo_evaluado_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		periodo_evaluado_lblNewLabel.setBounds(27, 462, 122, 20);
+		periodo_evaluado_lblNewLabel.setBounds(680, 472, 122, 20);
 		panel.add(periodo_evaluado_lblNewLabel);
 		
 		periodo_evaluado_textField = new JTextField();
 		periodo_evaluado_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		periodo_evaluado_textField.setBounds(181, 461, 140, 30);
+		periodo_evaluado_textField.setBounds(927, 467, 246, 30);
 		panel.add(periodo_evaluado_textField);
 		periodo_evaluado_textField.setColumns(10);
 		
 		JLabel anos_servicio_lblNewLabel = new JLabel("A\u00F1os de servicio como profesor");
 		anos_servicio_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		anos_servicio_lblNewLabel.setBounds(252, 573, 277, 25);
+		anos_servicio_lblNewLabel.setBounds(818, 522, 277, 25);
 		panel.add(anos_servicio_lblNewLabel);
 		
 		JLabel jornada_comple_lblNewLabel = new JLabel("Jornada completa");
 		jornada_comple_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		jornada_comple_lblNewLabel.setBounds(165, 689, 124, 20);
+		jornada_comple_lblNewLabel.setBounds(692, 561, 134, 20);
 		panel.add(jornada_comple_lblNewLabel);
 		
 		JComboBox jornada_comple_comboBox = new JComboBox();
 		
 		jornada_comple_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		jornada_comple_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
-		jornada_comple_comboBox.setBounds(327, 687, 74, 27);
+		jornada_comple_comboBox.setBounds(836, 558, 74, 27);
 		panel.add(jornada_comple_comboBox);
 		
 		jornada_comple_comboBox.addActionListener(new ActionListener() {
@@ -198,13 +190,13 @@ public class Evaluation extends JFrame {
 		JLabel jornada_parcial_lblNewLabel = new JLabel("Jornada parcial");
 		
 		jornada_parcial_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		jornada_parcial_lblNewLabel.setBounds(417, 690, 107, 20);
+		jornada_parcial_lblNewLabel.setBounds(969, 561, 107, 20);
 		panel.add(jornada_parcial_lblNewLabel);
 		
 		JComboBox jornada_parcial_comboBox = new JComboBox();
 		jornada_parcial_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		jornada_parcial_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
-		jornada_parcial_comboBox.setBounds(556, 687, 74, 27);
+		jornada_parcial_comboBox.setBounds(1111, 558, 74, 27);
 		panel.add(jornada_parcial_comboBox);
 		
 		jornada_parcial_comboBox.addActionListener(new ActionListener() {
@@ -217,14 +209,14 @@ public class Evaluation extends JFrame {
 		
 		JLabel tipo_de_contrato_lblNewLabel = new JLabel("Tipo de contrato");
 		tipo_de_contrato_lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		tipo_de_contrato_lblNewLabel.setBounds(308, 780, 134, 20);
+		tipo_de_contrato_lblNewLabel.setBounds(871, 596, 157, 20);
 		panel.add(tipo_de_contrato_lblNewLabel);
 		
 		contrato_comboBox = new JComboBox();
 		
 		contrato_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		contrato_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto", "Temporero", "Probatorio", "Permanente"}));
-		contrato_comboBox.setBounds(308, 845, 139, 27);
+		contrato_comboBox.setBounds(871, 629, 139, 27);
 		panel.add(contrato_comboBox);
 		
 		contrato_comboBox.addActionListener(new ActionListener() {
@@ -237,71 +229,44 @@ public class Evaluation extends JFrame {
 		
 		JLabel lblNewLabel_9 = new JLabel("Especifique los cursos ofrecidos ");
 		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_9.setBounds(1092, 51, 255, 22);
+		lblNewLabel_9.setBounds(689, 667, 255, 22);
 		panel.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("durante el per\u00EDodo evaluado:");
 		lblNewLabel_10.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_10.setBounds(1356, 51, 226, 22);
+		lblNewLabel_10.setBounds(941, 667, 226, 22);
 		panel.add(lblNewLabel_10);
-		
-		table = new JTable();
-		table.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"Codigo","Titulo del curso","Modalidad",
-			}
-		));
-		table.getColumnModel().getColumn(1).setPreferredWidth(93);
-		table.setBounds(848, 369, 806, 503);
-		panel.add(table);
 		
 		JLabel codigo_lblNewLabel = new JLabel("C\u00F3digo");
 		codigo_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		codigo_lblNewLabel.setBounds(1230, 108, 50, 20);
+		codigo_lblNewLabel.setBounds(801, 726, 50, 20);
 		panel.add(codigo_lblNewLabel);
 		
 		codigo_textField = new JTextField();
 		codigo_textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		codigo_textField.setBounds(1308, 110, 140, 29);
+		codigo_textField.setBounds(893, 722, 226, 29);
 		panel.add(codigo_textField);
 		codigo_textField.setColumns(10);
 		
 		titulo_curso_lblNewLabel = new JLabel("T\u00EDtulo del Curso ");
 		titulo_curso_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		titulo_curso_lblNewLabel.setBounds(1169, 172, 117, 20);
+		titulo_curso_lblNewLabel.setBounds(744, 785, 118, 20);
 		panel.add(titulo_curso_lblNewLabel);
 		
 		tutulo_del_curso_textField = new JTextField();
 		tutulo_del_curso_textField.setColumns(10);
-		tutulo_del_curso_textField.setBounds(1308, 171, 130, 26);
+		tutulo_del_curso_textField.setBounds(893, 784, 226, 26);
 		panel.add(tutulo_del_curso_textField);
 		
 		JLabel modalidad_lblNewLabel = new JLabel("Modalidad");
 		modalidad_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		modalidad_lblNewLabel.setBounds(1212, 239, 72, 20);
+		modalidad_lblNewLabel.setBounds(779, 829, 72, 20);
 		panel.add(modalidad_lblNewLabel);
 		
 		modalidad_textField = new JTextField();
 		modalidad_textField.setColumns(10);
-		modalidad_textField.setBounds(1308, 238, 130, 26);
+		modalidad_textField.setBounds(893, 828, 226, 26);
 		panel.add(modalidad_textField);
-		
-		JButton btnNewButton = new JButton("A\u00F1adir");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnNewButton.setBounds(1585, 109, 90, 29);
-		panel.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Borrar");
-		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnNewButton_1.setBounds(1585, 170, 89, 29);
-		panel.add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("Editar");
-		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnNewButton_2.setBounds(1585, 238, 86, 29);
-		panel.add(btnNewButton_2);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(779, 144, 0, 12);
@@ -318,8 +283,13 @@ public class Evaluation extends JFrame {
 		
 		rangoAcademico_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Rango Catedratico", "Rango Catedratico Asociado", "Rango Catedratico Auxiliar"}));
 		rangoAcademico_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		rangoAcademico_comboBox.setBounds(264, 262, 253, 27);
+		rangoAcademico_comboBox.setBounds(920, 261, 253, 27);
 		panel.add(rangoAcademico_comboBox);
+		
+		JLabel lblNewLabel_44 = new JLabel("Informaci\u00F3n a Ingresar");
+		lblNewLabel_44.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44.setBounds(647, 11, 596, 123);
+		panel.add(lblNewLabel_44);
 		
 		
 		/////////////////////////////// INSTRUMENTO I ///////////////////////////////////////////
@@ -1452,51 +1422,37 @@ public class Evaluation extends JFrame {
 		panel_6_5.setBounds(0, 501, 1530, 10);
 		panel_4.add(panel_6_5);
 		
-		calidad_a_textField = new JTextField();
-		calidad_a_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_a_textField.setBounds(1350, 41, 170, 54);
-		panel_4.add(calidad_a_textField);
-		calidad_a_textField.setColumns(10);
-		
-		calidad_b_textField = new JTextField();
-		calidad_b_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_b_textField.setColumns(10);
-		calidad_b_textField.setBounds(1350, 133, 170, 54);
-		panel_4.add(calidad_b_textField);
-		
-		calidad_c_textField = new JTextField();
-		calidad_c_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_c_textField.setColumns(10);
-		calidad_c_textField.setBounds(1350, 217, 170, 38);
-		panel_4.add(calidad_c_textField);
-		
-		calidad_f_textField = new JTextField();
-		calidad_f_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_f_textField.setColumns(10);
-		calidad_f_textField.setBounds(1350, 436, 170, 54);
-		panel_4.add(calidad_f_textField);
-		
-		calidad_g_h_textField = new JTextField();
-		calidad_g_h_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_g_h_textField.setColumns(10);
-		calidad_g_h_textField.setBounds(1350, 534, 170, 54);
-		panel_4.add(calidad_g_h_textField);
-		
-		calidad_d_textField = new JTextField();
-		calidad_d_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_d_textField.setColumns(10);
-		calidad_d_textField.setBounds(1350, 284, 170, 38);
-		panel_4.add(calidad_d_textField);
-		
-		calidad_e_textField = new JTextField();
-		calidad_e_textField.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		calidad_e_textField.setColumns(10);
-		calidad_e_textField.setBounds(1350, 354, 170, 38);
-		panel_4.add(calidad_e_textField);
-		
 		JPanel panel_6_6 = new JPanel();
 		panel_6_6.setBounds(1244, 0, 10, 611);
 		panel_4.add(panel_6_6);
+		
+		JComboBox auto_a_comboBox = new JComboBox();
+		auto_a_comboBox.setBounds(1321, 39, 144, 44);
+		panel_4.add(auto_a_comboBox);
+		
+		JComboBox auto_b_comboBox = new JComboBox();
+		auto_b_comboBox.setBounds(1321, 130, 144, 44);
+		panel_4.add(auto_b_comboBox);
+		
+		JComboBox auto_c_comboBox = new JComboBox();
+		auto_c_comboBox.setBounds(1321, 217, 144, 35);
+		panel_4.add(auto_c_comboBox);
+		
+		JComboBox auto_d_comboBox = new JComboBox();
+		auto_d_comboBox.setBounds(1321, 287, 144, 35);
+		panel_4.add(auto_d_comboBox);
+		
+		JComboBox auto_e_comboBox = new JComboBox();
+		auto_e_comboBox.setBounds(1321, 354, 144, 44);
+		panel_4.add(auto_e_comboBox);
+		
+		JComboBox auto_f_comboBox = new JComboBox();
+		auto_f_comboBox.setBounds(1321, 435, 144, 44);
+		panel_4.add(auto_f_comboBox);
+		
+		JComboBox auto_g_comboBox = new JComboBox();
+		auto_g_comboBox.setBounds(1321, 532, 144, 44);
+		panel_4.add(auto_g_comboBox);
 		
 		JLabel lblNewLabel_11 = new JLabel("Puntuaci\u00F3n");
 		lblNewLabel_11.setForeground(Color.BLACK);
@@ -1595,6 +1551,18 @@ public class Evaluation extends JFrame {
 		lblNewLabel_19.setBounds(38, 375, 881, 46);
 		panel_5.add(lblNewLabel_19);
 		
+		JComboBox comboBox_8 = new JComboBox();
+		comboBox_8.setBounds(1284, 29, 144, 44);
+		panel_5.add(comboBox_8);
+		
+		JComboBox comboBox_8_1 = new JComboBox();
+		comboBox_8_1.setBounds(1284, 154, 144, 44);
+		panel_5.add(comboBox_8_1);
+		
+		JComboBox comboBox_8_2 = new JComboBox();
+		comboBox_8_2.setBounds(1284, 334, 144, 44);
+		panel_5.add(comboBox_8_2);
+		
 		JLabel lblNewLabel_20 = new JLabel("Puntuaci\u00F3n");
 		lblNewLabel_20.setFont(new Font("Tahoma", Font.BOLD, 23));
 		lblNewLabel_20.setBounds(1510, 266, 175, 35);
@@ -1669,6 +1637,10 @@ public class Evaluation extends JFrame {
 		lblNewLabel_25.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_25.setBounds(51, 117, 513, 45);
 		panel_10.add(lblNewLabel_25);
+		
+		JComboBox comboBox_8_3 = new JComboBox();
+		comboBox_8_3.setBounds(1050, 72, 144, 44);
+		panel_10.add(comboBox_8_3);
 		
 		JLabel lblNewLabel_20_1 = new JLabel("Puntuaci\u00F3n");
 		lblNewLabel_20_1.setFont(new Font("Tahoma", Font.BOLD, 23));
@@ -1753,6 +1725,18 @@ public class Evaluation extends JFrame {
 		JPanel panel_6_8_1_1 = new JPanel();
 		panel_6_8_1_1.setBounds(989, 0, 10, 581);
 		panel_12.add(panel_6_8_1_1);
+		
+		JComboBox comboBox_8_4 = new JComboBox();
+		comboBox_8_4.setBounds(1060, 28, 144, 44);
+		panel_12.add(comboBox_8_4);
+		
+		JComboBox comboBox_8_5 = new JComboBox();
+		comboBox_8_5.setBounds(1060, 149, 144, 44);
+		panel_12.add(comboBox_8_5);
+		
+		JComboBox comboBox_8_6 = new JComboBox();
+		comboBox_8_6.setBounds(1060, 294, 144, 44);
+		panel_12.add(comboBox_8_6);
 		
 		JLabel lblNewLabel_26 = new JLabel("Investigaci\u00F3n y trabajo creativo");
 		lblNewLabel_26.setFont(new Font("Tahoma", Font.BOLD, 22));
@@ -1843,6 +1827,18 @@ public class Evaluation extends JFrame {
 		JPanel panel_6_8_1_1_1 = new JPanel();
 		panel_6_8_1_1_1.setBounds(1266, 0, 10, 581);
 		panel_14.add(panel_6_8_1_1_1);
+		
+		JComboBox comboBox_8_7 = new JComboBox();
+		comboBox_8_7.setBounds(1391, 77, 144, 44);
+		panel_14.add(comboBox_8_7);
+		
+		JComboBox comboBox_8_8 = new JComboBox();
+		comboBox_8_8.setBounds(1391, 256, 144, 44);
+		panel_14.add(comboBox_8_8);
+		
+		JComboBox comboBox_8_9 = new JComboBox();
+		comboBox_8_9.setBounds(1391, 427, 144, 44);
+		panel_14.add(comboBox_8_9);
 		
 		JLabel lblNewLabel_32 = new JLabel("Crecimiento y Desarrollo Profesional");
 		lblNewLabel_32.setFont(new Font("Tahoma", Font.BOLD, 21));
