@@ -19,7 +19,7 @@ public class ContinuarEvaluacion extends JFrame {
 
 		public ContinuarEvaluacion() {
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			setBounds(-7, 0, 5000, 1200);
+			setBounds(-7, 0, 1920, 1080);
 			contentPane = new JPanel();
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			setContentPane(contentPane);
