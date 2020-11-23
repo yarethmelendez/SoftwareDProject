@@ -1,9 +1,10 @@
 package systemEvaluation;
 
 public class PointSum {
-	// Instrumento 1
-	int I1_1;
-	int I1_2;
-	int I1_3;
-	// To be continued...
+	int instrumento1[]; // Suma de puntos por pregunta en Instrumento 1
+	int instrumento2[]; // Suma de puntos por pregunta en Instrumento 2
+	int instrumento3[]; // Suma de puntos por pregunta en Instrumento 3
+	int instrumento4[]; // Suma de puntos por pregunta en Instrumento 4
+	
+	
 }
