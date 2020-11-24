@@ -231,6 +231,7 @@ public class Evaluation extends JFrame {
 		contrato_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto", "Temporero", "Probatorio", "Permanente"}));
 		contrato_comboBox.setBounds(871, 629, 139, 27);
 		panel.add(contrato_comboBox);
+		contrato_comboBox.setSelectedItem("Temporero"); // SETTER TEST !!!!!!!!!!
 		
 		contrato_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
