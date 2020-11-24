@@ -71,4 +71,49 @@ public class fileManager {
 		return 0;
 	}
 
+	public String[] combobox(String ID, String op1) {
+		
+		String[] ops;
+		File instru;
+		int found = 0;
+		
+		String[] ap = new String[30] ;
+
+		try {
+			instru = new File("./instrumentos.csv");
+			Scanner scanner = new Scanner(instru);
+			//Scanner scanner = new Scanner(new File ("C:\\Users\\biowo\\git\\softwareDesignProject\\Software Design\\DesignProject\\credencials.csv"));
+			
+			while(scanner.hasNextLine()) {
+				String data = scanner.nextLine();
+				 ops = data.split(",", 50);
+				System.out.print("reading ");
+			
+				if (ops[2].trim().equals(ID) && ops[3].trim().equals(op1) )
+				{
+				//	System.out.print("\n im in!!!!!!!!!!!");
+				
+
+					int j = 4;
+					for (int i = 0;i < 29; i++ ) {
+						ap[i]  = ops[j];
+						j++;
+					//System.out.print("\n"+ap[i]+"\n");
+					}
+					//System.out.print("\n"+ap[28]+" soy 29 \n");
+				}
+		}
+				scanner.close();
+				
+			
+		}catch(Exception ex) {
+			
+			System.out.print("404 "+ ex);
+		}
+		
+		
+		return ap;
+		
+	}
+	
 }

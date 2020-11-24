@@ -34,6 +34,9 @@ import java.awt.GridLayout;
 import javax.swing.JScrollPane;
 import java.awt.BorderLayout;
 import javax.swing.SpringLayout;
+import javax.swing.JTextPane;
+import javax.swing.UIManager;
+import java.awt.SystemColor;
 //import com.jgoodies.forms.layout.FormLayout;
 //import com.jgoodies.forms.layout.ColumnSpec;
 //import com.jgoodies.forms.layout.RowSpec;
@@ -65,6 +68,37 @@ public class Evaluation extends JFrame {
 	private JTextField parte3_gerencia_total_textField;
 	private JTextField textField_2;
 
+
+	private JComboBox parte1_perfil_de_estudiante_1_comboBox = new JComboBox();
+	private JComboBox parte1_perfil_de_estudiante_2_comboBox = new JComboBox();
+	private JComboBox parte2_estudi_3_comboBox = new JComboBox();
+	private JComboBox parte2_estudi_4_comboBox = new JComboBox();
+	private JComboBox parte3_estudi_5_comboBox = new JComboBox();
+	private JComboBox parte3_estudi_6_comboBox = new JComboBox();
+	private JComboBox parte3_estudi_7_comboBox = new JComboBox();
+	private JComboBox parte3_estudi_8_comboBox = new JComboBox();
+	private JComboBox parte3_estudi_9_comboBox = new JComboBox();
+	private JComboBox parte3_estudi_10_comboBox_3 = new JComboBox();
+	private JComboBox parte3_estudi_11_comboBox_3 = new JComboBox();
+	private JComboBox parte3_estudi_12_comboBox_3 = new JComboBox();
+	private JComboBox parte3_desarollo_de_clase_13_comboBox = new JComboBox();
+	private JComboBox parte3_desarollo_de_clase_14_comboBox = new JComboBox();
+	private JComboBox parte3_desarollo_de_clase_15_comboBox_1_1 = new JComboBox();
+	private JComboBox parte3_desarollo_de_clase_16_comboBox = new JComboBox();
+	private JComboBox parte3_desarollo_de_clase_17_comboBox_1_1 = new JComboBox();
+	private JComboBox parte5_gerencia_18_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_19_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_20_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_21_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_22_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_23_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_24_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_25_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_26_comboBox_1 = new JComboBox();
+	private JComboBox parte5_gerencia_27_comboBox = new JComboBox();
+	private JComboBox parte5_gerencia_28_comboBox = new JComboBox();
+	private JComboBox parte5_gerencia_29_comboBox = new JComboBox();
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -80,8 +114,12 @@ public class Evaluation extends JFrame {
 
 	//Testing
 	public Evaluation() {
+		
+		
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(-7, 0, 1920, 1200);
+		setBounds(0, 0, 1920, 1080);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -149,15 +187,21 @@ public class Evaluation extends JFrame {
 		objetivo_evaluacion_lblNewLabel.setBounds(680, 418, 185, 20);
 		panel.add(objetivo_evaluacion_lblNewLabel);
 		
-		JCheckBox formacion_chckbxNewCheckBox = new JCheckBox("Formativa ");
-		formacion_chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		formacion_chckbxNewCheckBox.setBounds(1059, 416, 106, 25);
-		panel.add(formacion_chckbxNewCheckBox);
+		JComboBox objetivo_eval_comboBox = new JComboBox();
 		
-		JCheckBox sumativa_chckbxNewCheckBox = new JCheckBox("Sumativa");
-		sumativa_chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		sumativa_chckbxNewCheckBox.setBounds(927, 416, 96, 25);
-		panel.add(sumativa_chckbxNewCheckBox);
+		objetivo_eval_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		objetivo_eval_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Formativa", "Sumativa"}));
+		objetivo_eval_comboBox.setBounds(930, 416, 235, 25);
+		panel.add(objetivo_eval_comboBox);
+		
+		objetivo_eval_comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String objetivo = objetivo_eval_comboBox.getSelectedItem().toString();
+				System.out.println("Obejtivo de evaluacion: " + objetivo);
+			}
+		});
+		
+
 		
 		JLabel periodo_evaluado_lblNewLabel = new JLabel("Per\u00EDodo evaluado");
 		periodo_evaluado_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -226,6 +270,7 @@ public class Evaluation extends JFrame {
 		contrato_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto", "Temporero", "Probatorio", "Permanente"}));
 		contrato_comboBox.setBounds(871, 629, 139, 27);
 		panel.add(contrato_comboBox);
+		contrato_comboBox.setSelectedItem("Temporero"); // SETTER TEST !!!!!!!!!!
 		
 		contrato_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -301,6 +346,10 @@ public class Evaluation extends JFrame {
 		
 		
 		/////////////////////////////// INSTRUMENTO I ///////////////////////////////////////////
+	
+		
+		
+		
 		
 		JTabbedPane tabbedPane_2 = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.addTab("Instrumento I", null, tabbedPane_2, null);
@@ -322,7 +371,7 @@ public class Evaluation extends JFrame {
 		panel_15.add(lblNewLabel_40);
 		
 		JLabel lblNewLabel_41 = new JLabel("(4) Siempre (3) Casi siempre (2) Ocasionalmente (1) Casi");
-		lblNewLabel_41.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_41.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_41.setBounds(711, 241, 580, 25);
 		panel_15.add(lblNewLabel_41);
 		
@@ -350,9 +399,9 @@ public class Evaluation extends JFrame {
 		panel_6_8_2.setBounds(990, -55, 10, 495);
 		panel_16.add(panel_6_8_2);
 		
-		JComboBox parte1_perfil_de_estudiante_1_comboBox = new JComboBox();
 		
-		parte1_perfil_de_estudiante_1_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4"}));
+		
+		parte1_perfil_de_estudiante_1_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3","4"}));
 		parte1_perfil_de_estudiante_1_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte1_perfil_de_estudiante_1_comboBox.setBounds(1092, 97, 159, 38);
 		panel_16.add(parte1_perfil_de_estudiante_1_comboBox);
@@ -360,23 +409,22 @@ public class Evaluation extends JFrame {
 		parte1_perfil_de_estudiante_1_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte1Box1 = parte1_perfil_de_estudiante_1_comboBox.getSelectedItem().toString();
-				int parteIBox1 = Integer.parseInt(parte1Box1);
-				System.out.println("Box 1: " + parteIBox1);
+				System.out.println("Box 1: " + parte1Box1);
 			}
 		});
 		
-		JComboBox parte1_perfil_de_estudiante_2_comboBox = new JComboBox();
+		
 	
-		parte1_perfil_de_estudiante_2_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4"}));
+		parte1_perfil_de_estudiante_2_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte1_perfil_de_estudiante_2_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte1_perfil_de_estudiante_2_comboBox.setBounds(1092, 303, 159, 38);
 		panel_16.add(parte1_perfil_de_estudiante_2_comboBox);
 		
+		
 		parte1_perfil_de_estudiante_2_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte1Box2 = parte1_perfil_de_estudiante_2_comboBox.getSelectedItem().toString();
-				int parteIBox2 = Integer.parseInt(parte1Box2);
-				System.out.println("Box 2: " + parteIBox2);
+				System.out.println("Box 2: " + parte1Box2);
 			}
 		});
 		
@@ -396,11 +444,6 @@ public class Evaluation extends JFrame {
 		parte1_total_textField.setColumns(10);
 		parte1_total_textField.setBounds(28, 11, 259, 53);
 		panel_8_2.add(parte1_total_textField);
-		
-		JButton guardar_servicios_institucion_btnNewButton_1_1 = new JButton("GUARDAR");
-		guardar_servicios_institucion_btnNewButton_1_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_servicios_institucion_btnNewButton_1_1.setBounds(711, 795, 170, 39);
-		panel_15.add(guardar_servicios_institucion_btnNewButton_1_1);
 		
 		JLabel lblNewLabel_21_3 = new JLabel("Total");
 		lblNewLabel_21_3.setFont(new Font("Tahoma", Font.BOLD, 30));
@@ -469,9 +512,9 @@ public class Evaluation extends JFrame {
 		panel_6_8_2_2.setBounds(990, -55, 10, 495);
 		panel_16_2.add(panel_6_8_2_2);
 		
-		JComboBox parte2_estudi_3_comboBox = new JComboBox();
 		
-		parte2_estudi_3_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3"}));
+		
+		parte2_estudi_3_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3"}));
 		parte2_estudi_3_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte2_estudi_3_comboBox.setBounds(1092, 72, 159, 38);
 		panel_16_2.add(parte2_estudi_3_comboBox);
@@ -479,14 +522,13 @@ public class Evaluation extends JFrame {
 		parte2_estudi_3_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte2Box3 = parte2_estudi_3_comboBox.getSelectedItem().toString();
-				int parteIIBox3 = Integer.parseInt(parte2Box3);
-				System.out.println("Box 3: " + parteIIBox3);
+				System.out.println("Box 3: " + parte2Box3);
 			}
 		});
 		
-		JComboBox parte2_estudi_4_comboBox = new JComboBox();
+		
 	
-		parte2_estudi_4_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3"}));
+		parte2_estudi_4_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3"}));
 		parte2_estudi_4_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte2_estudi_4_comboBox.setBounds(1092, 259, 159, 38);
 		panel_16_2.add(parte2_estudi_4_comboBox);
@@ -494,8 +536,7 @@ public class Evaluation extends JFrame {
 		parte2_estudi_4_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte2Box4 = parte2_estudi_4_comboBox.getSelectedItem().toString();
-				int parteIIBox4 = Integer.parseInt(parte2Box4);
-				System.out.println("Box 4: " + parteIIBox4);
+				System.out.println("Box 4: " + parte2Box4);
 			}
 		});
 		
@@ -526,18 +567,13 @@ public class Evaluation extends JFrame {
 		lblNewLabel_21_3_1.setBounds(1205, 763, 90, 46);
 		panel_17.add(lblNewLabel_21_3_1);
 		
-		JButton guardar_servicios_institucion_parte2_btnNewButton = new JButton("GUARDAR");
-		guardar_servicios_institucion_parte2_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_servicios_institucion_parte2_btnNewButton.setBounds(648, 777, 336, 54);
-		panel_17.add(guardar_servicios_institucion_parte2_btnNewButton);
-		
 		JLabel lblNewLabel_39_1 = new JLabel("Evaluaci\u00F3n de Facultad por los Estudiantes");
 		lblNewLabel_39_1.setFont(new Font("Tahoma", Font.BOLD, 54));
 		lblNewLabel_39_1.setBounds(402, 31, 1529, 135);
 		panel_17.add(lblNewLabel_39_1);
 		
 		JLabel lblNewLabel_41_1 = new JLabel("(3) Lo hizo (2) No lo hizo (1) Desconozco porque no estuve al inicio del curso");
-		lblNewLabel_41_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_41_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_41_1.setBounds(567, 211, 1121, 42);
 		panel_17.add(lblNewLabel_41_1);
 		
@@ -579,9 +615,9 @@ public class Evaluation extends JFrame {
 		panel_6_8_2_2_1.setBounds(1053, 0, 10, 645);
 		panel_16_2_1.add(panel_6_8_2_2_1);
 		
-		JComboBox parte3_estudi_5_comboBox = new JComboBox();
+		
 	
-		parte3_estudi_5_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_5_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3", "4"}));
 		parte3_estudi_5_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_estudi_5_comboBox.setBounds(1114, 41, 159, 38);
 		panel_16_2_1.add(parte3_estudi_5_comboBox);
@@ -589,14 +625,13 @@ public class Evaluation extends JFrame {
 		parte3_estudi_5_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box5 = parte3_estudi_5_comboBox.getSelectedItem().toString();
-				int parteIIIBox5 = Integer.parseInt(parte3Box5);
-				System.out.println("Box 5: " + parteIIIBox5);
+				System.out.println("Box 5: " + parte3Box5);
 			}
 		});
 		
-		JComboBox parte3_estudi_6_comboBox = new JComboBox();
+		
 	
-		parte3_estudi_6_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_6_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3", "4"}));
 		parte3_estudi_6_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_estudi_6_comboBox.setBounds(1114, 113, 159, 38);
 		panel_16_2_1.add(parte3_estudi_6_comboBox);
@@ -604,8 +639,7 @@ public class Evaluation extends JFrame {
 		parte3_estudi_6_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box6 = parte3_estudi_6_comboBox.getSelectedItem().toString();
-				int parteIIIBox6 = Integer.parseInt(parte3Box6);
-				System.out.println("Box 6: " + parteIIIBox6);
+				System.out.println("Box 6: " + parte3Box6);
 			}
 		});
 		
@@ -673,94 +707,87 @@ public class Evaluation extends JFrame {
 		lblNewLabel_43_2_1_2_1_2_1.setBounds(10, 548, 1038, 26);
 		panel_16_2_1.add(lblNewLabel_43_2_1_2_1_2_1);
 		
-		JComboBox parte3_estudi_7_comboBox = new JComboBox();
+		
 	
 		parte3_estudi_7_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
-		parte3_estudi_7_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_7_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3", "4"}));
 		parte3_estudi_7_comboBox.setBounds(1114, 183, 159, 34);
 		panel_16_2_1.add(parte3_estudi_7_comboBox);
 		
 		parte3_estudi_7_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box7 = parte3_estudi_7_comboBox.getSelectedItem().toString();
-				int parteIIIBox7 = Integer.parseInt(parte3Box7);
-				System.out.println("Box 7: " + parteIIIBox7);
+				System.out.println("Box 7: " + parte3Box7);
 			}
 		});
 		
-		JComboBox parte3_estudi_8_comboBox = new JComboBox();
+		
 
 		parte3_estudi_8_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
-		parte3_estudi_8_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_8_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_estudi_8_comboBox.setBounds(1114, 269, 159, 38);
 		panel_16_2_1.add(parte3_estudi_8_comboBox);
 		
 		parte3_estudi_8_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box8 = parte3_estudi_8_comboBox.getSelectedItem().toString();
-				int parteIIIBox8 = Integer.parseInt(parte3Box8);
-				System.out.println("Box 8: " + parteIIIBox8);
+				System.out.println("Box 8: " + parte3Box8);
 			}
 		});
 		
-		JComboBox parte3_estudi_9_comboBox = new JComboBox();
+		
 		
 		parte3_estudi_9_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
-		parte3_estudi_9_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_9_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_estudi_9_comboBox.setBounds(1114, 347, 159, 33);
 		panel_16_2_1.add(parte3_estudi_9_comboBox);
 		
 		parte3_estudi_9_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box9 = parte3_estudi_9_comboBox.getSelectedItem().toString();
-				int parteIIIBox9 = Integer.parseInt(parte3Box9);
-				System.out.println("Box 9: " + parteIIIBox9);
-		
+				System.out.println("Box 9: " + parte3Box9);
 			}
 		});
 		
-		JComboBox parte3_estudi_10_comboBox_3 = new JComboBox();
+		
 
 		parte3_estudi_10_comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 16));
-		parte3_estudi_10_comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_10_comboBox_3.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_estudi_10_comboBox_3.setBounds(1114, 416, 159, 37);
 		panel_16_2_1.add(parte3_estudi_10_comboBox_3);
 		
 		parte3_estudi_10_comboBox_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box10 = parte3_estudi_10_comboBox_3.getSelectedItem().toString();
-				int parteIIIBox10 = Integer.parseInt(parte3Box10);
-				System.out.println("Box 10: " + parteIIIBox10);
+				System.out.println("Box 10: " + parte3Box10);
 			}
 		});
 		
-		JComboBox parte3_estudi_11_comboBox_3 = new JComboBox();
+		
 
 		parte3_estudi_11_comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 16));
-		parte3_estudi_11_comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_11_comboBox_3.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3", "4"}));
 		parte3_estudi_11_comboBox_3.setBounds(1114, 491, 159, 27);
 		panel_16_2_1.add(parte3_estudi_11_comboBox_3);
 		
 		parte3_estudi_11_comboBox_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box11 = parte3_estudi_11_comboBox_3.getSelectedItem().toString();
-				int parteIIIBox11 = Integer.parseInt(parte3Box11);
-				System.out.println("Box 11: " + parteIIIBox11);
+				System.out.println("Box 11: " + parte3Box11);
 			}
 		});
 		
-		JComboBox parte3_estudi_12_comboBox_3 = new JComboBox();
+		
 		
 		parte3_estudi_12_comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 16));
-		parte3_estudi_12_comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_estudi_12_comboBox_3.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_estudi_12_comboBox_3.setBounds(1114, 548, 159, 41);
 		panel_16_2_1.add(parte3_estudi_12_comboBox_3);
 		
 		parte3_estudi_12_comboBox_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box12 = parte3_estudi_12_comboBox_3.getSelectedItem().toString();
-				int parteIIIBox12 = Integer.parseInt(parte3Box12);
-				System.out.println("Box 12: " + parteIIIBox12);
+				System.out.println("Box 12: " + parte3Box12);
 				
 			}
 		});
@@ -770,15 +797,10 @@ public class Evaluation extends JFrame {
 		lblNewLabel_40_1_1.setBounds(375, 102, 1160, 49);
 		panel_18.add(lblNewLabel_40_1_1);
 		
-		JLabel lblNewLabel_41_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (N/A) No Aplica");
-		lblNewLabel_41_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		JLabel lblNewLabel_41_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (Espacio en blanco) No Aplica");
+		lblNewLabel_41_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_41_1_1.setBounds(28, 162, 1827, 42);
 		panel_18.add(lblNewLabel_41_1_1);
-		
-		JButton guardar_parte3_estudiante_btnNewButton = new JButton("GUARDAR");
-		guardar_parte3_estudiante_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_parte3_estudiante_btnNewButton.setBounds(687, 845, 336, 54);
-		panel_18.add(guardar_parte3_estudiante_btnNewButton);
 		
 		JPanel panel_8_2_1_1 = new JPanel();
 		panel_8_2_1_1.setLayout(null);
@@ -811,8 +833,8 @@ public class Evaluation extends JFrame {
 		lblNewLabel_40_1_1_1.setBounds(382, 146, 1160, 49);
 		panel_19.add(lblNewLabel_40_1_1_1);
 		
-		JLabel lblNewLabel_41_1_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (N/A) No Aplica");
-		lblNewLabel_41_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		JLabel lblNewLabel_41_1_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (Espacio en blanco) No Aplica");
+		lblNewLabel_41_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_41_1_1_1.setBounds(30, 206, 1827, 42);
 		panel_19.add(lblNewLabel_41_1_1_1);
 		
@@ -867,9 +889,9 @@ public class Evaluation extends JFrame {
 		panel_6_7_2_3_1_1.setBounds(0, 386, 1303, 10);
 		panel_12_1.add(panel_6_7_2_3_1_1);
 		
-		JComboBox parte3_desarollo_de_clase_13_comboBox = new JComboBox();
+		
 
-		parte3_desarollo_de_clase_13_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_desarollo_de_clase_13_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_desarollo_de_clase_13_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_desarollo_de_clase_13_comboBox.setBounds(1071, 32, 159, 38);
 		panel_12_1.add(parte3_desarollo_de_clase_13_comboBox);
@@ -877,14 +899,13 @@ public class Evaluation extends JFrame {
 		parte3_desarollo_de_clase_13_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box13 = parte3_desarollo_de_clase_13_comboBox.getSelectedItem().toString();
-				int parteIIIBox13 = Integer.parseInt(parte3Box13);
-				System.out.println("Box 13: " + parteIIIBox13);
+				System.out.println("Box 13: " + parte3Box13);
 			}
 		});
 		
-		JComboBox parte3_desarollo_de_clase_14_comboBox = new JComboBox();
+		
 
-		parte3_desarollo_de_clase_14_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_desarollo_de_clase_14_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ", "1", "2", "3", "4"}));
 		parte3_desarollo_de_clase_14_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_desarollo_de_clase_14_comboBox.setBounds(1071, 127, 159, 38);
 		panel_12_1.add(parte3_desarollo_de_clase_14_comboBox);
@@ -892,14 +913,13 @@ public class Evaluation extends JFrame {
 		parte3_desarollo_de_clase_14_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box14 = parte3_desarollo_de_clase_14_comboBox.getSelectedItem().toString();
-				int parteIIIBox14 = Integer.parseInt(parte3Box14);
-				System.out.println("Box 14: " + parteIIIBox14);
+				System.out.println("Box 14: " + parte3Box14);
 			}
 		});
 		
-		JComboBox parte3_desarollo_de_clase_15_comboBox_1_1 = new JComboBox();
+		
 
-		parte3_desarollo_de_clase_15_comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_desarollo_de_clase_15_comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_desarollo_de_clase_15_comboBox_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_desarollo_de_clase_15_comboBox_1_1.setBounds(1071, 220, 159, 38);
 		panel_12_1.add(parte3_desarollo_de_clase_15_comboBox_1_1);
@@ -907,14 +927,13 @@ public class Evaluation extends JFrame {
 		parte3_desarollo_de_clase_15_comboBox_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box15 = parte3_desarollo_de_clase_15_comboBox_1_1.getSelectedItem().toString();
-				int parteIIIBox15 = Integer.parseInt(parte3Box15);
-				System.out.println("Box 15: " + parteIIIBox15);
+				System.out.println("Box 15: " + parte3Box15);
 			}
 		});
 		
-		JComboBox parte3_desarollo_de_clase_16_comboBox = new JComboBox();
+		
 
-		parte3_desarollo_de_clase_16_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte3_desarollo_de_clase_16_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_desarollo_de_clase_16_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_desarollo_de_clase_16_comboBox.setBounds(1071, 321, 159, 38);
 		panel_12_1.add(parte3_desarollo_de_clase_16_comboBox);
@@ -922,14 +941,13 @@ public class Evaluation extends JFrame {
 		parte3_desarollo_de_clase_16_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box16 = parte3_desarollo_de_clase_16_comboBox.getSelectedItem().toString();
-				int parteIIIBox16 = Integer.parseInt(parte3Box16);
-				System.out.println("Box 16: " + parteIIIBox16);
+				System.out.println("Box 16: " + parte3Box16);
 			}
 		});
 		
-		JComboBox parte3_desarollo_de_clase_17_comboBox_1_1 = new JComboBox();
 		
-		parte3_desarollo_de_clase_17_comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		parte3_desarollo_de_clase_17_comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte3_desarollo_de_clase_17_comboBox_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte3_desarollo_de_clase_17_comboBox_1_1.setBounds(1071, 418, 159, 38);
 		panel_12_1.add(parte3_desarollo_de_clase_17_comboBox_1_1);
@@ -937,15 +955,9 @@ public class Evaluation extends JFrame {
 		parte3_desarollo_de_clase_17_comboBox_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte3Box17 = parte3_desarollo_de_clase_17_comboBox_1_1.getSelectedItem().toString();
-				int parteIIIBox17 = Integer.parseInt(parte3Box17);
-				System.out.println("Box 17: " + parteIIIBox17);
+				System.out.println("Box 17: " + parte3Box17);
 			}
 		});
-		
-		JButton guardar_parte3_estudiante_btnNewButton_1 = new JButton("GUARDAR");
-		guardar_parte3_estudiante_btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_parte3_estudiante_btnNewButton_1.setBounds(581, 783, 336, 75);
-		panel_19.add(guardar_parte3_estudiante_btnNewButton_1);
 		
 		JPanel panel_8_2_1_1_1 = new JPanel();
 		panel_8_2_1_1_1.setLayout(null);
@@ -978,8 +990,8 @@ public class Evaluation extends JFrame {
 		lblNewLabel_40_1_1_1_1.setBounds(646, 99, 503, 49);
 		panel_20.add(lblNewLabel_40_1_1_1_1);
 		
-		JLabel lblNewLabel_41_1_1_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (N/A) No Aplica");
-		lblNewLabel_41_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		JLabel lblNewLabel_41_1_1_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (Espacio en blanco) No Aplica");
+		lblNewLabel_41_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_41_1_1_1_1.setBounds(45, 146, 1827, 42);
 		panel_20.add(lblNewLabel_41_1_1_1_1);
 		
@@ -1007,9 +1019,9 @@ public class Evaluation extends JFrame {
 		panel_6_8_2_2_1_1.setBounds(1053, 0, 10, 669);
 		panel_16_2_1_1.add(panel_6_8_2_2_1_1);
 		
-		JComboBox parte5_gerencia_18_comboBox_1 = new JComboBox();
+		
 
-		parte5_gerencia_18_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte5_gerencia_18_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_18_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_18_comboBox_1.setBounds(1114, 29, 159, 38);
 		panel_16_2_1_1.add(parte5_gerencia_18_comboBox_1);
@@ -1017,14 +1029,13 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_18_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box18 = parte5_gerencia_18_comboBox_1.getSelectedItem().toString();
-				int parteIVBox18 = Integer.parseInt(parte4Box18);
-				System.out.println("Box 18: " + parteIVBox18);
+				System.out.println("Box 18: " + parte4Box18);
 			}
 		});
 		
-		JComboBox parte5_gerencia_19_comboBox_1 = new JComboBox();
+		
 	
-		parte5_gerencia_19_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte5_gerencia_19_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_19_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_19_comboBox_1.setBounds(1114, 97, 159, 27);
 		panel_16_2_1_1.add(parte5_gerencia_19_comboBox_1);
@@ -1032,8 +1043,7 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_19_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box19 = parte5_gerencia_19_comboBox_1.getSelectedItem().toString();
-				int parteIVBox19 = Integer.parseInt(parte4Box19);
-				System.out.println("Box 19: " + parteIVBox19);
+				System.out.println("Box 19: " + parte4Box19);
 			}
 		});
 		
@@ -1096,9 +1106,9 @@ public class Evaluation extends JFrame {
 		lblNewLabel_43_2_1_2_1_2_1_1.setBounds(10, 458, 1038, 26);
 		panel_16_2_1_1.add(lblNewLabel_43_2_1_2_1_2_1_1);
 		
-		JComboBox parte5_gerencia_20_comboBox_1 = new JComboBox();
+		
 
-		parte5_gerencia_20_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte5_gerencia_20_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_20_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_20_comboBox_1.setBounds(1114, 156, 159, 34);
 		panel_16_2_1_1.add(parte5_gerencia_20_comboBox_1);
@@ -1106,14 +1116,13 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_20_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box20 = parte5_gerencia_20_comboBox_1.getSelectedItem().toString();
-				int parteIVBox20 = Integer.parseInt(parte4Box20);
-				System.out.println("Box 20: " + parteIVBox20);				
+				System.out.println("Box 20: " + parte4Box20);				
 			}
 		});
 		
-		JComboBox parte5_gerencia_21_comboBox_1 = new JComboBox();
+		
 
-		parte5_gerencia_21_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte5_gerencia_21_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_21_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_21_comboBox_1.setBounds(1114, 222, 159, 38);
 		panel_16_2_1_1.add(parte5_gerencia_21_comboBox_1);
@@ -1121,14 +1130,13 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_21_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box21 = parte5_gerencia_21_comboBox_1.getSelectedItem().toString();
-				int parteIVBox21 = Integer.parseInt(parte4Box21);
-				System.out.println("Box 21: " + parteIVBox21);
+				System.out.println("Box 21: " + parte4Box21);
 			}
 		});
 		
-		JComboBox parte5_gerencia_22_comboBox_1 = new JComboBox();
 		
-		parte5_gerencia_22_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		parte5_gerencia_22_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_22_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_22_comboBox_1.setBounds(1114, 283, 159, 33);
 		panel_16_2_1_1.add(parte5_gerencia_22_comboBox_1);
@@ -1136,15 +1144,14 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_22_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box22 = parte5_gerencia_22_comboBox_1.getSelectedItem().toString();
-				int parteIVBox22 = Integer.parseInt(parte4Box22);
-				System.out.println("Box 22: " + parteIVBox22);
+				System.out.println("Box 22: " + parte4Box22);
 				
 			}
 		});
 		
-		JComboBox parte5_gerencia_23_comboBox_1 = new JComboBox();
+		
 
-		parte5_gerencia_23_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte5_gerencia_23_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_23_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_23_comboBox_1.setBounds(1114, 339, 159, 37);
 		panel_16_2_1_1.add(parte5_gerencia_23_comboBox_1);
@@ -1152,14 +1159,13 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_23_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box23 = parte5_gerencia_23_comboBox_1.getSelectedItem().toString();
-				int parteIVBox23 = Integer.parseInt(parte4Box23);
-				System.out.println("Box 23: " + parteIVBox23);
+				System.out.println("Box 23: " + parte4Box23);
 			}
 		});
 		
-		JComboBox parte5_gerencia_24_comboBox_1 = new JComboBox();
+		
 
-		parte5_gerencia_24_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		parte5_gerencia_24_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_24_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_24_comboBox_1.setBounds(1114, 400, 159, 27);
 		panel_16_2_1_1.add(parte5_gerencia_24_comboBox_1);
@@ -1167,15 +1173,14 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_24_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box24 = parte5_gerencia_24_comboBox_1.getSelectedItem().toString();
-				int parteIVBox24 = Integer.parseInt(parte4Box24);
-				System.out.println("Box 24: " + parteIVBox24);
+				System.out.println("Box 24: " + parte4Box24);
 				
 			}
 		});
 		
-		JComboBox parte5_gerencia_25_comboBox_1 = new JComboBox();
 		
-		parte5_gerencia_25_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		parte5_gerencia_25_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_25_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_25_comboBox_1.setBounds(1114, 453, 159, 31);
 		panel_16_2_1_1.add(parte5_gerencia_25_comboBox_1);
@@ -1183,8 +1188,7 @@ public class Evaluation extends JFrame {
 		parte5_gerencia_25_comboBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String parte4Box25 = parte5_gerencia_25_comboBox_1.getSelectedItem().toString();
-				int parteIVBox25 = Integer.parseInt(parte4Box25);
-				System.out.println("Box 25: " + parteIVBox25);
+				System.out.println("Box 25: " + parte4Box25);
 			}
 		});
 		
@@ -1207,18 +1211,20 @@ public class Evaluation extends JFrame {
 		panel_6_7_3_2_1_2_1_1_1_1_1_1.setBounds(0, 496, 1530, 10);
 		panel_16_2_1_1.add(panel_6_7_3_2_1_2_1_1_1_1_1_1);
 		
-		JComboBox parte5_gerencia_26_comboBox_1 = new JComboBox();
-		parte5_gerencia_26_comboBox_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String parte4Box26 = parte5_gerencia_26_comboBox_1.getSelectedItem().toString();
-				int parteIVBox26 = Integer.parseInt(parte4Box26);
-				System.out.println("Box 26: " + parteIVBox26);
-			}
-		});
-		parte5_gerencia_26_comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		
+		
+		parte5_gerencia_26_comboBox_1.setModel(new DefaultComboBoxModel(new String[] { " ","1", "2", "3", "4"}));
 		parte5_gerencia_26_comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_26_comboBox_1.setBounds(1114, 529, 159, 31);
 		panel_16_2_1_1.add(parte5_gerencia_26_comboBox_1);
+		
+		parte5_gerencia_26_comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String parte4Box26 = parte5_gerencia_26_comboBox_1.getSelectedItem().toString();
+				System.out.println("Box 26: " + parte4Box26);
+			}
+		});
 		
 		JPanel panel_6_7_3_2_1_2_1_1_1_1_1_1_1 = new JPanel();
 		panel_6_7_3_2_1_2_1_1_1_1_1_1_1.setBounds(-36, 583, 1530, 10);
@@ -1229,11 +1235,18 @@ public class Evaluation extends JFrame {
 		lblNewLabel_43_2_1_2_1_2_1_1_2.setBounds(10, 620, 1038, 26);
 		panel_16_2_1_1.add(lblNewLabel_43_2_1_2_1_2_1_1_2);
 		
-		JComboBox parte5_gerencia_27_comboBox = new JComboBox();
-		parte5_gerencia_27_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		parte5_gerencia_27_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_27_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_27_comboBox.setBounds(1114, 604, 159, 28);
 		panel_16_2_1_1.add(parte5_gerencia_27_comboBox);
+		
+		parte5_gerencia_27_comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String parte4Box27 = parte5_gerencia_27_comboBox.getSelectedItem().toString();
+				System.out.println("Box 27: " + parte4Box27);
+			}
+		});
 		
 		JLabel lblNewLabel_21_3_1_1_2 = new JLabel("Total");
 		lblNewLabel_21_3_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 30));
@@ -1251,11 +1264,6 @@ public class Evaluation extends JFrame {
 		parte3_gerencia_total_textField.setColumns(10);
 		parte3_gerencia_total_textField.setBounds(25, 11, 75, 34);
 		panel_8_2_1_1_1_1.add(parte3_gerencia_total_textField);
-		
-		JButton guardar_parte3_estudiante_btnNewButton_1_1 = new JButton("GUARDAR");
-		guardar_parte3_estudiante_btnNewButton_1_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_parte3_estudiante_btnNewButton_1_1.setBounds(1667, 705, 209, 61);
-		panel_20.add(guardar_parte3_estudiante_btnNewButton_1_1);
 		
 		JPanel panel_21 = new JPanel();
 		tabbedPane_2.addTab("Parte IV continuaci\u00F3n", null, panel_21, null);
@@ -1285,17 +1293,31 @@ public class Evaluation extends JFrame {
 		panel_6_8_2_3.setBounds(990, -55, 10, 495);
 		panel_16_3.add(panel_6_8_2_3);
 		
-		JComboBox parte5_gerencia_28_comboBox = new JComboBox();
-		parte5_gerencia_28_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		parte5_gerencia_28_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_28_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_28_comboBox.setBounds(1092, 97, 159, 38);
 		panel_16_3.add(parte5_gerencia_28_comboBox);
+
+		parte5_gerencia_28_comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String parte4Box28 = parte5_gerencia_28_comboBox.getSelectedItem().toString();
+				System.out.println("Box 28: " + parte4Box28);
+			}
+		});
 		
-		JComboBox parte5_gerencia_29_comboBox = new JComboBox();
-		parte5_gerencia_29_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "N/A"}));
+		
+		parte5_gerencia_29_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
 		parte5_gerencia_29_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		parte5_gerencia_29_comboBox.setBounds(1092, 303, 159, 38);
 		panel_16_3.add(parte5_gerencia_29_comboBox);
+		
+		parte5_gerencia_29_comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String parte4Box29 = parte5_gerencia_29_comboBox.getSelectedItem().toString();
+				System.out.println("Box 28: " + parte4Box29);
+			}
+		});
 		
 		JLabel lblNewLabel_42_3_1 = new JLabel(" dudas relacionadas con los temas del curso y sus evaluaciones.");
 		lblNewLabel_42_3_1.setFont(new Font("Tahoma", Font.BOLD, 21));
@@ -1317,8 +1339,8 @@ public class Evaluation extends JFrame {
 		lblNewLabel_40_1_1_1_1_1.setBounds(682, 146, 503, 49);
 		panel_21.add(lblNewLabel_40_1_1_1_1_1);
 		
-		JLabel lblNewLabel_41_1_1_1_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (N/A) No Aplica");
-		lblNewLabel_41_1_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		JLabel lblNewLabel_41_1_1_1_1_1 = new JLabel("(4) Totalmente de acuerdo (si) (3) Parcialmente de acuerdo (mayormente si) (2) Parcialmente en desacuerdo (mayormente no) (1) Totalmente en desacuerdo (no) (Espacio en blanco) No Aplica");
+		lblNewLabel_41_1_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_41_1_1_1_1_1.setBounds(28, 195, 1827, 42);
 		panel_21.add(lblNewLabel_41_1_1_1_1_1);
 		
@@ -1343,6 +1365,13 @@ public class Evaluation extends JFrame {
 		lblNewLabel_21_3_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 30));
 		lblNewLabel_21_3_1_1_1_1.setBounds(1192, 762, 90, 46);
 		panel_21.add(lblNewLabel_21_3_1_1_1_1);
+		
+		JLabel lblNewLabel_46 = new JLabel("New label");
+		tabbedPane.addTab("New tab", null, lblNewLabel_46, null);
+		
+		
+		//////////////////////// Termina Instrumento I //////////////////////////////
+		
 		
 		JTabbedPane tabbedPane_1 = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.addTab("Instrumento II", null, tabbedPane_1, null);
@@ -1474,11 +1503,6 @@ public class Evaluation extends JFrame {
 		lblNewLabel_12.setBounds(509, 11, 1117, 126);
 		panel_1.add(lblNewLabel_12);
 		
-		JButton guardar_calidad_docente_btnNewButton = new JButton("GUARDAR");
-		guardar_calidad_docente_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_calidad_docente_btnNewButton.setBounds(677, 845, 336, 54);
-		panel_1.add(guardar_calidad_docente_btnNewButton);
-		
 		JPanel panel_9 = new JPanel();
 		panel_9.setBackground(Color.GRAY);
 		panel_9.setBounds(1371, 828, 276, 71);
@@ -1593,15 +1617,6 @@ public class Evaluation extends JFrame {
 		lblNewLabel_21.setBounds(1328, 836, 90, 46);
 		panel_3.add(lblNewLabel_21);
 		
-		JButton guardar_servicios_institucion_btnNewButton_1 = new JButton("GUARDAR");
-		guardar_servicios_institucion_btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		guardar_servicios_institucion_btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_servicios_institucion_btnNewButton_1.setBounds(795, 839, 336, 54);
-		panel_3.add(guardar_servicios_institucion_btnNewButton_1);
-		
 		JPanel panel_7 = new JPanel();
 		tabbedPane_1.addTab("Servicio a la Comunidad", null, panel_7, null);
 		panel_7.setLayout(null);
@@ -1671,11 +1686,6 @@ public class Evaluation extends JFrame {
 		servicio_comunidad_total_textField.setColumns(10);
 		servicio_comunidad_total_textField.setBounds(27, 11, 259, 53);
 		panel_8_1.add(servicio_comunidad_total_textField);
-		
-		JButton guardar_servicio_comunidad_btnNewButton_1 = new JButton("GUARDAR");
-		guardar_servicio_comunidad_btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_servicio_comunidad_btnNewButton_1.setBounds(716, 782, 336, 54);
-		panel_7.add(guardar_servicio_comunidad_btnNewButton_1);
 		
 		JPanel panel_11 = new JPanel();
 		tabbedPane_1.addTab("Investigaci\u00F3n y trabajo creativo", null, panel_11, null);
@@ -1772,11 +1782,6 @@ public class Evaluation extends JFrame {
 		lblNewLabel_21_2_1.setFont(new Font("Tahoma", Font.BOLD, 30));
 		lblNewLabel_21_2_1.setBounds(1197, 784, 90, 46);
 		panel_11.add(lblNewLabel_21_2_1);
-		
-		JButton guardar_calidad_docente_btnNewButton_1 = new JButton("GUARDAR");
-		guardar_calidad_docente_btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 25));
-		guardar_calidad_docente_btnNewButton_1.setBounds(796, 804, 336, 54);
-		panel_11.add(guardar_calidad_docente_btnNewButton_1);
 		
 		JPanel panel_13 = new JPanel();
 		tabbedPane_1.addTab("Crecimiento y Desarrollo Profesional", null, panel_13, null);
@@ -1882,27 +1887,249 @@ public class Evaluation extends JFrame {
 		panel_13.add(guardar_crecimiento_desarrollo_btnNewButton_2);
 		
 		JTabbedPane tabbedPane_3 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("New tab", null, tabbedPane_3, null);
+		tabbedPane.addTab("Instrumento III", null, tabbedPane_3, null);
 		
 		JPanel panel_22 = new JPanel();
-		tabbedPane_3.addTab("New tab", null, panel_22, null);
+		tabbedPane_3.addTab("Rubrica", null, panel_22, null);
+		panel_22.setLayout(null);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		GroupLayout gl_panel_22 = new GroupLayout(panel_22);
-		gl_panel_22.setHorizontalGroup(
-			gl_panel_22.createParallelGroup(Alignment.LEADING)
-				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 1904, GroupLayout.PREFERRED_SIZE)
-		);
-		gl_panel_22.setVerticalGroup(
-			gl_panel_22.createParallelGroup(Alignment.LEADING)
-				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 932, GroupLayout.PREFERRED_SIZE)
-		);
-		panel_22.setLayout(gl_panel_22);
+		JLabel lblNewLabel_45 = new JLabel("");
+		lblNewLabel_45.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\Screenshots\\Screenshot 2020-11-24 175722.jpg"));
+		lblNewLabel_45.setBounds(513, 283, 1062, 415);
+		panel_22.add(lblNewLabel_45);
 		
-		//JLabel lblNewLabel_46 = new JLabel("");
-		//lblNewLabel_46.setHorizontalAlignment(SwingConstants.CENTER);
-		//lblNewLabel_46.setIcon(new ImageIcon("C:\\Users\\natal\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\4GMYY9S5\\Valencias-Catedr\u00E1tico_Aprobada_8_junio_2020[1]-1[2].png"));
-		//scrollPane_1.setViewportView(lblNewLabel_46);
+		JLabel lblNewLabel_44_1 = new JLabel("Visita al sal\u00F3n de clase");
+		lblNewLabel_44_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44_1.setBounds(765, 52, 596, 123);
+		panel_22.add(lblNewLabel_44_1);
+		
+		JLabel lblNewLabel_47 = new JLabel("Rubrica para la evaluaci\u00F3n");
+		lblNewLabel_47.setFont(new Font("Tahoma", Font.BOLD, 21));
+		lblNewLabel_47.setBounds(892, 207, 596, 35);
+		panel_22.add(lblNewLabel_47);
+		
+		JPanel panel_23 = new JPanel();
+		tabbedPane_3.addTab("Criterio I", null, panel_23, null);
+		panel_23.setLayout(null);
+		
+		JLabel lblNewLabel_48 = new JLabel("1. Domina el tema discutido en clase.");
+		lblNewLabel_48.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48.setBounds(10, 145, 389, 41);
+		panel_23.add(lblNewLabel_48);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane.setBounds(1095, 183, 637, 168);
+		panel_23.add(textPane);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox.setBounds(796, 156, 94, 22);
+		panel_23.add(comboBox);
+		
+		JLabel lblNewLabel_48_1 = new JLabel("2. Usa ejemplos o ejercicios relacionados con el tema de la clase.");
+		lblNewLabel_48_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_1.setBounds(10, 364, 637, 41);
+		panel_23.add(lblNewLabel_48_1);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1.setBounds(40, 183, 637, 168);
+		panel_23.add(textPane_1);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_1.setBounds(796, 375, 94, 22);
+		panel_23.add(comboBox_1);
+		
+		JComboBox comboBox_3 = new JComboBox();
+		comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_3.setBounds(796, 604, 94, 22);
+		panel_23.add(comboBox_3);
+		
+		JLabel lblNewLabel_48_1_1 = new JLabel("3. Integra conceptos o experiencias de otras disciplinas para enriquecer la clase.");
+		lblNewLabel_48_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_1_1.setBounds(10, 584, 762, 59);
+		panel_23.add(lblNewLabel_48_1_1);
+		
+		JTextPane textPane_1_1 = new JTextPane();
+		textPane_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_1.setBounds(40, 660, 637, 168);
+		panel_23.add(textPane_1_1);
+		
+		JLabel lblNewLabel_48_1_1_1 = new JLabel("4. Relaciona la utilidad del tema con otros cursos o \u00E1reas del conocimiento.");
+		lblNewLabel_48_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_1_1_1.setBounds(1070, 136, 762, 59);
+		panel_23.add(lblNewLabel_48_1_1_1);
+		
+		JComboBox comboBox_3_1 = new JComboBox();
+		comboBox_3_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_3_1.setBounds(1787, 156, 94, 22);
+		panel_23.add(comboBox_3_1);
+		
+		JTextPane textPane_1_1_1 = new JTextPane();
+		textPane_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_1_1.setBounds(40, 405, 637, 168);
+		panel_23.add(textPane_1_1_1);
+		
+		JLabel lblNewLabel_48_2 = new JLabel("5. Presenta el tema en forma actualizada.");
+		lblNewLabel_48_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_2.setBounds(1072, 364, 404, 41);
+		panel_23.add(lblNewLabel_48_2);
+		
+		JComboBox comboBox_4 = new JComboBox();
+		comboBox_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_4.setBounds(1787, 375, 94, 22);
+		panel_23.add(comboBox_4);
+		
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_2.setBounds(1095, 660, 637, 168);
+		panel_23.add(textPane_2);
+		
+		JLabel lblNewLabel_48_2_1 = new JLabel("6. Incorpora en la clase las nuevas tendencias de la disciplina.");
+		lblNewLabel_48_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_2_1.setBounds(1070, 593, 598, 41);
+		panel_23.add(lblNewLabel_48_2_1);
+		
+		JComboBox comboBox_4_1 = new JComboBox();
+		comboBox_4_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_4_1.setBounds(1787, 604, 94, 22);
+		panel_23.add(comboBox_4_1);
+		
+		JTextPane textPane_2_1 = new JTextPane();
+		textPane_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_2_1.setBounds(1095, 405, 637, 168);
+		panel_23.add(textPane_2_1);
+		
+		JPanel panel_6_6_1 = new JPanel();
+		panel_6_6_1.setBackground(UIManager.getColor("Button.disabledForeground"));
+		panel_6_6_1.setBounds(994, 136, 10, 796);
+		panel_23.add(panel_6_6_1);
+		
+		JLabel lblNewLabel_49 = new JLabel(" DOMINIO DE LA DISCIPLINA");
+		lblNewLabel_49.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_49.setBounds(615, 38, 870, 87);
+		panel_23.add(lblNewLabel_49);
+		
+		JPanel panel_6_6_1_1 = new JPanel();
+		panel_6_6_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1.setBounds(-10, 124, 1904, 10);
+		panel_23.add(panel_6_6_1_1);
+		
+		JPanel panel_24 = new JPanel();
+		tabbedPane_3.addTab("Criterio II", null, panel_24, null);
+		panel_24.setLayout(null);
+		
+		JLabel lblNewLabel_49_1 = new JLabel("ORGANIZACI\u00D3N Y PRESENTACI\u00D3N DEL CONTENIDO");
+		lblNewLabel_49_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_49_1.setBounds(246, 33, 1401, 87);
+		panel_24.add(lblNewLabel_49_1);
+		
+		JTextPane textPane_1_2 = new JTextPane();
+		textPane_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_2.setBounds(66, 251, 637, 168);
+		panel_24.add(textPane_1_2);
+		
+		JTextPane textPane_1_3 = new JTextPane();
+		textPane_1_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_3.setBounds(66, 496, 637, 168);
+		panel_24.add(textPane_1_3);
+		
+		JTextPane textPane_1_4 = new JTextPane();
+		textPane_1_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_4.setBounds(66, 724, 637, 168);
+		panel_24.add(textPane_1_4);
+		
+		JTextPane textPane_1_5 = new JTextPane();
+		textPane_1_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_5.setBounds(1079, 282, 637, 168);
+		panel_24.add(textPane_1_5);
+		
+		JTextPane textPane_1_6 = new JTextPane();
+		textPane_1_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textPane_1_6.setBounds(1079, 513, 637, 168);
+		panel_24.add(textPane_1_6);
+		
+		JLabel lblNewLabel_48_3 = new JLabel("7. Presenta el material de la clase en forma organizada y coherente.");
+		lblNewLabel_48_3.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_3.setBounds(48, 199, 742, 41);
+		panel_24.add(lblNewLabel_48_3);
+		
+		JLabel lblNewLabel_48_4 = new JLabel("8. Utiliza el vocabulario propio de la materia.");
+		lblNewLabel_48_4.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_4.setBounds(48, 444, 742, 41);
+		panel_24.add(lblNewLabel_48_4);
+		
+		JLabel lblNewLabel_48_5 = new JLabel("9. Cumple con los objetivos establecidos para la clase.");
+		lblNewLabel_48_5.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_5.setBounds(48, 672, 710, 41);
+		panel_24.add(lblNewLabel_48_5);
+		
+		JLabel lblNewLabel_48_6 = new JLabel("10. Utiliza el tiempo de la clase de acuerdo con los objetivos establecidos ");
+		lblNewLabel_48_6.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_6.setBounds(1056, 199, 838, 41);
+		panel_24.add(lblNewLabel_48_6);
+		
+		JLabel lblNewLabel_48_7 = new JLabel("11. Resume los conceptos discutidos en clase");
+		lblNewLabel_48_7.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_7.setBounds(1056, 461, 591, 41);
+		panel_24.add(lblNewLabel_48_7);
+		
+		JLabel lblNewLabel_48_6_1 = new JLabel("y las actividades planificadas.");
+		lblNewLabel_48_6_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_6_1.setBounds(1095, 230, 838, 41);
+		panel_24.add(lblNewLabel_48_6_1);
+		
+		JComboBox comboBox_5 = new JComboBox();
+		comboBox_5.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_5.setBounds(760, 212, 94, 22);
+		panel_24.add(comboBox_5);
+		
+		JComboBox comboBox_6 = new JComboBox();
+		comboBox_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_6.setBounds(760, 457, 94, 22);
+		panel_24.add(comboBox_6);
+		
+		JComboBox comboBox_7 = new JComboBox();
+		comboBox_7.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_7.setBounds(760, 685, 94, 22);
+		panel_24.add(comboBox_7);
+		
+		JComboBox comboBox_9 = new JComboBox();
+		comboBox_9.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_9.setBounds(1782, 212, 94, 22);
+		panel_24.add(comboBox_9);
+		
+		JComboBox comboBox_10 = new JComboBox();
+		comboBox_10.setFont(new Font("Tahoma", Font.BOLD, 16));
+		comboBox_10.setBounds(1782, 474, 94, 22);
+		panel_24.add(comboBox_10);
+		
+		JPanel panel_6_6_1_1_1 = new JPanel();
+		panel_6_6_1_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_1.setBounds(0, 160, 1914, 10);
+		panel_24.add(panel_6_6_1_1_1);
+		
+		JPanel panel_6_6_1_2 = new JPanel();
+		panel_6_6_1_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_2.setBounds(948, 160, 10, 796);
+		panel_24.add(panel_6_6_1_2);
+		
+		JPanel panel_25 = new JPanel();
+		tabbedPane_3.addTab("Criterio III", null, panel_25, null);
+		panel_25.setLayout(null);
+		
+		JLabel lblNewLabel_49_1_1 = new JLabel("PROMOCI\u00D3N DEL INTER\u00C9S DEL ESTUDIANTE");
+		lblNewLabel_49_1_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_49_1_1.setBounds(321, 44, 1401, 87);
+		panel_25.add(lblNewLabel_49_1_1);
+		
+		JPanel panel_6_6_1_1_1_1 = new JPanel();
+		panel_6_6_1_1_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_1_1.setBounds(0, 161, 1914, 10);
+		panel_25.add(panel_6_6_1_1_1_1);
+		
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -1917,7 +2144,58 @@ public class Evaluation extends JFrame {
 		);
 		panel_2.setLayout(gl_panel_2);
 		
+		comboboxItems ("test", "instru1");
+		
+	}
 	
+	public void comboboxItems(String ID, String op1) {
+		String bruh = "hola";
+		String[] ap = new String[35];
+		
+		fileManager continueI = new fileManager();
+	    ap = continueI.combobox(ID, op1);
+	
+		 	 parte1_perfil_de_estudiante_1_comboBox.setSelectedItem(ap[0]);
+		 	 if(ap[1] == "0") {
+		 		parte1_perfil_de_estudiante_2_comboBox.setSelectedIndex(0);
+		 	
+		 	 }
+		 	 else {
+		 		 parte1_perfil_de_estudiante_2_comboBox.setSelectedItem(ap[1]);
+		 	 }
+		 	 
+			 parte2_estudi_3_comboBox.setSelectedItem(ap[2]);
+			 parte2_estudi_4_comboBox.setSelectedItem(ap[3]);
+			 parte3_estudi_5_comboBox.setSelectedItem(ap[4]);
+			 parte3_estudi_6_comboBox.setSelectedItem(ap[5]);
+			 parte3_estudi_7_comboBox.setSelectedItem(ap[6]);
+			 parte3_estudi_8_comboBox.setSelectedItem(ap[7]);
+			 parte3_estudi_9_comboBox.setSelectedItem(ap[8]);
+			 parte3_estudi_10_comboBox_3.setSelectedItem(ap[9]);
+			 parte3_estudi_11_comboBox_3.setSelectedItem(ap[10]);
+			 parte3_estudi_12_comboBox_3.setSelectedItem(ap[11]);
+			 parte3_desarollo_de_clase_13_comboBox.setSelectedItem(ap[12]);
+			 parte3_desarollo_de_clase_14_comboBox.setSelectedItem(ap[13]);
+			 parte3_desarollo_de_clase_15_comboBox_1_1.setSelectedItem(ap[14]);
+			 parte3_desarollo_de_clase_16_comboBox.setSelectedItem(ap[15]);
+			 parte3_desarollo_de_clase_17_comboBox_1_1.setSelectedItem(ap[16]);
+			 parte5_gerencia_18_comboBox_1.setSelectedItem(ap[17]);
+			 parte5_gerencia_19_comboBox_1.setSelectedItem(ap[18]);
+			 parte5_gerencia_20_comboBox_1.setSelectedItem(ap[19]);
+			 parte5_gerencia_21_comboBox_1.setSelectedItem(ap[20]);
+			 parte5_gerencia_22_comboBox_1.setSelectedItem(ap[21]);
+			 parte5_gerencia_23_comboBox_1.setSelectedItem(ap[22]);
+			 parte5_gerencia_24_comboBox_1.setSelectedItem(ap[23]);
+			 parte5_gerencia_25_comboBox_1.setSelectedItem(ap[24]);
+			 parte5_gerencia_26_comboBox_1.setSelectedItem(ap[25]);
+			 parte5_gerencia_27_comboBox.setSelectedItem(ap[26]);
+			 parte5_gerencia_28_comboBox.setSelectedItem(ap[27]);
+			 parte5_gerencia_29_comboBox.setSelectedItem(ap[28]);
+		
 		
 	}
 }
+
+
+
+
