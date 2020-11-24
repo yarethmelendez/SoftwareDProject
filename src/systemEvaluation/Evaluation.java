@@ -176,15 +176,21 @@ public class Evaluation extends JFrame {
 		objetivo_evaluacion_lblNewLabel.setBounds(680, 418, 185, 20);
 		panel.add(objetivo_evaluacion_lblNewLabel);
 		
-		JCheckBox formacion_chckbxNewCheckBox = new JCheckBox("Formativa ");
-		formacion_chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		formacion_chckbxNewCheckBox.setBounds(1059, 416, 106, 25);
-		panel.add(formacion_chckbxNewCheckBox);
+		JComboBox objetivo_eval_comboBox = new JComboBox();
 		
-		JCheckBox sumativa_chckbxNewCheckBox = new JCheckBox("Sumativa");
-		sumativa_chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		sumativa_chckbxNewCheckBox.setBounds(927, 416, 96, 25);
-		panel.add(sumativa_chckbxNewCheckBox);
+		objetivo_eval_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		objetivo_eval_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Formativa", "Sumativa"}));
+		objetivo_eval_comboBox.setBounds(930, 416, 235, 25);
+		panel.add(objetivo_eval_comboBox);
+		
+		objetivo_eval_comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String objetivo = objetivo_eval_comboBox.getSelectedItem().toString();
+				System.out.println("Obejtivo de evaluacion: " + objetivo);
+			}
+		});
+		
+
 		
 		JLabel periodo_evaluado_lblNewLabel = new JLabel("Per\u00EDodo evaluado");
 		periodo_evaluado_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
