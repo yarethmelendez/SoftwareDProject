@@ -26,6 +26,14 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.Window.Type;
+import java.awt.ScrollPane;
+import java.awt.Label;
+import javax.swing.ImageIcon;
+import javax.swing.JLayeredPane;
+import java.awt.GridLayout;
+import javax.swing.JScrollPane;
+import java.awt.BorderLayout;
+import javax.swing.SpringLayout;
 //import com.jgoodies.forms.layout.FormLayout;
 //import com.jgoodies.forms.layout.ColumnSpec;
 //import com.jgoodies.forms.layout.RowSpec;
@@ -1878,7 +1886,23 @@ public class Evaluation extends JFrame {
 		
 		JPanel panel_22 = new JPanel();
 		tabbedPane_3.addTab("New tab", null, panel_22, null);
-		panel_22.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		GroupLayout gl_panel_22 = new GroupLayout(panel_22);
+		gl_panel_22.setHorizontalGroup(
+			gl_panel_22.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 1904, GroupLayout.PREFERRED_SIZE)
+		);
+		gl_panel_22.setVerticalGroup(
+			gl_panel_22.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 932, GroupLayout.PREFERRED_SIZE)
+		);
+		panel_22.setLayout(gl_panel_22);
+		
+		//JLabel lblNewLabel_46 = new JLabel("");
+		//lblNewLabel_46.setHorizontalAlignment(SwingConstants.CENTER);
+		//lblNewLabel_46.setIcon(new ImageIcon("C:\\Users\\natal\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\4GMYY9S5\\Valencias-Catedr\u00E1tico_Aprobada_8_junio_2020[1]-1[2].png"));
+		//scrollPane_1.setViewportView(lblNewLabel_46);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
