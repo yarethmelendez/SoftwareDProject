@@ -20,7 +20,6 @@ public class fileManager {
 		try {
 			loginCreds = new File("./credencials.csv");
 			scanner = new Scanner(loginCreds);
-			//Scanner scanner = new Scanner(new File ("C:\\Users\\biowo\\git\\softwareDesignProject\\Software Design\\DesignProject\\credencials.csv"));
 			
 			while(scanner.hasNextLine() && found != 1) {
 				String data = scanner.nextLine();
@@ -82,7 +81,6 @@ public class fileManager {
 		try {
 			instru = new File("./instrumentos.csv");
 			Scanner scanner = new Scanner(instru);
-			//Scanner scanner = new Scanner(new File ("C:\\Users\\biowo\\git\\softwareDesignProject\\Software Design\\DesignProject\\credencials.csv"));
 			
 			while(scanner.hasNextLine()) {
 				String data = scanner.nextLine();

@@ -30,7 +30,6 @@ public class LogIn implements ActionListener{
 		initialize();
 		
 	}
-
 	/**
 	 * Initialize the contents of the frame.
 	 */

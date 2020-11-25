@@ -31,15 +31,19 @@ public class ContinuarEvaluacion extends JFrame {
 			contentPane.add(lblSelecionaUnaEvaluacion);
 			
 			table = new JTable();
-			table.setBounds(447, 141, 1028, 689);
+			table.setBounds(447, 164, 1028, 666);
 			contentPane.add(table);
 			
-			btnNewButton = new JButton("Salir");
+			btnNewButton = new JButton("Retroceder ");
 			btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-			btnNewButton.setBounds(1746, 24, 145, 46);
+			btnNewButton.setBounds(953, 901, 145, 46);
 			contentPane.add(btnNewButton);
+			
+			JButton btnCargar = new JButton("Cargar");
+			btnCargar.setFont(new Font("Tahoma", Font.BOLD, 15));
+			btnCargar.setBounds(680, 901, 145, 46);
+			contentPane.add(btnCargar);
 		}
-
 	}
 
 
