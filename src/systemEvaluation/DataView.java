@@ -4,7 +4,7 @@ package systemEvaluation;
 import java.io.*;
 
 public class DataView {
-	File file = new File("./dummydata.csv");
+	File file = new File("./instrumentos.csv");
 	String data[][]; // Data holder
 	DataView() throws IOException{
 		int sum = -1;

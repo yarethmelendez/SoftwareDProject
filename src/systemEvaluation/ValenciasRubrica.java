@@ -32,8 +32,9 @@ class asociado{
 	ExternalValues Pg = new ExternalValues();
 	ExternalValues Ph = new ExternalValues();
 	
-	void CalidadDocente()  throws IOException{
+	double[] CalidadDocente(int val)  throws IOException{
 		dv = new DataView();
+		double result[] = new double[8];
 		A = 0.25;
 		B = 0.25;
 		C = 0.25;
@@ -54,6 +55,7 @@ class asociado{
 		Pa.I1P = (M/((M + N)*Pa.I1))+(N/((M+N)*Pa.I1A));
 		Pa.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)+(D*Pa.I4))*(Pa.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
+		result[0] = Pa.puntuacion;
 		
 		//////////Habilidad para organizar el contenido...///////////
 		Pb.I1 = 0;
@@ -66,6 +68,7 @@ class asociado{
 		Pb.I1P = (M/((M + N)*Pa.I1))+(N/((M+N)*Pa.I1A));
 		Pb.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)*(Pb.puntuacionMaxima / 3)) / (1-D);
 		//////////////////////////////////////////////////////////////
+		result[1] = Pb.puntuacion;
 		
 		////////Conocimiento de los desarrollos actuales...//////////
 		Pc.I2 = 0;
@@ -76,6 +79,7 @@ class asociado{
 		Pc.puntuacionMaxima = 10;
 		Pc.puntuacion = ((((B*Pc.I2)+(C*Pa.I3)+(D*Pc.I4))*(Pc.puntuacionMaxima / 3))/(1-A));
 		//////////////////////////////////////////////////////////////
+		result[2] = Pc.puntuacion;
 		
 		////////Habilidad para relacionar la disciplina...//////////
 		Pd.I1 = 0;
@@ -88,6 +92,7 @@ class asociado{
 		Pd.I1P = (M / ((M + N)*Pd.I1)) + (N / ((M + N) * Pd.I1A));
 		Pd.puntuacion = ((A*Pd.I1*(Pd.puntuacionMaxima / 3))+(B*Pd.I2)*(C*Pd.I3*(Pd.puntuacionMaxima / 3))) / (1-D);
 		//////////////////////////////////////////////////////////////
+		result[3] = Pd.puntuacion;
 		
 		//////////Habilidad para promover y ampliar...////////////////
 		Pe.I1 = 0;
@@ -101,6 +106,7 @@ class asociado{
 		Pe.I1P = (M/(M+N)*Pe.I1)+(N/(M+N)*Pe.I1A);
 		Pe.puntuacion = ((A*Pe.I1)+(B*Pe.I2)+(C*Pe.I3)+(D*Pe.I4))*(Pe.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
+		result[4] = Pe.puntuacion;
 		
 		/////////Habilidad para desarrollar y utilizar.../////////////
 		Pf.I1 = 0;
@@ -113,6 +119,7 @@ class asociado{
 		Pf.I1P = (M / ((M + N)*Pd.I1)) + (N / ((M + N) * Pd.I1A));
 		Pf.puntuacion = ((A*Pf.I1)+(B*Pf.I2)+(C*Pf.I3)+(D*Pf.I4))*(Pf.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
+		result[5] = Pf.puntuacion;
 		
 		double I1g = (M/(M+N)*Pg.I1)+(N/(M+N)*Pg.I1A);
 		double I1h = (M/(M+N)*Ph.I1)+(N/(M+N)*Ph.I1A);
@@ -128,6 +135,7 @@ class asociado{
 		Pg.I1P = (Pg.I1 + Ph.I1)/2;
 		Pg.puntuacion = ((A*I1g)+(B*Pg.I2)+(C*Pg.I3)+(D*I4))*(Pg.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
+		result[6] = Pg.puntuacion;
 		
 		///////Posecion de los atributos de integridad.../////////////
 		Ph.I1 = 0;
@@ -139,6 +147,9 @@ class asociado{
 		Ph.I1P = (Pg.I1 + Ph.I1)/2;
 		Ph.puntuacion = ((A*I1h)+(B*Ph.I2)+(C*Ph.I3)+(D*I4))*(Ph.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
+		result[7] = Ph.puntuacion;
+		
+		return result;
 	}
 }
 
