@@ -1,9 +1,12 @@
-//package systemEvaluation;
-//
-//public class DataViewTest {
-//
-//	public static void main(String[] args) {
-//		DataView view = new DataView();
-//	}
-//
-//}
+package systemEvaluation;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class DataViewTest {
+
+	public static void main(String[] args) throws IOException {
+		DataView view = new DataView();
+	}
+
+}
