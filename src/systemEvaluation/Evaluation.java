@@ -30,6 +30,11 @@ import javax.swing.JToolBar;
 import javax.swing.JPopupMenu;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 import javax.swing.JDesktopPane;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -37,10 +42,10 @@ import javax.swing.JMenuItem;
 import javax.swing.JFormattedTextField;
 
 
-public class Evaluation extends JFrame {
+public class Evaluation extends JFrame  {
 	
 	//String bruh = "Empty";
-	String[] values = new String[43];
+	String[] values = new String[60];
 
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -1282,7 +1287,7 @@ public class Evaluation extends JFrame {
 				parte5_gerencia_29_comboBox.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						String parte4Box29 = parte5_gerencia_29_comboBox.getSelectedItem().toString();
-						System.out.println("Box 28: " + parte4Box29);
+						System.out.println("Box 29: " + parte4Box29);
 					}
 				});
 				
@@ -1618,6 +1623,41 @@ public class Evaluation extends JFrame {
 							 System.out.println("Test " + i + ": " +values[i]);
 						 }
 						 /////////////////////////////////////////////////////////
+						 
+						 LogIn user = new LogIn();
+						 
+						 String ID = user.getID();
+						 System.out.print("\n"+ID+" hooooooolaaaaaa\n");
+						 File guardar;
+							
+
+							try {
+								guardar = new File("./instrumentos.csv");
+								FileWriter fw = new FileWriter("./instrumentos.csv",true);
+								BufferedWriter bw = new BufferedWriter(fw);
+								PrintWriter pw = new PrintWriter(bw);
+								
+								pw.println("FALSE"+","+"FALSE"+","+ID+","+values[0]+","+values[1]+","+values[2]+","+values[3]+","+values[4]+
+										","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+values[9]+","+values[10]+","+values[11]+","+values[12]+
+										","+values[13]+","+values[14]+","+values[15]+","+values[16]+","+values[17]+","+values[18]+","+values[19]+","+values[20]
+												+","+values[21]+","+values[22]+","+values[23]+","+values[24]+","+values[25]+","+values[26]+","+values[27]
+														+","+values[28]+","+values[29]+","+values[30]+","+values[31]+","+values[32]+
+														","+values[33]+","+values[34]+","+values[35]+","+values[36]+","+values[37]+","+values[38]+","+values[39]
+																+","+values[40]+","+values[41]+","+values[42]);
+								
+//								for(int i = 0 ; i < values.length ;i++) {
+//									pw.println(values[i]+",");	
+//								}
+								pw.flush();
+								pw.close();
+								
+								
+							}catch(Exception ex) {
+								
+								System.out.print("404 "+ ex);
+							}
+							
+						 
 					}
 				});
 				guardarButton.setBounds(719, 747, 186, 61);

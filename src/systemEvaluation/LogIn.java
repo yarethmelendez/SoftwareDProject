@@ -24,7 +24,7 @@ public class LogIn implements ActionListener{
 	private JTextField numeroFacultad_textField;
 	private JLabel lblNewLabel_3;
 	private JButton btnNewButton;
-
+	private String userName;
 	
 	public LogIn() {
 		initialize();
@@ -84,7 +84,7 @@ public class LogIn implements ActionListener{
 			public void actionPerformed(ActionEvent arg0) {
 			
 				
-				String userName = numeroFacultad_textField.getText();
+				userName = numeroFacultad_textField.getText();
 				String pass = passwordField.getText();
 				int found = 0;
 			
@@ -119,6 +119,14 @@ public class LogIn implements ActionListener{
 		botonRegistrarse.setBounds(873, 631, 172, 29);
 		panel_1.add(botonRegistrarse);
 	}
+	
+	public String getID() {
+		
+		System.out.print("\n"+userName+" baby girl !!\n");
+		return userName;
+		
+	}
+
 
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
