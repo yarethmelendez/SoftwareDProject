@@ -38,6 +38,9 @@ import javax.swing.JFormattedTextField;
 
 
 public class Evaluation extends JFrame {
+	
+	//String bruh = "Empty";
+	String[] values = new String[43];
 
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -139,7 +142,7 @@ public class Evaluation extends JFrame {
 		unidad_academica_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panel.add(unidad_academica_lblNewLabel);
 		
-		Unidadacademica_textField = new JTextField();
+		Unidadacademica_textField = new JTextField(); 
 		Unidadacademica_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		Unidadacademica_textField.setBounds(920, 162, 253, 30);
 		panel.add(Unidadacademica_textField);
@@ -1324,7 +1327,304 @@ public class Evaluation extends JFrame {
 				lblNewLabel_21_3_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 30));
 				lblNewLabel_21_3_1_1_1_1.setBounds(1192, 762, 90, 46);
 				panel_21.add(lblNewLabel_21_3_1_1_1_1);
-		
+				
+				
+				/////////////////////////////////////BOTON GUARDAR //////////////////////////////////////
+				
+				JButton guardarButton = new JButton("Guardar");
+				guardarButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						
+						//Informacion a ingresar
+						
+						 values [0] = Unidadacademica_textField.getText();
+						 values [1] = nombre_prof_textField.getText();
+						 values [2] = rangoAcademico_comboBox.getSelectedItem().toString();
+						 values [3] = departamento_textField.getText();
+						 values [4] = disiplina_textField.getText();
+						 values [5] = objetivo_eval_comboBox.getSelectedItem().toString();
+						 values [6] = periodo_evaluado_textField.getText();
+						 values [7] = jornada_comple_comboBox.getSelectedItem().toString();
+						 values [8] = jornada_parcial_comboBox.getSelectedItem().toString();
+						 values [9] = contrato_comboBox.getSelectedItem().toString();
+						 values [10] = codigo_textField.getText();
+						 values [11] = tutulo_del_curso_textField.getText();
+						 values [12] = modalidad_textField.getText();
+						 values [13] = comboBox_11.getSelectedItem().toString();
+						 
+						if (parte1_perfil_de_estudiante_1_comboBox.getSelectedItem().toString() == " ") {
+							
+							values[14] = "0";
+							
+						} else {
+							
+							values [14] = parte1_perfil_de_estudiante_1_comboBox.getSelectedItem().toString();
+						 
+						}
+						if (parte1_perfil_de_estudiante_2_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [15] = "0";
+							
+						} else {
+							
+						 values [15] = parte1_perfil_de_estudiante_2_comboBox.getSelectedItem().toString();
+						 
+						}
+						if (parte2_estudi_3_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [16] = "0";
+							
+						} else {
+							
+							values [16] = parte2_estudi_3_comboBox.getSelectedItem().toString();
+
+						}
+						if (parte2_estudi_4_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [17] = "0";
+							
+						} else {
+							
+							values [17] = parte2_estudi_4_comboBox.getSelectedItem().toString();
+							
+						}
+						if (parte3_estudi_5_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [18] = "0";
+							
+						} else {
+							
+							values [18] = parte3_estudi_5_comboBox.getSelectedItem().toString();
+
+						}
+						if (parte3_estudi_6_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [19] = "0";
+							
+						} else {
+							
+							values [19] = parte3_estudi_6_comboBox.getSelectedItem().toString();
+
+						}
+						if (parte3_estudi_7_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [20] = "0";
+							
+						} else {
+							
+							values [20] = parte3_estudi_7_comboBox.getSelectedItem().toString();
+
+						}
+						if (parte3_estudi_8_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [21] = "0";
+							
+						} else {
+							
+							values [21] = parte3_estudi_8_comboBox.getSelectedItem().toString();
+	
+						}
+						if (parte3_estudi_9_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [22] = "0";
+							
+						} else {
+							
+							values [22] = parte3_estudi_9_comboBox.getSelectedItem().toString();
+
+						}
+						if (parte3_estudi_10_comboBox_3.getSelectedItem().toString() == " ") {
+							
+							values [23] = "0";
+							
+						} else {
+							
+							values [23] = parte3_estudi_10_comboBox_3.getSelectedItem().toString();
+
+						}
+						if (parte3_estudi_11_comboBox_3.getSelectedItem().toString() == " ") {
+
+							values [24] = "0";
+							
+						} else {
+							
+							values [24] = parte3_estudi_11_comboBox_3.getSelectedItem().toString();
+							
+						}
+						if (parte3_estudi_12_comboBox_3.getSelectedItem().toString() == " ") {
+							
+							values [25] = "0";
+						
+						} else {
+							
+							 values [25] = parte3_estudi_12_comboBox_3.getSelectedItem().toString();
+
+						}
+						if (parte3_desarollo_de_clase_13_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [26] = "0";
+							
+						} else {
+							
+							values [26] = parte3_desarollo_de_clase_13_comboBox.getSelectedItem().toString();
+
+						}
+						if (parte3_desarollo_de_clase_14_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [27] = "0";
+							
+						} else {
+							
+							values [27] = parte3_desarollo_de_clase_14_comboBox.getSelectedItem().toString();
+							
+						}
+						if (parte3_desarollo_de_clase_15_comboBox_1_1.getSelectedItem().toString() == " ") {
+							
+							values [28] = "0";
+							
+						} else {
+							
+							values [28] = parte3_desarollo_de_clase_15_comboBox_1_1.getSelectedItem().toString();
+							
+						}
+						if (parte3_desarollo_de_clase_16_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [29] = "0";
+							
+						} else {
+							
+							values [29] = parte3_desarollo_de_clase_16_comboBox.getSelectedItem().toString();
+
+						}
+						if ( parte3_desarollo_de_clase_17_comboBox_1_1.getSelectedItem().toString() == " ") {
+							
+							values [30] = "0";
+							
+						} else {
+							
+							values [30] = parte3_desarollo_de_clase_17_comboBox_1_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_18_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [31] = "0";
+							
+						} else {
+							
+							values [31] = parte5_gerencia_18_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_19_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [32] = "0";
+							
+						} else {
+							
+							values [32] = parte5_gerencia_19_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_20_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [33] = "0";
+
+						} else {
+							
+							values [33] = parte5_gerencia_20_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_21_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [34] = "0";
+							
+						} else {
+							
+							values [34] = parte5_gerencia_21_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_22_comboBox_1.getSelectedItem().toString() == " ") { 
+							
+							values[35] = "0";
+							
+						} else {
+							
+							values [35] = parte5_gerencia_22_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_23_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [36] = "0";
+							
+						} else {
+							
+							values [36] = parte5_gerencia_23_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_24_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [37] = "0";
+						
+						} else {
+							
+							values [37] = parte5_gerencia_24_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_25_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [38] = "0";
+							
+						} else {
+							
+							values [38] = parte5_gerencia_25_comboBox_1.getSelectedItem().toString();
+							
+						}
+						if (parte5_gerencia_26_comboBox_1.getSelectedItem().toString() == " ") {
+							
+							values [39] = "0";
+							
+						} else {
+							
+							values [39] = parte5_gerencia_26_comboBox_1.getSelectedItem().toString();
+
+						}
+						if (parte5_gerencia_27_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [40] = "0";
+							
+						} else {
+							
+							values [40] = parte5_gerencia_27_comboBox.getSelectedItem().toString();
+
+						} 
+						if (parte5_gerencia_28_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [41] = "0";
+							
+						} else {
+							
+							values [41] = parte5_gerencia_28_comboBox.getSelectedItem().toString();
+
+						} 
+						if (parte5_gerencia_29_comboBox.getSelectedItem().toString() == " ") {
+							
+							values [42] = "0";
+							
+						} else {
+							
+							values [42] = parte5_gerencia_29_comboBox.getSelectedItem().toString();
+						 
+						}
+						 /////////////////TESTING//////////////////////////////
+						 for (int i = 0; i < values.length; i++) {
+							 System.out.println("Test " + i + ": " +values[i]);
+						 }
+						 /////////////////////////////////////////////////////////
+					}
+				});
+				guardarButton.setBounds(719, 747, 186, 61);
+				panel_21.add(guardarButton);
+				
+		//////////////////////// Termina Boton ///////////////////////////////////////
+
 		
 		//////////////////////// Termina Instrumento I //////////////////////////////
 		
