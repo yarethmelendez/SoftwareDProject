@@ -46,21 +46,26 @@ class asociado{
 		int N = dv.ObSums()[1];
 		
 		//////////////////Dominio de la disciplina////////////////////
-		Pa.I1 = dv.ISum(22,31)/9;
+		Pa.I1 = dv.ISum(22,31);
 		Pa.I1A = dv.ISum(21,27)/6;
 		Pa.I1P = (M/((M + N)*Pa.I1))+(N/((M+N)*Pa.I1A));
+		System.out.println("I1P: "+Pa.I1P);
 		
-		Pa.I1 *= Pa.I1P-1;
+		Pa.I1 *= Pa.I1P;
+		System.out.println("I1: "+Pa.I1);
 		Pa.I1A *= Pa.I1P-1;
 		Pa.I2 = dv.ISum(46,62);
-		Pa.I3 = ((dv.ISum(63,68)/6)*0.75);
-		Pa.I3A = ((dv.ISum(63,66)/4)*0.75);
+		System.out.println("I2: "+Pa.I2);
+		Pa.I3 = (dv.ISum(63,68)/6)*0.75;
+		System.out.println("I3: "+Pa.I3);
+		Pa.I3A = (dv.ISum(63,66)/4)*0.75;
 		Pa.I4 = dv.RNum(98)*0.75;
+		System.out.println("I4: "+Pa.I4);
 		Pa.puntuacionMaxima = 15;
 		
 		Pa.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)+(D*Pa.I4))*(Pa.puntuacionMaxima / 3);
-		//////////////////////////////////////////////////////////////
 		result[0] = Pa.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		//////////Habilidad para organizar el contenido...///////////
 		Pb.I1 = (dv.RNum(23)+dv.RNum(27)+dv.RNum(34))/3;
@@ -75,19 +80,19 @@ class asociado{
 		Pb.puntuacionMaxima = 10;
 		
 		Pb.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)*(Pb.puntuacionMaxima / 3)) / (1-D);
-		//////////////////////////////////////////////////////////////
 		result[1] = Pb.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		////////Conocimiento de los desarrollos actuales...//////////
 		Pc.I2 = dv.ISum(46,62);
 		Pc.I3 = (dv.ISum(67,68)/2)*0.75;
 		Pc.I3A = 0;
 		Pc.I4 = dv.RNum(98)*0.75;
-		
 		Pc.puntuacionMaxima = 10;
+		
 		Pc.puntuacion = ((((B*Pc.I2)+(C*Pa.I3)+(D*Pc.I4))*(Pc.puntuacionMaxima / 3))/(1-A));
-		//////////////////////////////////////////////////////////////
 		result[2] = Pc.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		////////Habilidad para relacionar la disciplina...//////////
 		Pd.I1 = dv.RNum(31);
@@ -102,8 +107,8 @@ class asociado{
 		Pd.puntuacionMaxima = 6;
 		
 		Pd.puntuacion = ((A*Pd.I1*(Pd.puntuacionMaxima / 3))+(B*Pd.I2)*(C*Pd.I3*(Pd.puntuacionMaxima / 3))) / (1-D);
-		//////////////////////////////////////////////////////////////
 		result[3] = Pd.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		//////////Habilidad para promover y ampliar...////////////////
 		Pe.I1 = (dv.RNum(21)+dv.RNum(23)+dv.RNum(31)+dv.RNum(33))/4;
@@ -119,8 +124,8 @@ class asociado{
 		Pe.puntuacionMaxima = 7;
 		
 		Pe.puntuacion = ((A*Pe.I1)+(B*Pe.I2)+(C*Pe.I3)+(D*Pe.I4))*(Pe.puntuacionMaxima / 3);
-		//////////////////////////////////////////////////////////////
 		result[4] = Pe.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		/////////Habilidad para desarrollar y utilizar.../////////////
 		Pf.I1 = (dv.RNum(26)+dv.RNum(30)+dv.RNum(39))/3;
@@ -136,8 +141,8 @@ class asociado{
 		Pf.puntuacionMaxima = 9;
 		
 		Pf.puntuacion = ((A*Pf.I1)+(B*Pf.I2)+(C*Pf.I3)+(D*Pf.I4))*(Pf.puntuacionMaxima / 3);
-		//////////////////////////////////////////////////////////////
 		result[5] = Pf.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		double I1g = (M/(M+N)*Pg.I1)+(N/(M+N)*Pg.I1A);
 		double I1h = (M/(M+N)*Ph.I1)+(N/(M+N)*Ph.I1A);
@@ -163,8 +168,8 @@ class asociado{
 		Pg.puntuacionMaxima = 8;
 		
 		Pg.puntuacion = ((A*I1g)+(B*Pg.I2)+(C*Pg.I3)+(D*I4))*(Pg.puntuacionMaxima / 3);
-		//////////////////////////////////////////////////////////////
 		result[6] = Pg.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		///////Posecion de los atributos de integridad.../////////////
 		Ph.I1A = (((I1C-2) < 2 ? 2 : (I1C-2))*4)+(((dv.RNum(31)+dv.RNum(34)+dv.RNum(35)+dv.RNum(36))/4)/2);
@@ -179,8 +184,8 @@ class asociado{
 		Ph.puntuacionMaxima = 8;
 		
 		Ph.puntuacion = ((A*I1h)+(B*Ph.I2)+(C*Ph.I3)+(D*I4))*(Ph.puntuacionMaxima / 3);
-		//////////////////////////////////////////////////////////////
 		result[7] = Ph.puntuacion;
+		//////////////////////////////////////////////////////////////
 		
 		return result;
 	}

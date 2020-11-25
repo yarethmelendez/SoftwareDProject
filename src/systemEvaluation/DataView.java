@@ -36,12 +36,11 @@ public class DataView {
 		int[] MN = {0,0}; // Online / Local surveys
 		
 		for(int i = 0; i < data.length; i++) {
-			if(data[i][16].equals("TRUE")) 
+			if(data[i][16].equals("Manual")) 
 				MN[0]++;
 			else
 				MN[1]++;
 		}
-		
 		return MN;
 	}
 	
@@ -49,7 +48,7 @@ public class DataView {
 		int sum = 0;
 
 		for(int i = 0; i < data.length;i++) {
-			for(int j = start; j < end; j++) { 
+			for(int j = start; j <= end; j++) { 
 				sum += Integer.parseInt(data[i][j]); // Convert string to int
 			}
 		}
