@@ -1,5 +1,7 @@
 package systemEvaluation;
 
+import java.io.IOException;
+
 public class ValenciasRubrica{
 	ValenciasRango rango; // Determina que rango se usa
 
@@ -19,6 +21,7 @@ public class ValenciasRubrica{
 }
 
 class asociado{
+	DataView dv;
 	double A,B,C,D; // Factor influencia del Instrumento
 	ExternalValues Pa = new ExternalValues();
 	ExternalValues Pb = new ExternalValues();
@@ -29,24 +32,26 @@ class asociado{
 	ExternalValues Pg = new ExternalValues();
 	ExternalValues Ph = new ExternalValues();
 	
-	void CalidadDocente() {
+	void CalidadDocente()  throws IOException{
+		dv = new DataView();
 		A = 0.25;
 		B = 0.25;
 		C = 0.25;
 		D = 0.25;
 		
-		//////////////////Dominio de la disciplina////////////////////
-		Pa.I1 = 0;
-		Pa.I1A = 0;
-		Pa.I2 = 0;
-		Pa.I3 = 0;
-		Pa.I3A = 0;
-		Pa.I4 = 0;
+		int M = dv.ObSums()[0];
+		int N = dv.ObSums()[1];
 		
-		Pa.M = 0;
-		Pa.N = 0;
+		//////////////////Dominio de la disciplina////////////////////
+		Pa.I1 = (dv.ISum(22,31)/9)-1;
+		Pa.I1A = (dv.ISum(21,27)/6)-1;
+		Pa.I2 = dv.ISum(46,62);
+		Pa.I3 = ((dv.ISum(63,68)/6)*0.75);
+		Pa.I3A = ((dv.ISum(63,66)/4)*0.75);
+		Pa.I4 = dv.RNum(98)*0.75;
+		
 		Pa.puntuacionMaxima = 15;
-		Pa.I1P = (Pa.M/((Pa.M + Pa.N)*Pa.I1))+(Pa.N/((Pa.M+Pa.N)*Pa.I1A));
+		Pa.I1P = (M/((M + N)*Pa.I1))+(N/((M+N)*Pa.I1A));
 		Pa.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)+(D*Pa.I4))*(Pa.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
 		
@@ -56,11 +61,9 @@ class asociado{
 		Pb.I2 = 0;
 		Pb.I3 = 0;
 		Pb.I3A = 0;
-		
-		Pb.M = 0;
-		Pb.N = 0;
+
 		Pb.puntuacionMaxima = 10;
-		Pb.I1P = (Pa.M/((Pa.M + Pa.N)*Pa.I1))+(Pa.N/((Pa.M+Pa.N)*Pa.I1A));
+		Pb.I1P = (M/((M + N)*Pa.I1))+(N/((M+N)*Pa.I1A));
 		Pb.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)*(Pb.puntuacionMaxima / 3)) / (1-D);
 		//////////////////////////////////////////////////////////////
 		
@@ -80,11 +83,9 @@ class asociado{
 		Pd.I2 = 0;
 		Pd.I3 = 0;
 		Pd.I3A = 0;
-		
-		Pd.M = 0;
-		Pd.N = 0;
+
 		Pd.puntuacionMaxima = 6;
-		Pd.I1P = (Pd.M / ((Pd.M + Pd.N)*Pd.I1)) + (Pd.N / ((Pd.M + Pd.N) * Pd.I1A));
+		Pd.I1P = (M / ((M + N)*Pd.I1)) + (N / ((M + N) * Pd.I1A));
 		Pd.puntuacion = ((A*Pd.I1*(Pd.puntuacionMaxima / 3))+(B*Pd.I2)*(C*Pd.I3*(Pd.puntuacionMaxima / 3))) / (1-D);
 		//////////////////////////////////////////////////////////////
 		
@@ -95,11 +96,9 @@ class asociado{
 		Pe.I3 = 0;
 		Pe.I3A = 0;
 		Pe.I4 = 0;
-		
-		Pe.M = 0;
-		Pe.N = 0;
+
 		Pe.puntuacionMaxima = 7;
-		Pe.I1P = (Pe.M/(Pe.M+Pe.N)*Pe.I1)+(Pe.N/(Pe.M+Pe.N)*Pe.I1A);
+		Pe.I1P = (M/(M+N)*Pe.I1)+(N/(M+N)*Pe.I1A);
 		Pe.puntuacion = ((A*Pe.I1)+(B*Pe.I2)+(C*Pe.I3)+(D*Pe.I4))*(Pe.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
 		
@@ -109,16 +108,14 @@ class asociado{
 		Pf.I2 = 0;
 		Pf.I3 = 0;
 		Pf.I4 = 0;
-		
-		Pf.M = 0;
-		Pf.N = 0;
+
 		Pf.puntuacionMaxima = 9;
-		Pf.I1P = (Pd.M / ((Pd.M + Pd.N)*Pd.I1)) + (Pd.N / ((Pd.M + Pd.N) * Pd.I1A));
+		Pf.I1P = (M / ((M + N)*Pd.I1)) + (N / ((M + N) * Pd.I1A));
 		Pf.puntuacion = ((A*Pf.I1)+(B*Pf.I2)+(C*Pf.I3)+(D*Pf.I4))*(Pf.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
 		
-		double I1g = (Pg.M/(Pg.M+Pg.N)*Pg.I1)+(Pg.N/(Pg.M+Pg.N)*Pg.I1A);
-		double I1h = (Ph.M/(Ph.M+Ph.N)*Ph.I1)+(Ph.N/(Pg.M+Ph.N)*Ph.I1A);
+		double I1g = (M/(M+N)*Pg.I1)+(N/(M+N)*Pg.I1A);
+		double I1h = (M/(M+N)*Ph.I1)+(N/(M+N)*Ph.I1A);
 		double I4 = (Pg.I4 + Ph.I4)/2;
 		
 		//////Disponibilidad y eficacia en la orientacion...//////////
@@ -127,9 +124,7 @@ class asociado{
 		Pg.I2 = 0;
 		Pg.I3 = 0;
 		Pg.I4 = 0;
-		
-		Pg.M = 0;
-		Pg.N = 0;
+
 		Pg.I1P = (Pg.I1 + Ph.I1)/2;
 		Pg.puntuacion = ((A*I1g)+(B*Pg.I2)+(C*Pg.I3)+(D*I4))*(Pg.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
@@ -140,9 +135,7 @@ class asociado{
 		Ph.I2 = 0;
 		Ph.I3 = 0;
 		Ph.I4 = 0;
-		
-		Ph.M = 0;
-		Ph.N = 0;
+
 		Ph.I1P = (Pg.I1 + Ph.I1)/2;
 		Ph.puntuacion = ((A*I1h)+(B*Ph.I2)+(C*Ph.I3)+(D*I4))*(Ph.puntuacionMaxima / 3);
 		//////////////////////////////////////////////////////////////
