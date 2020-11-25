@@ -24,7 +24,7 @@ public class LogIn implements ActionListener{
 	private JTextField numeroFacultad_textField;
 	private JLabel lblNewLabel_3;
 	private JButton btnNewButton;
-	private String userName;
+	static String userName;
 	
 	public LogIn() {
 		initialize();
@@ -85,13 +85,14 @@ public class LogIn implements ActionListener{
 			
 				
 				userName = numeroFacultad_textField.getText();
+				String test = userName;
 				String pass = passwordField.getText();
 				int found = 0;
 			
 		MainMenu m = new MainMenu();
 				
 			fileManager  file = new fileManager();
-			found =	file.login(userName, pass);
+			found =	file.login(getID(), pass);
 				
 		 
 				if (found == 1) {
@@ -121,14 +122,11 @@ public class LogIn implements ActionListener{
 	}
 	
 	public String getID() {
-		
-		System.out.print("\n"+userName+" baby girl !!\n");
 		return userName;
 		
 	}
-
-
-	public void actionPerformed(ActionEvent arg0) {
+	@Override
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}

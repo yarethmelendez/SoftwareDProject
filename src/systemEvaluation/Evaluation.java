@@ -45,7 +45,7 @@ import javax.swing.JFormattedTextField;
 public class Evaluation extends JFrame  {
 	
 	//String bruh = "Empty";
-	String[] values = new String[60];
+	String[] values = new String[45];
 
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
