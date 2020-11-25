@@ -21,12 +21,10 @@ public class DataView {
 		FileReader freader2 = new FileReader(file); // Reopen file
 		BufferedReader reader = new BufferedReader(freader2);
 		
-		System.out.println(data.length);
-		
 		while(reader.readLine() != null) { // Iterate lines
 			for(int i = 0; i < data.length; i++) {
 				test = reader.readLine(); // Read line
-				splitter = test.split(",",104); // Split line
+				splitter = test.split(",",103); // Split line
 				for(int j = 0; j < 103; j++) {
 					data[i][j] = splitter[j]; // Assign values
 				}
@@ -49,17 +47,16 @@ public class DataView {
 	
 	int ISum(int start,int end) { // Sums specific questions
 		int sum = 0;
-		int k = start;
+
 		for(int i = 0; i < data.length;i++) {
-			for(int j = 0; j < end; j++) { 
-				sum += Integer.parseInt(data[i][k]); // Convert string to int
-				k++;
+			for(int j = start; j < end; j++) { 
+				sum += Integer.parseInt(data[i][j]); // Convert string to int
 			}
 		}
 		return sum;
 	}
 	
-	int RNum(int num) {
+	int RNum(int num) { // Sum a single question
 		int sum = 0;
 		int k = num;
 		for(int i = 0; i < data.length;i++) {

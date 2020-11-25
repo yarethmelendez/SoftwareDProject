@@ -6,7 +6,8 @@ import java.io.IOException;
 public class DataViewTest {
 
 	public static void main(String[] args) throws IOException {
-		DataView view = new DataView();
+		ValenciasRubrica vr = new ValenciasRubrica(2);
+		System.out.println(vr.total[7]);
 	}
 
 }
