@@ -35,8 +35,6 @@ public class LogIn implements ActionListener{
 	 */
 	private void initialize() {
 		
-
-
 		frame = new JFrame();
 		frame.setBackground(Color.GREEN);
 		frame.setBounds(-7, 0, 1920, 1080);

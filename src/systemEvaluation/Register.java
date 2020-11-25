@@ -28,9 +28,9 @@ public class Register extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\ec18b863896963.5ac177847630c.png"));
 		setTitle("Registro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(-7, 0, 1920, 1200);
+		setBounds(0, 0, 1920, 1200);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 51));
+		contentPane.setBackground(new Color(250, 250, 210));
 		contentPane.setForeground(new Color(0, 0, 0));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -62,7 +62,7 @@ public class Register extends JFrame {
 		register_btnNewButton.setForeground(Color.BLACK);
 		register_btnNewButton.setBackground(new Color(0, 153, 51));
 		register_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
-		register_btnNewButton.setBounds(820, 546, 226, 54);
+		register_btnNewButton.setBounds(821, 594, 226, 54);
 		contentPane.add(register_btnNewButton);
 		register_btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -98,8 +98,8 @@ public class Register extends JFrame {
 		contentPane.add(titulo_lblNewLabel);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\logo-interamericana.png"));
-		lblNewLabel.setBounds(330, 613, 1475, 403);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\cropped-ss-2.png"));
+		lblNewLabel.setBounds(518, 735, 884, 135);
 		contentPane.add(lblNewLabel);
 		
 		JLabel password_lblNewLabel = new JLabel("Contrase\u00F1a");
