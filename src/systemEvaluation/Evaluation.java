@@ -49,7 +49,6 @@ public class Evaluation extends JFrame {
 	private JTextField codigo_textField;
 	private JTextField tutulo_del_curso_textField;
 	private JTextField modalidad_textField;
-	private JComboBox contrato_comboBox;
 	private JLabel titulo_curso_lblNewLabel;
 	private JTextField servicio_institucion_total_textField;
 	private JTextField calidad_total_textField;
@@ -64,6 +63,13 @@ public class Evaluation extends JFrame {
 	private JTextField textField_2;
 
 
+	private JComboBox rangoAcademico_comboBox = new JComboBox();
+	private JComboBox objetivo_eval_comboBox = new JComboBox();
+	private JComboBox jornada_comple_comboBox = new JComboBox();
+	private JComboBox jornada_parcial_comboBox = new JComboBox();
+	private JComboBox contrato_comboBox = new JComboBox();
+	private JComboBox comboBox_11 = new JComboBox();
+	
 	private JComboBox parte1_perfil_de_estudiante_1_comboBox = new JComboBox();
 	private JComboBox parte1_perfil_de_estudiante_2_comboBox = new JComboBox();
 	private JComboBox parte2_estudi_3_comboBox = new JComboBox();
@@ -182,7 +188,7 @@ public class Evaluation extends JFrame {
 		objetivo_evaluacion_lblNewLabel.setBounds(680, 418, 185, 20);
 		panel.add(objetivo_evaluacion_lblNewLabel);
 		
-		JComboBox objetivo_eval_comboBox = new JComboBox();
+		
 		
 		objetivo_eval_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		objetivo_eval_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Formativa", "Sumativa"}));
@@ -217,7 +223,7 @@ public class Evaluation extends JFrame {
 		jornada_comple_lblNewLabel.setBounds(692, 561, 134, 20);
 		panel.add(jornada_comple_lblNewLabel);
 		
-		JComboBox jornada_comple_comboBox = new JComboBox();
+	
 		
 		jornada_comple_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		jornada_comple_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
@@ -238,7 +244,7 @@ public class Evaluation extends JFrame {
 		jornada_parcial_lblNewLabel.setBounds(969, 561, 107, 20);
 		panel.add(jornada_parcial_lblNewLabel);
 		
-		JComboBox jornada_parcial_comboBox = new JComboBox();
+	
 		jornada_parcial_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		jornada_parcial_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
 		jornada_parcial_comboBox.setBounds(1111, 558, 74, 27);
@@ -317,7 +323,7 @@ public class Evaluation extends JFrame {
 		separator.setBounds(779, 144, 0, 12);
 		panel.add(separator);
 		
-		JComboBox rangoAcademico_comboBox = new JComboBox();
+		
 		
 		rangoAcademico_comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -341,7 +347,7 @@ public class Evaluation extends JFrame {
 		titulo_curso_lblNewLabel_1.setBounds(707, 887, 173, 20);
 		panel.add(titulo_curso_lblNewLabel_1);
 		
-		JComboBox comboBox_11 = new JComboBox();
+		
 		comboBox_11.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		comboBox_11.setModel(new DefaultComboBoxModel(new String[] {"Manual ", "Online"}));
 		comboBox_11.setBounds(893, 888, 226, 22);
@@ -2541,72 +2547,268 @@ public class Evaluation extends JFrame {
 		);
 		panel_2.setLayout(gl_panel_2);
 		
-		comboboxItems ("test", "instru1");
+		//comboboxItems ("test");
 	}
 	
-	public void comboboxItems(String ID, String op1) {
+	public void comboboxItems(String ID) {
 		String bruh = "hola";
 		String[] ap = new String[35];
 		
 		fileManager continueI = new fileManager();
-	    ap = continueI.combobox(ID, op1);
-	
-		 	 parte1_perfil_de_estudiante_1_comboBox.setSelectedItem(ap[0]);
-		 	 if(ap[1] == "0") {
+	    ap = continueI.combobox(ID);
+	    
+	    	Unidadacademica_textField.setText(ap[0]);
+	    	nombre_prof_textField.setText(ap[1]);
+	    	rangoAcademico_comboBox.setSelectedItem(ap[2]);
+	    	departamento_textField.setText(ap[3]);
+	    	disiplina_textField.setText(ap[4]);
+	    	objetivo_eval_comboBox.setSelectedItem(ap[5]) ;
+	    	periodo_evaluado_textField.setText(ap[6]);
+	    	jornada_comple_comboBox.setSelectedItem(ap[7]); 
+	    	jornada_parcial_comboBox.setSelectedItem(ap[8]); 
+	    	contrato_comboBox.setSelectedItem(ap[9]);
+	    	codigo_textField.setText(ap[10]);
+	    	tutulo_del_curso_textField.setText(ap[11]);
+	    	modalidad_textField.setText(ap[12]);
+	    	comboBox_11.setSelectedItem(ap[13]);
+		 	 
+		 	if(ap[14] == "0") {
 		 		parte1_perfil_de_estudiante_2_comboBox.setSelectedIndex(0);
 		 	
 		 	 }
 		 	 else {
-		 		 parte1_perfil_de_estudiante_2_comboBox.setSelectedItem(ap[1]);
+		 		 parte1_perfil_de_estudiante_1_comboBox.setSelectedItem(ap[14]);
+		 	 }
+		 	 if(ap[15] == "0") {
+		 		parte1_perfil_de_estudiante_2_comboBox.setSelectedIndex(0);
+		 	
+		 	 }
+		 	 else {
+		 		 parte1_perfil_de_estudiante_2_comboBox.setSelectedItem(ap[15]);
 		 	 }
 		 	 
-			 parte2_estudi_3_comboBox.setSelectedItem(ap[2]);
-			 parte2_estudi_4_comboBox.setSelectedItem(ap[3]);
-			 parte3_estudi_5_comboBox.setSelectedItem(ap[4]);
-			 parte3_estudi_6_comboBox.setSelectedItem(ap[5]);
-			 parte3_estudi_7_comboBox.setSelectedItem(ap[6]);
-			 parte3_estudi_8_comboBox.setSelectedItem(ap[7]);
-			 parte3_estudi_9_comboBox.setSelectedItem(ap[8]);
-			 parte3_estudi_10_comboBox_3.setSelectedItem(ap[9]);
-			 parte3_estudi_11_comboBox_3.setSelectedItem(ap[10]);
-			 parte3_estudi_12_comboBox_3.setSelectedItem(ap[11]);
-			 parte3_desarollo_de_clase_13_comboBox.setSelectedItem(ap[12]);
-			 parte3_desarollo_de_clase_14_comboBox.setSelectedItem(ap[13]);
-			 parte3_desarollo_de_clase_15_comboBox_1_1.setSelectedItem(ap[14]);
-			 parte3_desarollo_de_clase_16_comboBox.setSelectedItem(ap[15]);
-			 parte3_desarollo_de_clase_17_comboBox_1_1.setSelectedItem(ap[16]);
-			 parte5_gerencia_18_comboBox_1.setSelectedItem(ap[17]);
-			 parte5_gerencia_19_comboBox_1.setSelectedItem(ap[18]);
-			 parte5_gerencia_20_comboBox_1.setSelectedItem(ap[19]);
-			 parte5_gerencia_21_comboBox_1.setSelectedItem(ap[20]);
-			 parte5_gerencia_22_comboBox_1.setSelectedItem(ap[21]);
-			 parte5_gerencia_23_comboBox_1.setSelectedItem(ap[22]);
-			 parte5_gerencia_24_comboBox_1.setSelectedItem(ap[23]);
-			 parte5_gerencia_25_comboBox_1.setSelectedItem(ap[24]);
-			 parte5_gerencia_26_comboBox_1.setSelectedItem(ap[25]);
-			 parte5_gerencia_27_comboBox.setSelectedItem(ap[26]);
-			 parte5_gerencia_28_comboBox.setSelectedItem(ap[27]);
-			 parte5_gerencia_29_comboBox.setSelectedItem(ap[28]);
+		 	 
+		 	 if(ap[16] == "0") {
+		 		parte2_estudi_3_comboBox.setSelectedIndex(0);
+			 	
+			 }
+			 else {
+			 	parte2_estudi_3_comboBox.setSelectedItem(ap[16]);
+			 }
+		 	 
+		 	 if(ap[17] == "0") {
+		 		parte2_estudi_4_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte2_estudi_4_comboBox.setSelectedItem(ap[17]);
+			}
+			 
+		 	if(ap[18] == "0") {
+		 		parte3_estudi_5_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_5_comboBox.setSelectedItem(ap[18]);
+			}
+			 
+		 	if(ap[19] == "0") {
+		 		parte3_estudi_6_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_6_comboBox.setSelectedItem(ap[19]);
+			}
+			 
+		 	if(ap[20] == "0") {
+		 		parte3_estudi_7_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_7_comboBox.setSelectedItem(ap[20]);
+			}
+			 
+			if(ap[21] == "0") {
+				parte3_estudi_8_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_8_comboBox.setSelectedItem(ap[21]);
+			}
+			
+			if(ap[22] == "0") {
+				parte3_estudi_9_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_9_comboBox.setSelectedItem(ap[22]);
+			}
+			 
+			if(ap[23] == "0") {
+				parte3_estudi_10_comboBox_3.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_10_comboBox_3.setSelectedItem(ap[23]);
+			}
+			 
+			if(ap[24] == "0") {
+				parte3_estudi_11_comboBox_3.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_11_comboBox_3.setSelectedItem(ap[24]);
+			}
+			 
+			if(ap[25] == "0") {
+				parte3_estudi_12_comboBox_3.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_estudi_12_comboBox_3.setSelectedItem(ap[25]);
+			}
+			 
+			if(ap[26] == "0") {
+				 parte3_desarollo_de_clase_13_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				 parte3_desarollo_de_clase_13_comboBox.setSelectedItem(ap[26]);
+			}
+			
+			if(ap[27] == "0") {
+				parte3_desarollo_de_clase_14_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_desarollo_de_clase_14_comboBox.setSelectedItem(ap[27]);
+			}
+			
+			if(ap[28] == "0") {
+				parte3_desarollo_de_clase_15_comboBox_1_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_desarollo_de_clase_15_comboBox_1_1.setSelectedItem(ap[28]);
+			}
+			
+			if(ap[29] == "0") {
+				parte3_desarollo_de_clase_16_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_desarollo_de_clase_16_comboBox.setSelectedItem(ap[29]);
+			}
+			
+			if(ap[30] == "0") {
+				parte3_desarollo_de_clase_17_comboBox_1_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte3_desarollo_de_clase_17_comboBox_1_1.setSelectedItem(ap[30]);
+			}
+			 
+			if(ap[31] == "0") {
+				parte5_gerencia_18_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_18_comboBox_1.setSelectedItem(ap[31]);
+			}
+			
+			if(ap[32] == "0") {
+				parte5_gerencia_19_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_19_comboBox_1.setSelectedItem(ap[32]);
+			}
+			 
+			if(ap[33] == "0") {
+				parte5_gerencia_20_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_20_comboBox_1.setSelectedItem(ap[33]);
+			}
+			
+			if(ap[34] == "0") {
+				parte5_gerencia_21_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_21_comboBox_1.setSelectedItem(ap[34]);
+			}
+			 
+			
+			if(ap[35] == "0") {
+				parte5_gerencia_22_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_22_comboBox_1.setSelectedItem(ap[35]);
+			}
+			 
+			if(ap[36] == "0") {
+				parte5_gerencia_23_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_23_comboBox_1.setSelectedItem(ap[36]);
+			}
+			
+			if(ap[37] == "0") {
+				parte5_gerencia_24_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_24_comboBox_1.setSelectedItem(ap[37]);
+			}
+			
+			if(ap[38] == "0") {
+				parte5_gerencia_25_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_25_comboBox_1.setSelectedItem(ap[38]);
+			}
+			
+			if(ap[39] == "0") {
+				parte5_gerencia_26_comboBox_1.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_26_comboBox_1.setSelectedItem(ap[39]);
+			}
+			 
+			if(ap[40] == "0") {
+				parte5_gerencia_27_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_27_comboBox.setSelectedItem(ap[40]);
+			}
+			 
+			if(ap[41] == "0") {
+				parte5_gerencia_28_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_28_comboBox.setSelectedItem(ap[41]);
+			}
+			 
+			if(ap[42] == "0") {
+				parte5_gerencia_29_comboBox.setSelectedIndex(0);
+				 	
+		 	 }
+			else {
+				parte5_gerencia_29_comboBox.setSelectedItem(ap[42]);
+			} 
+			 
 		
 		
 	}
-	private static void addPopup(Component component, final JPopupMenu popup) {
-		component.addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) {
-				if (e.isPopupTrigger()) {
-					showMenu(e);
-				}
-			}
-			public void mouseReleased(MouseEvent e) {
-				if (e.isPopupTrigger()) {
-					showMenu(e);
-				}
-			}
-			private void showMenu(MouseEvent e) {
-				popup.show(e.getComponent(), e.getX(), e.getY());
-			}
-		});
-	}
+	
 }
 
 

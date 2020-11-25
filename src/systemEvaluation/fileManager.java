@@ -70,13 +70,14 @@ public class fileManager {
 		return 0;
 	}
 
-	public String[] combobox(String ID, String op1) {
+	public String[] combobox(String ID) {
 		
 		String[] ops;
 		File instru;
 		int found = 0;
 		
-		String[] ap = new String[30] ;
+		
+		String[] ap = new String[105] ;
 
 		try {
 			instru = new File("./instrumentos.csv");
@@ -84,16 +85,16 @@ public class fileManager {
 			
 			while(scanner.hasNextLine()) {
 				String data = scanner.nextLine();
-				 ops = data.split(",", 50);
+				 ops = data.split(",", 105);
 				System.out.print("reading ");
 			
-				if (ops[2].trim().equals(ID) && ops[3].trim().equals(op1) )
+				if (ops[2].trim().equals(ID) && ops[0].trim().equals("FALSE") && ops[1].trim().equals("FALSE"))
 				{
 				//	System.out.print("\n im in!!!!!!!!!!!");
 				
 
-					int j = 4;
-					for (int i = 0;i < 29; i++ ) {
+					int j = 3;
+					for (int i = 0;i < 100; i++ ) {
 						ap[i]  = ops[j];
 						j++;
 					//System.out.print("\n"+ap[i]+"\n");
