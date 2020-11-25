@@ -295,7 +295,7 @@ public class Evaluation extends JFrame {
 		
 		titulo_curso_lblNewLabel = new JLabel("T\u00EDtulo del Curso ");
 		titulo_curso_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		titulo_curso_lblNewLabel.setBounds(744, 785, 118, 20);
+		titulo_curso_lblNewLabel.setBounds(747, 785, 118, 20);
 		panel.add(titulo_curso_lblNewLabel);
 		
 		tutulo_del_curso_textField = new JTextField();
@@ -305,7 +305,7 @@ public class Evaluation extends JFrame {
 		
 		JLabel modalidad_lblNewLabel = new JLabel("Modalidad");
 		modalidad_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		modalidad_lblNewLabel.setBounds(779, 829, 72, 20);
+		modalidad_lblNewLabel.setBounds(793, 829, 72, 20);
 		panel.add(modalidad_lblNewLabel);
 		
 		modalidad_textField = new JTextField();
@@ -335,6 +335,17 @@ public class Evaluation extends JFrame {
 		lblNewLabel_44.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblNewLabel_44.setBounds(647, 11, 596, 123);
 		panel.add(lblNewLabel_44);
+		
+		JLabel titulo_curso_lblNewLabel_1 = new JLabel("Informaci\u00F3n Ingresada");
+		titulo_curso_lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		titulo_curso_lblNewLabel_1.setBounds(707, 887, 173, 20);
+		panel.add(titulo_curso_lblNewLabel_1);
+		
+		JComboBox comboBox_11 = new JComboBox();
+		comboBox_11.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		comboBox_11.setModel(new DefaultComboBoxModel(new String[] {"Manual ", "Online"}));
+		comboBox_11.setBounds(893, 888, 226, 22);
+		panel.add(comboBox_11);
 		
 		
 		/////////////////////////////// INSTRUMENTO I ///////////////////////////////////////////
