@@ -168,10 +168,10 @@ public class ValenciasRubrica{
 		return result;
 	}
 	
-	void ServicioInstitucion(int choice) throws IOException {
+	double[] ServicioInstitucion(int choice) throws IOException {
 		rango = new ValenciasRango(choice);
 		dv = new DataView();
-		double result[] = new double[7];
+		double result[] = new double[4];
 		B = 0.8; // Autoevaluacion narrativa
 		D = 0.2; // Evaluacion del director
 		int M = dv.ObSums()[0];
@@ -182,6 +182,7 @@ public class ValenciasRubrica{
 		Pa.I4 = (dv.RNum(92) + dv.RNum(100)) * 0.75;
 		
 		Pa.puntuacion = (((B*Pa.I2)+(D*Pa.I4))/2)*(rango.valen2A/3);
+		result[0] = Pa.puntuacion;
 		////////////////////////////////////////////////////////////
 		
 		///////////Participacion y aportacion a reuniones...////////
@@ -198,6 +199,7 @@ public class ValenciasRubrica{
 		
 		Pb.puntuacion = ((B*Pb.I2)+(D*Pb.I4))*(rango.valen2BC/3);
 		Pc.puntuacion = ((B*Pc.I2)+(D*Pc.I4))*(rango.valen2BC/3);
+		result[1] = Pc.puntuacion;
 		////////////////////////////////////////////////////////////
 		
 		////////////Colaboracion en organizaciones...///////////////
@@ -207,6 +209,7 @@ public class ValenciasRubrica{
 		
 		Pd.puntuacion = ((B*Pd.I2)+(D*Pe.I4))*(rango.valen2DE/3);
 		Pe.puntuacion = ((B*Pd.I2)+(D*Pe.I4))*(rango.valen2DE/3);
+		result[2] = Pe.puntuacion;
 		////////////////////////////////////////////////////////////
 		
 		////////////Designacion como director/a...//////////////////
@@ -215,13 +218,16 @@ public class ValenciasRubrica{
 		
 		Pf.puntuacion = Pf.I2*(rango.valen2FG/3);
 		Pg.puntuacion = Pf.I2*(rango.valen2FG/3);
+		result[3] = Pg.puntuacion;
 		////////////////////////////////////////////////////////////
+		
+		return result;
 	}
 	
-	void ServicioComunidad(int choice) throws IOException {
+	double ServicioComunidad(int choice) throws IOException {
 		rango = new ValenciasRango(choice);
 		dv = new DataView();
-		double result[] = new double[2];
+		double result;
 		B = 1.0; // Autoevaluacion narrativa
 		int M = dv.ObSums()[0];
 		int N = dv.ObSums()[1];
@@ -229,12 +235,15 @@ public class ValenciasRubrica{
 		Pa.I2 = dv.ISum(46,62);
 		Pa.puntuacion = (B*Pa.I2)*(rango.valen3AB/3);
 		Pb.puntuacion = (B*Pa.I2)*(rango.valen3AB/3);
+		result = Pb.puntuacion;
+		
+		return result;
 	}
 	
-	void InvestigacionTrabajo(int choice) throws IOException {
+	double[] InvestigacionTrabajo(int choice) throws IOException {
 		rango = new ValenciasRango(choice);
 		dv = new DataView();
-		double result[] = new double[5];
+		double result[] = new double[3];
 		B = 0.9; // Autoevaluacion narrativa
 		D = 0.1; //Evaluacion del director
 		int M = dv.ObSums()[0];
@@ -244,16 +253,23 @@ public class ValenciasRubrica{
 		Pb.I4 = dv.RNum(98)*0.75;
 		
 		Pa.puntuacion = Pa.I2*(rango.valen4A/3);
+		result[0] = Pa.puntuacion;
+		
 		Pb.puntuacion = ((B*Pb.I2)+(D*Pb.I4))*(rango.valen4B/3);
+		result[1] = Pb.puntuacion;
+		
 		Pc.puntuacion = Pa.I2*(rango.valen4CDE/3);
 		Pd.puntuacion = Pa.I2*(rango.valen4CDE/3);
 		Pe.puntuacion = Pa.I2*(rango.valen4CDE/3);
+		result[2] = Pe.puntuacion;
+		
+		return result;
 	}
 	
-	void CrecimientoDesarrollo(int choice) throws IOException {
+	double[] CrecimientoDesarrollo(int choice) throws IOException {
 		rango = new ValenciasRango(choice);
 		dv = new DataView();
-		double result[] = new double[6];
+		double result[] = new double[3];
 		B = 0.9; // Autoevaluacion narrativa
 		D = 0.1; //Evaluacion del director
 		int M = dv.ObSums()[0];
@@ -263,8 +279,15 @@ public class ValenciasRubrica{
 		Pf.I4 = dv.RNum(94)*0.75;
 		
 		Pa.puntuacion = Pa.I2*(rango.valen5ABC/3);
+		result[0] = Pa.puntuacion;
+		
 		Pd.puntuacion = Pa.I2*(rango.valen5D/3);
+		result[1] = Pd.puntuacion;
+		
 		Pe.puntuacion = ((B*Pa.I2)+(D*Pf.I4))+(rango.valen5EF/3);
+		result[2] = Pe.puntuacion;
+		
+		return result;
 	}
 }
 
