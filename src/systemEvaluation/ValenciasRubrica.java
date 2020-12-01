@@ -4,25 +4,6 @@ import java.io.IOException;
 
 public class ValenciasRubrica{
 	ValenciasRango rango; // Determina que rango se usa
-	double[] total;
-
-	ValenciasRubrica(int choice) throws IOException{
-		switch(choice) {
-		case 1:
-			auxiliar aux = new auxiliar();
-			break;
-		case 2:
-			asociado aso = new asociado();
-			total = aso.CalidadDocente();
-			break;
-		case 3:
-			catedratico cat = new catedratico();
-			break;
-		}
-	}
-}
-
-class asociado{
 	DataView dv;
 	double A,B,C,D; // Factor influencia del Instrumento
 	ExternalValues Pa = new ExternalValues();
@@ -34,7 +15,12 @@ class asociado{
 	ExternalValues Pg = new ExternalValues();
 	ExternalValues Ph = new ExternalValues();
 	
-	double[] CalidadDocente()  throws IOException{
+	ValenciasRubrica(){
+		
+	}
+	
+	double[] CalidadDocente(int choice)  throws IOException{
+		rango = new ValenciasRango(choice);
 		dv = new DataView();
 		double result[] = new double[8];
 		A = 0.25;
@@ -61,9 +47,8 @@ class asociado{
 		Pa.I3A = (dv.ISum(63,66)/4)*0.75;
 		Pa.I4 = dv.RNum(98)*0.75;
 		System.out.println("I4: "+Pa.I4);
-		Pa.puntuacionMaxima = 15;
 		
-		Pa.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)+(D*Pa.I4))*(Pa.puntuacionMaxima / 3);
+		Pa.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)+(D*Pa.I4))*(rango.valen1A / 3);
 		result[0] = Pa.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -77,9 +62,8 @@ class asociado{
 		Pb.I2 = dv.ISum(46,62);
 		Pb.I3 = (dv.ISum(46,62)/5)*0.75;
 		Pb.I3A = (dv.ISum(67,76)/10)*0.75;
-		Pb.puntuacionMaxima = 10;
 		
-		Pb.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)*(Pb.puntuacionMaxima / 3)) / (1-D);
+		Pb.puntuacion = ((A*Pa.I1)+(B*Pa.I2)+(C*Pa.I3)*(rango.valen1B / 3)) / (1-D);
 		result[1] = Pb.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -88,9 +72,8 @@ class asociado{
 		Pc.I3 = (dv.ISum(67,68)/2)*0.75;
 		Pc.I3A = 0;
 		Pc.I4 = dv.RNum(98)*0.75;
-		Pc.puntuacionMaxima = 10;
 		
-		Pc.puntuacion = ((((B*Pc.I2)+(C*Pa.I3)+(D*Pc.I4))*(Pc.puntuacionMaxima / 3))/(1-A));
+		Pc.puntuacion = ((((B*Pc.I2)+(C*Pa.I3)+(D*Pc.I4))*(rango.valen1C / 3))/(1-A));
 		result[2] = Pc.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -104,9 +87,8 @@ class asociado{
 		Pd.I2 = dv.ISum(46,62);
 		Pd.I3 = dv.ISum(65,66)*0.75;
 		Pd.I3A = (dv.RNum(64)+dv.RNum(65)+dv.RNum(66))*0.75;
-		Pd.puntuacionMaxima = 6;
 		
-		Pd.puntuacion = ((A*Pd.I1*(Pd.puntuacionMaxima / 3))+(B*Pd.I2)*(C*Pd.I3*(Pd.puntuacionMaxima / 3))) / (1-D);
+		Pd.puntuacion = ((A*Pd.I1*(rango.valen1D / 3))+(B*Pd.I2)*(C*Pd.I3*(rango.valen1D / 3))) / (1-D);
 		result[3] = Pd.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -121,9 +103,8 @@ class asociado{
 		Pe.I3 = dv.ISum(74,78)*0.75;
 		Pe.I3A = dv.ISum(77,81)*0.75;
 		Pe.I4 = dv.RNum(98)*0.75;
-		Pe.puntuacionMaxima = 7;
 		
-		Pe.puntuacion = ((A*Pe.I1)+(B*Pe.I2)+(C*Pe.I3)+(D*Pe.I4))*(Pe.puntuacionMaxima / 3);
+		Pe.puntuacion = ((A*Pe.I1)+(B*Pe.I2)+(C*Pe.I3)+(D*Pe.I4))*(rango.valen1E / 3);
 		result[4] = Pe.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -138,9 +119,8 @@ class asociado{
 		Pf.I3 = dv.ISum(79,82)*0.75;
 		Pf.I3A = ((dv.RNum(67)+dv.RNum(69)+dv.RNum(70)+dv.RNum(71)+dv.RNum(75)+dv.ISum(78,81))/9)*0.75;
 		Pf.I4 = (dv.RNum(98)+dv.RNum(101)+dv.RNum(102))*0.75;
-		Pf.puntuacionMaxima = 9;
 		
-		Pf.puntuacion = ((A*Pf.I1)+(B*Pf.I2)+(C*Pf.I3)+(D*Pf.I4))*(Pf.puntuacionMaxima / 3);
+		Pf.puntuacion = ((A*Pf.I1)+(B*Pf.I2)+(C*Pf.I3)+(D*Pf.I4))*(rango.valen1F / 3);
 		result[5] = Pf.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -165,9 +145,8 @@ class asociado{
 		Pg.I3 = 0;
 		Pg.I3A = dv.RNum(74)*0.75;
 		Pg.I4 = dv.ISum(83, 84)*0.75;
-		Pg.puntuacionMaxima = 8;
 		
-		Pg.puntuacion = ((A*I1g)+(B*Pg.I2)+(C*Pg.I3)+(D*I4))*(Pg.puntuacionMaxima / 3);
+		Pg.puntuacion = ((A*I1g)+(B*Pg.I2)+(C*Pg.I3)+(D*I4))*(rango.valen1GH / 3);
 		result[6] = Pg.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -181,22 +160,135 @@ class asociado{
 		Ph.I3 = dv.RNum(75)*0.75;
 		Ph.I3A = (dv.RNum(73)+dv.RNum(74)+dv.RNum(76))*0.75;
 		Ph.I4 = ((dv.RNum(85)+dv.RNum(86)+dv.ISum(88,93)+dv.RNum(95)+dv.RNum(96)+dv.RNum(100)+dv.RNum(102))/11)*0.75;
-		Ph.puntuacionMaxima = 8;
 		
-		Ph.puntuacion = ((A*I1h)+(B*Ph.I2)+(C*Ph.I3)+(D*I4))*(Ph.puntuacionMaxima / 3);
+		Ph.puntuacion = ((A*I1h)+(B*Ph.I2)+(C*Ph.I3)+(D*I4))*(rango.valen1GH / 3);
 		result[7] = Ph.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
 		return result;
 	}
-}
-
-class auxiliar{
 	
-}
-
-class catedratico{
+	double[] ServicioInstitucion(int choice) throws IOException {
+		rango = new ValenciasRango(choice);
+		dv = new DataView();
+		double result[] = new double[4];
+		B = 0.8; // Autoevaluacion narrativa
+		D = 0.2; // Evaluacion del director
+		int M = dv.ObSums()[0];
+		int N = dv.ObSums()[1];
+		
+		//////////Trabajo en comites de facultad...//////////////////
+		Pa.I2 = dv.ISum(46,62);
+		Pa.I4 = (dv.RNum(92) + dv.RNum(100)) * 0.75;
+		
+		Pa.puntuacion = (((B*Pa.I2)+(D*Pa.I4))/2)*(rango.valen2A/3);
+		result[0] = Pa.puntuacion;
+		////////////////////////////////////////////////////////////
+		
+		///////////Participacion y aportacion a reuniones...////////
+		/////////Servicio en comites y en organizaciones.../////////
+		
+		Pb.I2 = dv.ISum(46,62);
+		Pb.I4 = ((dv.RNum(87)+dv.RNum(88)+dv.RNum(93))/3)*0.75;
+		
+		Pc.I2 = dv.ISum(46,62);
+		Pc.I4 = dv.RNum(92) * 0.75;
+		
+		Pb.I4 = (Pb.I4 + Pc.I4) / 2;
+		Pc.I4 = (Pb.I4 + Pc.I4) / 2;
+		
+		Pb.puntuacion = ((B*Pb.I2)+(D*Pb.I4))*(rango.valen2BC/3);
+		Pc.puntuacion = ((B*Pc.I2)+(D*Pc.I4))*(rango.valen2BC/3);
+		result[1] = Pc.puntuacion;
+		////////////////////////////////////////////////////////////
+		
+		////////////Colaboracion en organizaciones...///////////////
+		///////////Asistencia a actos oficiales/////////////////////
+		Pd.I2 = dv.ISum(46,62);
+		Pe.I4 = dv.RNum(93)*0.75;
+		
+		Pd.puntuacion = ((B*Pd.I2)+(D*Pe.I4))*(rango.valen2DE/3);
+		Pe.puntuacion = ((B*Pd.I2)+(D*Pe.I4))*(rango.valen2DE/3);
+		result[2] = Pe.puntuacion;
+		////////////////////////////////////////////////////////////
+		
+		////////////Designacion como director/a...//////////////////
+		////////Participacion en organismos de gobierno...//////////
+		Pf.I2 = dv.ISum(46,62);
+		
+		Pf.puntuacion = Pf.I2*(rango.valen2FG/3);
+		Pg.puntuacion = Pf.I2*(rango.valen2FG/3);
+		result[3] = Pg.puntuacion;
+		////////////////////////////////////////////////////////////
+		
+		return result;
+	}
 	
+	double ServicioComunidad(int choice) throws IOException {
+		rango = new ValenciasRango(choice);
+		dv = new DataView();
+		double result;
+		B = 1.0; // Autoevaluacion narrativa
+		int M = dv.ObSums()[0];
+		int N = dv.ObSums()[1];
+		
+		Pa.I2 = dv.ISum(46,62);
+		Pa.puntuacion = (B*Pa.I2)*(rango.valen3AB/3);
+		Pb.puntuacion = (B*Pa.I2)*(rango.valen3AB/3);
+		result = Pb.puntuacion;
+		
+		return result;
+	}
+	
+	double[] InvestigacionTrabajo(int choice) throws IOException {
+		rango = new ValenciasRango(choice);
+		dv = new DataView();
+		double result[] = new double[3];
+		B = 0.9; // Autoevaluacion narrativa
+		D = 0.1; //Evaluacion del director
+		int M = dv.ObSums()[0];
+		int N = dv.ObSums()[1];
+		
+		Pa.I2 = dv.ISum(46,62);
+		Pb.I4 = dv.RNum(98)*0.75;
+		
+		Pa.puntuacion = Pa.I2*(rango.valen4A/3);
+		result[0] = Pa.puntuacion;
+		
+		Pb.puntuacion = ((B*Pb.I2)+(D*Pb.I4))*(rango.valen4B/3);
+		result[1] = Pb.puntuacion;
+		
+		Pc.puntuacion = Pa.I2*(rango.valen4CDE/3);
+		Pd.puntuacion = Pa.I2*(rango.valen4CDE/3);
+		Pe.puntuacion = Pa.I2*(rango.valen4CDE/3);
+		result[2] = Pe.puntuacion;
+		
+		return result;
+	}
+	
+	double[] CrecimientoDesarrollo(int choice) throws IOException {
+		rango = new ValenciasRango(choice);
+		dv = new DataView();
+		double result[] = new double[3];
+		B = 0.9; // Autoevaluacion narrativa
+		D = 0.1; //Evaluacion del director
+		int M = dv.ObSums()[0];
+		int N = dv.ObSums()[1];
+		
+		Pa.I2 = dv.ISum(46,62);
+		Pf.I4 = dv.RNum(94)*0.75;
+		
+		Pa.puntuacion = Pa.I2*(rango.valen5ABC/3);
+		result[0] = Pa.puntuacion;
+		
+		Pd.puntuacion = Pa.I2*(rango.valen5D/3);
+		result[1] = Pd.puntuacion;
+		
+		Pe.puntuacion = ((B*Pa.I2)+(D*Pf.I4))+(rango.valen5EF/3);
+		result[2] = Pe.puntuacion;
+		
+		return result;
+	}
 }
 
 class ExternalValues{
@@ -204,6 +296,5 @@ class ExternalValues{
 	int N; // Cantidad de evaliaciones I1A
 	double I1P; // Ecuacion I1
 	double I1,I1A,I2,I3,I3A,I4; // Promedio instrumentos
-	double puntuacionMaxima;
 	double puntuacion;
 }
