@@ -41,7 +41,7 @@ public class Results extends JFrame {
 		
 		
 		ValenciasRubrica vr = new ValenciasRubrica(2);
-		System.out.println(Math.round(vr.total[0]));
+		//System.out.println(Math.round(vr.total[0]));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1920, 1080);
@@ -251,6 +251,7 @@ public class Results extends JFrame {
 		contentPane.add(panel_6_6_1_1_3_1_4_3_1);
 		
 		JTextField textField = new JTextField(""+Math.round(vr.total[0]));
+		textField.setEditable(false);
 		textField.setBounds(1555, 283, 115, 34);
 		contentPane.add(textField);
 		textField.setColumns(10);
