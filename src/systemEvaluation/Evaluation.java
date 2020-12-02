@@ -109,6 +109,30 @@ public class Evaluation extends JFrame  {
 	private JComboBox parte5_gerencia_28_comboBox = new JComboBox();
 	private JComboBox parte5_gerencia_29_comboBox = new JComboBox();
 	
+	
+	
+
+	private JComboBox comboBox = new JComboBox();
+	private JComboBox comboBox_1 = new JComboBox();
+	private JComboBox comboBox_3 = new JComboBox();
+	private JComboBox comboBox_3_1 = new JComboBox();
+	private JComboBox comboBox_4 = new JComboBox();
+	private JComboBox comboBox_4_1 = new JComboBox();
+	private JComboBox comboBox_5 = new JComboBox();
+	private JComboBox comboBox_6 = new JComboBox();
+	private JComboBox comboBox_7 = new JComboBox();
+	private JComboBox comboBox_9 = new JComboBox();
+	private JComboBox comboBox_10 = new JComboBox();
+	private JComboBox comboBox_5_1 = new JComboBox();
+	private JComboBox comboBox_5_2 = new JComboBox();
+	private JComboBox comboBox_5_3 = new JComboBox();
+	private JComboBox comboBox_5_4 = new JComboBox();
+	private JComboBox comboBox_5_5 = new JComboBox();
+	private JComboBox comboBox_5_1_1 = new JComboBox();
+	private JComboBox comboBox_5_1_2 = new JComboBox();
+	private JComboBox comboBox_5_1_3 = new JComboBox();
+	private JComboBox comboBox_5_1_4 = new JComboBox();
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -2429,7 +2453,7 @@ public class Evaluation extends JFrame  {
 		textPane.setBounds(1095, 183, 637, 168);
 		panel_23.add(textPane);
 		
-		JComboBox comboBox = new JComboBox();
+		
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox.setBounds(796, 156, 94, 22);
@@ -2445,13 +2469,13 @@ public class Evaluation extends JFrame  {
 		textPane_1.setBounds(40, 183, 637, 168);
 		panel_23.add(textPane_1);
 		
-		JComboBox comboBox_1 = new JComboBox();
+		
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_1.setBounds(796, 375, 94, 22);
 		panel_23.add(comboBox_1);
 		
-		JComboBox comboBox_3 = new JComboBox();
+		
 		comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_3.setBounds(796, 604, 94, 22);
@@ -2472,7 +2496,7 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_1_1_1.setBounds(1070, 136, 762, 59);
 		panel_23.add(lblNewLabel_48_1_1_1);
 		
-		JComboBox comboBox_3_1 = new JComboBox();
+		
 		comboBox_3_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_3_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_3_1.setBounds(1787, 156, 94, 22);
@@ -2488,7 +2512,7 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_2.setBounds(1072, 364, 404, 41);
 		panel_23.add(lblNewLabel_48_2);
 		
-		JComboBox comboBox_4 = new JComboBox();
+	
 		comboBox_4.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_4.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_4.setBounds(1787, 375, 94, 22);
@@ -2504,7 +2528,7 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_2_1.setBounds(1070, 593, 598, 41);
 		panel_23.add(lblNewLabel_48_2_1);
 		
-		JComboBox comboBox_4_1 = new JComboBox();
+	
 		comboBox_4_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_4_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_4_1.setBounds(1787, 604, 94, 22);
@@ -2594,31 +2618,31 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_6_1.setBounds(1095, 230, 838, 41);
 		panel_24.add(lblNewLabel_48_6_1);
 		
-		JComboBox comboBox_5 = new JComboBox();
+		
 		comboBox_5.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5.setBounds(760, 212, 94, 22);
 		panel_24.add(comboBox_5);
 		
-		JComboBox comboBox_6 = new JComboBox();
+		
 		comboBox_6.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_6.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_6.setBounds(760, 457, 94, 22);
 		panel_24.add(comboBox_6);
 		
-		JComboBox comboBox_7 = new JComboBox();
+	
 		comboBox_7.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_7.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_7.setBounds(760, 685, 94, 22);
 		panel_24.add(comboBox_7);
 		
-		JComboBox comboBox_9 = new JComboBox();
+	
 		comboBox_9.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_9.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_9.setBounds(1782, 212, 94, 22);
 		panel_24.add(comboBox_9);
 		
-		JComboBox comboBox_10 = new JComboBox();
+		
 		comboBox_10.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_10.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_10.setBounds(1782, 474, 94, 22);
@@ -2713,31 +2737,31 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_3_1_3_1_1.setBounds(1056, 580, 891, 41);
 		panel_25.add(lblNewLabel_48_3_1_3_1_1);
 		
-		JComboBox comboBox_5_1 = new JComboBox();
+	
 		comboBox_5_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1.setBounds(841, 239, 94, 22);
 		panel_25.add(comboBox_5_1);
 		
-		JComboBox comboBox_5_2 = new JComboBox();
+	
 		comboBox_5_2.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_2.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_2.setBounds(841, 454, 94, 22);
 		panel_25.add(comboBox_5_2);
 		
-		JComboBox comboBox_5_3 = new JComboBox();
+	
 		comboBox_5_3.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_3.setBounds(841, 678, 94, 22);
 		panel_25.add(comboBox_5_3);
 		
-		JComboBox comboBox_5_4 = new JComboBox();
+	
 		comboBox_5_4.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_4.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_4.setBounds(1791, 239, 94, 22);
 		panel_25.add(comboBox_5_4);
 		
-		JComboBox comboBox_5_5 = new JComboBox();
+	
 		comboBox_5_5.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_5.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_5.setBounds(1791, 559, 94, 22);
@@ -2812,25 +2836,25 @@ public class Evaluation extends JFrame  {
 		panel_6_6_1_2_1_1.setBounds(909, 211, 10, 796);
 		panel_26.add(panel_6_6_1_2_1_1);
 		
-		JComboBox comboBox_5_1_1 = new JComboBox();
+	
 		comboBox_5_1_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_1.setBounds(790, 277, 94, 22);
 		panel_26.add(comboBox_5_1_1);
 		
-		JComboBox comboBox_5_1_2 = new JComboBox();
+
 		comboBox_5_1_2.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_2.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_2.setBounds(790, 585, 94, 22);
 		panel_26.add(comboBox_5_1_2);
 		
-		JComboBox comboBox_5_1_3 = new JComboBox();
+		
 		comboBox_5_1_3.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_3.setBounds(1788, 279, 94, 22);
 		panel_26.add(comboBox_5_1_3);
 		
-		JComboBox comboBox_5_1_4 = new JComboBox();
+
 		comboBox_5_1_4.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_4.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_4.setBounds(1788, 572, 94, 22);
@@ -2849,7 +2873,7 @@ public class Evaluation extends JFrame  {
 		);
 		panel_2.setLayout(gl_panel_2);
 		
-		//comboboxItems ("test");
+		comboboxItems ("test");
 	}
 	
 	public void comboboxItems(String ID) {
@@ -3107,7 +3131,170 @@ public class Evaluation extends JFrame  {
 				parte5_gerencia_29_comboBox.setSelectedItem(ap[42]);
 			} 
 			 
-		
+			////////////////////////////Instrument 3//////////////////////////////////////
+			if(ap[60] == "0") {
+			comboBox.setSelectedIndex(0); 
+			
+			}
+			else {
+				comboBox.setSelectedItem(ap[60]); 
+			}
+			if(ap[61] == "0") {
+				comboBox_1.setSelectedIndex(0);
+			
+			}
+			else {
+				comboBox_1.setSelectedItem(ap[61]);
+			}
+			
+			
+			if(ap[62] == "0") {
+				comboBox_3.setSelectedIndex(0); 
+				
+			}
+			else {
+			 comboBox_3.setSelectedItem(ap[62]);
+			}
+			
+			if(ap[63] == "0") {
+				comboBox_3_1.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_3_1.setSelectedItem(ap[63]);
+			}
+			
+			if(ap[64] == "0") {
+				comboBox_4.setSelectedIndex(0); 
+			 	
+			}
+			else {
+			comboBox_4.setSelectedItem(ap[64]);
+			}
+			
+			if(ap[65] == "0") {
+				comboBox_4_1.setSelectedIndex(0); 
+			 	
+			}
+			else {
+			comboBox_4_1.setSelectedItem(ap[65]);
+			}
+			
+			if(ap[66] == "0") {
+				comboBox_5.setSelectedIndex(0); 
+			 	
+			}
+			else {
+			comboBox_5.setSelectedItem(ap[66]);
+			}
+			
+			if(ap[67] == "0") {
+			comboBox_6.setSelectedIndex(0); 
+			 	
+			}
+			else {
+			comboBox_6.setSelectedItem(ap[67]);
+			}
+			
+			if(ap[68] == "0") {
+			comboBox_7.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_7.setSelectedItem(ap[68]);
+			}
+			
+			if(ap[69] == "0") {
+			comboBox_9.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_9.setSelectedItem(ap[69]);
+			}
+			
+			if(ap[70] == "0") {
+			comboBox_10.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_10.setSelectedItem(ap[70]);
+			}
+			
+			if(ap[71] == "0") {
+			comboBox_5_1.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_1.setSelectedItem(ap[71]);
+			}
+			
+			if(ap[72] == "0") {
+			comboBox_5_2.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_2.setSelectedItem(ap[72]);
+			}
+			
+			if(ap[73] == "0") {
+			comboBox_5_3.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_3.setSelectedItem(ap[73]);
+			}
+			
+			if(ap[74] == "0") {
+			comboBox_5_4.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_4.setSelectedItem(ap[74]);
+			}
+			
+			if(ap[75] == "0") {
+			comboBox_5_5.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_5.setSelectedItem(ap[75]);
+			}
+			
+			if(ap[76] == "0") {
+			comboBox_5_1_1.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_1_1.setSelectedItem(ap[76]);
+			}
+			
+			if(ap[77] == "0") {
+			comboBox_5_1_2.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_1_2.setSelectedItem(ap[77]);
+			}
+			
+			if(ap[78] == "0") {
+			comboBox_5_1_3.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_1_3.setSelectedItem(ap[78]);
+			}
+			
+			if(ap[79] == "0") {
+			comboBox_5_1_4.setSelectedIndex(0);
+			 	
+			}
+			else {
+			comboBox_5_1_4.setSelectedItem(ap[79]);
+			}
+						
+			
+			
+			
 		
 	}
 }
