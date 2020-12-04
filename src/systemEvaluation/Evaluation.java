@@ -45,8 +45,7 @@ import javax.swing.JTextArea;
 
 public class Evaluation extends JFrame  {
 
-	//String bruh = "Empty";
-	String[] values = new String[45];
+	String[] values = new String[62];
 
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -1088,7 +1087,10 @@ public class Evaluation extends JFrame  {
 		parte5_gerencia_28_comboBox.setBounds(1092, 97, 159, 38);
 		panel_16_3.add(parte5_gerencia_28_comboBox);
 
-
+		parte5_gerencia_29_comboBox.setModel(new DefaultComboBoxModel(new String[] {" ","1", "2", "3", "4"}));
+		parte5_gerencia_29_comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
+		parte5_gerencia_29_comboBox.setBounds(1092, 303, 159, 38);
+		panel_16_3.add(parte5_gerencia_29_comboBox);
 
 		JLabel lblNewLabel_42_3_1 = new JLabel(" dudas relacionadas con los temas del curso y sus evaluaciones.");
 		lblNewLabel_42_3_1.setFont(new Font("Tahoma", Font.BOLD, 21));
@@ -1436,17 +1438,12 @@ public class Evaluation extends JFrame  {
 					BufferedWriter bw = new BufferedWriter(fw);
 					PrintWriter pw = new PrintWriter(bw);
 
-					pw.println("FALSE"+","+"FALSE"+","+ID+","+values[0]+","+values[1]+","+values[2]+","+values[3]+","+values[4]+
-							","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+values[9]+","+values[10]+","+values[11]+","+values[12]+
-							","+values[13]+","+values[14]+","+values[15]+","+values[16]+","+values[17]+","+values[18]+","+values[19]+","+values[20]
-									+","+values[21]+","+values[22]+","+values[23]+","+values[24]+","+values[25]+","+values[26]+","+values[27]
-											+","+values[28]+","+values[29]+","+values[30]+","+values[31]+","+values[32]+
-											","+values[33]+","+values[34]+","+values[35]+","+values[36]+","+values[37]+","+values[38]+","+values[39]
-													+","+values[40]+","+values[41]+","+values[42]);
+					pw.print("FALSE"+","+"FALSE"+","+ID+",");
 
-					//								for(int i = 0 ; i < values.length ;i++) {
-					//									pw.println(values[i]+",");	
-					//								}
+					for(int i = 0 ; i < values.length ;i++) {
+						pw.print(values[i]+",");	
+					}
+					pw.println(" ");
 					pw.flush();
 					pw.close();
 
@@ -2647,7 +2644,7 @@ public class Evaluation extends JFrame  {
 				);
 		panel_2.setLayout(gl_panel_2);
 
-		comboboxItems ("test");
+		//comboboxItems ("test");
 	}
 
 	public void comboboxItems(String ID) {
