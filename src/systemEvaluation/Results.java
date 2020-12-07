@@ -40,7 +40,7 @@ public class Results extends JFrame {
 	public Results() throws IOException {
 		
 		
-		ValenciasRubrica vr = new ValenciasRubrica(2);
+		ValenciasRubrica vr = new ValenciasRubrica();
 		//System.out.println(Math.round(vr.total[0]));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -250,43 +250,43 @@ public class Results extends JFrame {
 		panel_6_6_1_1_3_1_4_3_1.setBounds(306, 945, 1442, 4);
 		contentPane.add(panel_6_6_1_1_3_1_4_3_1);
 		
-		JTextField textField = new JTextField(""+Math.round(vr.total[0]));
+		JTextField textField = new JTextField(""+Math.round(vr.CalidadDocente(1)[0]));
 		textField.setEditable(false);
 		textField.setBounds(1555, 283, 115, 34);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JTextField textField_1 = new JTextField(""+Math.round(vr.total[1]));
+		JTextField textField_1 = new JTextField(""+Math.round(vr.CalidadDocente(1)[0]));
 		textField_1.setColumns(10);
 		textField_1.setBounds(1555, 356, 115, 34);
 		contentPane.add(textField_1);
 		
-		JTextField textField_2 = new JTextField(""+Math.round(vr.total[2]));
+		JTextField textField_2 = new JTextField(""+Math.round(vr.CalidadDocente(1)[1]));
 		textField_2.setColumns(10);
 		textField_2.setBounds(1555, 430, 115, 34);
 		contentPane.add(textField_2);
 		
-		JTextField textField_3 = new JTextField(""+Math.round(vr.total[3]));
+		JTextField textField_3 = new JTextField(""+Math.round(vr.CalidadDocente(1)[2]));
 		textField_3.setColumns(10);
 		textField_3.setBounds(1555, 505, 115, 34);
 		contentPane.add(textField_3);
 		
-		JTextField textField_4 = new JTextField(""+Math.round(vr.total[4]));
+		JTextField textField_4 = new JTextField(""+Math.round(vr.CalidadDocente(1)[3]));
 		textField_4.setColumns(10);
 		textField_4.setBounds(1555, 579, 115, 34);
 		contentPane.add(textField_4);
 		
-		JTextField textField_5 = new JTextField(""+Math.round(vr.total[5]));
+		JTextField textField_5 = new JTextField(""+Math.round(vr.CalidadDocente(1)[4]));
 		textField_5.setColumns(10);
 		textField_5.setBounds(1555, 673, 115, 34);
 		contentPane.add(textField_5);
 		
-		JTextField textField_6 = new JTextField(""+Math.round(vr.total[6]));
+		JTextField textField_6 = new JTextField(""+Math.round(vr.CalidadDocente(1)[5]));
 		textField_6.setColumns(10);
 		textField_6.setBounds(1555, 796, 115, 34);
 		contentPane.add(textField_6);
 		
-		JTextField textField_7 = new JTextField(""+Math.round(vr.total[7]));
+		JTextField textField_7 = new JTextField(""+Math.round(vr.CalidadDocente(1)[6]));
 		textField_7.setColumns(10);
 		textField_7.setBounds(1555, 900, 115, 34);
 		contentPane.add(textField_7);
