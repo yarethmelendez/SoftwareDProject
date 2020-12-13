@@ -3,14 +3,13 @@ package systemEvaluation;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
 import javax.swing.Box;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -26,16 +25,11 @@ import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
-import javax.swing.JToolBar;
-import javax.swing.JPopupMenu;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-import javax.swing.JDesktopPane;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -2454,18 +2448,47 @@ public class Evaluation extends JFrame  {
 		panel_26.add(comboBox_5_1_4);
 
 		////////////////////////panel instrumento IV//////////////////////////////////////////
-		JPanel panel_2 = new JPanel();
-		panel_2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
-		gl_panel_2.setHorizontalGroup(
-				gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 1797, Short.MAX_VALUE)
-				);
-		gl_panel_2.setVerticalGroup(
-				gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGap(0, 800, Short.MAX_VALUE)
-				);
-		panel_2.setLayout(gl_panel_2);
+		JTabbedPane tabbedPane_4 = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.addTab("Instrumeto IV", null, tabbedPane_4, null);
+
+		JPanel panel_29 = new JPanel();
+		tabbedPane_4.addTab("New tab", null, panel_29, null);
+		panel_29.setLayout(null);
+
+		JLabel lblNewLabel_44_1_2 = new JLabel(" Evaluaci\u00F3n del Director");
+		lblNewLabel_44_1_2.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44_1_2.setBounds(392, 11, 639, 123);
+		panel_29.add(lblNewLabel_44_1_2);
+
+		////////////////////////////Menu bar//////////////////////////////////////////////////
+		var menuBar = new JMenuBar();
+
+		var fileMenu = new JMenu("Guardar");///// menu option
+		fileMenu.setFont(new Font("Segoe UI", Font.BOLD, 17));
+		fileMenu.setMnemonic(KeyEvent.VK_F);
+
+
+		var eMenuItem1 = new JMenuItem("Guardar");
+		eMenuItem1.addActionListener(new ActionListener() {//// item 1
+			public void actionPerformed(ActionEvent arg0) {/// action listener 
+			}
+		});
+		eMenuItem1.setMnemonic(KeyEvent.VK_E);
+
+
+		fileMenu.add(eMenuItem1);
+		menuBar.add(fileMenu);
+
+		JMenuItem eMenuItem1_1 = new JMenuItem("Continuar Luego");//// item 2
+		eMenuItem1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {/// action listener 
+
+			}
+		});
+		eMenuItem1_1.setMnemonic(KeyEvent.VK_E);
+		fileMenu.add(eMenuItem1_1);
+
+		setJMenuBar(menuBar);
 
 		////////////////////////////Menu bar finish//////////////////////////////////////////////////
 
