@@ -52,6 +52,15 @@ public class MainMenu extends JFrame implements ActionListener {
 		contentPane.add(continue_btnNewButton);
 		
 		JButton erase_btnNewButton = new JButton("Borrar data existente");
+		erase_btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				BorrarEvaluacion e = new BorrarEvaluacion();
+				e.setVisible(true);
+				dispose();
+				
+				
+			}
+		});
 		erase_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
 		erase_btnNewButton.setBounds(810, 494, 239, 23);
 		contentPane.add(erase_btnNewButton);

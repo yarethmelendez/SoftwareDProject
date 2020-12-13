@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ContinuarEvaluacion extends JFrame {
 
@@ -35,13 +37,23 @@ public class ContinuarEvaluacion extends JFrame {
 			contentPane.add(table);
 			
 			btnNewButton = new JButton("Retroceder ");
+			btnNewButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					
+					MainMenu i = new MainMenu();
+					i.setVisible(true);
+					dispose(); 
+					
+				}
+				
+			});
 			btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-			btnNewButton.setBounds(953, 901, 145, 46);
+			btnNewButton.setBounds(1081, 901, 145, 46);
 			contentPane.add(btnNewButton);
 			
 			JButton btnCargar = new JButton("Cargar");
 			btnCargar.setFont(new Font("Tahoma", Font.BOLD, 15));
-			btnCargar.setBounds(680, 901, 145, 46);
+			btnCargar.setBounds(745, 901, 145, 46);
 			contentPane.add(btnCargar);
 		}
 	}
