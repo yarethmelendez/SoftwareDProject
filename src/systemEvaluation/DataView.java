@@ -7,6 +7,7 @@ public class DataView {
 	File file = new File("./instrumentos.csv");
 	File file2 = new File("./temp.csv"); // Holds non-deletable data
 	String data[][]; // Data holder
+	
 	DataView() throws IOException{
 		int sum = 0;
 		FileReader freader = new FileReader(file);
@@ -26,6 +27,7 @@ public class DataView {
 			}
 		}
 		
+		counter.close();
 		writer.close();
 		data = new String[sum][103];
 		System.out.println("Number of evals: "+data.length);
@@ -38,18 +40,16 @@ public class DataView {
 		while(reader.readLine() != null) { // Iterate lines
 			for(int i = 0; i < data.length; i++) {
 				test = reader.readLine(); // Read line
-				System.out.println("Test: "+test);
 				splitter = test.split(",",103); // Split line
 				for(int j = 0; j < 103; j++) {
 					data[i][j] = splitter[j]; // Assign values
 				}
 			}
 		}
-		
-		ObSums();
+		reader.close();
 	}
 	
-	int[] ObSums() {
+	int[] ObSums() { // Separates online and local surveys
 		int[] MN = {0,0}; // Online / Local surveys
 		
 		for(int i = 0; i < data.length; i++) {
@@ -69,6 +69,8 @@ public class DataView {
 				sum += Integer.parseInt(data[i][j]); // Convert string to int
 			}
 		}
+		
+		sum /= data.length;
 		return sum;
 	}
 	
@@ -78,6 +80,8 @@ public class DataView {
 		for(int i = 0; i < data.length;i++) {
 			sum += Integer.parseInt(data[i][k]); // Convert string to int
 		}
+		
+		sum /= data.length;
 		return sum;
 	}
 }
