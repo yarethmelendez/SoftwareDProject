@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.print.PrinterException;
 
 import javax.swing.Box;
 import javax.swing.DefaultComboBoxModel;
@@ -36,6 +37,12 @@ import javax.swing.JMenuItem;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextArea;
 import javax.swing.JSpinner;
+import java.awt.FlowLayout;
+import javax.swing.BoxLayout;
+import java.awt.BorderLayout;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JScrollPane;
 
 
 public class Evaluation extends JFrame  {
@@ -3205,7 +3212,7 @@ public class Evaluation extends JFrame  {
 		
 		JPanel panel_9 = new JPanel();
 		panel_9.setLayout(null);
-		panel_9.setBounds(-64, 0, 1904, 945);
+		panel_9.setBounds(-64, 0, 1977, 945);
 		panel_34.add(panel_9);
 		
 		JLabel lblNewLabel_48_10_3_4 = new JLabel("13. Mantiene un clima de respeto con los colegas y con los compa\u00F1eros de trabajo.\r");
@@ -3215,7 +3222,7 @@ public class Evaluation extends JFrame  {
 		
 		JPanel panel_6_6_1_1_4_1_1 = new JPanel();
 		panel_6_6_1_1_4_1_1.setBackground(SystemColor.textInactiveText);
-		panel_6_6_1_1_4_1_1.setBounds(0, 104, 1904, 10);
+		panel_6_6_1_1_4_1_1.setBounds(62, 104, 1904, 10);
 		panel_9.add(panel_6_6_1_1_4_1_1);
 		
 		JLabel lblNewLabel_44_1_2_1_1_1 = new JLabel(" Evaluaci\u00F3n del Director");
@@ -3400,11 +3407,57 @@ public class Evaluation extends JFrame  {
 		tabbedPane.addTab("Resultados", null, tabbedPane_4, null);
 		
 		JPanel panel_2 = new JPanel();
-		tabbedPane_4.addTab("New tab", null, panel_2, null);
-		panel_2.setLayout(null);
+		tabbedPane_4.addTab("Resultados", null, panel_2, null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		
+		JButton btnNewButton = new JButton("Print");
+		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
+		gl_panel_2.setHorizontalGroup(
+			gl_panel_2.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_2.createSequentialGroup()
+					.addGap(78)
+					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
+					.addGap(203)
+					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 1231, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(281, Short.MAX_VALUE))
+		);
+		gl_panel_2.setVerticalGroup(
+			gl_panel_2.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_2.createSequentialGroup()
+					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_2.createSequentialGroup()
+							.addGap(23)
+							.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 852, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel_2.createSequentialGroup()
+							.addGap(63)
+							.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap(83, Short.MAX_VALUE))
+		);
+		
+		JTextArea textArea_7 = new JTextArea();
+		scrollPane.setViewportView(textArea_7);
+		panel_2.setLayout(gl_panel_2);
+		
+		JButton btnNewButton8 = new JButton("Print");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+		
+		try {
+
+			textArea_7.print();
+			}
+			catch (PrinterException e1)
+			{
+			e1.printStackTrace();
+			}
+			}
+		});
+		btnNewButton.setBounds(177, 459, 89, 23);
+		tabbedPane.add(btnNewButton);
 	}
-
-
+	
 	public void comboboxItems(String ID) {
 		String bruh = "hola";
 		String[] ap = new String[62];
