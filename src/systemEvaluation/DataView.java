@@ -20,7 +20,7 @@ public class DataView {
 		
 		while(counter.readLine() != null) { // Count observations
 			test = counter.readLine(); // Read line
-			splitter = test.split(",",103); // Split line
+			splitter = test.split(",",145); // Split line
 			if(splitter[0].equals("FALSE")) { // If not-deletable, add to temp
 				sum++;
 				writer.write(test+"\n");
@@ -29,7 +29,7 @@ public class DataView {
 		
 		counter.close();
 		writer.close();
-		data = new String[sum][103];
+		data = new String[sum][145];
 		System.out.println("Number of evals: "+data.length);
 		
 		/////////////////////////////////////////////////////////////////////
@@ -40,8 +40,8 @@ public class DataView {
 		while(reader.readLine() != null) { // Iterate lines
 			for(int i = 0; i < data.length; i++) {
 				test = reader.readLine(); // Read line
-				splitter = test.split(",",103); // Split line
-				for(int j = 0; j < 103; j++) {
+				splitter = test.split(",",145); // Split line
+				for(int j = 0; j < 145; j++) {
 					data[i][j] = splitter[j]; // Assign values
 				}
 			}
@@ -61,8 +61,9 @@ public class DataView {
 		return MN;
 	}
 	
-	int ISum(int start,int end) { // Sums specific questions
+	int ISum(int start,int end) { // Sums a row of questions
 		int sum = 0;
+		int questions = (end+1) - start;
 
 		for(int i = 0; i < data.length;i++) {
 			for(int j = start; j <= end; j++) { 
@@ -70,7 +71,8 @@ public class DataView {
 			}
 		}
 		
-		sum /= data.length;
+		sum /= questions; // Get average by number of questions
+		sum /= data.length; // Get average by number of evaluations
 		return sum;
 	}
 	
