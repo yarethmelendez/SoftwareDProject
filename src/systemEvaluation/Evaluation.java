@@ -2984,7 +2984,7 @@ public class Evaluation extends JFrame  {
 	
 
 		JTabbedPane tabbedPane_6 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane_5.addTab("RESPONSABILIDADES y DEBERES COMO FACULTAD", null, tabbedPane_6, null);
+		tabbedPane_5.addTab("Responsabilidades y deberes como facultad", null, tabbedPane_6, null);
 		
 		JPanel panel_32 = new JPanel();
 		tabbedPane_6.addTab("1", null, panel_32, null);
@@ -3095,8 +3095,9 @@ public class Evaluation extends JFrame  {
 		panel_8_1.add(lblNewLabel_48_10_3);
 		
 		JLabel lblNewLabel_48_10_3_1 = new JLabel("tiempo establecido por la Universidad y la unidad acad\u00E9mica, los siguientes \r");
+		lblNewLabel_48_10_3_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_48_10_3_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblNewLabel_48_10_3_1.setBounds(33, 167, 760, 41);
+		lblNewLabel_48_10_3_1.setBounds(33, 167, 772, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_1);
 		
 		JLabel lblNewLabel_48_10_3_1_1 = new JLabel("documentos: el cotejo de listas, el informe de estudiantes que nunca han ");
@@ -3239,7 +3240,7 @@ public class Evaluation extends JFrame  {
 		panel_9.add(textPane_1_7_3_3_1);
 		
 		JPanel panel_27 = new JPanel();
-		tabbedPane_5.addTab("TAREAS ACAD\u00C9MICAS", null, panel_27, null);
+		tabbedPane_5.addTab("Tareas académicas", null, panel_27, null);
 		panel_27.setLayout(null);
 		
 		JLabel lblNewLabel_44_1_2_1_1_1_1 = new JLabel(" Evaluaci\u00F3n del Director");
