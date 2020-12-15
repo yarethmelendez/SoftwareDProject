@@ -61,8 +61,9 @@ public class DataView {
 		return MN;
 	}
 	
-	int ISum(int start,int end) { // Sums specific questions
+	int ISum(int start,int end) { // Sums a row of questions
 		int sum = 0;
+		int questions = (end+1) - start;
 
 		for(int i = 0; i < data.length;i++) {
 			for(int j = start; j <= end; j++) { 
@@ -70,7 +71,8 @@ public class DataView {
 			}
 		}
 		
-		sum /= data.length;
+		sum /= questions; // Get average by number of questions
+		sum /= data.length; // Get average by number of evaluations
 		return sum;
 	}
 	
