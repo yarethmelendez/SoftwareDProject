@@ -268,7 +268,7 @@ public class Evaluation extends JFrame  {
 		
 		DataView ec = new DataView();
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\ec18b863896963.5ac177847630c.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
 		setTitle("Evaluacion ");
 		setBackground(SystemColor.infoText);
 
@@ -1362,7 +1362,7 @@ public class Evaluation extends JFrame  {
 		panel_28.add(spinner_5_1);
 
 		JPanel panel_33 = new JPanel();
-		tabbedPane_7.addTab("Servicio a la Institución ", null, panel_33, null);
+		tabbedPane_7.addTab("Servicio a la Instituciï¿½n ", null, panel_33, null);
 		panel_33.setLayout(null);
 
 		JPanel panel_28_1 = new JPanel();
@@ -1619,7 +1619,7 @@ public class Evaluation extends JFrame  {
 		panel_28_1_1.add(spinner_6_1);
 
 		JPanel panel_36 = new JPanel();
-		tabbedPane_7.addTab("Investigación y Trabajo Creativo", null, panel_36, null);
+		tabbedPane_7.addTab("Investigaciï¿½n y Trabajo Creativo", null, panel_36, null);
 		panel_36.setLayout(null);
 
 		JPanel panel_28_1_2 = new JPanel();
@@ -2404,7 +2404,7 @@ public class Evaluation extends JFrame  {
 
 
 		JLabel lblNewLabel_45 = new JLabel("");
-		lblNewLabel_45.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\Screenshots\\Screenshot 2020-11-24 175722.jpg"));
+		lblNewLabel_45.setIcon(new ImageIcon("./Rubrica.jpeg"));
 		lblNewLabel_45.setBounds(513, 283, 1014, 486);
 		panel_22.add(lblNewLabel_45);
 
@@ -3794,7 +3794,7 @@ public class Evaluation extends JFrame  {
 		panel_29.add(lblNewLabel_44_1_2);
 
 		JLabel lblNewLabel_21 = new JLabel("");
-		lblNewLabel_21.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\Screenshots\\Screenshot 2020-11-24 175722.jpg"));
+		lblNewLabel_21.setIcon(new ImageIcon("./Rubrica.jpeg"));
 		lblNewLabel_21.setBounds(470, 247, 994, 410);
 		panel_29.add(lblNewLabel_21);
 
