@@ -21,6 +21,8 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.ImageIcon;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
@@ -3229,9 +3231,6 @@ public class Evaluation extends JFrame  {
 				values [59] = spinner_1_1_1_1.getValue().toString();
 				values [60] = spinner_3_1_1_1.getValue().toString();
 				values [61] = spinner_3_1_1_1_1.getValue().toString();
-
-				
-				
 				
 				
 				////////////////////////////NEW VALUES ///////////////////////////////
@@ -4948,9 +4947,16 @@ public class Evaluation extends JFrame  {
 	    textArea_8_2_1.setText(ap[158]);
 		textArea_8_2_1_1.setText(ap[159]);
 		textArea_8_2_1_1_1.setText(ap[160]);
-
-
-
-
+	
+		spinner.addMouseListener(new java.awt.event.MouseAdapter() {
+	        public void mouseClicked(java.awt.event.MouseEvent evt) {
+	            jSpinner1MouseClicked(evt);
+	        }
+	    });
+		
 	}
+	
+	private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {                                       
+	    System.out.println("wow");
+	}    
 }

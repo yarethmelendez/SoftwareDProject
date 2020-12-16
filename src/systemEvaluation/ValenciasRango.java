@@ -106,4 +106,6 @@ public class ValenciasRango extends ValenciasCapsule{
 		valen5D = 4;
 		valen5EF = 4;
 	}
+	
+	
 }
