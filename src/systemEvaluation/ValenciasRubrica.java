@@ -289,6 +289,35 @@ public class ValenciasRubrica{
 		
 		return result;
 	}
+  double Total(int choice) throws IOException {
+		
+		double sum = 0;
+		
+		sum += CalidadDocente(choice)[0];
+		sum += CalidadDocente(choice)[1];
+		sum += CalidadDocente(choice)[2];
+		sum += CalidadDocente(choice)[3];
+		sum += CalidadDocente(choice)[4];
+		sum += CalidadDocente(choice)[5];
+		sum += CalidadDocente(choice)[6];
+		
+		sum += ServicioInstitucion(choice)[0];
+		sum += ServicioInstitucion(choice)[1];
+		sum += ServicioInstitucion(choice)[2];
+		sum += ServicioInstitucion(choice)[3];
+		
+		sum += ServicioComunidad(choice);
+		
+		sum += InvestigacionTrabajo(choice)[0];
+		sum += InvestigacionTrabajo(choice)[1];
+		sum += InvestigacionTrabajo(choice)[2];
+		
+		sum += CrecimientoDesarrollo(choice)[0];
+		sum += CrecimientoDesarrollo(choice)[1];
+		sum += CrecimientoDesarrollo(choice)[2];
+		
+		return sum;
+	}
 }
 
 class ExternalValues{

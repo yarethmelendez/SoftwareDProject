@@ -150,7 +150,7 @@ public class onlineEvaluation extends JFrame  {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Evaluation frame = new Evaluation();
+					onlineEvaluation frame = new onlineEvaluation();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

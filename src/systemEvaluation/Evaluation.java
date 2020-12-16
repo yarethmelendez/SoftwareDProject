@@ -29,6 +29,7 @@ import java.awt.Toolkit;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.swing.JMenuBar;
@@ -263,7 +264,10 @@ public class Evaluation extends JFrame  {
 	}
 
 	//Testing
-	public Evaluation() {
+	public Evaluation() throws IOException {
+		
+		DataView ec = new DataView();
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\ec18b863896963.5ac177847630c.png"));
 		setTitle("Evaluacion ");
 		setBackground(SystemColor.infoText);
@@ -1895,7 +1899,7 @@ public class Evaluation extends JFrame  {
 		panel_4.setLayout(null);
 
 		JLabel lblNewLabel_8 = new JLabel("h. Posesi\u00F3n de los atributos de integridad, laboriosidad, liberalidad y objetividad en la ense\u00F1anza ");
-		lblNewLabel_8.setBounds(10, 549, 897, 52);
+		lblNewLabel_8.setBounds(10, 549, 1094, 52);
 		panel_4.add(lblNewLabel_8);
 		lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 21));
 
@@ -1962,43 +1966,50 @@ public class Evaluation extends JFrame  {
 		panel_6_6.setBounds(1244, 0, 10, 611);
 		panel_4.add(panel_6_6);
 
-		ins2_a_textField = new JTextField();
+		ins2_a_textField = new JTextField(""+ec.EvidenceCalc(46));
+		ins2_a_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_a_textField.setEditable(false);
 		ins2_a_textField.setBounds(1343, 38, 86, 35);
 		panel_4.add(ins2_a_textField);
 		ins2_a_textField.setColumns(10);
 
-		ins2_b_textField = new JTextField();
+		ins2_b_textField = new JTextField(""+ec.EvidenceCalc(47));
+		ins2_b_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_b_textField.setEditable(false);
 		ins2_b_textField.setColumns(10);
 		ins2_b_textField.setBounds(1343, 137, 86, 35);
 		panel_4.add(ins2_b_textField);
 
-		ins2_c_textField = new JTextField();
+		ins2_c_textField = new JTextField(""+ec.EvidenceCalc(48));
+		ins2_c_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_c_textField.setEditable(false);
 		ins2_c_textField.setColumns(10);
 		ins2_c_textField.setBounds(1343, 217, 86, 35);
 		panel_4.add(ins2_c_textField);
 
-		ins2_d_textField = new JTextField();
+		ins2_d_textField = new JTextField(""+ec.EvidenceCalc(49));
+		ins2_d_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_d_textField.setEditable(false);
 		ins2_d_textField.setColumns(10);
 		ins2_d_textField.setBounds(1343, 287, 86, 35);
 		panel_4.add(ins2_d_textField);
 
-		ins2_e_textField = new JTextField();
+		ins2_e_textField = new JTextField(""+ec.EvidenceCalc(50));
+		ins2_e_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_e_textField.setEditable(false);
 		ins2_e_textField.setColumns(10);
 		ins2_e_textField.setBounds(1343, 354, 86, 35);
 		panel_4.add(ins2_e_textField);
 
-		ins2_f_textField = new JTextField();
+		ins2_f_textField = new JTextField(""+ec.EvidenceCalc(51));
+		ins2_f_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_f_textField.setEditable(false);
 		ins2_f_textField.setColumns(10);
 		ins2_f_textField.setBounds(1343, 442, 86, 35);
 		panel_4.add(ins2_f_textField);
 
-		ins2_gh_textField = new JTextField();
+		ins2_gh_textField = new JTextField(""+ec.EvidenceCalc(52));
+		ins2_gh_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_gh_textField.setEditable(false);
 		ins2_gh_textField.setColumns(10);
 		ins2_gh_textField.setBounds(1343, 533, 86, 35);
@@ -2080,21 +2091,21 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_19.setBounds(38, 327, 881, 46);
 		panel_5.add(lblNewLabel_19);
 
-		ins2_1_ab_textField = new JTextField();
+		ins2_1_ab_textField = new JTextField(""+ec.EvidenceCalc(53));
 		ins2_1_ab_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_1_ab_textField.setEditable(false);
 		ins2_1_ab_textField.setBounds(1312, 11, 86, 38);
 		panel_5.add(ins2_1_ab_textField);
 		ins2_1_ab_textField.setColumns(10);
 
-		ins2_1_cd_textField = new JTextField();
+		ins2_1_cd_textField = new JTextField(""+ec.EvidenceCalc(54));
 		ins2_1_cd_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_1_cd_textField.setEditable(false);
 		ins2_1_cd_textField.setColumns(10);
 		ins2_1_cd_textField.setBounds(1312, 83, 86, 38);
 		panel_5.add(ins2_1_cd_textField);
 
-		ins2_1_ef_textField = new JTextField();
+		ins2_1_ef_textField = new JTextField(""+ec.EvidenceCalc(55));
 		ins2_1_ef_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_1_ef_textField.setEditable(false);
 		ins2_1_ef_textField.setColumns(10);
@@ -2122,28 +2133,28 @@ public class Evaluation extends JFrame  {
 		panel_6_7_1_2.setBounds(0, 384, 1530, 10);
 		panel_5.add(panel_6_7_1_2);
 
-		textField = new JTextField();
+		textField = new JTextField(""+ec.EvidenceCalc(56));
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setEditable(false);
 		textField.setColumns(10);
 		textField.setBounds(1312, 212, 86, 38);
 		panel_5.add(textField);
 
-		textField_1 = new JTextField();
+		textField_1 = new JTextField(""+ec.EvidenceCalc(57));
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBounds(1312, 273, 86, 38);
 		panel_5.add(textField_1);
 
-		textField_3 = new JTextField();
+		textField_3 = new JTextField(""+ec.EvidenceCalc(58));
 		textField_3.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_3.setEditable(false);
 		textField_3.setColumns(10);
 		textField_3.setBounds(1312, 335, 86, 38);
 		panel_5.add(textField_3);
 
-		textField_4 = new JTextField();
+		textField_4 = new JTextField(""+ec.EvidenceCalc(59));
 		textField_4.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_4.setEditable(false);
 		textField_4.setColumns(10);
@@ -2199,7 +2210,7 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_25.setBounds(51, 117, 513, 45);
 		panel_10.add(lblNewLabel_25);
 
-		ins2_3_ab_textField = new JTextField();
+		ins2_3_ab_textField = new JTextField(""+ec.EvidenceCalc(60));
 		ins2_3_ab_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_3_ab_textField.setEditable(false);
 		ins2_3_ab_textField.setColumns(10);
@@ -2268,19 +2279,19 @@ public class Evaluation extends JFrame  {
 		panel_6_8_1_1.setBounds(989, 0, 10, 581);
 		panel_12.add(panel_6_8_1_1);
 
-		ins2_4_a_textField = new JTextField();
+		ins2_4_a_textField = new JTextField(""+ec.EvidenceCalc(61));
 		ins2_4_a_textField.setEditable(false);
 		ins2_4_a_textField.setBounds(1076, 28, 128, 44);
 		panel_12.add(ins2_4_a_textField);
 		ins2_4_a_textField.setColumns(10);
 
-		ins2_4_b_textField = new JTextField();
+		ins2_4_b_textField = new JTextField(""+ec.EvidenceCalc(62));
 		ins2_4_b_textField.setEditable(false);
 		ins2_4_b_textField.setColumns(10);
 		ins2_4_b_textField.setBounds(1076, 138, 128, 44);
 		panel_12.add(ins2_4_b_textField);
 
-		ins2_4_cde_textField = new JTextField();
+		ins2_4_cde_textField = new JTextField(""+ec.EvidenceCalc(63));
 		ins2_4_cde_textField.setEditable(false);
 		ins2_4_cde_textField.setColumns(10);
 		ins2_4_cde_textField.setBounds(1076, 303, 128, 44);
@@ -2354,19 +2365,19 @@ public class Evaluation extends JFrame  {
 		panel_6_8_1_1_1.setBounds(1266, 0, 10, 581);
 		panel_14.add(panel_6_8_1_1_1);
 
-		ins2_5_abc_textField = new JTextField();
+		ins2_5_abc_textField = new JTextField(""+ec.EvidenceCalc(64));
 		ins2_5_abc_textField.setEditable(false);
 		ins2_5_abc_textField.setColumns(10);
 		ins2_5_abc_textField.setBounds(1387, 79, 128, 44);
 		panel_14.add(ins2_5_abc_textField);
 
-		ins2_5_b_textField = new JTextField();
+		ins2_5_b_textField = new JTextField(""+ec.EvidenceCalc(65));
 		ins2_5_b_textField.setEditable(false);
 		ins2_5_b_textField.setColumns(10);
 		ins2_5_b_textField.setBounds(1387, 261, 128, 44);
 		panel_14.add(ins2_5_b_textField);
 
-		ins2_5_ef_textField = new JTextField();
+		ins2_5_ef_textField = new JTextField(""+ec.EvidenceCalc(66));
 		ins2_5_ef_textField.setEditable(false);
 		ins2_5_ef_textField.setColumns(10);
 		ins2_5_ef_textField.setBounds(1387, 418, 128, 44);
@@ -2930,6 +2941,8 @@ public class Evaluation extends JFrame  {
 		var eMenuItem1 = new JMenuItem("Guardar");
 		eMenuItem1.addActionListener(new ActionListener() {//// item 1
 			public void actionPerformed(ActionEvent arg0) {/// action listener 
+				
+				
 
 				//Informacion a ingresar
 
@@ -3723,18 +3736,36 @@ public class Evaluation extends JFrame  {
 
 				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
 				{
-					Results1 w = new Results1();
+					Results1 w = null;
+					try {
+						w = new Results1();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					w.setVisible(true);
 
 				}
 				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
 
-					Results1 w = new Results1();
+					Results1 w = null;
+					try {
+						w = new Results1();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					w.setVisible(true);
 				}
 
 				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado"){
-					Results3 w = new Results3();
+					Results3 w = null;
+					try {
+						w = new Results3();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					w.setVisible(true);
 				}
 
@@ -3854,31 +3885,37 @@ public class Evaluation extends JFrame  {
 		textPane_1_7_4_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_4_3.setBounds(1027, 658, 637, 168);
 		panel_32.add(textPane_1_7_4_3);
+		comboBox_8.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_8.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_8.setBounds(827, 138, 94, 22);
 		panel_32.add(comboBox_8);
+		comboBox_12.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_12.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_12.setBounds(827, 358, 94, 22);
 		panel_32.add(comboBox_12);
+		comboBox_13.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_13.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_13.setBounds(827, 607, 94, 22);
 		panel_32.add(comboBox_13);
+		comboBox_14.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_14.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_14.setBounds(1767, 138, 94, 22);
 		panel_32.add(comboBox_14);
+		comboBox_15.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_15.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_15.setBounds(1767, 358, 94, 22);
 		panel_32.add(comboBox_15);
+		comboBox_16.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_16.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -4013,31 +4050,37 @@ public class Evaluation extends JFrame  {
 		panel_6_6_1_3_1.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_3_1.setBounds(910, 127, 10, 820);
 		panel_8_1.add(panel_6_6_1_3_1);
+		comboBox_17.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_17.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_17.setBounds(789, 156, 94, 22);
 		panel_8_1.add(comboBox_17);
+		comboBox_18.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_18.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_18.setBounds(806, 465, 94, 22);
 		panel_8_1.add(comboBox_18);
+		comboBox_19.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_19.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_19.setBounds(803, 706, 94, 22);
 		panel_8_1.add(comboBox_19);
+		comboBox_20.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_20.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_20.setBounds(1789, 156, 94, 22);
 		panel_8_1.add(comboBox_20);
+		comboBox_21.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_21.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_21.setBounds(1789, 427, 94, 22);
 		panel_8_1.add(comboBox_21);
+		comboBox_22.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_22.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -4082,11 +4125,13 @@ public class Evaluation extends JFrame  {
 		textPane_1_7_3_3_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_1.setBounds(251, 510, 1261, 246);
 		panel_9.add(textPane_1_7_3_3_1);
+		comboBox_23.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_23.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_23.setBounds(1595, 138, 94, 22);
 		panel_9.add(comboBox_23);
+		comboBox_24.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_24.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -4135,7 +4180,7 @@ public class Evaluation extends JFrame  {
 
 		JLabel lblNewLabel_48_10_3_4_2_2_1_1 = new JLabel("educativos o de prontuarios, proyectos innovadores, entre otros.\r ");
 		lblNewLabel_48_10_3_4_2_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblNewLabel_48_10_3_4_2_2_1_1.setBounds(46, 420, 837, 41);
+		lblNewLabel_48_10_3_4_2_2_1_1.setBounds(10, 420, 837, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_2_1_1);
 		//box16
 
@@ -4212,26 +4257,31 @@ public class Evaluation extends JFrame  {
 		comboBox_25.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_25.setBounds(753, 142, 94, 22);
 		panel_27.add(comboBox_25);
+		comboBox_26.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_26.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_26.setBounds(725, 448, 94, 22);
 		panel_27.add(comboBox_26);
+		comboBox_27.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_27.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_27.setBounds(736, 721, 94, 22);
 		panel_27.add(comboBox_27);
+		comboBox_28.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_28.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_28.setBounds(1773, 142, 94, 22);
 		panel_27.add(comboBox_28);
+		comboBox_29.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_29.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_29.setBounds(1773, 381, 94, 22);
 		panel_27.add(comboBox_29);
+		comboBox_30.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 
 
 		comboBox_30.setFont(new Font("Tahoma", Font.BOLD, 16));

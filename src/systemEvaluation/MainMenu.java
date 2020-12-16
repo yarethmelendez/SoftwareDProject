@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,14 +33,20 @@ public class MainMenu extends JFrame implements ActionListener {
 		new_evaluation_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
 		new_evaluation_btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Evaluation e = new Evaluation();
+				Evaluation e = null;
+				try {
+					e = new Evaluation();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				e.setVisible(true);
 				dispose();
 				type = 1;
 
 			}
 		});
-		new_evaluation_btnNewButton.setBounds(810, 398, 239, 23);
+		new_evaluation_btnNewButton.setBounds(741, 399, 397, 23);
 		contentPane.add(new_evaluation_btnNewButton);
 
 		JButton continue_btnNewButton = new JButton("Continuar evaluacion ");
@@ -51,7 +58,7 @@ public class MainMenu extends JFrame implements ActionListener {
 			}
 		});
 		continue_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		continue_btnNewButton.setBounds(810, 468, 239, 23);
+		continue_btnNewButton.setBounds(741, 469, 397, 23);
 		contentPane.add(continue_btnNewButton);
 
 		JButton erase_btnNewButton = new JButton("Borrar data existente");
@@ -65,12 +72,12 @@ public class MainMenu extends JFrame implements ActionListener {
 			}
 		});
 		erase_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		erase_btnNewButton.setBounds(810, 503, 239, 23);
+		erase_btnNewButton.setBounds(741, 504, 397, 23);
 		contentPane.add(erase_btnNewButton);
 
 		JButton configurations_btnNewButton = new JButton("Configuraciones");
 		configurations_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		configurations_btnNewButton.setBounds(810, 538, 239, 23);
+		configurations_btnNewButton.setBounds(741, 538, 397, 23);
 		contentPane.add(configurations_btnNewButton);
 
 		JLabel welcome_lblNewLabel = new JLabel("Que le gustaria hacer?");
@@ -92,13 +99,13 @@ public class MainMenu extends JFrame implements ActionListener {
 			}
 		});
 		Salir_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		Salir_btnNewButton.setBounds(810, 573, 239, 23);
+		Salir_btnNewButton.setBounds(741, 576, 397, 23);
 		contentPane.add(Salir_btnNewButton);
 		
 		///////////////////////////// BOTON ONLINE /////////////////////////////////////////////////////
 		JButton new_evaluation_btnNewButton_1 = new JButton("Crear nueva evaluacion (Clases en linea) ");
 		new_evaluation_btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 16));
-		new_evaluation_btnNewButton_1.setBounds(810, 433, 239, 23);
+		new_evaluation_btnNewButton_1.setBounds(741, 433, 397, 23);
 		contentPane.add(new_evaluation_btnNewButton_1);
 		new_evaluation_btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
