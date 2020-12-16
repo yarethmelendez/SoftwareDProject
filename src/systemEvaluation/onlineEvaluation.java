@@ -404,7 +404,9 @@ public class onlineEvaluation extends JFrame  {
 		lblNewLabel_42.setBounds(10, 97, 956, 38);
 		panel_16.add(lblNewLabel_42);
 
-		JLabel lblNewLabel_43 = new JLabel("2. ¿Cu\u00E1ntas veces te comunicas con tu profesor a trav\u00E9s de los medios");
+
+		JLabel lblNewLabel_43 = new JLabel("2. Â¿Cu\u00E1ntas veces te comunicas con tu profesor a trav\u00E9s de los medios");
+
 		lblNewLabel_43.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_43.setBounds(10, 297, 970, 26);
 		panel_16.add(lblNewLabel_43);
@@ -1083,12 +1085,15 @@ public class onlineEvaluation extends JFrame  {
 		panel_16_3.setBounds(108, 158, 1462, 416);
 		panel_21.add(panel_16_3);
 
-		JLabel lblNewLabel_42_3 = new JLabel("25. ¿Qu\u00E9 fue lo que m\u00E1s te gust\u00F3 del curso?\n");
+
+		JLabel lblNewLabel_42_3 = new JLabel("25. Â¿Qu\u00E9 fue lo que m\u00E1s te gust\u00F3 del curso?\n");
+
 		lblNewLabel_42_3.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_42_3.setBounds(10, 6, 945, 38);
 		panel_16_3.add(lblNewLabel_42_3);
 
-		JLabel lblNewLabel_43_3 = new JLabel("26. ¿Qu\u00E9 fue lo que menos te gust\u00F3 del curso?");
+		JLabel lblNewLabel_43_3 = new JLabel("26. Â¿Qu\u00E9 fue lo que menos te gust\u00F3 del curso?");
+
 		lblNewLabel_43_3.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_43_3.setBounds(810, 0, 970, 26);
 		panel_16_3.add(lblNewLabel_43_3);
@@ -1101,12 +1106,14 @@ public class onlineEvaluation extends JFrame  {
 		panel_6_8_2_3.setBounds(800, -22, 10, 495);
 		panel_16_3.add(panel_6_8_2_3);
 
-		JLabel lblNewLabel_43_3_1 = new JLabel("27. ¿Tomar\u00EDas otro curso en l\u00EDnea con el mismo profesor o lo recomendar\u00EDas ");
+
+		JLabel lblNewLabel_43_3_1 = new JLabel("27. Â¿Tomar\u00EDas otro curso en l\u00EDnea con el mismo profesor o lo recomendar\u00EDas ");
 		lblNewLabel_43_3_1.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_43_3_1.setBounds(0, 220, 945, 47);
 		panel_16_3.add(lblNewLabel_43_3_1);
 		
-		JLabel lblNewLabel_43_3_1_1 = new JLabel("28. ¿Qu\u00E9 sugerencias har\u00EDas para que el profesor mejore su ense\u00F1anza ");
+
+		JLabel lblNewLabel_43_3_1_1 = new JLabel("28. Â¿Qu\u00E9 sugerencias har\u00EDas para que el profesor mejore su ense\u00F1anza ");
 		lblNewLabel_43_3_1_1.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_43_3_1_1.setBounds(810, 215, 879, 26);
 		panel_16_3.add(lblNewLabel_43_3_1_1);
