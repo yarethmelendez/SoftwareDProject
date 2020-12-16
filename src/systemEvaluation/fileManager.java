@@ -77,7 +77,7 @@ public class fileManager {
 		int found = 0;
 		
 		
-		String[] ap = new String[105] ;
+		String[] ap = new String[146] ;
 
 		try {
 			instru = new File("./instrumentos.csv");

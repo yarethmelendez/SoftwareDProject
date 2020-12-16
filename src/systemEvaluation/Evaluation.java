@@ -47,7 +47,7 @@ import javax.swing.JScrollPane;
 
 public class Evaluation extends JFrame  {
 
-	String[] values = new String[62];
+	String[] values = new String[144];
 
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -131,6 +131,27 @@ public class Evaluation extends JFrame  {
 	private JComboBox comboBox_5_1_3 = new JComboBox();
 	private JComboBox comboBox_5_1_4 = new JComboBox();
 	
+	private JComboBox comboBox_8 = new JComboBox();
+	private JComboBox comboBox_12 = new JComboBox();
+	private JComboBox comboBox_13 = new JComboBox();
+	private JComboBox comboBox_14 = new JComboBox();
+	private JComboBox comboBox_15 = new JComboBox();
+	private JComboBox comboBox_16 = new JComboBox();
+	private JComboBox comboBox_17 = new JComboBox();
+	private JComboBox comboBox_18 = new JComboBox();
+	private JComboBox comboBox_19 = new JComboBox();
+	private JComboBox comboBox_20 = new JComboBox();
+	private JComboBox comboBox_21 = new JComboBox();
+	private JComboBox comboBox_22 = new JComboBox();
+	private JComboBox comboBox_23 = new JComboBox();
+	private JComboBox comboBox_24 = new JComboBox();
+	private JComboBox comboBox_25 = new JComboBox();
+	private JComboBox comboBox_26 = new JComboBox();
+	private JComboBox comboBox_27 = new JComboBox();
+	private JComboBox comboBox_28 = new JComboBox();
+	private JComboBox comboBox_29 = new JComboBox();
+	private JComboBox comboBox_30 = new JComboBox();
+	
 	private JTextField ins2_4_a_textField;
 	private JTextField ins2_a_textField;
 	private JTextField ins2_b_textField;
@@ -152,6 +173,53 @@ public class Evaluation extends JFrame  {
 	private JTextField textField_1;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	
+	
+	private JTextPane textPane_1 = new JTextPane();
+	private JTextPane textPane_1_1_1 = new JTextPane();
+	private JTextPane textPane_1_1 = new JTextPane();
+	private JTextPane textPane = new JTextPane();
+	private JTextPane textPane_2_1 = new JTextPane();
+	private JTextPane textPane_2 = new JTextPane();
+	private JTextPane textPane_1_2 = new JTextPane();
+	private JTextPane textPane_1_3 = new JTextPane();
+	private JTextPane textPane_1_4 = new JTextPane();
+	private JTextPane textPane_1_5 = new JTextPane();
+	private JTextPane textPane_1_6 = new JTextPane();
+	private JTextPane textPane_1_2_1 = new JTextPane();
+	private JTextPane textPane_1_2_2 = new JTextPane();
+	private JTextPane textPane_1_2_3 = new JTextPane();
+	private JTextPane textPane_1_2_4 = new JTextPane();
+	private JTextPane textPane_1_2_5 = new JTextPane();
+	private JTextPane textPane_1_2_1_1 = new JTextPane();
+	private JTextPane textPane_1_2_1_2 = new JTextPane();
+	private JTextPane textPane_1_2_1_3 = new JTextPane();
+	private JTextPane textPane_1_2_1_3_1 = new JTextPane();
+	
+	private JTextPane textPane_1_7_4 = new JTextPane();
+	private JTextPane textPane_1_7_1_2 = new JTextPane();
+	private JTextPane textPane_1_7_1_1_1 = new JTextPane();
+	private JTextPane textPane_1_7_4_1 = new JTextPane();
+	private JTextPane textPane_1_7_4_2 = new JTextPane();
+	private JTextPane textPane_1_7_4_3 = new JTextPane();
+	private JTextPane textPane_1_7_3 = new JTextPane();
+	private JTextPane textPane_1_7_3_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_1_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_2 = new JTextPane();
+	private JTextPane textPane_1_7_3_2_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_2_1_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_1_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_2 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_2_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_2_1_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_3 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_3_1 = new JTextPane();
+	private JTextPane textPane_1_7_3_3_2_3_1_1 = new JTextPane();
+	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -1931,15 +1999,14 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48.setBounds(10, 145, 389, 41);
 		panel_23.add(lblNewLabel_48);
 
-
-		JTextPane textPane = new JTextPane();
+//box4	
 		textPane.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane.setBounds(1095, 183, 637, 168);
 		panel_23.add(textPane);
 
 
 
-		JComboBox comboBox = new JComboBox();
+		
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox.setBounds(796, 156, 94, 22);
@@ -1951,15 +2018,15 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_1.setBounds(10, 364, 637, 41);
 		panel_23.add(lblNewLabel_48_1);
 
-
-		JTextPane textPane_1 = new JTextPane();
+//box1
+		
 		textPane_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1.setBounds(40, 183, 637, 168);
 		panel_23.add(textPane_1);
 
 
 
-		JComboBox comboBox_1 = new JComboBox();
+		
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_1.setBounds(796, 375, 94, 22);
@@ -1967,7 +2034,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_3 = new JComboBox();
+		
 		comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_3.setBounds(796, 604, 94, 22);
@@ -1979,8 +2046,7 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_1_1.setBounds(10, 584, 762, 59);
 		panel_23.add(lblNewLabel_48_1_1);
 
-
-		JTextPane textPane_1_1 = new JTextPane();
+//box 3	
 		textPane_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_1.setBounds(40, 660, 637, 168);
 		panel_23.add(textPane_1_1);
@@ -1993,14 +2059,13 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_3_1 = new JComboBox();
+		
 		comboBox_3_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_3_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_3_1.setBounds(1787, 156, 94, 22);
 		panel_23.add(comboBox_3_1);
 
-
-		JTextPane textPane_1_1_1 = new JTextPane();
+//box2	
 		textPane_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_1_1.setBounds(40, 405, 637, 168);
 		panel_23.add(textPane_1_1_1);
@@ -2013,14 +2078,13 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_4 = new JComboBox();
+		
 		comboBox_4.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_4.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_4.setBounds(1787, 375, 94, 22);
 		panel_23.add(comboBox_4);
 
-
-		JTextPane textPane_2 = new JTextPane();
+//box6	
 		textPane_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_2.setBounds(1095, 660, 637, 168);
 		panel_23.add(textPane_2);
@@ -2033,14 +2097,13 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_4_1 = new JComboBox();
+		
 		comboBox_4_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_4_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_4_1.setBounds(1787, 604, 94, 22);
 		panel_23.add(comboBox_4_1);
 
-
-		JTextPane textPane_2_1 = new JTextPane();
+//box5	
 		textPane_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_2_1.setBounds(1095, 405, 637, 168);
 		panel_23.add(textPane_2_1);
@@ -2074,32 +2137,28 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_49_1.setBounds(246, 33, 1401, 87);
 		panel_24.add(lblNewLabel_49_1);
 
-
-		JTextPane textPane_1_2 = new JTextPane();
+//box7	
 		textPane_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2.setBounds(66, 251, 637, 168);
 		panel_24.add(textPane_1_2);
 
-
-		JTextPane textPane_1_3 = new JTextPane();
+//box8	
 		textPane_1_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_3.setBounds(66, 496, 637, 168);
 		panel_24.add(textPane_1_3);
 
-
-		JTextPane textPane_1_4 = new JTextPane();
+//box9	
 		textPane_1_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_4.setBounds(66, 724, 637, 168);
 		panel_24.add(textPane_1_4);
 
-
-		JTextPane textPane_1_5 = new JTextPane();
+//box10	
 		textPane_1_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_5.setBounds(1079, 282, 637, 168);
 		panel_24.add(textPane_1_5);
 
-
-		JTextPane textPane_1_6 = new JTextPane();
+		//box11
+		
 		textPane_1_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_6.setBounds(1079, 513, 637, 168);
 		panel_24.add(textPane_1_6);
@@ -2142,7 +2201,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5 = new JComboBox();
+	
 		comboBox_5.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5.setBounds(760, 212, 94, 22);
@@ -2150,7 +2209,6 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_6 = new JComboBox();
 		comboBox_6.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_6.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_6.setBounds(760, 457, 94, 22);
@@ -2158,13 +2216,13 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_7 = new JComboBox();
+	
 		comboBox_7.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_7.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_7.setBounds(760, 685, 94, 22);
 		panel_24.add(comboBox_7);
 
-		JComboBox comboBox_9 = new JComboBox();
+		
 		comboBox_9.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_9.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_9.setBounds(1782, 212, 94, 22);
@@ -2172,7 +2230,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_10 = new JComboBox();
+	
 		comboBox_10.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_10.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_10.setBounds(1782, 474, 94, 22);
@@ -2237,32 +2295,32 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_3_1_2_1.setBounds(44, 689, 113, 41);
 		panel_25.add(lblNewLabel_48_3_1_2_1);
 
-
-		JTextPane textPane_1_2_1 = new JTextPane();
+		//box12
+		
 		textPane_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_1.setBounds(44, 278, 637, 168);
 		panel_25.add(textPane_1_2_1);
 
-
-		JTextPane textPane_1_2_2 = new JTextPane();
+		//box13
+		
 		textPane_1_2_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_2.setBounds(44, 486, 637, 168);
 		panel_25.add(textPane_1_2_2);
 
-
-		JTextPane textPane_1_2_3 = new JTextPane();
+		//box14
+		
 		textPane_1_2_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_3.setBounds(44, 741, 637, 168);
 		panel_25.add(textPane_1_2_3);
 
-
-		JTextPane textPane_1_2_4 = new JTextPane();
+		//box15
+		
 		textPane_1_2_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_4.setBounds(1099, 278, 637, 168);
 		panel_25.add(textPane_1_2_4);
 
-
-		JTextPane textPane_1_2_5 = new JTextPane();
+		//box16
+		
 		textPane_1_2_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_5.setBounds(1099, 658, 637, 168);
 		panel_25.add(textPane_1_2_5);
@@ -2287,7 +2345,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_1 = new JComboBox();
+		
 		comboBox_5_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1.setBounds(841, 239, 94, 22);
@@ -2295,7 +2353,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_2 = new JComboBox();
+		
 		comboBox_5_2.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_2.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_2.setBounds(841, 454, 94, 22);
@@ -2303,7 +2361,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_3 = new JComboBox();
+		
 		comboBox_5_3.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_3.setBounds(841, 678, 94, 22);
@@ -2311,7 +2369,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_4 = new JComboBox();
+		
 		comboBox_5_4.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_4.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_4.setBounds(1791, 239, 94, 22);
@@ -2319,7 +2377,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_5 = new JComboBox();
+		
 		comboBox_5_5.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_5.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_5.setBounds(1791, 559, 94, 22);
@@ -2354,20 +2412,20 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_3_1_6.setBounds(965, 266, 838, 41);
 		panel_26.add(lblNewLabel_48_3_1_6);
 
-
-		JTextPane textPane_1_2_1_1 = new JTextPane();
+		//box17
+		
 		textPane_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_1_1.setBounds(69, 332, 637, 168);
 		panel_26.add(textPane_1_2_1_1);
 
-
-		JTextPane textPane_1_2_1_2 = new JTextPane();
+		//box18
+		
 		textPane_1_2_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_1_2.setBounds(69, 659, 637, 168);
 		panel_26.add(textPane_1_2_1_2);
 
-
-		JTextPane textPane_1_2_1_3 = new JTextPane();
+		//box19
+		
 		textPane_1_2_1_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_1_3.setBounds(1031, 318, 637, 168);
 		panel_26.add(textPane_1_2_1_3);
@@ -2390,8 +2448,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_3_1_6_1_1.setBounds(1001, 595, 838, 41);
 		panel_26.add(lblNewLabel_48_3_1_6_1_1);
 
-
-		JTextPane textPane_1_2_1_3_1 = new JTextPane();
+		//box20
+		
 		textPane_1_2_1_3_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_2_1_3_1.setBounds(1031, 659, 637, 168);
 		panel_26.add(textPane_1_2_1_3_1);
@@ -2410,7 +2468,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_1_1 = new JComboBox();
+		
 		comboBox_5_1_1.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_1.setBounds(790, 277, 94, 22);
@@ -2418,7 +2476,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_1_2 = new JComboBox();
+		
 		comboBox_5_1_2.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_2.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_2.setBounds(790, 585, 94, 22);
@@ -2426,7 +2484,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_1_3 = new JComboBox();
+		
 		comboBox_5_1_3.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_3.setBounds(1788, 279, 94, 22);
@@ -2434,7 +2492,7 @@ public class Evaluation extends JFrame  {
 
 
 
-		JComboBox comboBox_5_1_4 = new JComboBox();
+		
 		comboBox_5_1_4.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox_5_1_4.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_5_1_4.setBounds(1788, 572, 94, 22);
@@ -2759,185 +2817,413 @@ public class Evaluation extends JFrame  {
 				////////////////////////////NEW VALUES ///////////////////////////////
 				if (comboBox.getSelectedItem().toString() == " ") {
 
-					values [60] = "0";
-
-				} else {
-
-					values [60] = comboBox.getSelectedItem().toString();
-
-				}	
-				if (comboBox_1.getSelectedItem().toString() == " ") {
-
 					values [61] = "0";
 
 				} else {
 
-					values [61] = comboBox_1.getSelectedItem().toString();
+					values [61] = comboBox.getSelectedItem().toString();
 
-				}
-				if (comboBox_3.getSelectedItem().toString() == " ") {
+				}	
+				if (comboBox_1.getSelectedItem().toString() == " ") {
 
 					values [62] = "0";
 
 				} else {
 
-					values [62] = comboBox_3.getSelectedItem().toString();
+					values [62] = comboBox_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_3_1.getSelectedItem().toString() == " ") {
+				if (comboBox_3.getSelectedItem().toString() == " ") {
 
 					values [63] = "0";
 
 				} else {
 
-					values [63] = comboBox_3_1.getSelectedItem().toString();
+					values [63] = comboBox_3.getSelectedItem().toString();
 
 				}
-				if (comboBox_4.getSelectedItem().toString() == " ") {
+				if (comboBox_3_1.getSelectedItem().toString() == " ") {
 
 					values [64] = "0";
 
 				} else {
 
-					values [64] = comboBox_4.getSelectedItem().toString();
+					values [64] = comboBox_3_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_4_1.getSelectedItem().toString() == " ") {
+				if (comboBox_4.getSelectedItem().toString() == " ") {
 
 					values [65] = "0";
 
 				} else {
 
-					values [65] = comboBox_4_1.getSelectedItem().toString();
+					values [65] = comboBox_4.getSelectedItem().toString();
 
 				}
-				if (comboBox_5.getSelectedItem().toString() == " ") {
+				if (comboBox_4_1.getSelectedItem().toString() == " ") {
 
 					values [66] = "0";
 
 				} else {
 
-					values [66] = comboBox_5.getSelectedItem().toString();
+					values [66] = comboBox_4_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_6.getSelectedItem().toString() == " ") {
+				if (comboBox_5.getSelectedItem().toString() == " ") {
 
 					values [67] = "0";
 
 				} else {
 
-					values [67] = comboBox_6.getSelectedItem().toString();
+					values [67] = comboBox_5.getSelectedItem().toString();
 
 				}
-				if (comboBox_7.getSelectedItem().toString() == " ") {
+				if (comboBox_6.getSelectedItem().toString() == " ") {
 
 					values [68] = "0";
 
 				} else {
 
-					values [68] = comboBox_7.getSelectedItem().toString();
+					values [68] = comboBox_6.getSelectedItem().toString();
 
 				}
-				if (comboBox_9.getSelectedItem().toString() == " ") {
+				if (comboBox_7.getSelectedItem().toString() == " ") {
 
 					values [69] = "0";
 
 				} else {
 
-					values [69] = comboBox_9.getSelectedItem().toString();
+					values [69] = comboBox_7.getSelectedItem().toString();
 
 				}
-				if (comboBox_10.getSelectedItem().toString() == " ") {
+				if (comboBox_9.getSelectedItem().toString() == " ") {
 
 					values [70] = "0";
 
 				} else {
 
-					values [70] = comboBox_10.getSelectedItem().toString();
+					values [70] = comboBox_9.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1.getSelectedItem().toString() == " ") {
+				if (comboBox_10.getSelectedItem().toString() == " ") {
 
 					values [71] = "0";
 
 				} else {
 
-					values [71] = comboBox_5_1.getSelectedItem().toString();
+					values [71] = comboBox_10.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_2.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1.getSelectedItem().toString() == " ") {
 
 					values [72] = "0";
 
 				} else {
 
-					values [72] = comboBox_5_2.getSelectedItem().toString();
+					values [72] = comboBox_5_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_3.getSelectedItem().toString() == " ") {
+				if (comboBox_5_2.getSelectedItem().toString() == " ") {
 
 					values [73] = "0";
 
 				} else {
 
-					values [73] = comboBox_5_3.getSelectedItem().toString();
+					values [73] = comboBox_5_2.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_4.getSelectedItem().toString() == " ") {
+				if (comboBox_5_3.getSelectedItem().toString() == " ") {
 
 					values [74] = "0";
 
 				} else {
 
-					values [74] = comboBox_5_4.getSelectedItem().toString();
+					values [74] = comboBox_5_3.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_5.getSelectedItem().toString() == " ") {
+				if (comboBox_5_4.getSelectedItem().toString() == " ") {
 
 					values [75] = "0";
 
 				} else {
 
-					values [75] = comboBox_5_5.getSelectedItem().toString();
+					values [75] = comboBox_5_4.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_1.getSelectedItem().toString() == " ") {
+				if (comboBox_5_5.getSelectedItem().toString() == " ") {
 
 					values [76] = "0";
 
 				} else {
 
-					values [76] = comboBox_5_1_1.getSelectedItem().toString();
+					values [76] = comboBox_5_5.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_2.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1_1.getSelectedItem().toString() == " ") {
 
 					values [77] = "0";
 
 				} else {
 
-					values [77] = comboBox_5_1_2.getSelectedItem().toString();
+					values [77] = comboBox_5_1_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_3.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1_2.getSelectedItem().toString() == " ") {
 
 					values [78] = "0";
 
 				} else {
 
-					values [78] = comboBox_5_1_3.getSelectedItem().toString();
+					values [78] = comboBox_5_1_2.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_4.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1_3.getSelectedItem().toString() == " ") {
 
 					values [79] = "0";
 
 				} else {
 
-					values [79] = comboBox_5_1_4.getSelectedItem().toString();
+					values [79] = comboBox_5_1_3.getSelectedItem().toString();
 
 				}
+				if (comboBox_5_1_4.getSelectedItem().toString() == " ") {
 
+					values [80] = "0";
+
+				} else {
+
+					values [80] = comboBox_5_1_4.getSelectedItem().toString();
+
+				}
+				
+				if (comboBox_8.getSelectedItem().toString() == " ") {
+
+					values [81] = "0";
+
+				} else {
+
+					values [81] = comboBox_8.getSelectedItem().toString();
+
+				}	
+				if (comboBox_12.getSelectedItem().toString() == " ") {
+
+					values [82] = "0";
+
+				} else {
+
+					values [82] = comboBox_12.getSelectedItem().toString();
+
+				}
+				if (comboBox_13.getSelectedItem().toString() == " ") {
+
+					values [83] = "0";
+
+				} else {
+
+					values [83] = comboBox_13.getSelectedItem().toString();
+
+				}
+				if (comboBox_14.getSelectedItem().toString() == " ") {
+
+					values [84] = "0";
+
+				} else {
+
+					values [84] = comboBox_14.getSelectedItem().toString();
+
+				}
+				if (comboBox_15.getSelectedItem().toString() == " ") {
+
+					values [85] = "0";
+
+				} else {
+
+					values [85] = comboBox_15.getSelectedItem().toString();
+
+				}
+				if (comboBox_16.getSelectedItem().toString() == " ") {
+
+					values [86] = "0";
+
+				} else {
+
+					values [86] = comboBox_16.getSelectedItem().toString();
+
+				}
+				if (comboBox_17.getSelectedItem().toString() == " ") {
+
+					values [87] = "0";
+
+				} else {
+
+					values [87] = comboBox_17.getSelectedItem().toString();
+
+				}
+				if (comboBox_18.getSelectedItem().toString() == " ") {
+
+					values [88] = "0";
+
+				} else {
+
+					values [88] = comboBox_18.getSelectedItem().toString();
+
+				}
+				if (comboBox_19.getSelectedItem().toString() == " ") {
+
+					values [89] = "0";
+
+				} else {
+
+					values [89] = comboBox_19.getSelectedItem().toString();
+
+				}
+				if (comboBox_20.getSelectedItem().toString() == " ") {
+
+					values [90] = "0";
+
+				} else {
+
+					values [90] = comboBox_20.getSelectedItem().toString();
+
+				}
+				if (comboBox_21.getSelectedItem().toString() == " ") {
+
+					values [91] = "0";
+
+				} else {
+
+					values [91] = comboBox_21.getSelectedItem().toString();
+
+				}
+				if (comboBox_22.getSelectedItem().toString() == " ") {
+
+					values [92] = "0";
+
+				} else {
+
+					values [92] = comboBox_22.getSelectedItem().toString();
+
+				}
+				if (comboBox_23.getSelectedItem().toString() == " ") {
+
+					values [93] = "0";
+
+				} else {
+
+					values [93] = comboBox_23.getSelectedItem().toString();
+
+				}
+				if (comboBox_24.getSelectedItem().toString() == " ") {
+
+					values [94] = "0";
+
+				} else {
+
+					values [94] = comboBox_24.getSelectedItem().toString();
+
+				}
+				if (comboBox_25.getSelectedItem().toString() == " ") {
+
+					values [95] = "0";
+
+				} else {
+
+					values [95] = comboBox_25.getSelectedItem().toString();
+
+				}
+				if (comboBox_26.getSelectedItem().toString() == " ") {
+
+					values [96] = "0";
+
+				} else {
+
+					values [96] = comboBox_26.getSelectedItem().toString();
+
+				}
+				if (comboBox_27.getSelectedItem().toString() == " ") {
+
+					values [97] = "0";
+
+				} else {
+
+					values [97] = comboBox_27.getSelectedItem().toString();
+
+				}
+				if (comboBox_28.getSelectedItem().toString() == " ") {
+
+					values [98] = "0";
+
+				} else {
+
+					values [98] = comboBox_28.getSelectedItem().toString();
+
+				}
+				if (comboBox_29.getSelectedItem().toString() == " ") {
+
+					values [99] = "0";
+
+				} else {
+
+					values [99] = comboBox_29.getSelectedItem().toString();
+
+				}
+				if (comboBox_30.getSelectedItem().toString() == " ") {
+
+					values [100] = "0";
+
+				} else {
+
+					values [100] = comboBox_30.getSelectedItem().toString();
+
+				}
+				
+				values [101] = textPane_1.getText();
+				values [102] = textPane_1_1_1.getText();
+				values [103] = textPane_1_1.getText();
+				values [104] = textPane.getText();
+				values [105] = textPane_2_1.getText();
+				values [106] = textPane_2.getText();
+				values [107] = textPane_1_2.getText();
+				values [108] = textPane_1_3.getText();
+				values [109] = textPane_1_4.getText();
+				values [110] = textPane_1_5.getText();
+				values [111] = textPane_1_6.getText();
+				values [112] = textPane_1_2_1.getText();
+				values [113] = textPane_1_2_2.getText();
+				values [114] = textPane_1_2_3.getText();
+				values [115] = textPane_1_2_4.getText();
+				values [116] = textPane_1_2_5.getText();
+				values [117] = textPane_1_2_1_1.getText();
+				values [118] = textPane_1_2_1_2.getText();
+				values [119] = textPane_1_2_1_3.getText();
+				values [120] = textPane_1_2_1_3_1.getText();
+					
+				
+				values [122] = textPane_1_7_4.getText();
+				values [123] = textPane_1_7_1_2.getText();
+				values [124] = textPane_1_7_1_1_1.getText();
+				values [125] = textPane_1_7_4_1.getText();
+				values [126] = textPane_1_7_4_2.getText();
+				values [127] = textPane_1_7_4_3.getText();
+				values [128] = textPane_1_7_3.getText();
+				values [129] = textPane_1_7_3_1.getText();
+				values [130] = textPane_1_7_3_1_1.getText();
+				values [131] = textPane_1_7_3_2.getText();
+				values [132] = textPane_1_7_3_2_1.getText();
+				values [133] = textPane_1_7_3_2_1_1.getText();
+				values [134] = textPane_1_7_3_3.getText();
+				values [135] = textPane_1_7_3_3_1.getText();
+				values [136] = textPane_1_7_3_3_2.getText();
+				values [137] = textPane_1_7_3_3_2_1.getText();
+				values [138] = textPane_1_7_3_3_2_1_1.getText();
+				values [139] = textPane_1_7_3_3_2_2.getText();
+				values [140] = textPane_1_7_3_3_2_2_1.getText();
+				values [141] = textPane_1_7_3_3_2_2_1_1.getText();
+				values [142] = textPane_1_7_3_3_2_3.getText();
+				values [143] = textPane_1_7_3_3_2_3_1.getText();
+				values [144] = textPane_1_7_3_3_2_3_1_1.getText();
+				
+				
 				/////////////////TESTING//////////////////////////////
 				for (int i = 0; i < values.length; i++) {
 					System.out.println("Test " + i + ": " +values[i]);
@@ -3011,8 +3297,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_4.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_4.setBounds(10, 125, 556, 41);
 		panel_32.add(lblNewLabel_48_10_4);
+	//box1
 		
-		JTextPane textPane_1_7_4 = new JTextPane();
 		textPane_1_7_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_4.setBounds(33, 166, 637, 168);
 		panel_32.add(textPane_1_7_4);
@@ -3027,7 +3313,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_1_1_1.setBounds(33, 377, 871, 41);
 		panel_32.add(lblNewLabel_48_10_1_1_1);
 		
-		JTextPane textPane_1_7_1_2 = new JTextPane();
+		//box2
+		
 		textPane_1_7_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_1_2.setBounds(33, 417, 637, 168);
 		panel_32.add(textPane_1_7_1_2);
@@ -3036,8 +3323,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_1_2_1.setBounds(10, 606, 758, 41);
 		panel_32.add(lblNewLabel_48_10_1_2_1);
+		//box3
 		
-		JTextPane textPane_1_7_1_1_1 = new JTextPane();
 		textPane_1_7_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_1_1_1.setBounds(33, 658, 637, 168);
 		panel_32.add(textPane_1_7_1_1_1);
@@ -3061,48 +3348,48 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_2_1_1_1.setBounds(1005, 596, 686, 41);
 		panel_32.add(lblNewLabel_48_10_2_1_1_1);
+		//box4
 		
-		JTextPane textPane_1_7_4_1 = new JTextPane();
 		textPane_1_7_4_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_4_1.setBounds(1027, 166, 637, 168);
 		panel_32.add(textPane_1_7_4_1);
+		//box5
 		
-		JTextPane textPane_1_7_4_2 = new JTextPane();
 		textPane_1_7_4_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_4_2.setBounds(1027, 400, 637, 168);
 		panel_32.add(textPane_1_7_4_2);
+		//box6
 		
-		JTextPane textPane_1_7_4_3 = new JTextPane();
 		textPane_1_7_4_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_4_3.setBounds(1027, 658, 637, 168);
 		panel_32.add(textPane_1_7_4_3);
 		
-		JComboBox comboBox_8 = new JComboBox();
+		
 		comboBox_8.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_8.setBounds(827, 138, 94, 22);
 		panel_32.add(comboBox_8);
 		
-		JComboBox comboBox_12 = new JComboBox();
+		
 		comboBox_12.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_12.setBounds(827, 358, 94, 22);
 		panel_32.add(comboBox_12);
 		
-		JComboBox comboBox_13 = new JComboBox();
+		
 		comboBox_13.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_13.setBounds(827, 607, 94, 22);
 		panel_32.add(comboBox_13);
 		
-		JComboBox comboBox_14 = new JComboBox();
+		
 		comboBox_14.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_14.setBounds(1767, 138, 94, 22);
 		panel_32.add(comboBox_14);
 		
-		JComboBox comboBox_15 = new JComboBox();
+		
 		comboBox_15.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_15.setBounds(1767, 358, 94, 22);
 		panel_32.add(comboBox_15);
 		
-		JComboBox comboBox_16 = new JComboBox();
+		
 		comboBox_16.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_16.setBounds(1767, 609, 94, 22);
 		panel_32.add(comboBox_16);
@@ -3150,8 +3437,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_1_2_1.setBounds(33, 233, 867, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_1_2_1);
+		//box7
 		
-		JTextPane textPane_1_7_3 = new JTextPane();
 		textPane_1_7_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3.setBounds(43, 273, 637, 168);
 		panel_8_1.add(textPane_1_7_3);
@@ -3165,8 +3452,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_2_1.setBounds(33, 481, 760, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_2_1);
+		//box8
 		
-		JTextPane textPane_1_7_3_1 = new JTextPane();
 		textPane_1_7_3_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_1.setBounds(43, 526, 637, 168);
 		panel_8_1.add(textPane_1_7_3_1);
@@ -3175,8 +3462,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_2_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_2_2.setBounds(10, 693, 760, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_2_2);
+		//box9
 		
-		JTextPane textPane_1_7_3_1_1 = new JTextPane();
 		textPane_1_7_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_1_1.setBounds(43, 757, 637, 151);
 		panel_8_1.add(textPane_1_7_3_1_1);
@@ -3195,8 +3482,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_3_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_3_1.setBounds(1001, 167, 873, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_3_1);
+		//box10
 		
-		JTextPane textPane_1_7_3_2 = new JTextPane();
 		textPane_1_7_3_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_2.setBounds(1031, 225, 637, 168);
 		panel_8_1.add(textPane_1_7_3_2);
@@ -3210,8 +3497,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_3_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_3_2_1.setBounds(1001, 446, 883, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_3_2_1);
+		//box11
 		
-		JTextPane textPane_1_7_3_2_1 = new JTextPane();
 		textPane_1_7_3_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_2_1.setBounds(1031, 504, 637, 168);
 		panel_8_1.add(textPane_1_7_3_2_1);
@@ -3225,8 +3512,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_3_2_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_3_2_2_1.setBounds(1001, 724, 873, 41);
 		panel_8_1.add(lblNewLabel_48_10_3_3_2_2_1);
+		//box12
 		
-		JTextPane textPane_1_7_3_2_1_1 = new JTextPane();
 		textPane_1_7_3_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_2_1_1.setBounds(1031, 757, 637, 151);
 		panel_8_1.add(textPane_1_7_3_2_1_1);
@@ -3236,32 +3523,32 @@ public class Evaluation extends JFrame  {
 		panel_6_6_1_3_1.setBounds(910, 127, 10, 820);
 		panel_8_1.add(panel_6_6_1_3_1);
 		
-		JComboBox comboBox_17 = new JComboBox();
+		
 		comboBox_17.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_17.setBounds(789, 156, 94, 22);
 		panel_8_1.add(comboBox_17);
 		
-		JComboBox comboBox_18 = new JComboBox();
+		
 		comboBox_18.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_18.setBounds(806, 465, 94, 22);
 		panel_8_1.add(comboBox_18);
 		
-		JComboBox comboBox_19 = new JComboBox();
+		
 		comboBox_19.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_19.setBounds(803, 706, 94, 22);
 		panel_8_1.add(comboBox_19);
 		
-		JComboBox comboBox_20 = new JComboBox();
+		
 		comboBox_20.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_20.setBounds(1789, 156, 94, 22);
 		panel_8_1.add(comboBox_20);
 		
-		JComboBox comboBox_21 = new JComboBox();
+		
 		comboBox_21.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_21.setBounds(1789, 427, 94, 22);
 		panel_8_1.add(comboBox_21);
 		
-		JComboBox comboBox_22 = new JComboBox();
+		
 		comboBox_22.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_22.setBounds(1789, 706, 94, 22);
 		panel_8_1.add(comboBox_22);
@@ -3289,8 +3576,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_44_1_2_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblNewLabel_44_1_2_1_1_1.setBounds(585, -4, 639, 97);
 		panel_9.add(lblNewLabel_44_1_2_1_1_1);
+		//box13
 		
-		JTextPane textPane_1_7_3_3 = new JTextPane();
 		textPane_1_7_3_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3.setBounds(251, 179, 1261, 246);
 		panel_9.add(textPane_1_7_3_3);
@@ -3299,21 +3586,22 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_1.setBounds(644, 446, 837, 41);
 		panel_9.add(lblNewLabel_48_10_3_4_1);
+		//box14
 		
-		JTextPane textPane_1_7_3_3_1 = new JTextPane();
 		textPane_1_7_3_3_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_1.setBounds(251, 510, 1261, 246);
 		panel_9.add(textPane_1_7_3_3_1);
 		
-		JComboBox comboBox_23 = new JComboBox();
+		
 		comboBox_23.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_23.setBounds(1595, 138, 94, 22);
 		panel_9.add(comboBox_23);
 		
-		JComboBox comboBox_24 = new JComboBox();
+		
 		comboBox_24.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_24.setBounds(1595, 459, 94, 22);
 		panel_9.add(comboBox_24);
+		
 		
 		JPanel panel_27 = new JPanel();
 		tabbedPane_5.addTab("TAREAS ACAD\u00C9MICAS", null, panel_27, null);
@@ -3338,8 +3626,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_1.setBounds(46, 160, 837, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_1);
+		//box15
 		
-		JTextPane textPane_1_7_3_3_2 = new JTextPane();
 		textPane_1_7_3_3_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2.setBounds(44, 196, 637, 168);
 		panel_27.add(textPane_1_7_3_3_2);
@@ -3358,8 +3646,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_2_1_1.setBounds(46, 420, 837, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_2_1_1);
+		//box16
 		
-		JTextPane textPane_1_7_3_3_2_1 = new JTextPane();
 		textPane_1_7_3_3_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_1.setBounds(46, 461, 637, 168);
 		panel_27.add(textPane_1_7_3_3_2_1);
@@ -3373,8 +3661,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_2_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_2_2_1.setBounds(46, 669, 837, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_2_2_1);
+		//box17
 		
-		JTextPane textPane_1_7_3_3_2_1_1 = new JTextPane();
 		textPane_1_7_3_3_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_1_1.setBounds(46, 721, 637, 168);
 		panel_27.add(textPane_1_7_3_3_2_1_1);
@@ -3383,8 +3671,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_3.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_3.setBounds(947, 129, 837, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_3);
+		//box18
 		
-		JTextPane textPane_1_7_3_3_2_2 = new JTextPane();
 		textPane_1_7_3_3_2_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_2.setBounds(1041, 181, 637, 168);
 		panel_27.add(textPane_1_7_3_3_2_2);
@@ -3393,8 +3681,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_3_1_1.setBounds(980, 396, 837, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_3_1_1);
+		//box19
 		
-		JTextPane textPane_1_7_3_3_2_2_1 = new JTextPane();
 		textPane_1_7_3_3_2_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_2_1.setBounds(1041, 461, 637, 168);
 		panel_27.add(textPane_1_7_3_3_2_2_1);
@@ -3418,8 +3706,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_3_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_3_1_2_1_1.setBounds(1017, 692, 767, 41);
 		panel_27.add(lblNewLabel_48_10_3_4_2_3_1_2_1_1);
+		//box20
 		
-		JTextPane textPane_1_7_3_3_2_2_1_1 = new JTextPane();
 		textPane_1_7_3_3_2_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_2_1_1.setBounds(1041, 744, 637, 168);
 		panel_27.add(textPane_1_7_3_3_2_2_1_1);
@@ -3429,32 +3717,32 @@ public class Evaluation extends JFrame  {
 		panel_6_6_1_3_2.setBounds(857, 115, 10, 832);
 		panel_27.add(panel_6_6_1_3_2);
 		
-		JComboBox comboBox_25 = new JComboBox();
+		
 		comboBox_25.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_25.setBounds(753, 142, 94, 22);
 		panel_27.add(comboBox_25);
 		
-		JComboBox comboBox_26 = new JComboBox();
+		
 		comboBox_26.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_26.setBounds(725, 448, 94, 22);
 		panel_27.add(comboBox_26);
 		
-		JComboBox comboBox_27 = new JComboBox();
+		
 		comboBox_27.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_27.setBounds(736, 721, 94, 22);
 		panel_27.add(comboBox_27);
 		
-		JComboBox comboBox_28 = new JComboBox();
+		
 		comboBox_28.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_28.setBounds(1773, 142, 94, 22);
 		panel_27.add(comboBox_28);
 		
-		JComboBox comboBox_29 = new JComboBox();
+		
 		comboBox_29.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_29.setBounds(1773, 381, 94, 22);
 		panel_27.add(comboBox_29);
 		
-		JComboBox comboBox_30 = new JComboBox();
+		
 		comboBox_30.setFont(new Font("Tahoma", Font.BOLD, 16));
 		comboBox_30.setBounds(1773, 653, 94, 22);
 		panel_27.add(comboBox_30);
@@ -3477,8 +3765,8 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_4.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_4.setBounds(746, 122, 252, 41);
 		panel_30.add(lblNewLabel_48_10_3_4_2_4);
+		//boxextra1
 		
-		JTextPane textPane_1_7_3_3_2_3 = new JTextPane();
 		textPane_1_7_3_3_2_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_3.setBounds(332, 157, 1144, 212);
 		panel_30.add(textPane_1_7_3_3_2_3);
@@ -3487,13 +3775,13 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_4_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_10_3_4_2_4_1.setBounds(746, 370, 276, 41);
 		panel_30.add(lblNewLabel_48_10_3_4_2_4_1);
+		//boxextra2
 		
-		JTextPane textPane_1_7_3_3_2_3_1 = new JTextPane();
 		textPane_1_7_3_3_2_3_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_3_1.setBounds(332, 408, 1144, 212);
 		panel_30.add(textPane_1_7_3_3_2_3_1);
+		//boxextra3
 		
-		JTextPane textPane_1_7_3_3_2_3_1_1 = new JTextPane();
 		textPane_1_7_3_3_2_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textPane_1_7_3_3_2_3_1_1.setBounds(332, 658, 1144, 265);
 		panel_30.add(textPane_1_7_3_3_2_3_1_1);
@@ -3814,164 +4102,374 @@ public class Evaluation extends JFrame  {
 		} 
 
 		////////////////////////////Instrument 3//////////////////////////////////////
-		if(ap[60] == "0") {
+		if(ap[61] == "0") {
 			comboBox.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox.setSelectedItem(ap[60]); 
+			comboBox.setSelectedItem(ap[61]); 
 		}
-		if(ap[61] == "0") {
+		if(ap[62] == "0") {
 			comboBox_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_1.setSelectedItem(ap[61]);
+			comboBox_1.setSelectedItem(ap[62]);
 		}
 
 
-		if(ap[62] == "0") {
+		if(ap[63] == "0") {
 			comboBox_3.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_3.setSelectedItem(ap[62]);
+			comboBox_3.setSelectedItem(ap[63]);
 		}
 
-		if(ap[63] == "0") {
+		if(ap[64] == "0") {
 			comboBox_3_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_3_1.setSelectedItem(ap[63]);
+			comboBox_3_1.setSelectedItem(ap[64]);
 		}
 
-		if(ap[64] == "0") {
+		if(ap[65] == "0") {
 			comboBox_4.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_4.setSelectedItem(ap[64]);
+			comboBox_4.setSelectedItem(ap[65]);
 		}
 
-		if(ap[65] == "0") {
+		if(ap[66] == "0") {
 			comboBox_4_1.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_4_1.setSelectedItem(ap[65]);
+			comboBox_4_1.setSelectedItem(ap[66]);
 		}
 
-		if(ap[66] == "0") {
+		if(ap[67] == "0") {
 			comboBox_5.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_5.setSelectedItem(ap[66]);
+			comboBox_5.setSelectedItem(ap[67]);
 		}
 
-		if(ap[67] == "0") {
+		if(ap[68] == "0") {
 			comboBox_6.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_6.setSelectedItem(ap[67]);
+			comboBox_6.setSelectedItem(ap[68]);
 		}
 
-		if(ap[68] == "0") {
+		if(ap[69] == "0") {
 			comboBox_7.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_7.setSelectedItem(ap[68]);
+			comboBox_7.setSelectedItem(ap[69]);
 		}
 
-		if(ap[69] == "0") {
+		if(ap[70] == "0") {
 			comboBox_9.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_9.setSelectedItem(ap[69]);
+			comboBox_9.setSelectedItem(ap[70]);
 		}
 
-		if(ap[70] == "0") {
+		if(ap[71] == "0") {
 			comboBox_10.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_10.setSelectedItem(ap[70]);
+			comboBox_10.setSelectedItem(ap[71]);
 		}
 
-		if(ap[71] == "0") {
+		if(ap[72] == "0") {
 			comboBox_5_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1.setSelectedItem(ap[71]);
+			comboBox_5_1.setSelectedItem(ap[72]);
 		}
 
-		if(ap[72] == "0") {
+		if(ap[73] == "0") {
 			comboBox_5_2.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_2.setSelectedItem(ap[72]);
+			comboBox_5_2.setSelectedItem(ap[73]);
 		}
 
-		if(ap[73] == "0") {
+		if(ap[74] == "0") {
 			comboBox_5_3.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_3.setSelectedItem(ap[73]);
+			comboBox_5_3.setSelectedItem(ap[74]);
 		}
 
-		if(ap[74] == "0") {
+		if(ap[75] == "0") {
 			comboBox_5_4.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_4.setSelectedItem(ap[74]);
+			comboBox_5_4.setSelectedItem(ap[75]);
 		}
 
-		if(ap[75] == "0") {
+		if(ap[76] == "0") {
 			comboBox_5_5.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_5.setSelectedItem(ap[75]);
+			comboBox_5_5.setSelectedItem(ap[76]);
 		}
 
-		if(ap[76] == "0") {
+		if(ap[77] == "0") {
 			comboBox_5_1_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_1.setSelectedItem(ap[76]);
+			comboBox_5_1_1.setSelectedItem(ap[77]);
 		}
 
-		if(ap[77] == "0") {
+		if(ap[78] == "0") {
 			comboBox_5_1_2.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_2.setSelectedItem(ap[77]);
+			comboBox_5_1_2.setSelectedItem(ap[78]);
 		}
 
-		if(ap[78] == "0") {
+		if(ap[79] == "0") {
 			comboBox_5_1_3.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_3.setSelectedItem(ap[78]);
+			comboBox_5_1_3.setSelectedItem(ap[79]);
 		}
 
-		if(ap[79] == "0") {
+		if(ap[80] == "0") {
 			comboBox_5_1_4.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_4.setSelectedItem(ap[79]);
+			comboBox_5_1_4.setSelectedItem(ap[80]);
 		}
+		
+		
+		if(ap[81] == "0") {
+			comboBox_8.setSelectedIndex(0); 
+
+		}
+		else {
+			comboBox_8.setSelectedItem(ap[81]); 
+		}
+		if(ap[82] == "0") {
+			comboBox_12.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_12.setSelectedItem(ap[82]);
+		}
+
+
+		if(ap[83] == "0") {
+			comboBox_13.setSelectedIndex(0); 
+
+		}
+		else {
+			comboBox_13.setSelectedItem(ap[83]);
+		}
+
+		if(ap[84] == "0") {
+			comboBox_14.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_14.setSelectedItem(ap[84]);
+		}
+
+		if(ap[85] == "0") {
+			comboBox_15.setSelectedIndex(0); 
+
+		}
+		else {
+			comboBox_15.setSelectedItem(ap[85]);
+		}
+
+		if(ap[86] == "0") {
+			comboBox_16.setSelectedIndex(0); 
+
+		}
+		else {
+			comboBox_16.setSelectedItem(ap[86]);
+		}
+
+		if(ap[87] == "0") {
+			comboBox_17.setSelectedIndex(0); 
+
+		}
+		else {
+			comboBox_17.setSelectedItem(ap[87]);
+		}
+
+		if(ap[88] == "0") {
+			comboBox_18.setSelectedIndex(0); 
+
+		}
+		else {
+			comboBox_18.setSelectedItem(ap[88]);
+		}
+
+		if(ap[89] == "0") {
+			comboBox_19.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_19.setSelectedItem(ap[89]);
+		}
+
+		if(ap[90] == "0") {
+			comboBox_20.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_20.setSelectedItem(ap[90]);
+		}
+
+		if(ap[91] == "0") {
+			comboBox_21.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_21.setSelectedItem(ap[91]);
+		}
+
+		if(ap[92] == "0") {
+			comboBox_22.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_22.setSelectedItem(ap[92]);
+		}
+
+		if(ap[93] == "0") {
+			comboBox_23.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_23.setSelectedItem(ap[93]);
+		}
+
+		if(ap[94] == "0") {
+			comboBox_24.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_24.setSelectedItem(ap[94]);
+		}
+
+		if(ap[95] == "0") {
+			comboBox_25.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_25.setSelectedItem(ap[95]);
+		}
+
+		if(ap[96] == "0") {
+			comboBox_26.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_26.setSelectedItem(ap[96]);
+		}
+
+		if(ap[97] == "0") {
+			comboBox_27.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_27.setSelectedItem(ap[97]);
+		}
+
+		if(ap[98] == "0") {
+			comboBox_28.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_28.setSelectedItem(ap[98]);
+		}
+
+		if(ap[99] == "0") {
+			comboBox_29.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_29.setSelectedItem(ap[99]);
+		}
+
+		if(ap[100] == "0") {
+			comboBox_30.setSelectedIndex(0);
+
+		}
+		else {
+			comboBox_30.setSelectedItem(ap[100]);
+		}
+		
+		textPane_1.setText(ap[101]);
+		textPane_1_1_1.setText(ap[102]);
+		textPane_1_1.setText(ap[103]);
+		textPane.setText(ap[104]);
+		textPane_2_1.setText(ap[105]);
+		textPane_2.setText(ap[106]);
+		textPane_1_2.setText(ap[107]);
+		textPane_1_3.setText(ap[108]);
+		textPane_1_4.setText(ap[109]);
+		textPane_1_5.setText(ap[110]);
+		textPane_1_6.setText(ap[111]);
+		textPane_1_2_1.setText(ap[112]);
+		textPane_1_2_2.setText(ap[113]);
+		textPane_1_2_3.setText(ap[114]);
+		textPane_1_2_4.setText(ap[115]);
+		textPane_1_2_5.setText(ap[116]);
+		textPane_1_2_1_1.setText(ap[117]);
+		textPane_1_2_1_2.setText(ap[118]);
+		textPane_1_2_1_3.setText(ap[119]);
+		textPane_1_2_1_3_1.setText(ap[120]);
+			
+		textPane_1_7_4.setText(ap[121]);
+		textPane_1_7_1_2.setText(ap[122]);
+		textPane_1_7_1_1_1.setText(ap[123]);
+		textPane_1_7_4_1.setText(ap[124]);
+		textPane_1_7_4_2.setText(ap[125]);
+		textPane_1_7_4_3.setText(ap[126]);
+		textPane_1_7_3.setText(ap[127]);
+		textPane_1_7_3_1.setText(ap[128]);
+		textPane_1_7_3_1_1.setText(ap[129]);
+		textPane_1_7_3_2.setText(ap[130]);
+		textPane_1_7_3_2_1.setText(ap[131]);
+		textPane_1_7_3_2_1_1.setText(ap[132]);
+		textPane_1_7_3_3.setText(ap[133]);
+		textPane_1_7_3_3_1.setText(ap[134]);
+		textPane_1_7_3_3_2.setText(ap[135]);
+		textPane_1_7_3_3_2_1.setText(ap[136]);
+		textPane_1_7_3_3_2_1_1.setText(ap[137]);
+		textPane_1_7_3_3_2_2.setText(ap[138]);
+		textPane_1_7_3_3_2_2_1.setText(ap[139]);
+		textPane_1_7_3_3_2_2_1_1.setText(ap[140]);
+		textPane_1_7_3_3_2_3.setText(ap[141]);
+		textPane_1_7_3_3_2_3_1.setText(ap[142]);
+		textPane_1_7_3_3_2_3_1_1.setText(ap[143]);
+		
+		
+		
+		
 	}
 }
