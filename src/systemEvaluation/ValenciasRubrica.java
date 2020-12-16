@@ -15,10 +15,7 @@ public class ValenciasRubrica{
 	ExternalValues Pg = new ExternalValues();
 	ExternalValues Ph = new ExternalValues();
 	
-	String I3;
-	
-	ValenciasRubrica(String status){
-		I3 = status;
+	ValenciasRubrica(){
 	}
 	
 	double[] CalidadDocente(int choice)  throws IOException{
