@@ -58,7 +58,6 @@ public class Evaluation extends JFrame  {
 	private JTextField periodo_evaluado_textField;
 	private JTextField codigo_textField;
 	private JTextField tutulo_del_curso_textField;
-	private JTextField modalidad_textField;
 	private JLabel titulo_curso_lblNewLabel;
 	private JTextField servicio_institucion_total_textField;
 	private JTextField calidad_total_textField;
@@ -78,7 +77,6 @@ public class Evaluation extends JFrame  {
 	private JComboBox jornada_comple_comboBox = new JComboBox();
 	private JComboBox jornada_parcial_comboBox = new JComboBox();
 	private JComboBox contrato_comboBox = new JComboBox();
-	private JComboBox comboBox_11 = new JComboBox();
 
 	private JComboBox parte1_perfil_de_estudiante_1_comboBox = new JComboBox();
 	private JComboBox parte1_perfil_de_estudiante_2_comboBox = new JComboBox();
@@ -270,8 +268,6 @@ public class Evaluation extends JFrame  {
 		jornada_comple_lblNewLabel.setBounds(692, 561, 134, 20);
 		panel.add(jornada_comple_lblNewLabel);
 
-
-
 		jornada_comple_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		jornada_comple_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
 		jornada_comple_comboBox.setBounds(836, 558, 74, 27);
@@ -336,16 +332,6 @@ public class Evaluation extends JFrame  {
 		tutulo_del_curso_textField.setBounds(893, 784, 226, 26);
 		panel.add(tutulo_del_curso_textField);
 
-		JLabel modalidad_lblNewLabel = new JLabel("Modalidad");
-		modalidad_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		modalidad_lblNewLabel.setBounds(793, 829, 72, 20);
-		panel.add(modalidad_lblNewLabel);
-
-		modalidad_textField = new JTextField();
-		modalidad_textField.setColumns(10);
-		modalidad_textField.setBounds(893, 828, 226, 26);
-		panel.add(modalidad_textField);
-
 		JSeparator separator = new JSeparator();
 		separator.setBounds(779, 144, 0, 12);
 		panel.add(separator);
@@ -361,17 +347,6 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_44.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblNewLabel_44.setBounds(647, 11, 596, 123);
 		panel.add(lblNewLabel_44);
-
-		JLabel titulo_curso_lblNewLabel_1 = new JLabel("Informaci\u00F3n Ingresada");
-		titulo_curso_lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		titulo_curso_lblNewLabel_1.setBounds(707, 887, 173, 20);
-		panel.add(titulo_curso_lblNewLabel_1);
-
-
-		comboBox_11.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		comboBox_11.setModel(new DefaultComboBoxModel(new String[] {"Manual ", "Online"}));
-		comboBox_11.setBounds(893, 888, 226, 22);
-		panel.add(comboBox_11);
 
 
 		/////////////////////////////// INSTRUMENTO I ///////////////////////////////////////////
@@ -1160,191 +1135,197 @@ public class Evaluation extends JFrame  {
 		JTabbedPane tabbedPane_1 = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.addTab("Instrumento II", null, tabbedPane_1, null);
 		
-		//EVIDENCIA////
+		JTabbedPane tabbedPane_7 = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane_1.addTab("Evidencia", null, tabbedPane_7, null);
+		
+		JPanel panel_31 = new JPanel();
+		tabbedPane_7.addTab("Calidad Docente", null, panel_31, null);
+		panel_31.setLayout(null);
 		
 		JPanel panel_28 = new JPanel();
 		panel_28.setLayout(null);
-		tabbedPane_1.addTab("Evidencia", null, panel_28, null);
-
-		JLabel lblNewLabel_44_1_1 = new JLabel("RANGO CATEDR\u00C1TICO");
+		panel_28.setBounds(0, 0, 1904, 958);
+		panel_31.add(panel_28);
+		
+		JLabel lblNewLabel_44_1_1 = new JLabel("CALIDAD DOCENTE");
 		lblNewLabel_44_1_1.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblNewLabel_44_1_1.setBounds(614, -14, 596, 107);
 		panel_28.add(lblNewLabel_44_1_1);
-
+		
 		JLabel lblNewLabel_48_8 = new JLabel("I. Experiencia y Calidad Docente");
 		lblNewLabel_48_8.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblNewLabel_48_8.setBounds(267, 68, 389, 41);
+		lblNewLabel_48_8.setBounds(354, 68, 389, 41);
 		panel_28.add(lblNewLabel_48_8);
-
-		JLabel lblNewLabel_48_9 = new JLabel("a. Dominio de la disciplina que ense\u00F1a");
+		
+		JLabel lblNewLabel_48_9 = new JLabel("a. Dominio de la disciplina que ense\u00F1a.");
 		lblNewLabel_48_9.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9.setBounds(197, 141, 389, 41);
 		panel_28.add(lblNewLabel_48_9);
-
+		
 		JLabel lblNewLabel_48_9_1 = new JLabel("b. Habilidad para organizar el contenido y presentarlo en");
 		lblNewLabel_48_9_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_1.setBounds(197, 249, 546, 41);
 		panel_28.add(lblNewLabel_48_9_1);
-
+		
 		JLabel lblNewLabel_48_9_2 = new JLabel("forma clara, l\u00F3gica e imaginativa.");
 		lblNewLabel_48_9_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_2.setBounds(207, 281, 389, 41);
 		panel_28.add(lblNewLabel_48_9_2);
-
+		
 		JLabel lblNewLabel_48_9_3 = new JLabel("c. Conocimiento de los desarrollos actuales de la disciplina.");
 		lblNewLabel_48_9_3.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_3.setBounds(197, 366, 562, 41);
 		panel_28.add(lblNewLabel_48_9_3);
-
+		
 		JLabel lblNewLabel_48_9_4 = new JLabel("d. Habilidad para relacionar la disciplina con otras esferas del");
 		lblNewLabel_48_9_4.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_4.setBounds(197, 471, 583, 41);
 		panel_28.add(lblNewLabel_48_9_4);
-
+		
 		JLabel lblNewLabel_48_9_5 = new JLabel("conocimiento. ");
 		lblNewLabel_48_9_5.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_5.setBounds(228, 503, 136, 34);
 		panel_28.add(lblNewLabel_48_9_5);
-
+		
 		JLabel lblNewLabel_48_9_6 = new JLabel("e. Habilidad para promover y ampliar el inter\u00E9s del estudiante");
 		lblNewLabel_48_9_6.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_6.setBounds(197, 586, 583, 41);
 		panel_28.add(lblNewLabel_48_9_6);
-
+		
 		JPanel panel_6_6_1_1_2 = new JPanel();
 		panel_6_6_1_1_2.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_2.setBounds(10, 68, 1904, 10);
 		panel_28.add(panel_6_6_1_1_2);
-
+		
 		JPanel panel_6_6_1_1_3 = new JPanel();
 		panel_6_6_1_1_3.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3.setBounds(160, 104, 1601, 4);
 		panel_28.add(panel_6_6_1_1_3);
-
+		
 		JPanel panel_6_6_1_1_3_1 = new JPanel();
 		panel_6_6_1_1_3_1.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1.setBounds(160, 217, 1601, 4);
 		panel_28.add(panel_6_6_1_1_3_1);
-
+		
 		JPanel panel_6_6_1_1_3_1_1 = new JPanel();
 		panel_6_6_1_1_3_1_1.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1_1.setBounds(160, 331, 1601, 3);
 		panel_28.add(panel_6_6_1_1_3_1_1);
-
+		
 		JPanel panel_6_6_1_1_3_1_2 = new JPanel();
 		panel_6_6_1_1_3_1_2.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1_2.setBounds(160, 553, 1601, 4);
 		panel_28.add(panel_6_6_1_1_3_1_2);
-
+		
 		JPanel panel_6_6_1_1_3_1_3 = new JPanel();
 		panel_6_6_1_1_3_1_3.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1_3.setBounds(160, 445, 1601, 4);
 		panel_28.add(panel_6_6_1_1_3_1_3);
-
+		
 		JPanel panel_6_6_1_1_3_1_4 = new JPanel();
 		panel_6_6_1_1_3_1_4.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1_4.setBounds(160, 665, 1601, 4);
 		panel_28.add(panel_6_6_1_1_3_1_4);
-
+		
 		JLabel lblNewLabel_48_9_7 = new JLabel("en la disciplina.");
 		lblNewLabel_48_9_7.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_7.setBounds(225, 613, 389, 41);
 		panel_28.add(lblNewLabel_48_9_7);
-
+		
 		JLabel lblNewLabel_48_9_8 = new JLabel("f. Habilidad para desarrollar y utilizar m\u00E9todos y estrategias adecuadas,");
 		lblNewLabel_48_9_8.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_8.setBounds(197, 680, 728, 41);
 		panel_28.add(lblNewLabel_48_9_8);
-
+		
 		JLabel lblNewLabel_48_9_9 = new JLabel(" incluyendo el \u201Cassessment\u201D para una ense\u00F1anza efectiva.");
 		lblNewLabel_48_9_9.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_9.setBounds(219, 716, 571, 41);
 		panel_28.add(lblNewLabel_48_9_9);
-
+		
 		JLabel lblNewLabel_48_9_10 = new JLabel("g. Disponibilidad y eficacia en la orientaci\u00F3n acad\u00E9mica del ");
 		lblNewLabel_48_9_10.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_10.setBounds(197, 782, 675, 41);
 		panel_28.add(lblNewLabel_48_9_10);
-
+		
 		JLabel lblNewLabel_48_9_11 = new JLabel("estudiante.");
 		lblNewLabel_48_9_11.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_11.setBounds(225, 809, 389, 34);
 		panel_28.add(lblNewLabel_48_9_11);
-
+		
 		JLabel lblNewLabel_48_9_12 = new JLabel("h. Posesi\u00F3n de los atributos de integridad, laboriosidad, liberalidad y ");
 		lblNewLabel_48_9_12.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_12.setBounds(197, 845, 710, 41);
 		panel_28.add(lblNewLabel_48_9_12);
-
-		JLabel lblNewLabel_48_9_13 = new JLabel("objetividad en la ense\u00F1anza");
+		
+		JLabel lblNewLabel_48_9_13 = new JLabel("objetividad en la ense\u00F1anza.");
 		lblNewLabel_48_9_13.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblNewLabel_48_9_13.setBounds(225, 874, 389, 41);
 		panel_28.add(lblNewLabel_48_9_13);
-
+		
 		JPanel panel_6_6_1_1_3_1_4_1 = new JPanel();
 		panel_6_6_1_1_3_1_4_1.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1_4_1.setBounds(160, 774, 1601, 3);
 		panel_28.add(panel_6_6_1_1_3_1_4_1);
-
+		
 		JPanel panel_6_6_1_1_3_1_4_3 = new JPanel();
 		panel_6_6_1_1_3_1_4_3.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_1_4_3.setBounds(141, 926, 1611, 3);
 		panel_28.add(panel_6_6_1_1_3_1_4_3);
-
+		
 		JPanel panel_6_6_1_1_3_2 = new JPanel();
 		panel_6_6_1_1_3_2.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_2.setBounds(141, 74, 17, 855);
 		panel_28.add(panel_6_6_1_1_3_2);
-
+		
 		JPanel panel_6_6_1_1_3_2_1 = new JPanel();
 		panel_6_6_1_1_3_2_1.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_2_1.setBounds(1744, 74, 17, 855);
 		panel_28.add(panel_6_6_1_1_3_2_1);
-
+		
 		JPanel panel_6_6_1_1_3_2_2 = new JPanel();
 		panel_6_6_1_1_3_2_2.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_2_2.setBounds(934, 68, 10, 861);
 		panel_28.add(panel_6_6_1_1_3_2_2);
-
+		
 		JPanel panel_6_6_1_1_3_2_2_1 = new JPanel();
 		panel_6_6_1_1_3_2_2_1.setBackground(SystemColor.textInactiveText);
 		panel_6_6_1_1_3_2_2_1.setBounds(1185, 68, 10, 862);
 		panel_28.add(panel_6_6_1_1_3_2_2_1);
-
+		
 		JLabel lblNewLabel_48_8_1_1 = new JLabel("Puntuaci\u00F3n obtenida");
 		lblNewLabel_48_8_1_1.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblNewLabel_48_8_1_1.setBounds(949, 68, 234, 41);
 		panel_28.add(lblNewLabel_48_8_1_1);
-
+		
 		JLabel lblNewLabel_48_8_1_1_1 = new JLabel("Comentarios");
 		lblNewLabel_48_8_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblNewLabel_48_8_1_1_1.setBounds(1369, 68, 152, 41);
 		panel_28.add(lblNewLabel_48_8_1_1_1);
-
+		
 		JTextArea textArea = new JTextArea();
 		textArea.setBounds(1195, 110, 546, 101);
 		panel_28.add(textArea);
-
+		
 		JTextArea textArea_1 = new JTextArea();
 		textArea_1.setBounds(1195, 217, 546, 114);
 		panel_28.add(textArea_1);
-
+		
 		JTextArea textArea_2 = new JTextArea();
 		textArea_2.setBounds(1195, 331, 546, 114);
 		panel_28.add(textArea_2);
-
+		
 		JTextArea textArea_3 = new JTextArea();
 		textArea_3.setBounds(1195, 445, 546, 107);
 		panel_28.add(textArea_3);
-
+		
 		JTextArea textArea_4 = new JTextArea();
 		textArea_4.setBounds(1195, 553, 546, 107);
 		panel_28.add(textArea_4);
-
+		
 		JTextArea textArea_5 = new JTextArea();
 		textArea_5.setBounds(1196, 670, 546, 107);
 		panel_28.add(textArea_5);
-
+		
 		JTextArea textArea_6 = new JTextArea();
 		textArea_6.setBounds(1195, 782, 546, 140);
 		panel_28.add(textArea_6);
@@ -1383,6 +1364,523 @@ public class Evaluation extends JFrame  {
 		spinner_5_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_5_1.setBounds(1039, 831, 58, 27);
 		panel_28.add(spinner_5_1);
+		
+		JPanel panel_33 = new JPanel();
+		tabbedPane_7.addTab("Servicio a la Institución ", null, panel_33, null);
+		panel_33.setLayout(null);
+		
+		JPanel panel_28_1 = new JPanel();
+		panel_28_1.setLayout(null);
+		panel_28_1.setBounds(0, 0, 1904, 958);
+		panel_33.add(panel_28_1);
+		
+		JLabel lblNewLabel_44_1_1_1 = new JLabel("Servicio a la Instituci\u00F3n");
+		lblNewLabel_44_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44_1_1_1.setBounds(614, -14, 596, 107);
+		panel_28_1.add(lblNewLabel_44_1_1_1);
+		
+		JLabel lblNewLabel_48_8_1 = new JLabel("Servicio a la Instituci\u00F3n");
+		lblNewLabel_48_8_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1.setBounds(354, 68, 389, 41);
+		panel_28_1.add(lblNewLabel_48_8_1);
+		
+		JLabel lblNewLabel_48_9_14 = new JLabel("a. Trabajo en comit\u00E9s de facultad a nivel departamental");
+		lblNewLabel_48_9_14.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_14.setBounds(197, 141, 710, 41);
+		panel_28_1.add(lblNewLabel_48_9_14);
+		
+		JLabel lblNewLabel_48_9_1_1 = new JLabel("b. Participaci\u00F3n yaportaci\u00F3n a reuniones de facultad y de\r\n");
+		lblNewLabel_48_9_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_1_1.setBounds(197, 249, 546, 41);
+		panel_28_1.add(lblNewLabel_48_9_1_1);
+		
+		JLabel lblNewLabel_48_9_2_1 = new JLabel("comit\u00E9s a nivel de Recinto\r");
+		lblNewLabel_48_9_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_2_1.setBounds(207, 281, 389, 41);
+		panel_28_1.add(lblNewLabel_48_9_2_1);
+		
+		JLabel lblNewLabel_48_9_3_1 = new JLabel("c. Servicio en comit\u00E9s y en organizaciones a nivel institucional");
+		lblNewLabel_48_9_3_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_3_1.setBounds(197, 366, 710, 41);
+		panel_28_1.add(lblNewLabel_48_9_3_1);
+		
+		JLabel lblNewLabel_48_9_4_1 = new JLabel("d. Colaboraci\u00F3n en actividades estudiantiles");
+		lblNewLabel_48_9_4_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_4_1.setBounds(197, 477, 583, 41);
+		panel_28_1.add(lblNewLabel_48_9_4_1);
+		
+		JLabel lblNewLabel_48_9_6_1 = new JLabel("e. Asistencia a actos oficiales");
+		lblNewLabel_48_9_6_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_6_1.setBounds(197, 586, 583, 41);
+		panel_28_1.add(lblNewLabel_48_9_6_1);
+		
+		JPanel panel_6_6_1_1_2_1 = new JPanel();
+		panel_6_6_1_1_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_2_1.setBounds(10, 68, 1904, 10);
+		panel_28_1.add(panel_6_6_1_1_2_1);
+		
+		JPanel panel_6_6_1_1_3_3 = new JPanel();
+		panel_6_6_1_1_3_3.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_3.setBounds(160, 104, 1601, 4);
+		panel_28_1.add(panel_6_6_1_1_3_3);
+		
+		JPanel panel_6_6_1_1_3_1_5 = new JPanel();
+		panel_6_6_1_1_3_1_5.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_5.setBounds(160, 217, 1601, 4);
+		panel_28_1.add(panel_6_6_1_1_3_1_5);
+		
+		JPanel panel_6_6_1_1_3_1_3_1 = new JPanel();
+		panel_6_6_1_1_3_1_3_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_3_1.setBounds(160, 445, 1601, 4);
+		panel_28_1.add(panel_6_6_1_1_3_1_3_1);
+		
+		JPanel panel_6_6_1_1_3_1_4_2 = new JPanel();
+		panel_6_6_1_1_3_1_4_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_4_2.setBounds(160, 665, 1601, 4);
+		panel_28_1.add(panel_6_6_1_1_3_1_4_2);
+		
+		JLabel lblNewLabel_48_9_8_1 = new JLabel("f. Designaci\u00F3n como director/a de departamento, presidente de comit\u00E9 ");
+		lblNewLabel_48_9_8_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_8_1.setBounds(197, 680, 728, 41);
+		panel_28_1.add(lblNewLabel_48_9_8_1);
+		
+		JLabel lblNewLabel_48_9_9_1 = new JLabel("y otras\r");
+		lblNewLabel_48_9_9_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_9_1.setBounds(219, 716, 571, 41);
+		panel_28_1.add(lblNewLabel_48_9_9_1);
+		
+		JLabel lblNewLabel_48_9_10_1 = new JLabel("g. Participaci\u00F3n en organismos de gobierno; tales como: ");
+		lblNewLabel_48_9_10_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_10_1.setBounds(197, 803, 675, 41);
+		panel_28_1.add(lblNewLabel_48_9_10_1);
+		
+		JLabel lblNewLabel_48_9_11_1 = new JLabel("el Senado y el Consejo Universitario");
+		lblNewLabel_48_9_11_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_11_1.setBounds(219, 840, 389, 34);
+		panel_28_1.add(lblNewLabel_48_9_11_1);
+		
+		JPanel panel_6_6_1_1_3_1_4_3_1 = new JPanel();
+		panel_6_6_1_1_3_1_4_3_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_4_3_1.setBounds(141, 926, 1611, 3);
+		panel_28_1.add(panel_6_6_1_1_3_1_4_3_1);
+		
+		JPanel panel_6_6_1_1_3_2_3 = new JPanel();
+		panel_6_6_1_1_3_2_3.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_3.setBounds(141, 74, 17, 855);
+		panel_28_1.add(panel_6_6_1_1_3_2_3);
+		
+		JPanel panel_6_6_1_1_3_2_1_1 = new JPanel();
+		panel_6_6_1_1_3_2_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_1_1.setBounds(1744, 74, 17, 855);
+		panel_28_1.add(panel_6_6_1_1_3_2_1_1);
+		
+		JPanel panel_6_6_1_1_3_2_2_2 = new JPanel();
+		panel_6_6_1_1_3_2_2_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_2.setBounds(934, 68, 10, 861);
+		panel_28_1.add(panel_6_6_1_1_3_2_2_2);
+		
+		JPanel panel_6_6_1_1_3_2_2_1_1 = new JPanel();
+		panel_6_6_1_1_3_2_2_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_1_1.setBounds(1185, 68, 10, 862);
+		panel_28_1.add(panel_6_6_1_1_3_2_2_1_1);
+		
+		JLabel lblNewLabel_48_8_1_1_2 = new JLabel("Puntuaci\u00F3n obtenida");
+		lblNewLabel_48_8_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_2.setBounds(949, 68, 234, 41);
+		panel_28_1.add(lblNewLabel_48_8_1_1_2);
+		
+		JLabel lblNewLabel_48_8_1_1_1_1 = new JLabel("Comentarios");
+		lblNewLabel_48_8_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_1_1.setBounds(1369, 68, 152, 41);
+		panel_28_1.add(lblNewLabel_48_8_1_1_1_1);
+		
+		JTextArea textArea_8 = new JTextArea();
+		textArea_8.setBounds(1195, 110, 546, 101);
+		panel_28_1.add(textArea_8);
+		
+		JTextArea textArea_1_1 = new JTextArea();
+		textArea_1_1.setBounds(1195, 217, 546, 232);
+		panel_28_1.add(textArea_1_1);
+		
+		JTextArea textArea_3_1 = new JTextArea();
+		textArea_3_1.setBounds(1195, 445, 546, 224);
+		panel_28_1.add(textArea_3_1);
+		
+		JTextArea textArea_5_1 = new JTextArea();
+		textArea_5_1.setBounds(1196, 670, 546, 245);
+		panel_28_1.add(textArea_5_1);
+		
+		JSpinner spinner_6 = new JSpinner();
+		spinner_6.setFont(new Font("Tahoma", Font.BOLD, 19));
+		spinner_6.setBounds(1039, 155, 58, 27);
+		panel_28_1.add(spinner_6);
+		
+		JSpinner spinner_1_1 = new JSpinner();
+		spinner_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_1_1.setBounds(1039, 307, 58, 27);
+		panel_28_1.add(spinner_1_1);
+		
+		JSpinner spinner_3_1 = new JSpinner();
+		spinner_3_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_3_1.setBounds(1038, 549, 59, 27);
+		panel_28_1.add(spinner_3_1);
+		
+		JSpinner spinner_5_2 = new JSpinner();
+		spinner_5_2.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_5_2.setBounds(1039, 762, 58, 27);
+		panel_28_1.add(spinner_5_2);
+		
+		JPanel panel_35 = new JPanel();
+		tabbedPane_7.addTab("Servicio a la Comunidad", null, panel_35, null);
+		panel_35.setLayout(null);
+		
+		JPanel panel_28_1_1 = new JPanel();
+		panel_28_1_1.setLayout(null);
+		panel_28_1_1.setBounds(10, 11, 1904, 958);
+		panel_35.add(panel_28_1_1);
+		
+		JLabel lblNewLabel_44_1_1_1_1 = new JLabel("Servicio a la Instituci\u00F3n");
+		lblNewLabel_44_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44_1_1_1_1.setBounds(614, -14, 596, 107);
+		panel_28_1_1.add(lblNewLabel_44_1_1_1_1);
+		
+		JLabel lblNewLabel_48_8_1_2 = new JLabel("Servicio a la Comunidad ");
+		lblNewLabel_48_8_1_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_2.setBounds(385, 68, 284, 41);
+		panel_28_1_1.add(lblNewLabel_48_8_1_2);
+		
+		JLabel lblNewLabel_48_9_14_1 = new JLabel("a. Servicio en el campo profesional del profesor como ");
+		lblNewLabel_48_9_14_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_14_1.setBounds(197, 327, 710, 41);
+		panel_28_1_1.add(lblNewLabel_48_9_14_1);
+		
+		JLabel lblNewLabel_48_9_1_1_1 = new JLabel("b. Servicio como recurso: conferenciante de grupos de la comunidad,");
+		lblNewLabel_48_9_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_1_1_1.setBounds(197, 450, 701, 41);
+		panel_28_1_1.add(lblNewLabel_48_9_1_1_1);
+		
+		JLabel lblNewLabel_48_9_2_1_1 = new JLabel("consultor o investigador");
+		lblNewLabel_48_9_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_2_1_1.setBounds(224, 361, 389, 41);
+		panel_28_1_1.add(lblNewLabel_48_9_2_1_1);
+		
+		JLabel lblNewLabel_48_9_3_1_1 = new JLabel(" participaci\u00F3n activa en gestiones pol\u00EDticas, religiosas o c\u00EDvicas\r");
+		lblNewLabel_48_9_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_3_1_1.setBounds(224, 488, 710, 41);
+		panel_28_1_1.add(lblNewLabel_48_9_3_1_1);
+		
+		JPanel panel_6_6_1_1_2_1_1 = new JPanel();
+		panel_6_6_1_1_2_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_2_1_1.setBounds(10, 68, 1904, 10);
+		panel_28_1_1.add(panel_6_6_1_1_2_1_1);
+		
+		JPanel panel_6_6_1_1_3_3_1 = new JPanel();
+		panel_6_6_1_1_3_3_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_3_1.setBounds(160, 104, 1601, 4);
+		panel_28_1_1.add(panel_6_6_1_1_3_3_1);
+		
+		JPanel panel_6_6_1_1_3_1_4_3_1_1 = new JPanel();
+		panel_6_6_1_1_3_1_4_3_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_4_3_1_1.setBounds(141, 926, 1611, 3);
+		panel_28_1_1.add(panel_6_6_1_1_3_1_4_3_1_1);
+		
+		JPanel panel_6_6_1_1_3_2_3_1 = new JPanel();
+		panel_6_6_1_1_3_2_3_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_3_1.setBounds(141, 74, 17, 855);
+		panel_28_1_1.add(panel_6_6_1_1_3_2_3_1);
+		
+		JPanel panel_6_6_1_1_3_2_1_1_1 = new JPanel();
+		panel_6_6_1_1_3_2_1_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_1_1_1.setBounds(1744, 74, 17, 855);
+		panel_28_1_1.add(panel_6_6_1_1_3_2_1_1_1);
+		
+		JPanel panel_6_6_1_1_3_2_2_2_1 = new JPanel();
+		panel_6_6_1_1_3_2_2_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_2_1.setBounds(934, 68, 10, 861);
+		panel_28_1_1.add(panel_6_6_1_1_3_2_2_2_1);
+		
+		JPanel panel_6_6_1_1_3_2_2_1_1_1 = new JPanel();
+		panel_6_6_1_1_3_2_2_1_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_1_1_1.setBounds(1185, 68, 10, 862);
+		panel_28_1_1.add(panel_6_6_1_1_3_2_2_1_1_1);
+		
+		JLabel lblNewLabel_48_8_1_1_2_1 = new JLabel("Puntuaci\u00F3n obtenida");
+		lblNewLabel_48_8_1_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_2_1.setBounds(949, 68, 234, 41);
+		panel_28_1_1.add(lblNewLabel_48_8_1_1_2_1);
+		
+		JLabel lblNewLabel_48_8_1_1_1_1_1 = new JLabel("Comentarios");
+		lblNewLabel_48_8_1_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_1_1_1.setBounds(1369, 68, 152, 41);
+		panel_28_1_1.add(lblNewLabel_48_8_1_1_1_1_1);
+		
+		JTextArea textArea_8_1 = new JTextArea();
+		textArea_8_1.setBounds(1196, 108, 556, 798);
+		panel_28_1_1.add(textArea_8_1);
+		
+		JSpinner spinner_6_1 = new JSpinner();
+		spinner_6_1.setFont(new Font("Tahoma", Font.BOLD, 19));
+		spinner_6_1.setBounds(1039, 380, 58, 27);
+		panel_28_1_1.add(spinner_6_1);
+		
+		JPanel panel_36 = new JPanel();
+		tabbedPane_7.addTab("Investigación y Trabajo Creativo", null, panel_36, null);
+		panel_36.setLayout(null);
+		
+		JPanel panel_28_1_2 = new JPanel();
+		panel_28_1_2.setLayout(null);
+		panel_28_1_2.setBounds(0, 0, 1904, 958);
+		panel_36.add(panel_28_1_2);
+		
+		JLabel lblNewLabel_44_1_1_1_2 = new JLabel(" Investigaci\u00F3n y Trabajo Creativo");
+		lblNewLabel_44_1_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44_1_1_1_2.setBounds(614, -14, 1057, 107);
+		panel_28_1_2.add(lblNewLabel_44_1_1_1_2);
+		
+		JLabel lblNewLabel_48_8_1_3 = new JLabel("Investigaci\u00F3n y Trabajo");
+		lblNewLabel_48_8_1_3.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_3.setBounds(366, 68, 389, 41);
+		panel_28_1_2.add(lblNewLabel_48_8_1_3);
+		
+		JLabel lblNewLabel_48_9_14_2 = new JLabel("a. Publicaciones");
+		lblNewLabel_48_9_14_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_14_2.setBounds(197, 141, 710, 41);
+		panel_28_1_2.add(lblNewLabel_48_9_14_2);
+		
+		JLabel lblNewLabel_48_9_1_1_2 = new JLabel("b. Presentaciones y trabajos creativos relacionados con la\r\n");
+		lblNewLabel_48_9_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_1_1_2.setBounds(197, 250, 546, 41);
+		panel_28_1_2.add(lblNewLabel_48_9_1_1_2);
+		
+		JLabel lblNewLabel_48_9_2_1_2 = new JLabel("disciplina que ense\u00F1a");
+		lblNewLabel_48_9_2_1_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_2_1_2.setBounds(207, 281, 389, 41);
+		panel_28_1_2.add(lblNewLabel_48_9_2_1_2);
+		
+		JLabel lblNewLabel_48_9_3_1_2 = new JLabel("c. Propuestas dise\u00F1adas y presentadas");
+		lblNewLabel_48_9_3_1_2.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_3_1_2.setBounds(197, 477, 710, 41);
+		panel_28_1_2.add(lblNewLabel_48_9_3_1_2);
+		
+		JLabel lblNewLabel_48_9_4_1_1 = new JLabel("d. Concesi\u00F3n de ayudas para investigaci\u00F3n y proyectos");
+		lblNewLabel_48_9_4_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_4_1_1.setBounds(197, 628, 583, 41);
+		panel_28_1_2.add(lblNewLabel_48_9_4_1_1);
+		
+		JLabel lblNewLabel_48_9_6_1_1 = new JLabel("e. Invenciones, patentes, labor art\u00EDstica y actuaci\u00F3n");
+		lblNewLabel_48_9_6_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_6_1_1.setBounds(197, 789, 583, 41);
+		panel_28_1_2.add(lblNewLabel_48_9_6_1_1);
+		
+		JPanel panel_6_6_1_1_2_1_2 = new JPanel();
+		panel_6_6_1_1_2_1_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_2_1_2.setBounds(10, 68, 1904, 10);
+		panel_28_1_2.add(panel_6_6_1_1_2_1_2);
+		
+		JPanel panel_6_6_1_1_3_3_2 = new JPanel();
+		panel_6_6_1_1_3_3_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_3_2.setBounds(160, 104, 1601, 4);
+		panel_28_1_2.add(panel_6_6_1_1_3_3_2);
+		
+		JPanel panel_6_6_1_1_3_1_5_1 = new JPanel();
+		panel_6_6_1_1_3_1_5_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_5_1.setBounds(160, 217, 1601, 4);
+		panel_28_1_2.add(panel_6_6_1_1_3_1_5_1);
+		
+		JPanel panel_6_6_1_1_3_1_3_1_1 = new JPanel();
+		panel_6_6_1_1_3_1_3_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_3_1_1.setBounds(160, 333, 1601, 4);
+		panel_28_1_2.add(panel_6_6_1_1_3_1_3_1_1);
+		
+		JPanel panel_6_6_1_1_3_1_4_3_1_2 = new JPanel();
+		panel_6_6_1_1_3_1_4_3_1_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_4_3_1_2.setBounds(141, 926, 1611, 3);
+		panel_28_1_2.add(panel_6_6_1_1_3_1_4_3_1_2);
+		
+		JPanel panel_6_6_1_1_3_2_3_2 = new JPanel();
+		panel_6_6_1_1_3_2_3_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_3_2.setBounds(141, 74, 17, 855);
+		panel_28_1_2.add(panel_6_6_1_1_3_2_3_2);
+		
+		JPanel panel_6_6_1_1_3_2_1_1_2 = new JPanel();
+		panel_6_6_1_1_3_2_1_1_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_1_1_2.setBounds(1744, 74, 17, 855);
+		panel_28_1_2.add(panel_6_6_1_1_3_2_1_1_2);
+		
+		JPanel panel_6_6_1_1_3_2_2_2_2 = new JPanel();
+		panel_6_6_1_1_3_2_2_2_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_2_2.setBounds(934, 68, 10, 861);
+		panel_28_1_2.add(panel_6_6_1_1_3_2_2_2_2);
+		
+		JPanel panel_6_6_1_1_3_2_2_1_1_2 = new JPanel();
+		panel_6_6_1_1_3_2_2_1_1_2.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_1_1_2.setBounds(1185, 68, 10, 862);
+		panel_28_1_2.add(panel_6_6_1_1_3_2_2_1_1_2);
+		
+		JLabel lblNewLabel_48_8_1_1_2_2 = new JLabel("Puntuaci\u00F3n obtenida");
+		lblNewLabel_48_8_1_1_2_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_2_2.setBounds(949, 68, 234, 41);
+		panel_28_1_2.add(lblNewLabel_48_8_1_1_2_2);
+		
+		JLabel lblNewLabel_48_8_1_1_1_1_2 = new JLabel("Comentarios");
+		lblNewLabel_48_8_1_1_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_1_1_2.setBounds(1369, 68, 152, 41);
+		panel_28_1_2.add(lblNewLabel_48_8_1_1_1_1_2);
+		
+		JTextArea textArea_8_2 = new JTextArea();
+		textArea_8_2.setBounds(1195, 110, 546, 101);
+		panel_28_1_2.add(textArea_8_2);
+		
+		JTextArea textArea_1_1_1 = new JTextArea();
+		textArea_1_1_1.setBounds(1195, 217, 546, 698);
+		panel_28_1_2.add(textArea_1_1_1);
+		
+		JSpinner spinner_6_2 = new JSpinner();
+		spinner_6_2.setFont(new Font("Tahoma", Font.BOLD, 19));
+		spinner_6_2.setBounds(1039, 155, 58, 27);
+		panel_28_1_2.add(spinner_6_2);
+		
+		JSpinner spinner_1_1_1 = new JSpinner();
+		spinner_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_1_1_1.setBounds(1039, 277, 58, 27);
+		panel_28_1_2.add(spinner_1_1_1);
+		
+		JSpinner spinner_3_1_1 = new JSpinner();
+		spinner_3_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_3_1_1.setBounds(1039, 608, 59, 27);
+		panel_28_1_2.add(spinner_3_1_1);
+		
+		JPanel panel_37 = new JPanel();
+		tabbedPane_7.addTab("Crecimiento y Desarrollo Profesional", null, panel_37, null);
+		panel_37.setLayout(null);
+		
+		JPanel panel_28_1_2_1 = new JPanel();
+		panel_28_1_2_1.setLayout(null);
+		panel_28_1_2_1.setBounds(0, 0, 1904, 958);
+		panel_37.add(panel_28_1_2_1);
+		
+		JLabel lblNewLabel_44_1_1_1_2_1 = new JLabel("Crecimiento y Desarrollo Profesional");
+		lblNewLabel_44_1_1_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel_44_1_1_1_2_1.setBounds(614, -14, 1057, 107);
+		panel_28_1_2_1.add(lblNewLabel_44_1_1_1_2_1);
+		
+		JLabel lblNewLabel_48_8_1_3_1 = new JLabel("Crecimiento y Desarrollo Profesional");
+		lblNewLabel_48_8_1_3_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_3_1.setBounds(366, 68, 460, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_8_1_3_1);
+		
+		JLabel lblNewLabel_48_9_14_2_1 = new JLabel("a. Obtenci\u00F3n de premios, ayudas y becas");
+		lblNewLabel_48_9_14_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_14_2_1.setBounds(197, 141, 710, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_9_14_2_1);
+		
+		JLabel lblNewLabel_48_9_1_1_2_1 = new JLabel("b. Nombramiento como asesor/a en agencias del gobierno estatal o federal\r");
+		lblNewLabel_48_9_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_1_1_2_1.setBounds(197, 250, 762, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_9_1_1_2_1);
+		
+		JLabel lblNewLabel_48_9_3_1_2_1 = new JLabel("c. Propuestas dise\u00F1adas y presentadas");
+		lblNewLabel_48_9_3_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_3_1_2_1.setBounds(197, 339, 710, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_9_3_1_2_1);
+		
+		JLabel lblNewLabel_48_9_4_1_1_1 = new JLabel("d. Recurso en conferencias y charlas");
+		lblNewLabel_48_9_4_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_4_1_1_1.setBounds(197, 567, 583, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_9_4_1_1_1);
+		
+		JLabel lblNewLabel_48_9_6_1_1_1 = new JLabel("e. Participaci\u00F3n en conferencias, congresos o institutos");
+		lblNewLabel_48_9_6_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_6_1_1_1.setBounds(197, 762, 583, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_9_6_1_1_1);
+		
+		JPanel panel_6_6_1_1_2_1_2_1 = new JPanel();
+		panel_6_6_1_1_2_1_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_2_1_2_1.setBounds(10, 68, 1904, 10);
+		panel_28_1_2_1.add(panel_6_6_1_1_2_1_2_1);
+		
+		JPanel panel_6_6_1_1_3_3_2_1 = new JPanel();
+		panel_6_6_1_1_3_3_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_3_2_1.setBounds(160, 104, 1601, 4);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_3_2_1);
+		
+		JPanel panel_6_6_1_1_3_1_3_1_1_1 = new JPanel();
+		panel_6_6_1_1_3_1_3_1_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_3_1_1_1.setBounds(151, 425, 1601, 4);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_1_3_1_1_1);
+		
+		JPanel panel_6_6_1_1_3_1_4_3_1_2_1 = new JPanel();
+		panel_6_6_1_1_3_1_4_3_1_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_4_3_1_2_1.setBounds(141, 926, 1611, 3);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_1_4_3_1_2_1);
+		
+		JPanel panel_6_6_1_1_3_2_3_2_1 = new JPanel();
+		panel_6_6_1_1_3_2_3_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_3_2_1.setBounds(141, 74, 17, 855);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_2_3_2_1);
+		
+		JPanel panel_6_6_1_1_3_2_1_1_2_1 = new JPanel();
+		panel_6_6_1_1_3_2_1_1_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_1_1_2_1.setBounds(1744, 74, 17, 855);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_2_1_1_2_1);
+		
+		JPanel panel_6_6_1_1_3_2_2_2_2_1 = new JPanel();
+		panel_6_6_1_1_3_2_2_2_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_2_2_1.setBounds(934, 68, 10, 861);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_2_2_2_2_1);
+		
+		JPanel panel_6_6_1_1_3_2_2_1_1_2_1 = new JPanel();
+		panel_6_6_1_1_3_2_2_1_1_2_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_2_2_1_1_2_1.setBounds(1185, 68, 10, 862);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_2_2_1_1_2_1);
+		
+		JLabel lblNewLabel_48_8_1_1_2_2_1 = new JLabel("Puntuaci\u00F3n obtenida");
+		lblNewLabel_48_8_1_1_2_2_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_2_2_1.setBounds(949, 68, 234, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_8_1_1_2_2_1);
+		
+		JLabel lblNewLabel_48_8_1_1_1_1_2_1 = new JLabel("Comentarios");
+		lblNewLabel_48_8_1_1_1_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel_48_8_1_1_1_1_2_1.setBounds(1369, 68, 152, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_8_1_1_1_1_2_1);
+		
+		JTextArea textArea_8_2_1 = new JTextArea();
+		textArea_8_2_1.setBounds(1195, 110, 546, 318);
+		panel_28_1_2_1.add(textArea_8_2_1);
+		
+		JSpinner spinner_1_1_1_1 = new JSpinner();
+		spinner_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_1_1_1_1.setBounds(1040, 199, 58, 27);
+		panel_28_1_2_1.add(spinner_1_1_1_1);
+		
+		JSpinner spinner_3_1_1_1 = new JSpinner();
+		spinner_3_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_3_1_1_1.setBounds(1040, 552, 59, 27);
+		panel_28_1_2_1.add(spinner_3_1_1_1);
+		
+		JPanel panel_6_6_1_1_3_1_3_1_1_1_1 = new JPanel();
+		panel_6_6_1_1_3_1_3_1_1_1_1.setBackground(SystemColor.textInactiveText);
+		panel_6_6_1_1_3_1_3_1_1_1_1.setBounds(151, 706, 1601, 4);
+		panel_28_1_2_1.add(panel_6_6_1_1_3_1_3_1_1_1_1);
+		
+		JLabel lblNewLabel_48_9_6_1_1_1_1 = new JLabel("f. Educaci\u00F3n post doctoral, educaci\u00F3n continua\r");
+		lblNewLabel_48_9_6_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel_48_9_6_1_1_1_1.setBounds(197, 851, 583, 41);
+		panel_28_1_2_1.add(lblNewLabel_48_9_6_1_1_1_1);
+		
+		JSpinner spinner_3_1_1_1_1 = new JSpinner();
+		spinner_3_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		spinner_3_1_1_1_1.setBounds(1040, 797, 59, 27);
+		panel_28_1_2_1.add(spinner_3_1_1_1_1);
+		
+		JTextArea textArea_8_2_1_1 = new JTextArea();
+		textArea_8_2_1_1.setBounds(1194, 429, 558, 277);
+		panel_28_1_2_1.add(textArea_8_2_1_1);
+		
+		JTextArea textArea_8_2_1_1_1 = new JTextArea();
+		textArea_8_2_1_1_1.setBounds(1195, 709, 557, 211);
+		panel_28_1_2_1.add(textArea_8_2_1_1_1);
+		
 
 ///////////////////////////// instrumento 2 ////////////////////////////
 
@@ -1938,7 +2436,6 @@ public class Evaluation extends JFrame  {
 		panel_23.add(textPane);
 
 
-
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "4", "3", "2", "1", "0"}));
 		comboBox.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -2469,6 +2966,41 @@ public class Evaluation extends JFrame  {
 		fileMenu.add(eMenuItem1_1);
 
 		setJMenuBar(menuBar);
+		
+		
+		
+		var eMenuItem2 = new JMenuItem("Print");
+		eMenuItem2.addActionListener(new ActionListener() {//// item 3
+			public void actionPerformed(ActionEvent arg0) {/// action listener 
+				
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
+				{
+				   Results1 w = new Results1();
+				   w.setVisible(true);
+				   
+				}
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
+					
+					Results1 w = new Results1();
+					   w.setVisible(true);
+				}
+				
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado"){
+					Results3 w = new Results3();
+					   w.setVisible(true);
+				}
+				
+				
+			}
+		});
+		eMenuItem2.setMnemonic(KeyEvent.VK_E);
+
+
+		fileMenu.add(eMenuItem2);
+		menuBar.add(fileMenu);
+
+		
+		
 
 		////////////////////////////Menu bar finish//////////////////////////////////////////////////
 
@@ -2492,9 +3024,7 @@ public class Evaluation extends JFrame  {
 				values [9] = contrato_comboBox.getSelectedItem().toString();
 				values [10] = codigo_textField.getText();
 				values [11] = tutulo_del_curso_textField.getText();
-				values [12] = modalidad_textField.getText();
-				values [13] = comboBox_11.getSelectedItem().toString();
-
+		
 				if (parte1_perfil_de_estudiante_1_comboBox.getSelectedItem().toString() == " ") {
 
 					values[14] = "0";
@@ -2986,8 +3516,13 @@ public class Evaluation extends JFrame  {
 		
 		JLabel lblNewLabel_44_1_2 = new JLabel(" Evaluaci\u00F3n del Director");
 		lblNewLabel_44_1_2.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblNewLabel_44_1_2.setBounds(448, 23, 639, 123);
+		lblNewLabel_44_1_2.setBounds(653, 35, 639, 123);
 		panel_29.add(lblNewLabel_44_1_2);
+		
+		JLabel lblNewLabel_21 = new JLabel("");
+		lblNewLabel_21.setIcon(new ImageIcon("C:\\Users\\natal\\OneDrive\\Pictures\\Screenshots\\Screenshot 2020-11-24 175722.jpg"));
+		lblNewLabel_21.setBounds(470, 247, 994, 410);
+		panel_29.add(lblNewLabel_21);
 	
 
 		JTabbedPane tabbedPane_6 = new JTabbedPane(JTabbedPane.TOP);
@@ -3495,7 +4030,7 @@ public class Evaluation extends JFrame  {
 		
 		JTextPane textPane_1_7_3_3_2_3_1_1 = new JTextPane();
 		textPane_1_7_3_3_2_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textPane_1_7_3_3_2_3_1_1.setBounds(332, 658, 1144, 265);
+		textPane_1_7_3_3_2_3_1_1.setBounds(332, 658, 1144, 228);
 		panel_30.add(textPane_1_7_3_3_2_3_1_1);
 		
 		JLabel lblNewLabel_48_10_3_4_2_4_1_1 = new JLabel("Recomendaci\u00F3n para el Plan de Acci\u00F3n del profesor evaluado: ");
@@ -3503,59 +4038,7 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_10_3_4_2_4_1_1.setBounds(615, 619, 587, 41);
 		panel_30.add(lblNewLabel_48_10_3_4_2_4_1_1);
 		
-		JTabbedPane tabbedPane_4 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Resultados", null, tabbedPane_4, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPane_4.addTab("Resultados", null, panel_2, null);
-		
-		JScrollPane scrollPane = new JScrollPane();
-		
-		JButton btnNewButton = new JButton("Print");
-		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
-		gl_panel_2.setHorizontalGroup(
-			gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_2.createSequentialGroup()
-					.addGap(78)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
-					.addGap(203)
-					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 1231, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(281, Short.MAX_VALUE))
-		);
-		gl_panel_2.setVerticalGroup(
-			gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_2.createSequentialGroup()
-					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel_2.createSequentialGroup()
-							.addGap(23)
-							.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 852, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_panel_2.createSequentialGroup()
-							.addGap(63)
-							.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(83, Short.MAX_VALUE))
-		);
-		
-		JTextArea textArea_7 = new JTextArea();
-		scrollPane.setViewportView(textArea_7);
-		panel_2.setLayout(gl_panel_2);
-		
 		JButton btnNewButton8 = new JButton("Print");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-		
-		try {
-
-			textArea_7.print();
-			}
-			catch (PrinterException e1)
-			{
-			e1.printStackTrace();
-			}
-			}
-		});
-		btnNewButton.setBounds(177, 459, 89, 23);
-		tabbedPane.add(btnNewButton);
 	}
 	
 	public void comboboxItems(String ID) {
@@ -3577,8 +4060,7 @@ public class Evaluation extends JFrame  {
 		contrato_comboBox.setSelectedItem(ap[9]);
 		codigo_textField.setText(ap[10]);
 		tutulo_del_curso_textField.setText(ap[11]);
-		modalidad_textField.setText(ap[12]);
-		comboBox_11.setSelectedItem(ap[13]);
+		
 
 		if(ap[14] == "0") {
 			parte1_perfil_de_estudiante_2_comboBox.setSelectedIndex(0);
