@@ -15,9 +15,11 @@ import javax.swing.border.EmptyBorder;
 public class MainMenu extends JFrame implements ActionListener {
 
 	public JPanel contentPane;
-
+	static int type;
 
 	public MainMenu() {
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(-7, -7, 1920, 1080);
 		contentPane = new JPanel();
@@ -33,6 +35,7 @@ public class MainMenu extends JFrame implements ActionListener {
 				Evaluation e = new Evaluation();
 				e.setVisible(true);
 				dispose();
+				type = 1;
 
 			}
 		});
@@ -97,9 +100,23 @@ public class MainMenu extends JFrame implements ActionListener {
 		new_evaluation_btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		new_evaluation_btnNewButton_1.setBounds(810, 433, 239, 23);
 		contentPane.add(new_evaluation_btnNewButton_1);
+		new_evaluation_btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				onlineEvaluation e = new onlineEvaluation();
+				e.setVisible(true);
+				dispose();
+				type = 2;
+
+			}
+		});
+		
+		
 
 	}
-
+	public int gettype() {
+		return type;
+		
+	}
 
 	public void actionPerformed(ActionEvent arg0) {
 
