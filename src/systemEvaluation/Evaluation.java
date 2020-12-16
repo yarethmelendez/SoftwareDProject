@@ -264,6 +264,18 @@ public class Evaluation extends JFrame  {
 
 	//Testing
 	public Evaluation() {
+		MainMenu type = new MainMenu();
+		int mod = type.gettype();
+		
+		if (mod == 1) {
+			
+			values[13] = "Manual";
+		} else if (mod == 2) {
+			
+			values[13] = "Online";
+		}
+		
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\natal\\OneDrive\\Pictures\\flyers\\ec18b863896963.5ac177847630c.png"));
 		setTitle("Evaluacion ");
 		setBackground(SystemColor.infoText);
