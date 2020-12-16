@@ -2752,182 +2752,182 @@ public class Evaluation extends JFrame  {
 				////////////////////////////NEW VALUES ///////////////////////////////
 				if (comboBox.getSelectedItem().toString() == " ") {
 
-					values [60] = "0";
-
-				} else {
-
-					values [60] = comboBox.getSelectedItem().toString();
-
-				}	
-				if (comboBox_1.getSelectedItem().toString() == " ") {
-
 					values [61] = "0";
 
 				} else {
 
-					values [61] = comboBox_1.getSelectedItem().toString();
+					values [61] = comboBox.getSelectedItem().toString();
 
-				}
-				if (comboBox_3.getSelectedItem().toString() == " ") {
+				}	
+				if (comboBox_1.getSelectedItem().toString() == " ") {
 
 					values [62] = "0";
 
 				} else {
 
-					values [62] = comboBox_3.getSelectedItem().toString();
+					values [62] = comboBox_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_3_1.getSelectedItem().toString() == " ") {
+				if (comboBox_3.getSelectedItem().toString() == " ") {
 
 					values [63] = "0";
 
 				} else {
 
-					values [63] = comboBox_3_1.getSelectedItem().toString();
+					values [63] = comboBox_3.getSelectedItem().toString();
 
 				}
-				if (comboBox_4.getSelectedItem().toString() == " ") {
+				if (comboBox_3_1.getSelectedItem().toString() == " ") {
 
 					values [64] = "0";
 
 				} else {
 
-					values [64] = comboBox_4.getSelectedItem().toString();
+					values [64] = comboBox_3_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_4_1.getSelectedItem().toString() == " ") {
+				if (comboBox_4.getSelectedItem().toString() == " ") {
 
 					values [65] = "0";
 
 				} else {
 
-					values [65] = comboBox_4_1.getSelectedItem().toString();
+					values [65] = comboBox_4.getSelectedItem().toString();
 
 				}
-				if (comboBox_5.getSelectedItem().toString() == " ") {
+				if (comboBox_4_1.getSelectedItem().toString() == " ") {
 
 					values [66] = "0";
 
 				} else {
 
-					values [66] = comboBox_5.getSelectedItem().toString();
+					values [66] = comboBox_4_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_6.getSelectedItem().toString() == " ") {
+				if (comboBox_5.getSelectedItem().toString() == " ") {
 
 					values [67] = "0";
 
 				} else {
 
-					values [67] = comboBox_6.getSelectedItem().toString();
+					values [67] = comboBox_5.getSelectedItem().toString();
 
 				}
-				if (comboBox_7.getSelectedItem().toString() == " ") {
+				if (comboBox_6.getSelectedItem().toString() == " ") {
 
 					values [68] = "0";
 
 				} else {
 
-					values [68] = comboBox_7.getSelectedItem().toString();
+					values [68] = comboBox_6.getSelectedItem().toString();
 
 				}
-				if (comboBox_9.getSelectedItem().toString() == " ") {
+				if (comboBox_7.getSelectedItem().toString() == " ") {
 
 					values [69] = "0";
 
 				} else {
 
-					values [69] = comboBox_9.getSelectedItem().toString();
+					values [69] = comboBox_7.getSelectedItem().toString();
 
 				}
-				if (comboBox_10.getSelectedItem().toString() == " ") {
+				if (comboBox_9.getSelectedItem().toString() == " ") {
 
 					values [70] = "0";
 
 				} else {
 
-					values [70] = comboBox_10.getSelectedItem().toString();
+					values [70] = comboBox_9.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1.getSelectedItem().toString() == " ") {
+				if (comboBox_10.getSelectedItem().toString() == " ") {
 
 					values [71] = "0";
 
 				} else {
 
-					values [71] = comboBox_5_1.getSelectedItem().toString();
+					values [71] = comboBox_10.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_2.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1.getSelectedItem().toString() == " ") {
 
 					values [72] = "0";
 
 				} else {
 
-					values [72] = comboBox_5_2.getSelectedItem().toString();
+					values [72] = comboBox_5_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_3.getSelectedItem().toString() == " ") {
+				if (comboBox_5_2.getSelectedItem().toString() == " ") {
 
 					values [73] = "0";
 
 				} else {
 
-					values [73] = comboBox_5_3.getSelectedItem().toString();
+					values [73] = comboBox_5_2.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_4.getSelectedItem().toString() == " ") {
+				if (comboBox_5_3.getSelectedItem().toString() == " ") {
 
 					values [74] = "0";
 
 				} else {
 
-					values [74] = comboBox_5_4.getSelectedItem().toString();
+					values [74] = comboBox_5_3.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_5.getSelectedItem().toString() == " ") {
+				if (comboBox_5_4.getSelectedItem().toString() == " ") {
 
 					values [75] = "0";
 
 				} else {
 
-					values [75] = comboBox_5_5.getSelectedItem().toString();
+					values [75] = comboBox_5_4.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_1.getSelectedItem().toString() == " ") {
+				if (comboBox_5_5.getSelectedItem().toString() == " ") {
 
 					values [76] = "0";
 
 				} else {
 
-					values [76] = comboBox_5_1_1.getSelectedItem().toString();
+					values [76] = comboBox_5_5.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_2.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1_1.getSelectedItem().toString() == " ") {
 
 					values [77] = "0";
 
 				} else {
 
-					values [77] = comboBox_5_1_2.getSelectedItem().toString();
+					values [77] = comboBox_5_1_1.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_3.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1_2.getSelectedItem().toString() == " ") {
 
 					values [78] = "0";
 
 				} else {
 
-					values [78] = comboBox_5_1_3.getSelectedItem().toString();
+					values [78] = comboBox_5_1_2.getSelectedItem().toString();
 
 				}
-				if (comboBox_5_1_4.getSelectedItem().toString() == " ") {
+				if (comboBox_5_1_3.getSelectedItem().toString() == " ") {
 
 					values [79] = "0";
 
 				} else {
 
-					values [79] = comboBox_5_1_4.getSelectedItem().toString();
+					values [79] = comboBox_5_1_3.getSelectedItem().toString();
+
+				}
+				if (comboBox_5_1_4.getSelectedItem().toString() == " ") {
+
+					values [80] = "0";
+
+				} else {
+
+					values [80] = comboBox_5_1_4.getSelectedItem().toString();
 
 				}
 
@@ -3661,164 +3661,164 @@ public class Evaluation extends JFrame  {
 		} 
 
 		////////////////////////////Instrument 3//////////////////////////////////////
-		if(ap[60] == "0") {
+		if(ap[61] == "0") {
 			comboBox.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox.setSelectedItem(ap[60]); 
+			comboBox.setSelectedItem(ap[61]); 
 		}
-		if(ap[61] == "0") {
+		if(ap[62] == "0") {
 			comboBox_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_1.setSelectedItem(ap[61]);
+			comboBox_1.setSelectedItem(ap[62]);
 		}
 
 
-		if(ap[62] == "0") {
+		if(ap[63] == "0") {
 			comboBox_3.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_3.setSelectedItem(ap[62]);
+			comboBox_3.setSelectedItem(ap[63]);
 		}
 
-		if(ap[63] == "0") {
+		if(ap[64] == "0") {
 			comboBox_3_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_3_1.setSelectedItem(ap[63]);
+			comboBox_3_1.setSelectedItem(ap[64]);
 		}
 
-		if(ap[64] == "0") {
+		if(ap[65] == "0") {
 			comboBox_4.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_4.setSelectedItem(ap[64]);
+			comboBox_4.setSelectedItem(ap[65]);
 		}
 
-		if(ap[65] == "0") {
+		if(ap[66] == "0") {
 			comboBox_4_1.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_4_1.setSelectedItem(ap[65]);
+			comboBox_4_1.setSelectedItem(ap[66]);
 		}
 
-		if(ap[66] == "0") {
+		if(ap[67] == "0") {
 			comboBox_5.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_5.setSelectedItem(ap[66]);
+			comboBox_5.setSelectedItem(ap[67]);
 		}
 
-		if(ap[67] == "0") {
+		if(ap[68] == "0") {
 			comboBox_6.setSelectedIndex(0); 
 
 		}
 		else {
-			comboBox_6.setSelectedItem(ap[67]);
+			comboBox_6.setSelectedItem(ap[68]);
 		}
 
-		if(ap[68] == "0") {
+		if(ap[69] == "0") {
 			comboBox_7.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_7.setSelectedItem(ap[68]);
+			comboBox_7.setSelectedItem(ap[69]);
 		}
 
-		if(ap[69] == "0") {
+		if(ap[70] == "0") {
 			comboBox_9.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_9.setSelectedItem(ap[69]);
+			comboBox_9.setSelectedItem(ap[70]);
 		}
 
-		if(ap[70] == "0") {
+		if(ap[71] == "0") {
 			comboBox_10.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_10.setSelectedItem(ap[70]);
+			comboBox_10.setSelectedItem(ap[71]);
 		}
 
-		if(ap[71] == "0") {
+		if(ap[72] == "0") {
 			comboBox_5_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1.setSelectedItem(ap[71]);
+			comboBox_5_1.setSelectedItem(ap[72]);
 		}
 
-		if(ap[72] == "0") {
+		if(ap[73] == "0") {
 			comboBox_5_2.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_2.setSelectedItem(ap[72]);
+			comboBox_5_2.setSelectedItem(ap[73]);
 		}
 
-		if(ap[73] == "0") {
+		if(ap[74] == "0") {
 			comboBox_5_3.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_3.setSelectedItem(ap[73]);
+			comboBox_5_3.setSelectedItem(ap[74]);
 		}
 
-		if(ap[74] == "0") {
+		if(ap[75] == "0") {
 			comboBox_5_4.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_4.setSelectedItem(ap[74]);
+			comboBox_5_4.setSelectedItem(ap[75]);
 		}
 
-		if(ap[75] == "0") {
+		if(ap[76] == "0") {
 			comboBox_5_5.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_5.setSelectedItem(ap[75]);
+			comboBox_5_5.setSelectedItem(ap[76]);
 		}
 
-		if(ap[76] == "0") {
+		if(ap[77] == "0") {
 			comboBox_5_1_1.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_1.setSelectedItem(ap[76]);
+			comboBox_5_1_1.setSelectedItem(ap[77]);
 		}
 
-		if(ap[77] == "0") {
+		if(ap[78] == "0") {
 			comboBox_5_1_2.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_2.setSelectedItem(ap[77]);
+			comboBox_5_1_2.setSelectedItem(ap[78]);
 		}
 
-		if(ap[78] == "0") {
+		if(ap[79] == "0") {
 			comboBox_5_1_3.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_3.setSelectedItem(ap[78]);
+			comboBox_5_1_3.setSelectedItem(ap[79]);
 		}
 
-		if(ap[79] == "0") {
+		if(ap[80] == "0") {
 			comboBox_5_1_4.setSelectedIndex(0);
 
 		}
 		else {
-			comboBox_5_1_4.setSelectedItem(ap[79]);
+			comboBox_5_1_4.setSelectedItem(ap[80]);
 		}
 	}
 }
