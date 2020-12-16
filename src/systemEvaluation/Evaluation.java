@@ -47,7 +47,7 @@ import javax.swing.JScrollPane;
 
 public class Evaluation extends JFrame  {
 
-	String[] values = new String[144];
+	String[] values = new String[161];
 
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -210,6 +210,43 @@ public class Evaluation extends JFrame  {
 	private JTextPane textPane_1_7_3_3_2_3 = new JTextPane();
 	private JTextPane textPane_1_7_3_3_2_3_1 = new JTextPane();
 	private JTextPane textPane_1_7_3_3_2_3_1_1 = new JTextPane();
+	
+	private JSpinner spinner = new JSpinner();
+	private JSpinner spinner_1 = new JSpinner();
+	private JSpinner spinner_2 = new JSpinner();
+	private JSpinner spinner_3 = new JSpinner();
+	private JSpinner spinner_4 = new JSpinner();
+	private JSpinner spinner_5 = new JSpinner();
+	private JSpinner spinner_5_1 = new JSpinner();
+	private JSpinner spinner_6 = new JSpinner();
+	private JSpinner spinner_1_1 = new JSpinner();
+	private JSpinner spinner_3_1 = new JSpinner();
+	private JSpinner spinner_5_2 = new JSpinner();
+	private JSpinner spinner_6_1 = new JSpinner();
+	private JSpinner spinner_6_2 = new JSpinner();
+	private JSpinner spinner_1_1_1 = new JSpinner();
+	private JSpinner spinner_3_1_1 = new JSpinner();
+	private JSpinner spinner_1_1_1_1 = new JSpinner();
+	private JSpinner spinner_3_1_1_1 = new JSpinner();
+	private JSpinner spinner_3_1_1_1_1 = new JSpinner();
+	
+	private JTextArea textArea = new JTextArea();
+	private JTextArea textArea_1 = new JTextArea();
+	private JTextArea textArea_2 = new JTextArea();
+	private JTextArea textArea_3 = new JTextArea();
+	private JTextArea textArea_4 = new JTextArea();
+	private JTextArea textArea_5 = new JTextArea();
+	private JTextArea textArea_6 = new JTextArea();
+	private JTextArea textArea_8 = new JTextArea();
+	private JTextArea textArea_1_1 = new JTextArea();
+	private JTextArea textArea_3_1 = new JTextArea();
+	private JTextArea textArea_5_1 = new JTextArea();
+	private JTextArea textArea_8_1 = new JTextArea();
+	private JTextArea textArea_8_2 = new JTextArea();
+	private JTextArea textArea_1_1_1 = new JTextArea();
+	private JTextArea textArea_8_2_1 = new JTextArea();
+	private JTextArea textArea_8_2_1_1 = new JTextArea();
+	private JTextArea textArea_8_2_1_1_1 = new JTextArea();
 
 
 	public static void main(String[] args) {
@@ -1258,65 +1295,64 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_8_1_1_1.setBounds(1369, 68, 152, 41);
 		panel_28.add(lblNewLabel_48_8_1_1_1);
 
-		JTextArea textArea = new JTextArea();
+		
 		textArea.setBounds(1195, 110, 546, 101);
 		panel_28.add(textArea);
-
-		JTextArea textArea_1 = new JTextArea();
+		
 		textArea_1.setBounds(1195, 217, 546, 114);
 		panel_28.add(textArea_1);
 
-		JTextArea textArea_2 = new JTextArea();
+		
 		textArea_2.setBounds(1195, 331, 546, 114);
 		panel_28.add(textArea_2);
 
-		JTextArea textArea_3 = new JTextArea();
+		
 		textArea_3.setBounds(1195, 445, 546, 107);
 		panel_28.add(textArea_3);
 
-		JTextArea textArea_4 = new JTextArea();
+		
 		textArea_4.setBounds(1195, 553, 546, 107);
 		panel_28.add(textArea_4);
 
-		JTextArea textArea_5 = new JTextArea();
+		
 		textArea_5.setBounds(1196, 670, 546, 107);
 		panel_28.add(textArea_5);
 
-		JTextArea textArea_6 = new JTextArea();
+		
 		textArea_6.setBounds(1195, 782, 546, 140);
 		panel_28.add(textArea_6);
 
-		JSpinner spinner = new JSpinner();
+		
 		spinner.setFont(new Font("Tahoma", Font.BOLD, 19));
 		spinner.setBounds(1039, 155, 58, 27);
 		panel_28.add(spinner);
 
-		JSpinner spinner_1 = new JSpinner();
+
 		spinner_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_1.setBounds(1039, 263, 58, 27);
 		panel_28.add(spinner_1);
 
-		JSpinner spinner_2 = new JSpinner();
+		
 		spinner_2.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_2.setBounds(1039, 380, 58, 27);
 		panel_28.add(spinner_2);
-
-		JSpinner spinner_3 = new JSpinner();
+		
+		
 		spinner_3.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_3.setBounds(1038, 485, 59, 27);
 		panel_28.add(spinner_3);
 
-		JSpinner spinner_4 = new JSpinner();
+		
 		spinner_4.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_4.setBounds(1039, 600, 58, 27);
 		panel_28.add(spinner_4);
-
-		JSpinner spinner_5 = new JSpinner();
+		
+		
 		spinner_5.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_5.setBounds(1039, 711, 58, 27);
 		panel_28.add(spinner_5);
 
-		JSpinner spinner_5_1 = new JSpinner();
+		
 		spinner_5_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_5_1.setBounds(1039, 831, 58, 27);
 		panel_28.add(spinner_5_1);
@@ -1450,38 +1486,38 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_8_1_1_1_1.setBounds(1369, 68, 152, 41);
 		panel_28_1.add(lblNewLabel_48_8_1_1_1_1);
 
-		JTextArea textArea_8 = new JTextArea();
+		
 		textArea_8.setBounds(1195, 110, 546, 101);
 		panel_28_1.add(textArea_8);
 
-		JTextArea textArea_1_1 = new JTextArea();
+		
 		textArea_1_1.setBounds(1195, 217, 546, 232);
 		panel_28_1.add(textArea_1_1);
 
-		JTextArea textArea_3_1 = new JTextArea();
+		
 		textArea_3_1.setBounds(1195, 445, 546, 224);
 		panel_28_1.add(textArea_3_1);
 
-		JTextArea textArea_5_1 = new JTextArea();
+		
 		textArea_5_1.setBounds(1196, 670, 546, 245);
 		panel_28_1.add(textArea_5_1);
 
-		JSpinner spinner_6 = new JSpinner();
+		
 		spinner_6.setFont(new Font("Tahoma", Font.BOLD, 19));
 		spinner_6.setBounds(1039, 155, 58, 27);
 		panel_28_1.add(spinner_6);
 
-		JSpinner spinner_1_1 = new JSpinner();
+		
 		spinner_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_1_1.setBounds(1039, 307, 58, 27);
 		panel_28_1.add(spinner_1_1);
 
-		JSpinner spinner_3_1 = new JSpinner();
+		
 		spinner_3_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_3_1.setBounds(1038, 549, 59, 27);
 		panel_28_1.add(spinner_3_1);
 
-		JSpinner spinner_5_2 = new JSpinner();
+		
 		spinner_5_2.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_5_2.setBounds(1039, 762, 58, 27);
 		panel_28_1.add(spinner_5_2);
@@ -1570,11 +1606,10 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_8_1_1_1_1_1.setBounds(1369, 68, 152, 41);
 		panel_28_1_1.add(lblNewLabel_48_8_1_1_1_1_1);
 
-		JTextArea textArea_8_1 = new JTextArea();
+		
 		textArea_8_1.setBounds(1196, 108, 556, 798);
 		panel_28_1_1.add(textArea_8_1);
 
-		JSpinner spinner_6_1 = new JSpinner();
 		spinner_6_1.setFont(new Font("Tahoma", Font.BOLD, 19));
 		spinner_6_1.setBounds(1039, 380, 58, 27);
 		panel_28_1_1.add(spinner_6_1);
@@ -1683,25 +1718,26 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_8_1_1_1_1_2.setBounds(1369, 68, 152, 41);
 		panel_28_1_2.add(lblNewLabel_48_8_1_1_1_1_2);
 
-		JTextArea textArea_8_2 = new JTextArea();
+		
 		textArea_8_2.setBounds(1195, 110, 546, 101);
 		panel_28_1_2.add(textArea_8_2);
 
-		JTextArea textArea_1_1_1 = new JTextArea();
+		
 		textArea_1_1_1.setBounds(1195, 217, 546, 698);
 		panel_28_1_2.add(textArea_1_1_1);
 
-		JSpinner spinner_6_2 = new JSpinner();
+
+		
 		spinner_6_2.setFont(new Font("Tahoma", Font.BOLD, 19));
 		spinner_6_2.setBounds(1039, 155, 58, 27);
 		panel_28_1_2.add(spinner_6_2);
 
-		JSpinner spinner_1_1_1 = new JSpinner();
+		
 		spinner_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_1_1_1.setBounds(1039, 277, 58, 27);
 		panel_28_1_2.add(spinner_1_1_1);
 
-		JSpinner spinner_3_1_1 = new JSpinner();
+		
 		spinner_3_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_3_1_1.setBounds(1039, 608, 59, 27);
 		panel_28_1_2.add(spinner_3_1_1);
@@ -1800,16 +1836,16 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_8_1_1_1_1_2_1.setBounds(1369, 68, 152, 41);
 		panel_28_1_2_1.add(lblNewLabel_48_8_1_1_1_1_2_1);
 
-		JTextArea textArea_8_2_1 = new JTextArea();
+		
 		textArea_8_2_1.setBounds(1195, 110, 546, 318);
 		panel_28_1_2_1.add(textArea_8_2_1);
 
-		JSpinner spinner_1_1_1_1 = new JSpinner();
+		
 		spinner_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_1_1_1_1.setBounds(1040, 199, 58, 27);
 		panel_28_1_2_1.add(spinner_1_1_1_1);
 
-		JSpinner spinner_3_1_1_1 = new JSpinner();
+		
 		spinner_3_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_3_1_1_1.setBounds(1040, 552, 59, 27);
 		panel_28_1_2_1.add(spinner_3_1_1_1);
@@ -1824,16 +1860,16 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_48_9_6_1_1_1_1.setBounds(197, 851, 583, 41);
 		panel_28_1_2_1.add(lblNewLabel_48_9_6_1_1_1_1);
 
-		JSpinner spinner_3_1_1_1_1 = new JSpinner();
+		
 		spinner_3_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_3_1_1_1_1.setBounds(1040, 797, 59, 27);
 		panel_28_1_2_1.add(spinner_3_1_1_1_1);
 
-		JTextArea textArea_8_2_1_1 = new JTextArea();
+		
 		textArea_8_2_1_1.setBounds(1194, 429, 558, 277);
 		panel_28_1_2_1.add(textArea_8_2_1_1);
 
-		JTextArea textArea_8_2_1_1_1 = new JTextArea();
+		
 		textArea_8_2_1_1_1.setBounds(1195, 709, 557, 211);
 		panel_28_1_2_1.add(textArea_8_2_1_1_1);
 
@@ -3173,6 +3209,31 @@ public class Evaluation extends JFrame  {
 					values [42] = parte5_gerencia_29_comboBox.getSelectedItem().toString();
 
 				}
+				
+				
+				values [43] = spinner.getValue().toString();
+				values [44] = spinner_1.getValue().toString();
+				values [45] = spinner_2.getValue().toString();
+				values [46] = spinner_3.getValue().toString();
+				values [47] = spinner_4.getValue().toString();
+				values [48] = spinner_5.getValue().toString();
+				values [49] = spinner_5_1.getValue().toString();
+				values [50] = spinner_6.getValue().toString();
+				values [51] = spinner_1_1.getValue().toString();
+				values [52] = spinner_3_1.getValue().toString();
+				values [53] = spinner_5_2.getValue().toString();
+				values [54] = spinner_6_1.getValue().toString();
+				values [56] = spinner_6_2.getValue().toString();
+				values [57] = spinner_1_1_1.getValue().toString();
+				values [58] = spinner_3_1_1.getValue().toString();
+				values [59] = spinner_1_1_1_1.getValue().toString();
+				values [60] = spinner_3_1_1_1.getValue().toString();
+				values [61] = spinner_3_1_1_1_1.getValue().toString();
+
+				
+				
+				
+				
 				////////////////////////////NEW VALUES ///////////////////////////////
 				if (comboBox.getSelectedItem().toString() == " ") {
 
@@ -3581,6 +3642,26 @@ public class Evaluation extends JFrame  {
 				values [141] = textPane_1_7_3_3_2_3.getText();
 				values [142] = textPane_1_7_3_3_2_3_1.getText();
 				values [143] = textPane_1_7_3_3_2_3_1_1.getText();
+				
+				
+				values [144] = textArea.getText();
+				values [145] = textArea_1.getText();
+				values [146] = textArea_2.getText();
+				values [147] = textArea_3.getText();
+				values [148] = textArea_4.getText();
+				values [149] = textArea_5.getText();
+				values [150] = textArea_6.getText();
+				values [151] = textArea_8.getText();
+				values [152] = textArea_1_1.getText();
+				values [153] = textArea_3_1.getText();
+				values [154] = textArea_5_1.getText();
+				values [155] = textArea_8_1.getText();
+				values [156] = textArea_8_2.getText();
+				values [157] = textArea_1_1_1.getText();
+				values [158] = textArea_8_2_1.getText();
+				values [159] = textArea_8_2_1_1.getText();
+				values [160] = textArea_8_2_1_1_1.getText();
+
 
 
 				/////////////////TESTING//////////////////////////////
@@ -4219,7 +4300,7 @@ public class Evaluation extends JFrame  {
 		rangoAcademico_comboBox.setSelectedItem(ap[2]);
 		departamento_textField.setText(ap[3]);
 		disiplina_textField.setText(ap[4]);
-		objetivo_eval_comboBox.setSelectedItem(ap[5]) ;
+		objetivo_eval_comboBox.setSelectedItem(ap[5]);
 		periodo_evaluado_textField.setText(ap[6]);
 		jornada_comple_comboBox.setSelectedItem(ap[7]); 
 		jornada_parcial_comboBox.setSelectedItem(ap[8]); 
@@ -4460,7 +4541,28 @@ public class Evaluation extends JFrame  {
 		}
 		else {
 			parte5_gerencia_29_comboBox.setSelectedItem(ap[42]);
+			
 		} 
+		///////////////////////////Instrument 2////////////////////////////////
+
+		spinner.setValue(Integer.valueOf(ap[43]));
+		spinner_1.setValue(Integer.valueOf(ap[44]));
+		spinner_2.setValue(Integer.valueOf(ap[45]));
+		spinner_3.setValue(Integer.valueOf(ap[46]));
+		spinner_4.setValue(Integer.valueOf(ap[47]));
+		spinner_5.setValue(Integer.valueOf(ap[48]));
+		spinner_5_1.setValue(Integer.valueOf(ap[49]));
+		spinner_6.setValue(Integer.valueOf(ap[50]));
+		spinner_1_1.setValue(Integer.valueOf(ap[51]));
+		spinner_3_1.setValue(Integer.valueOf(ap[52]));
+		spinner_5_2.setValue(Integer.valueOf(ap[53]));
+		spinner_6_1.setValue(Integer.valueOf(ap[54]));
+		spinner_6_2.setValue(Integer.valueOf(ap[55]));
+		spinner_1_1_1.setValue(Integer.valueOf(ap[56]));
+		spinner_3_1_1.setValue(Integer.valueOf(ap[57]));
+		spinner_1_1_1_1.setValue(Integer.valueOf(ap[58]));
+		spinner_3_1_1_1.setValue(Integer.valueOf(ap[59]));
+		spinner_3_1_1_1_1.setValue(Integer.valueOf(ap[60]));
 
 		////////////////////////////Instrument 3//////////////////////////////////////
 		if(ap[61] == "0") {
@@ -4828,6 +4930,24 @@ public class Evaluation extends JFrame  {
 		textPane_1_7_3_3_2_3.setText(ap[141]);
 		textPane_1_7_3_3_2_3_1.setText(ap[142]);
 		textPane_1_7_3_3_2_3_1_1.setText(ap[143]);
+		
+		textArea.setText(ap[144]);
+		textArea_1.setText(ap[145]);
+		textArea_2.setText(ap[146]);
+		textArea_3.setText(ap[147]);
+		textArea_4.setText(ap[148]);
+		textArea_5.setText(ap[149]);
+		textArea_6.setText(ap[150]);
+		textArea_8.setText(ap[151]);
+		textArea_1_1.setText(ap[152]);
+		textArea_3_1 .setText(ap[153]);
+		textArea_5_1.setText(ap[154]);
+		textArea_8_1.setText(ap[155]);
+		textArea_8_2.setText(ap[156]);
+		textArea_1_1_1.setText(ap[157]);
+	    textArea_8_2_1.setText(ap[158]);
+		textArea_8_2_1_1.setText(ap[159]);
+		textArea_8_2_1_1_1.setText(ap[160]);
 
 
 
