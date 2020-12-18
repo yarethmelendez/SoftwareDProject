@@ -1,6 +1,7 @@
 package systemEvaluation;
 
 import java.awt.Color;
+
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -31,6 +32,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.*;
 
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -265,6 +267,8 @@ public class Evaluation extends JFrame  {
 
 	//Testing
 	public Evaluation() throws IOException {
+		
+		
 		
 		DataView ec = new DataView();
 		
@@ -1345,7 +1349,7 @@ public class Evaluation extends JFrame  {
 		panel_28.add(panel_6_6_1_1_2_2);
 
 		JPanel panel_33 = new JPanel();
-		tabbedPane_7.addTab("Servicio a la Instituci�n ", null, panel_33, null);
+		tabbedPane_7.addTab("Servicio a la Instituci\u00F3n ", null, panel_33, null);
 		panel_33.setLayout(null);
 
 		JPanel panel_28_1 = new JPanel();
@@ -1607,7 +1611,7 @@ public class Evaluation extends JFrame  {
 		panel_28_1_1.add(spinner_6_1);
 
 		JPanel panel_36 = new JPanel();
-		tabbedPane_7.addTab("Investigaci�n y Trabajo Creativo", null, panel_36, null);
+		tabbedPane_7.addTab("Investigaci\u00F3n y Trabajo Creativo", null, panel_36, null);
 		panel_36.setLayout(null);
 
 		JPanel panel_28_1_2 = new JPanel();
@@ -2935,10 +2939,20 @@ public class Evaluation extends JFrame  {
 		eMenuItem1.addActionListener(new ActionListener() {//// item 1
 			public void actionPerformed(ActionEvent arg0) {/// action listener 
 				
+				int valueID;
+				int value ;
+				String[] ag = new String[160];
+
+				fileManager IDgen = new fileManager();
+				ag = IDgen.IDGen();
 				
-
 				//Informacion a ingresar
-
+				System.out.println("woooooooooooooooooooow ");
+				System.out.println(ag[12]);
+//				for (int i = 0; i < ag.length; i++) {
+//					System.out.println("Test " + i + ": " +ag[i]);
+//				}
+				
 				values [0] = Unidadacademica_textField.getText();
 				values [1] = nombre_prof_textField.getText();
 				values [2] = rangoAcademico_comboBox.getSelectedItem().toString();
@@ -2951,271 +2965,43 @@ public class Evaluation extends JFrame  {
 				values [9] = contrato_comboBox.getSelectedItem().toString();
 				values [10] = codigo_textField.getText();
 				values [11] = tutulo_del_curso_textField.getText();
-				values [12] = " ";
+				value = Integer.valueOf(ag[12]);
+				valueID = value + 1; 
+				values [12] =  String.valueOf(valueID);
 				values [13] = "Manual";
 
 
-				if (parte1_perfil_de_estudiante_1.getSelectedText().toString() == " ") {
+				
+				values [14] = parte1_perfil_de_estudiante_1.getText();
+				values [15] = parte1_perfil_de_estudiante_2.getText();
+				values [16] = parte2_estudi_3.getText();
+				values [17] = parte2_estudi_4.getText();
+				values [18] = parte3_estudi_5_.getText();
+				values [19] = parte3_estudi_6.getText();
+				values [20] = parte3_estudi_7.getText();
+				values [21] = parte3_estudi_8.getText();
+				values [22] = parte3_estudi_9.getText();
+				values [23] = parte3_estudi_10.getText();
+				values [24] = parte3_estudi_11.getText();
+				values [25] = parte3_estudi_12.getText();
+				values [26] = parte3_desarollo_de_clase_13.getText();
+				values [27] = parte3_desarollo_de_clase_14.getText();
+				values [28] = parte3_desarollo_de_clase_15.getText();
+				values [29] = parte3_desarollo_de_clase_16.getText();
+				values [30] = parte3_desarollo_de_clase_17.getText();
+				values [31] = parte5_gerencia_18.getText();
+				values [32] = parte5_gerencia_19.getText();
+				values [33] = parte5_gerencia_20.getText();
+				values [34] = parte5_gerencia_21.getText();
+				values [35] = parte5_gerencia_22.getText();
+				values [36] = parte5_gerencia_23.getText();
+				values [37] = parte5_gerencia_24.getText();
+				values [38] = parte5_gerencia_25.getText();
+				values [39] = parte5_gerencia_26.getText();
+				values [40] = parte5_gerencia_27.getText();
+				values [41] = parte5_gerencia_28.getText();
+				values [42] = parte5_gerencia_29.getText();
 
-					values[14] = "0";
-
-				} else {
-
-					values [14] = parte1_perfil_de_estudiante_1.getSelectedText().toString();
-
-				}
-				if (parte1_perfil_de_estudiante_2.getSelectedText().toString() == " ") {
-
-					values [15] = "0";
-
-				} else {
-
-					values [15] = parte1_perfil_de_estudiante_2.getSelectedText().toString();
-
-				}
-				if (parte2_estudi_3.getSelectedText().toString() == " ") {
-
-					values [16] = "0";
-
-				} else {
-
-					values [16] = parte2_estudi_3.getSelectedText().toString();
-
-				}
-				if (parte2_estudi_4.getSelectedText().toString() == " ") {
-
-					values [17] = "0";
-
-				} else {
-
-					values [17] = parte2_estudi_4.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_5_.getSelectedText().toString() == " ") {
-
-					values [18] = "0";
-
-				} else {
-
-					values [18] = parte3_estudi_5_.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_6.getSelectedText().toString() == " ") {
-
-					values [19] = "0";
-
-				} else {
-
-					values [19] = parte3_estudi_6.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_7.getSelectedText().toString() == " ") {
-
-					values [20] = "0";
-
-				} else {
-
-					values [20] = parte3_estudi_7.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_8.getSelectedText().toString() == " ") {
-
-					values [21] = "0";
-
-				} else {
-
-					values [21] = parte3_estudi_8.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_9.getSelectedText().toString() == " ") {
-
-					values [22] = "0";
-
-				} else {
-
-					values [22] = parte3_estudi_9.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_10.getSelectedText().toString() == " ") {
-
-					values [23] = "0";
-
-				} else {
-
-					values [23] = parte3_estudi_10.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_11.getSelectedText().toString() == " ") {
-
-					values [24] = "0";
-
-				} else {
-
-					values [24] = parte3_estudi_11.getSelectedText().toString();
-
-				}
-				if (parte3_estudi_12.getSelectedText().toString() == " ") {
-
-					values [25] = "0";
-
-				} else {
-
-					values [25] = parte3_estudi_12.getSelectedText().toString();
-
-				}
-				if (parte3_desarollo_de_clase_13.getSelectedText().toString() == " ") {
-
-					values [26] = "0";
-
-				} else {
-
-					values [26] = parte3_desarollo_de_clase_13.getSelectedText().toString();
-
-				}
-				if (parte3_desarollo_de_clase_14.getSelectedText().toString() == " ") {
-
-					values [27] = "0";
-
-				} else {
-
-					values [27] = parte3_desarollo_de_clase_14.getSelectedText().toString();
-
-				}
-				if (parte3_desarollo_de_clase_15.getSelectedText().toString() == " ") {
-
-					values [28] = "0";
-
-				} else {
-
-					values [28] = parte3_desarollo_de_clase_15.getSelectedText().toString();
-
-				}
-				if (parte3_desarollo_de_clase_16.getSelectedText().toString() == " ") {
-
-					values [29] = "0";
-
-				} else {
-
-					values [29] = parte3_desarollo_de_clase_16.getSelectedText().toString();
-
-				}
-				if ( parte3_desarollo_de_clase_17.getSelectedText().toString() == " ") {
-
-					values [30] = "0";
-
-				} else {
-
-					values [30] = parte3_desarollo_de_clase_17.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_18.getSelectedText().toString() == " ") {
-
-					values [31] = "0";
-
-				} else {
-
-					values [31] = parte5_gerencia_18.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_19.getSelectedText().toString() == " ") {
-
-					values [32] = "0";
-
-				} else {
-
-					values [32] = parte5_gerencia_19.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_20.getSelectedText().toString() == " ") {
-
-					values [33] = "0";
-
-				} else {
-
-					values [33] = parte5_gerencia_20.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_21.getSelectedText().toString() == " ") {
-
-					values [34] = "0";
-
-				} else {
-
-					values [34] = parte5_gerencia_21.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_22.getSelectedText().toString() == " ") { 
-
-					values[35] = "0";
-
-				} else {
-
-					values [35] = parte5_gerencia_22.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_23.getSelectedText().toString() == " ") {
-
-					values [36] = "0";
-
-				} else {
-
-					values [36] = parte5_gerencia_23.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_24.getSelectedText().toString() == " ") {
-
-					values [37] = "0";
-
-				} else {
-
-					values [37] = parte5_gerencia_24.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_25.getSelectedText().toString() == " ") {
-
-					values [38] = "0";
-
-				} else {
-
-					values [38] = parte5_gerencia_25.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_26.getSelectedText().toString() == " ") {
-
-					values [39] = "0";
-
-				} else {
-
-					values [39] = parte5_gerencia_26.getSelectedText().toString();
-
-				}
-				if (parte5_gerencia_27.getSelectedText().toString() == " ") {
-
-					values [40] = "0";
-
-				} else {
-
-					values [40] = parte5_gerencia_27.getSelectedText().toString();
-
-				} 
-				if (parte5_gerencia_28.getSelectedText().toString() == " ") {
-
-					values [41] = "0";
-
-				} else {
-
-					values [41] = parte5_gerencia_28.getSelectedText().toString();
-
-				} 
-				if (parte5_gerencia_29.getSelectedText().toString() == " ") {
-
-					values [42] = "0";
-
-				} else {
-
-					values [42] = parte5_gerencia_29.getSelectedText().toString();
-
-				}
 				
 				
 				values [43] = spinner.getValue().toString();
@@ -4379,15 +4165,22 @@ public class Evaluation extends JFrame  {
 
 
 		JButton btnNewButton8 = new JButton("Print");
+		
+		
+		//load test
+//		LogIn user = new LogIn();
+//		String User = user.getID();
+//		comboboxItems(User);
 
+		
 	}
 
-	public void comboboxItems(String ID) {
+	public void comboboxItems(String ID , int IDE) {
 		String bruh = "hola";
-		String[] ap = new String[62];
+		String[] ap = new String[161];
 
 		fileManager continueI = new fileManager();
-		ap = continueI.combobox(ID);
+		ap = continueI.combobox(ID,IDE);
 
 		Unidadacademica_textField.setText(ap[0]);
 		nombre_prof_textField.setText(ap[1]);
@@ -4404,259 +4197,86 @@ public class Evaluation extends JFrame  {
 
 
 
-		if(ap[14] == "0") {
-			parte1_perfil_de_estudiante_1.setText(0);
-
-		}
-		else {
+	
 			parte1_perfil_de_estudiante_1.setText(ap[14]);
-		}
-		if(ap[15] == "0") {
-			parte1_perfil_de_estudiante_2.setText(0);
-
-		}
-		else {
+		
 			parte1_perfil_de_estudiante_2.setText(ap[15]);
-		}
-
-
-		if(ap[16] == "0") {
-			parte2_estudi_3.setText(0);
-
-		}
-		else {
+	
 			parte2_estudi_3.setText(ap[16]);
-		}
-
-		if(ap[17] == "0") {
-			parte2_estudi_4.setText(0);
-
-		}
-		else {
+	
 			parte2_estudi_4.setText(ap[17]);
-		}
-
-		if(ap[18] == "0") {
-			parte3_estudi_5_.setText(0);
-
-		}
-		else {
+	
 			parte3_estudi_5_.setText(ap[18]);
-		}
-
-		if(ap[19] == "0") {
-			parte3_estudi_6.setText(0);
-
-		}
-		else {
+	
 			parte3_estudi_6.setText(ap[19]);
-		}
-
-		if(ap[20] == "0") {
-			parte3_estudi_7.setText(0);
-
-		}
-		else {
+		
 			parte3_estudi_7.setText(ap[20]);
-		}
-
-		if(ap[21] == "0") {
-			parte3_estudi_8.setText(0);
-
-		}
-		else {
+	
 			parte3_estudi_8.setText(ap[21]);
-		}
-
-		if(ap[22] == "0") {
-			parte3_estudi_9.setText(0);
-
-		}
-		else {
+	
 			parte3_estudi_9.setText(ap[22]);
-		}
-
-		if(ap[23] == "0") {
-			parte3_estudi_10.setText(0);
-
-		}
-		else {
+	
 			parte3_estudi_10.setText(ap[23]);
-		}
-
-		if(ap[24] == "0") {
-			parte3_estudi_11.setText(0);
-
-		}
-		else {
+	
 			parte3_estudi_11.setText(ap[24]);
-		}
-
-		if(ap[25] == "0") {
-			parte3_estudi_12.setText(0);
-
-		}
-		else {
+		
 			parte3_estudi_12.setText(ap[25]);
-		}
-
-		if(ap[26] == "0") {
-			parte3_desarollo_de_clase_13.setText(0);
-
-		}
-		else {
+	
 			parte3_desarollo_de_clase_13.setText(ap[26]);
-		}
-
-		if(ap[27] == "0") {
-			parte3_desarollo_de_clase_14.setText(0);
-
-		}
-		else {
+	
 			parte3_desarollo_de_clase_14.setText(ap[27]);
-		}
-
-		if(ap[28] == "0") {
-			parte3_desarollo_de_clase_15.setText(0);
-
-		}
-		else {
+		
 			parte3_desarollo_de_clase_15.setText(ap[28]);
-		}
-
-		if(ap[29] == "0") {
-			parte3_desarollo_de_clase_16.setText(0);
-
-		}
-		else {
+		
 			parte3_desarollo_de_clase_16.setText(ap[29]);
-		}
-
-		if(ap[30] == "0") {
-			parte3_desarollo_de_clase_17.setText(0);
-
-		}
-		else {
+		
 			parte3_desarollo_de_clase_17.setText(ap[30]);
-		}
-
-		if(ap[31] == "0") {
-			parte5_gerencia_18.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_18.setText(ap[31]);
-		}
-
-		if(ap[32] == "0") {
-			parte5_gerencia_19.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_19.setText(ap[32]);
-		}
-
-		if(ap[33] == "0") {
-			parte5_gerencia_20.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_20.setText(ap[33]);
-		}
-
-		if(ap[34] == "0") {
-			parte5_gerencia_21.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_21.setText(ap[34]);
-		}
-
-
-		if(ap[35] == "0") {
-			parte5_gerencia_22.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_22.setText(ap[35]);
-		}
-
-		if(ap[36] == "0") {
-			parte5_gerencia_23.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_23.setText(ap[36]);
-		}
-
-		if(ap[37] == "0") {
-			parte5_gerencia_24.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_24.setText(ap[37]);
-		}
-
-		if(ap[38] == "0") {
-			parte5_gerencia_25.setText(0);
-
-		}
-		else {
+		
 			parte5_gerencia_25.setText(ap[38]);
-		}
-
-		if(ap[39] == "0") {
-			parte5_gerencia_26.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_26.setText(ap[39]);
-		}
-
-		if(ap[40] == "0") {
-			parte5_gerencia_27.setText(0);
-
-		}
-		else {
+	
 			parte5_gerencia_27.setText(ap[40]);
-		}
-
-		if(ap[41] == "0") {
-			parte5_gerencia_28.setText(0);
-
-		}
-		else {
+		
 			parte5_gerencia_28.setText(ap[41]);
-		}
-
-		if(ap[42] == "0") {
-			parte5_gerencia_29.setText(0);
-
-		}
-		else {
+		
 			parte5_gerencia_29.setText(ap[42]);
 			
-		} 
+		
 		///////////////////////////Instrument 2////////////////////////////////
 
-		spinner.setValue(Integer.valueOf(ap[43]));
-		spinner_1.setValue(Integer.valueOf(ap[44]));
-		spinner_2.setValue(Integer.valueOf(ap[45]));
-		spinner_3.setValue(Integer.valueOf(ap[46]));
-		spinner_4.setValue(Integer.valueOf(ap[47]));
-		spinner_5.setValue(Integer.valueOf(ap[48]));
-		spinner_5_1.setValue(Integer.valueOf(ap[49]));
-		spinner_6.setValue(Integer.valueOf(ap[50]));
-		spinner_1_1.setValue(Integer.valueOf(ap[51]));
-		spinner_3_1.setValue(Integer.valueOf(ap[52]));
-		spinner_5_2.setValue(Integer.valueOf(ap[53]));
-		spinner_6_1.setValue(Integer.valueOf(ap[54]));
-		spinner_6_2.setValue(Integer.valueOf(ap[55]));
-		spinner_1_1_1.setValue(Integer.valueOf(ap[56]));
-		spinner_3_1_1.setValue(Integer.valueOf(ap[57]));
-		spinner_1_1_1_1.setValue(Integer.valueOf(ap[58]));
-		spinner_3_1_1_1.setValue(Integer.valueOf(ap[59]));
-		spinner_3_1_1_1_1.setValue(Integer.valueOf(ap[60]));
+		spinner.setValue(Integer.parseInt(ap[43]));
+		spinner_1.setValue(Integer.parseInt(ap[44]));
+		spinner_2.setValue(Integer.parseInt(ap[45]));
+		spinner_3.setValue(Integer.parseInt(ap[46]));
+		spinner_4.setValue(Integer.parseInt(ap[47]));
+		spinner_5.setValue(Integer.parseInt(ap[48]));
+		spinner_5_1.setValue(Integer.parseInt(ap[49]));
+		spinner_6.setValue(Integer.parseInt(ap[50]));
+		spinner_1_1.setValue(Integer.parseInt(ap[51]));
+		spinner_3_1.setValue(Integer.parseInt(ap[52]));
+		spinner_5_2.setValue(Integer.parseInt(ap[53]));
+		spinner_6_1.setValue(Integer.parseInt(ap[54]));
+		spinner_6_2.setValue(Integer.parseInt(ap[55]));
+		spinner_1_1_1.setValue(Integer.parseInt(ap[56]));
+		spinner_3_1_1.setValue(Integer.parseInt(ap[57]));
+		spinner_1_1_1_1.setValue(Integer.parseInt(ap[58]));
+		spinner_3_1_1_1.setValue(Integer.parseInt(ap[59]));
+		spinner_3_1_1_1_1.setValue(Integer.parseInt(ap[60]));
 
 		////////////////////////////Instrument 3//////////////////////////////////////
 		if(ap[61] == "0") {
