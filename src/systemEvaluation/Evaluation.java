@@ -50,8 +50,10 @@ import javax.swing.JScrollPane;
 
 public class Evaluation extends JFrame  {
 
-	String[] values = new String[161];
-
+	String[] values = new String[162];
+	int[] I2re = new int[21];
+	
+	
 	private JPanel contentPane;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 	private JTextField Unidadacademica_textField;
@@ -135,9 +137,6 @@ public class Evaluation extends JFrame  {
 	private JTextField ins2_5_b_textField;
 	private JTextField ins2_5_ef_textField;
 	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_3;
-	private JTextField textField_4;
 
 
 	private JTextPane textPane_1 = new JTextPane();
@@ -250,6 +249,7 @@ public class Evaluation extends JFrame  {
 	private JTextField parte5_gerencia_27;
 	private JTextField parte5_gerencia_28;
 	private JTextField parte5_gerencia_29;
+	private JTextField textField_15;
 
 
 	public static void main(String[] args) {
@@ -268,7 +268,10 @@ public class Evaluation extends JFrame  {
 	//Testing
 	public Evaluation() throws IOException {
 		
-		
+		for (int i = 0 ; i < I2re.length; i++) {
+			I2re[i]= 0;
+		}
+
 		
 		DataView ec = new DataView();
 		
@@ -1719,7 +1722,7 @@ public class Evaluation extends JFrame  {
 		panel_28_1_2.add(textArea_8_2);
 
 		
-		textArea_1_1_1.setBounds(1195, 217, 546, 698);
+		textArea_1_1_1.setBounds(1195, 217, 539, 105);
 		panel_28_1_2.add(textArea_1_1_1);
 
 
@@ -1737,6 +1740,11 @@ public class Evaluation extends JFrame  {
 		spinner_3_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		spinner_3_1_1.setBounds(1039, 608, 59, 27);
 		panel_28_1_2.add(spinner_3_1_1);
+		
+		textField_15 = new JTextField();
+		textField_15.setBounds(1205, 348, 529, 567);
+		panel_28_1_2.add(textField_15);
+		textField_15.setColumns(10);
 
 		JPanel panel_37 = new JPanel();
 		tabbedPane_7.addTab("Crecimiento y Desarrollo Profesional", null, panel_37, null);
@@ -1870,6 +1878,65 @@ public class Evaluation extends JFrame  {
 		panel_28_1_2_1.add(textArea_8_2_1_1_1);
 		
 		JButton btnNewButton = new JButton("Calcular");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					DataView DV = new DataView();
+					int r =0;
+					//r = Integer.parseInt(spinner.getValue());
+					System.out.println(spinner.getValue()+ "soy yo tu padre ");
+					
+					
+					I2re[0] = DV.EvidenceCalc((int) spinner.getValue());
+					I2re[1] = DV.EvidenceCalc((int)spinner_1.getValue());
+					I2re[2] = DV.EvidenceCalc((int)spinner_2.getValue());
+					I2re[3] = DV.EvidenceCalc((int)spinner_3.getValue());
+					I2re[4] = DV.EvidenceCalc((int) spinner_4.getValue());
+					I2re[5] = DV.EvidenceCalc((int) spinner_5.getValue());
+					I2re[6] = DV.EvidenceCalc((int) spinner_5_1.getValue());
+					I2re[7] = DV.EvidenceCalc((int)spinner_6.getValue());
+					I2re[8] = DV.EvidenceCalc((int)spinner_1_1.getValue());
+					I2re[9] = DV.EvidenceCalc((int) spinner_3_1.getValue());
+					I2re[10] = DV.EvidenceCalc((int) spinner_5_2.getValue());
+					I2re[11] = DV.EvidenceCalc((int)spinner_6_1.getValue());
+					I2re[12] = DV.EvidenceCalc((int) spinner_6_2.getValue());
+					I2re[13] = DV.EvidenceCalc((int)spinner_1_1_1.getValue());
+					I2re[14] = DV.EvidenceCalc((int)spinner_3_1_1.getValue());
+					I2re[15] = DV.EvidenceCalc((int) spinner_1_1_1_1.getValue());
+					I2re[16] = DV.EvidenceCalc((int)spinner_3_1_1_1.getValue());
+					I2re[17] = DV.EvidenceCalc((int) spinner_3_1_1_1_1.getValue());
+					
+					
+					ins2_a_textField.setText(String.valueOf(I2re[0]));
+					ins2_b_textField.setText(String.valueOf(I2re[1]));
+					ins2_c_textField.setText(String.valueOf(I2re[2]));
+					ins2_d_textField.setText(String.valueOf(I2re[3]));
+					ins2_e_textField.setText(String.valueOf(I2re[4]));
+					ins2_f_textField.setText(String.valueOf(I2re[5]));
+					ins2_gh_textField.setText(String.valueOf(I2re[6]));
+					ins2_1_ab_textField.setText(String.valueOf(I2re[7]));
+					ins2_1_cd_textField.setText(String.valueOf(I2re[8]));
+					ins2_1_ef_textField.setText(String.valueOf(I2re[9]));
+					textField.setText(String.valueOf(I2re[10]));
+					ins2_3_ab_textField.setText(String.valueOf(I2re[11]));
+					ins2_4_a_textField.setText(String.valueOf(I2re[12]));
+					ins2_4_b_textField.setText(String.valueOf(I2re[13]));
+					ins2_4_cde_textField.setText(String.valueOf(I2re[14]));
+					ins2_5_abc_textField.setText(String.valueOf(I2re[15]));
+					ins2_5_b_textField.setText(String.valueOf(I2re[16]));
+					ins2_5_ef_textField.setText(String.valueOf(I2re[17]));
+						
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
+			
+				
+			}
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 14));
 		btnNewButton.setBounds(1744, 11, 132, 41);
 		panel_28_1_2_1.add(btnNewButton);
@@ -2074,10 +2141,6 @@ public class Evaluation extends JFrame  {
 		lblNewLabel_17.setBounds(35, 219, 701, 28);
 		panel_5.add(lblNewLabel_17);
 
-		JPanel panel_6_7_1 = new JPanel();
-		panel_6_7_1.setBounds(0, 258, 1530, 10);
-		panel_5.add(panel_6_7_1);
-
 		JLabel lblNewLabel_18 = new JLabel("e. Asistencia a actos oficiales");
 		lblNewLabel_18.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_18.setBounds(38, 270, 979, 46);
@@ -2099,24 +2162,20 @@ public class Evaluation extends JFrame  {
 		ins2_1_cd_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_1_cd_textField.setEditable(false);
 		ins2_1_cd_textField.setColumns(10);
-		ins2_1_cd_textField.setBounds(1312, 83, 86, 38);
+		ins2_1_cd_textField.setBounds(1312, 115, 86, 38);
 		panel_5.add(ins2_1_cd_textField);
 
 		ins2_1_ef_textField = new JTextField(" ");
 		ins2_1_ef_textField.setHorizontalAlignment(SwingConstants.CENTER);
 		ins2_1_ef_textField.setEditable(false);
 		ins2_1_ef_textField.setColumns(10);
-		ins2_1_ef_textField.setBounds(1312, 150, 86, 38);
+		ins2_1_ef_textField.setBounds(1312, 237, 86, 38);
 		panel_5.add(ins2_1_ef_textField);
 
 		JLabel lblNewLabel_19_1 = new JLabel("g. Participaci\u00F3n en organismos de gobierno; tales como: el Senado y el Consejo Universitario\r");
 		lblNewLabel_19_1.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_19_1.setBounds(38, 419, 1091, 46);
 		panel_5.add(lblNewLabel_19_1);
-
-		JPanel panel_6_7_4 = new JPanel();
-		panel_6_7_4.setBounds(0, 134, 1530, 10);
-		panel_5.add(panel_6_7_4);
 
 		JPanel panel_6_7_4_1 = new JPanel();
 		panel_6_7_4_1.setBounds(0, 193, 1530, 10);
@@ -2126,37 +2185,12 @@ public class Evaluation extends JFrame  {
 		panel_6_7_1_1.setBounds(0, 316, 1530, 10);
 		panel_5.add(panel_6_7_1_1);
 
-		JPanel panel_6_7_1_2 = new JPanel();
-		panel_6_7_1_2.setBounds(0, 384, 1530, 10);
-		panel_5.add(panel_6_7_1_2);
-
 		textField = new JTextField(" ");
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setEditable(false);
 		textField.setColumns(10);
-		textField.setBounds(1312, 212, 86, 38);
+		textField.setBounds(1312, 386, 86, 38);
 		panel_5.add(textField);
-
-		textField_1 = new JTextField(" ");
-		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
-		textField_1.setBounds(1312, 273, 86, 38);
-		panel_5.add(textField_1);
-
-		textField_3 = new JTextField(" ");
-		textField_3.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_3.setEditable(false);
-		textField_3.setColumns(10);
-		textField_3.setBounds(1312, 335, 86, 38);
-		panel_5.add(textField_3);
-
-		textField_4 = new JTextField(" ");
-		textField_4.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_4.setEditable(false);
-		textField_4.setColumns(10);
-		textField_4.setBounds(1312, 423, 86, 38);
-		panel_5.add(textField_4);
 
 		JLabel lblNewLabel_20 = new JLabel("Puntuaci\u00F3n");
 		lblNewLabel_20.setFont(new Font("Tahoma", Font.BOLD, 23));
@@ -2941,7 +2975,7 @@ public class Evaluation extends JFrame  {
 				
 				int valueID;
 				int value ;
-				String[] ag = new String[160];
+				String[] ag = new String[162];
 
 				fileManager IDgen = new fileManager();
 				ag = IDgen.IDGen();
@@ -3451,9 +3485,10 @@ public class Evaluation extends JFrame  {
 				values [155] = textArea_8_1.getText();
 				values [156] = textArea_8_2.getText();
 				values [157] = textArea_1_1_1.getText();
-				values [158] = textArea_8_2_1.getText();
-				values [159] = textArea_8_2_1_1.getText();
-				values [160] = textArea_8_2_1_1_1.getText();
+				values [158] = textField_15.getText();
+				values [159] = textArea_8_2_1.getText();
+				values [160] = textArea_8_2_1_1.getText();
+				values [161] = textArea_8_2_1_1_1.getText();
 
 
 				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
@@ -4177,7 +4212,7 @@ public class Evaluation extends JFrame  {
 
 	public void comboboxItems(String ID , int IDE) {
 		String bruh = "hola";
-		String[] ap = new String[161];
+		String[] ap = new String[162];
 
 		fileManager continueI = new fileManager();
 		ap = continueI.combobox(ID,IDE);
@@ -4659,9 +4694,10 @@ public class Evaluation extends JFrame  {
 		textArea_8_1.setText(ap[155]);
 		textArea_8_2.setText(ap[156]);
 		textArea_1_1_1.setText(ap[157]);
-	    textArea_8_2_1.setText(ap[158]);
-		textArea_8_2_1_1.setText(ap[159]);
-		textArea_8_2_1_1_1.setText(ap[160]);
+		textField_15.setText(ap[158]);
+	    textArea_8_2_1.setText(ap[159]);
+		textArea_8_2_1_1.setText(ap[160]);
+		textArea_8_2_1_1_1.setText(ap[161]);
 
 
 

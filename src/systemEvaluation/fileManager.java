@@ -78,7 +78,7 @@ public class fileManager {
 		String NIDE ;
 		System.out.print("\n yo soy una pera");
 		
-		String[] ap = new String[161] ;
+		String[] ap = new String[162] ;
 		
 		
 		NIDE = String.valueOf(IDE); 
@@ -99,7 +99,7 @@ public class fileManager {
 				
 
 					int j = 3;
-					for (int i = 0;i < 160; i++ ) {
+					for (int i = 0;i < 162; i++ ) {
 						ap[i]  = ops[j];
 						j++;
 					//System.out.print("\n"+ap[i]+"\n");
@@ -128,7 +128,7 @@ public String[] borrarEV(String ID , int IDE) {
 		String NIDE ;
 		System.out.print("\n yo soy una pera");
 		
-		String[] ap = new String[164] ;
+		String[] ap = new String[166] ;
 		
 		
 		NIDE = String.valueOf(IDE); 
@@ -157,7 +157,7 @@ public String[] borrarEV(String ID , int IDE) {
 				
 
 					int j = 0;
-					for (int i = 0;i < 163; i++ ) {
+					for (int i = 0;i < 166; i++ ) {
 						ap[i]  = ops[j];
 						j++;
 						
@@ -194,7 +194,7 @@ public String[] IDGen() {
 		int found = 0;
 		
 		
-		String[] ap = new String[160] ;
+		String[] ap = new String[162] ;
 
 		try {
 			instru = new File("./instrumentos.csv");
@@ -208,7 +208,7 @@ public String[] IDGen() {
 			
 
 					int j = 3;
-					for (int i = 0;i < 160; i++ ) {
+					for (int i = 0;i < 162; i++ ) {
 						ap[i]  = ops[j];
 						j++;
 					
