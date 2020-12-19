@@ -109,7 +109,13 @@ public class MainMenu extends JFrame implements ActionListener {
 		contentPane.add(new_evaluation_btnNewButton_1);
 		new_evaluation_btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				onlineEvaluation e = new onlineEvaluation();
+				onlineEvaluation e = null;
+				try {
+					e = new onlineEvaluation();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				e.setVisible(true);
 				dispose();
 				type = 2;
