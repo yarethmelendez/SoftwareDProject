@@ -62,8 +62,13 @@ public class ContinuarEvaluacion extends JFrame {
 				
 				Evaluation i = null;
 				String IDEBox = textField.getText();
-	
-				
+				String[] ag = new String[164] ;
+
+				int j = 40;
+
+				String[] ops;
+				File instru;
+				int size = 0;
 				
 				try {
 					i = new Evaluation();
@@ -71,9 +76,47 @@ public class ContinuarEvaluacion extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				i.comboboxItems(User, Integer.parseInt(IDEBox));
-				i.setVisible(true);
-				dispose();
+				
+				
+				try {
+					instru = new File("./instrumentos.csv");
+					Scanner scanner = new Scanner(instru);
+
+					while(scanner.hasNextLine()) {
+						String data = scanner.nextLine();
+						ops = data.split(",", 170);
+						size++;
+
+					}
+					scanner.close();
+
+
+				}catch(Exception ex) {
+
+					System.out.print("404 "+ ex);
+				}
+
+				
+				
+				
+				for(int h = 0; h <size ;h++) {
+
+					fileManager continuar = new fileManager();
+					ag = continuar.combobox(User,h);
+					System.out.print(ag[12]+ "owowowowowowowowowowowowo");
+					
+
+					if ( Integer.parseInt(IDEBox) > 0 && IDEBox.trim().equals(ag[12])) {
+						
+						i.comboboxItems(User, Integer.parseInt(IDEBox));
+						i.setVisible(true);
+						dispose();
+						}
+				}
+				
+				
+				
+				
 				
 			}
 		});

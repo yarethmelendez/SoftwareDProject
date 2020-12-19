@@ -20,7 +20,7 @@ public class DataView {
 		
 		while(counter.readLine() != null) { // Count observations
 			test = counter.readLine(); // Read line
-			splitter = test.split(",",160); // Split line
+			splitter = test.split(",",162); // Split line
 			if(splitter[0].equals("FALSE")) { // If not-deletable, add to temp
 				sum++;
 				writer.write(test+"\n");
@@ -29,7 +29,7 @@ public class DataView {
 		
 		counter.close();
 		writer.close();
-		data = new String[sum][160];
+		data = new String[sum][162];
 		System.out.println("Number of evals: "+data.length);
 		
 		/////////////////////////////////////////////////////////////////////
@@ -40,8 +40,8 @@ public class DataView {
 		while(reader.readLine() != null) { // Iterate lines
 			for(int i = 0; i < data.length; i++) {
 				test = reader.readLine(); // Read line
-				splitter = test.split(",",160); // Split line
-				for(int j = 0; j < 160; j++) {
+				splitter = test.split(",",162); // Split line
+				for(int j = 0; j < 162; j++) {
 					data[i][j] = splitter[j]; // Assign values
 				}
 			}
@@ -88,11 +88,11 @@ public class DataView {
 	}
 	int EvidenceCalc(int score) {
 		
-		if (RNum(score) >= 3 || RNum(score) > 2)
+		if ((score) >= 3 || (score) > 2)
 			score = 3;
-		else if (RNum(score) == 2 ||RNum(score) > 1)
+		else if ((score) == 2 ||(score) > 1)
 			score = 2;
-		else if (RNum(score) == 1 || RNum(score) > 0)
+		else if ((score) == 1 || (score) > 0)
 			score = 1;
 		else
 			score = 0;
