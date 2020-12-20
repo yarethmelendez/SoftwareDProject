@@ -17,6 +17,7 @@ import java.awt.Font;
 public class Results1 extends JFrame {
 
 	public static void main(String[] args) {
+	
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -168,7 +169,7 @@ public class Results1 extends JFrame {
 						+ "            _________________________                                           \r\nV. Crecimiento y Desarrollo Profesional 10%   "
 						+ "                                10%                           _________________________                                          "
 						+ "     \r\n___________________________________________________________________________________________________________________\r\n    "
-						+ "                                                                     Evaluaci\u00F3n Promedio Final: "+vr.Total(2,0)+"  \r\n\r\n\r\n\r\nEl/la profesor/a"
+						+ "                                                                     Evaluaci\u00F3n Promedio Final: "+vr.Total(i,mm.gettype())+"  \r\n\r\n\r\n\r\nEl/la profesor/a"
 						+ " ________________________________________________ "
 						+ "cumple con los criterios requeridos para\r\nel Rango de Catedr\u00E1tico Asociado, seg\u00FAn consta en la Parte "
 						+ "II, 2.2.3 del Manual de Facultad y cumple con los\r\ncriterios de Experiencia y Calidad Docente, Servicio a la Instituci\u00F3n y "
