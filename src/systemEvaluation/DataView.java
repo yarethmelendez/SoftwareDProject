@@ -10,10 +10,9 @@ public class DataView {
 	File file2 = new File("./temp.csv"); // Holds non-deletable data
 	String data[][]; // Data holder
 	
-	DataView() throws IOException{
+	DataView(String fac) throws IOException{
 		int sum = 0;
 		FileReader freader = new FileReader(file);
-		//BufferedReader counter = new BufferedReader(freader); // counts evaluations
 		String test;
 		String splitter[] = null; // Split lines
 		Scanner counter ;
@@ -25,9 +24,7 @@ public class DataView {
 		while(counter.hasNextLine()) { // Count observations
 			test = counter.nextLine();; // Read line
 			splitter = test.split(",",165); // Split line
-			//System.out.print("\n");
-			//System.out.println(test+" yooooooo im the test you lil b \n ");
-			if(splitter[0].equals("FALSE")) { // If not-deletable, add to temp
+			if(splitter[16].equals(fac)) { // If not-deletable, add to temp
 				sum++;
 				writer.write(test+"\n");
 			}
@@ -47,8 +44,8 @@ public class DataView {
 			for(int i = 0; i < data.length; i++) {
 				test = reader.readLine(); // Read line
 				splitter = test.split(",",165); // Split line
-				for(int j = 0; j < 165; j++) {
-					data[i][j] = splitter[j]; // Assign values
+					for(int j = 0; j < 165; j++) {
+						data[i][j] = splitter[j]; // Assign values
 				}
 			}
 		}
@@ -67,31 +64,74 @@ public class DataView {
 		return MN;
 	}
 	
-	int ISum(int start,int end) { // Sums a row of questions
+	int ISum(int start,int end) { // Sums a row of Manual questions
 		int sum = 0;
 		int questions = (end+1) - start;
+		int count = 0;
 
 		for(int i = 0; i < data.length;i++) {
-			for(int j = start; j <= end; j++) { 
-				sum += Integer.parseInt(data[i][j]); // Convert string to int
+			if(data[i][16].equals("Manual")) {
+				for(int j = start; j <= end; j++) 
+					sum += Integer.parseInt(data[i][j]); // Convert string to int
+					count++;
 			}
 		}
 		
 		sum /= questions; // Get average by number of questions
-		sum /= data.length; // Get average by number of evaluations
+		sum /= count; // Get average by number of evaluations
 		return sum;
 	}
 	
-	int RNum(int num) { // Sum a single question
+	
+		
+	int RNum(int num) { // Sum a single Manual question
 		int sum = 0;
 		int k = num;
+		int count = 0;
 		for(int i = 0; i < data.length;i++) {
-			sum += Integer.parseInt(data[i][k]); // Convert string to int
+			if(data[i][16].equals("Manual")){
+				sum += Integer.parseInt(data[i][k]); // Convert string to int
+				count++;
+			}
 		}
 		
-		sum /= data.length;
+		sum /= count;
 		return sum;
 	}
+	
+	int RNumO(int num) { // Sum a single Online question
+		int sum = 0;
+		int k = num;
+		int count = 0;
+		
+		for(int i = 0; i < data.length;i++) {
+			if(data[i][16].equals("Online")){
+				sum += Integer.parseInt(data[i][k]); // Convert string to int
+				count++;
+			}
+		}
+		sum /= count;
+		return sum;
+	}
+		
+		int ISumO(int start,int end) { // Sums a row of Online questions
+			int sum = 0;
+			int questions = (end+1) - start;
+			int count = 0;
+			
+			for(int i = 0; i < data.length;i++) {
+				if(data[i][16].equals("Online")) {
+					for(int j = start; j <= end; j++) 
+						sum += Integer.parseInt(data[i][j]); // Convert string to int
+						count++;
+				}
+			
+			}
+			sum /= questions; // Get average by number of questions
+			sum /= count; // Get average by number of evaluations
+			return sum;
+		}
+	
 	int EvidenceCalc(int score) {
 		
 		if ((score) >= 3 || (score) > 2)

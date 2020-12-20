@@ -38,7 +38,6 @@ import java.util.Scanner;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextArea;
 import javax.swing.JSpinner;
@@ -257,10 +256,6 @@ public class onlineEvaluation extends JFrame  {
 	private JTextArea textField_26;
 	private JTextArea textField_27;
 	private JTextArea textField_28;
-	private JCheckBox chckbxNewCheckBox;
-	private JCheckBox chckbxNewCheckBox_1;
-	private JCheckBox chckbxNewCheckBox_2;
-	private JCheckBox chckbxNewCheckBox_3;
 
 
 	public static void main(String[] args) {
@@ -284,7 +279,7 @@ public class onlineEvaluation extends JFrame  {
 		}
 
 		
-		DataView ec = new DataView();
+		DataView ec = new DataView(nombre_prof_textField.getText());
 
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
 		setTitle("Evaluacion ");
@@ -297,7 +292,7 @@ public class onlineEvaluation extends JFrame  {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		tabbedPane.setBounds(10, 21, 1884, 960);
+		tabbedPane.setBounds(10, 9, 1884, 972);
 		contentPane.add(tabbedPane);
 
 		//////////////////////////////////// Info a ingresar ////////////////////////////////////////////
@@ -1900,7 +1895,7 @@ public class onlineEvaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					DataView DV = new DataView();
+					DataView DV = new DataView(nombre_prof_textField.getText());
 					int r =0;
 					//r = Integer.parseInt(spinner.getValue());
 					System.out.println(spinner.getValue()+ "soy yo tu padre ");
@@ -3063,7 +3058,7 @@ public class onlineEvaluation extends JFrame  {
 		var eMenuItem1 = new JMenuItem("Guardar");
 		eMenuItem1.addActionListener(new ActionListener() {//// item 1
 			public void actionPerformed(ActionEvent arg0) {/// action listener 
-				if(chckbxNewCheckBox.isSelected() && chckbxNewCheckBox_1.isSelected() && chckbxNewCheckBox_2.isSelected() && chckbxNewCheckBox_3.isSelected()) {
+
 				int valueID;
 				int value ;
 				String[] ag = new String[162];
@@ -3713,15 +3708,10 @@ public class onlineEvaluation extends JFrame  {
 					System.out.print("404 "+ ex);
 				}
 
+
+
+
 			}	
-			
-			else
-			{
-				Component frame = null;
-				JOptionPane.showMessageDialog(frame,
-						"Todas las casillas de verificaci\u00F3n deben de estar marcadas para poder guardar","ERROR",JOptionPane.ERROR_MESSAGE);
-			}
-			}
 		});
 		eMenuItem1.setMnemonic(KeyEvent.VK_E);
 
@@ -4306,11 +4296,48 @@ public class onlineEvaluation extends JFrame  {
 				values [159] = textArea_8_2_1.getText();
 				values [160] = textArea_8_2_1_1.getText();
 				values [161] = textArea_8_2_1_1_1.getText();
-				Component frame = null;
-				JOptionPane.showMessageDialog(frame,
-						"Los valores han sido guardados para continuar luego","Success",JOptionPane.PLAIN_MESSAGE);
 
-			
+
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
+				{
+					Results1 w = null;
+					try {
+						w = new Results1();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					w.setVisible(true);
+
+				}
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
+
+					Results2 w = null;
+					try {
+						w = new Results2();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					w.setVisible(true);
+				}
+
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado"){
+					Results3 w = null;
+					try {
+						w = new Results3();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					w.setVisible(true);
+				}
+
+
+
+
+
+
 				/////////////////TESTING//////////////////////////////
 				for (int i = 0; i < values.length; i++) {
 					System.out.println("Test " + i + ": " +values[i]);
@@ -4338,7 +4365,7 @@ public class onlineEvaluation extends JFrame  {
 					pw.println(" ");
 					pw.flush();
 					pw.close();
-					
+
 
 				}catch(Exception ex) {
 
@@ -4400,7 +4427,23 @@ public class onlineEvaluation extends JFrame  {
 				
 			}
 		});
-	
+		i2=new JMenuItem("Comentarios");
+		i2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				Comentarios e = null;
+				try {
+					e = new Comentarios();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				e.setVisible(true)
+;			}
+		});
+		submenu.add(i1);
+		submenu.add(i2);  
+		fileMenu.add(submenu); 
 		 
 		////////////////////////////Menu bar finish//////////////////////////////////////////////////
 
@@ -4992,23 +5035,23 @@ public class onlineEvaluation extends JFrame  {
 		
 		JLabel lblNewLabel_46 = new JLabel("Terminados:");
 		lblNewLabel_46.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel_46.setBounds(1195, 1, 93, 14);
+		lblNewLabel_46.setBounds(1195, 9, 93, 14);
 		contentPane.add(lblNewLabel_46);
 		
-		chckbxNewCheckBox = new JCheckBox("Instrumento 1");
-		chckbxNewCheckBox.setBounds(1294, -1, 119, 23);
+		JCheckBox chckbxNewCheckBox = new JCheckBox("Instrumento 1");
+		chckbxNewCheckBox.setBounds(1294, 7, 119, 23);
 		contentPane.add(chckbxNewCheckBox);
 		
-		chckbxNewCheckBox_1 = new JCheckBox("Instrumento 2");
-		chckbxNewCheckBox_1.setBounds(1415, -1, 112, 23);
+		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Instrumento 2");
+		chckbxNewCheckBox_1.setBounds(1415, 7, 112, 23);
 		contentPane.add(chckbxNewCheckBox_1);
 		
-		chckbxNewCheckBox_2 = new JCheckBox("Instrumento 3");
-		chckbxNewCheckBox_2.setBounds(1529, -1, 112, 23);
+		JCheckBox chckbxNewCheckBox_2 = new JCheckBox("Instrumento 3");
+		chckbxNewCheckBox_2.setBounds(1529, 7, 112, 23);
 		contentPane.add(chckbxNewCheckBox_2);
 		
-		chckbxNewCheckBox_3 = new JCheckBox("Instrumento 4");
-		chckbxNewCheckBox_3.setBounds(1643, -1, 119, 23);
+		JCheckBox chckbxNewCheckBox_3 = new JCheckBox("Instrumento 4");
+		chckbxNewCheckBox_3.setBounds(1643, 7, 119, 23);
 		contentPane.add(chckbxNewCheckBox_3);
 
 

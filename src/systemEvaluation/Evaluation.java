@@ -280,7 +280,7 @@ public class Evaluation extends JFrame  {
 		}
 
 
-		DataView ec = new DataView();
+		DataView ec = new DataView(nombre_prof_textField.getText());
 
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
 		setTitle("Evaluacion ");
@@ -1911,7 +1911,7 @@ public class Evaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					DataView DV = new DataView();
+					DataView DV = new DataView(nombre_prof_textField.getText());
 					int r =0;
 					//r = Integer.parseInt(spinner.getValue());
 					System.out.println(spinner.getValue()+ "soy yo tu padre ");
@@ -4291,9 +4291,46 @@ public class Evaluation extends JFrame  {
 				values [160] = textArea_8_2_1_1.getText();
 				values [161] = textArea_8_2_1_1_1.getText();
 
-				Component frame = null;
-				JOptionPane.showMessageDialog(frame,
-						"Los valores han sido guardados para continuar luego","Success",JOptionPane.PLAIN_MESSAGE);
+
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
+				{
+					Results1 w = null;
+					try {
+						w = new Results1();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					w.setVisible(true);
+
+				}
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
+
+					Results2 w = null;
+					try {
+						w = new Results2();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					w.setVisible(true);
+				}
+
+				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado"){
+					Results3 w = null;
+					try {
+						w = new Results3();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					w.setVisible(true);
+				}
+
+
+
+
+
 
 				/////////////////TESTING//////////////////////////////
 				for (int i = 0; i < values.length; i++) {
@@ -4322,7 +4359,6 @@ public class Evaluation extends JFrame  {
 					pw.flush();
 					pw.close();
 
-					
 
 				}catch(Exception ex) {
 
@@ -4386,7 +4422,22 @@ public class Evaluation extends JFrame  {
 
 			}
 		});
-	
+		i2=new JMenuItem("Comentarios");
+		i2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				Comentarios e = null;
+				try {
+					new Comentarios();
+				}catch (IOException e1 ) {
+					e1.printStackTrace();
+				}
+				e.setVisible(true)
+				;			}
+		});
+		submenu.add(i1);
+		submenu.add(i2);  
+		fileMenu.add(submenu); 
 
 
 
