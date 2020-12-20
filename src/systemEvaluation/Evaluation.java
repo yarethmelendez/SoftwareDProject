@@ -4386,22 +4386,7 @@ public class Evaluation extends JFrame  {
 
 			}
 		});
-		i2=new JMenuItem("Comentarios");
-		i2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-				Comentarios e = null;
-				try {
-					new Comentarios();
-				}catch (IOException e1 ) {
-					e1.printStackTrace();
-				}
-				e.setVisible(true)
-				;			}
-		});
-		submenu.add(i1);
-		submenu.add(i2);  
-		fileMenu.add(submenu); 
+	
 
 
 
