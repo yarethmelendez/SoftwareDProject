@@ -19,7 +19,7 @@ public class ValenciasRubrica{
 		
 	}
 	
-	double[] CalidadDocente(int choice)  throws IOException{
+	double[] CalidadDocente(int choice, int status)  throws IOException{
 		rango = new ValenciasRango(choice);
 		dv = new DataView();
 		double result[] = new double[7];
@@ -28,6 +28,7 @@ public class ValenciasRubrica{
 		C = 0.25;
 		D = 0.25;
 		
+		double I3;
 		double M = dv.ObSums()[0];
 		double N = dv.ObSums()[1];
 		
@@ -37,13 +38,13 @@ public class ValenciasRubrica{
 		
 		Pa.I1P = ((M/(M+N))*Pa.I1)+((N/(M+N))*Pa.I1A);
 		
-		Pa.I2 = dv.RNum(46);
-		Pa.I3 = (dv.ISum(63,68)-1)*0.75;
-		Pa.I3 = Pa.I3 < 3 && Pa.I3 > 2 ? 3 : Pa.I3; // Change this
-		Pa.I3A = (dv.ISum(63,66)-1)*0.75;
-		Pa.I4 = dv.RNum(98)*0.75;
+		Pa.I2 = dv.EvidenceCalc((int)(dv.RNum(46)));
+		Pa.I3 = (dv.ISum(64,69))*0.75;
+		Pa.I3A = (dv.ISum(64,67))*0.75;
+		Pa.I4 = dv.RNum(99)*0.75;
 		
-		Pa.puntuacion = ((A*Pa.I1P)+(B*Pa.I2)+(C*Pa.I3)+(D*Pa.I4))*(rango.valen1A / 3);
+		I3 = status == 0 ? Pa.I3 : Pa.I3A;
+		Pa.puntuacion = ((A*Pa.I1P)+(B*Pa.I2)+(C*I3)+(D*Pa.I4))*(rango.valen1A / 3);
 		result[0] = Pa.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -52,34 +53,40 @@ public class ValenciasRubrica{
 		Pb.I1A = ((dv.RNum(23)+dv.RNum(25)+dv.RNum(27)+dv.RNum(28)+dv.RNum(40))/5) - 1;
 		Pb.I1P = ((M/(M+N))*Pb.I1)+((N/(M+N))*Pb.I1A);
 		
-		Pb.I2 = dv.RNum(47);
-		Pb.I3 = dv.ISum(69,73)*0.75;
-		Pb.I3A = dv.ISum(67,76)*0.75;
+		Pb.I2 = dv.EvidenceCalc((int)(dv.RNum(47)));
+		Pb.I3 = dv.ISum(70,74)*0.75;
+		Pb.I3A = dv.ISum(68,77)*0.75;
 		
-		Pb.puntuacion = (((A*Pb.I1P)+(B*Pb.I2)+(C*Pb.I3))*(rango.valen1B / 3)) / (1-D);
+		I3 = status == 0 ? Pb.I3 : Pb.I3A;
+		
+		Pb.puntuacion = (((A*Pb.I1P)+(B*Pb.I2)+(C*I3))*(rango.valen1B / 3)) / (1-D);
 		result[1] = Pb.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
 		////////Conocimiento de los desarrollos actuales...//////////
-		Pc.I2 = dv.RNum(48);
-		Pc.I3 = ((dv.RNum(67)+dv.RNum(68))/2)*0.75;
+		Pc.I2 = dv.EvidenceCalc((int)(dv.RNum(48)));
+		Pc.I3 = ((dv.RNum(68)+dv.RNum(69))/2)*0.75;
 		Pc.I3A = 0;
-		Pc.I4 = dv.RNum(98)*0.75;
+		Pc.I4 = dv.RNum(99)*0.75;
 		
-		Pc.puntuacion = (((B*Pc.I2)+(C*Pc.I3)+(D*Pc.I4))*(rango.valen1C / 3))/(1-A);
+		I3 = status == 0 ? Pc.I3 : Pc.I3A;
+		
+		Pc.puntuacion = status == 0 ? (((B*Pc.I2)+(C*I3)+(D*Pc.I4))*(rango.valen1C / 3))/(1-A): (((B*Pc.I2)+(D*Pc.I4))*(rango.valen1C / 3))/(1-A-C);
 		result[2] = Pc.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
 		////////Habilidad para relacionar la disciplina...//////////
 		Pd.I1 = dv.RNum(31) - 1;
 		Pd.I1A = dv.RNum(27) - 1;
-		Pd.I1P = ((M/(M+N))*Pd.I1)+((N/(M+N))*Pb.I1A);
+		Pd.I1P = ((M/(M+N))*Pd.I1)+((N/(M+N))*Pd.I1A);
 		
-		Pd.I2 = dv.RNum(49);
-		Pd.I3 = (dv.RNum(65)+dv.RNum(66));
-		Pd.I3A = (dv.RNum(64)+dv.RNum(65)+dv.RNum(66))*0.75;
+		Pd.I2 = dv.EvidenceCalc((int)(dv.RNum(49)));
+		Pd.I3 = ((dv.RNum(66)+dv.RNum(67))/2)*0.75;
+		Pd.I3A = ((dv.RNum(65)+dv.RNum(66)+dv.RNum(67))/3)*0.75;
 		
-		Pd.puntuacion = ((A*Pd.I1P*(rango.valen1D / 3))+(B*Pd.I2)*(C*Pd.I3*(rango.valen1D / 3))) / (1-D);
+		I3 = status == 0 ? Pd.I3 : Pd.I3A;
+		
+		Pd.puntuacion = (((A*Pd.I1P*(rango.valen1D / 3))+(B*Pd.I2)+(C*I3*(rango.valen1D / 3))) / (1-D))+1;
 		result[3] = Pd.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -88,12 +95,14 @@ public class ValenciasRubrica{
 		Pe.I1A = ((dv.RNum(22)+dv.RNum(25)+dv.RNum(28)+dv.RNum(29))/4)-1;
 		Pe.I1P = ((M/(M+N))*Pe.I1)+((N/(M+N))*Pe.I1A);
 		
-		Pe.I2 = dv.RNum(50);
-		Pe.I3 = dv.ISum(74,78) * 0.75;
-		Pe.I3A = dv.ISum(77,81);
-		Pe.I4 = dv.RNum(98) * 0.75;
+		Pe.I2 = dv.EvidenceCalc((int)(dv.RNum(50)));
+		Pe.I3 = dv.ISum(75,79) * 0.75;
+		Pe.I3A = dv.ISum(78,82)*0.75;
+		Pe.I4 = dv.RNum(99) * 0.75;
 		
-		Pe.puntuacion = ((A*Pe.I1P)+(B*Pe.I2)+(C*Pe.I3)+(D*Pe.I4))*(rango.valen1E / 3);
+		I3 = status == 0 ? Pe.I3 : Pe.I3A;
+		
+		Pe.puntuacion = ((A*Pe.I1P)+(B*Pe.I2)+(C*I3)+(D*Pe.I4))*(rango.valen1E / 3);
 		result[4] = Pe.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -102,12 +111,14 @@ public class ValenciasRubrica{
 		Pf.I1A = ((dv.RNum(28)+dv.RNum(32)+dv.RNum(33)+dv.RNum(38))/4) - 1;
 		Pf.I1P = ((M/(M+N))*Pf.I1)+((N/(M+N))*Pf.I1A);
 		
-		Pf.I2 = dv.RNum(51);
-		Pf.I3 = dv.ISum(79,82)*0.75;
-		Pf.I3A = (dv.RNum(67)+dv.RNum(69)+dv.RNum(70)+dv.RNum(71)+dv.RNum(75)+dv.ISum(78,81))*0.75;
-		Pf.I4 = ((dv.RNum(98)+dv.RNum(101)+dv.RNum(102))/3)*0.75;
+		Pf.I2 = dv.EvidenceCalc((int)(dv.RNum(51)));
+		Pf.I3 = dv.ISum(80,83)*0.75;
+		Pf.I3A = ((dv.RNum(67)+dv.RNum(70)+dv.RNum(71)+dv.RNum(72)+dv.RNum(76)+dv.ISum(79,82))/6)*0.75;
+		Pf.I4 = ((dv.RNum(99)+dv.RNum(102)+dv.RNum(103))/3)*0.75;
 		
-		Pf.puntuacion = ((A*Pf.I1P)+(B*Pf.I2)+(C*Pf.I3)+(D*Pf.I4))*(rango.valen1F / 3);
+		I3 = status == 0 ? Pf.I3 : Pf.I3A;
+		
+		Pf.puntuacion = ((A*Pf.I1P)+(B*Pf.I2)+(C*I3)+(D*Pf.I4))*(rango.valen1F / 3);
 		result[5] = Pf.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -125,20 +136,22 @@ public class ValenciasRubrica{
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		
 		Pg.I3 = 0;
-		Pg.I3A = dv.RNum(74)*0.75;
-		Pg.I4 = ((dv.RNum(83)+dv.RNum(84))/2)*0.75;
+		Pg.I3A = dv.RNum(75)*0.75;
+		Pg.I4 = ((dv.RNum(84)+dv.RNum(85))/2)*0.75;
 		//////////////////////////////////////////////////////////////
 		
 		///////Posecion de los atributos de integridad.../////////////
 		Ph.I1P = (I1g + I1h)/2;
 
-		Ph.I2 = dv.RNum(52);
-		Ph.I3 = dv.RNum(75)*0.75;
-		Ph.I3A = ((dv.RNum(73)+dv.RNum(74)+dv.RNum(76))/3)*0.75;
-		Ph.I4 = ((dv.RNum(85)+dv.RNum(86)+dv.ISum(88,93)+dv.RNum(95)+dv.RNum(96)+dv.RNum(100)+dv.RNum(102))/7) * 0.75;
+		Ph.I2 = dv.EvidenceCalc((int)(dv.RNum(52)));
+		Ph.I3 = dv.RNum(76)*0.75;
+		Ph.I3A = ((dv.RNum(74)+dv.RNum(75)+dv.RNum(77))/3)*0.75;
+		Ph.I4 = ((dv.RNum(86)+dv.RNum(87)+dv.ISum(89,94)+dv.RNum(96)+dv.RNum(97)+dv.RNum(101)+dv.RNum(103))/7) * 0.75;
 		double I4 = (Pg.I4 + Ph.I4)/2;
 		
-		Ph.puntuacion = ((A*Ph.I1P)+(B*Ph.I2)+(C*Ph.I3)+(D*I4))*(rango.valen1GH / 3);
+		I3 = status == 0 ? Ph.I3 : (Pg.I3A + Ph.I3A)/2;
+		
+		Ph.puntuacion = ((A*Ph.I1P)+(B*Ph.I2)+(C*I3)+(D*I4))*(rango.valen1GH / 3);
 		result[6] = Ph.puntuacion;
 		//////////////////////////////////////////////////////////////
 		
@@ -153,7 +166,7 @@ public class ValenciasRubrica{
 		D = 0.2; // Evaluacion del director
 		
 		//////////Trabajo en comites de facultad...//////////////////
-		Pa.I2 = dv.RNum(53);
+		Pa.I2 = dv.EvidenceCalc((int)(dv.RNum(53)));
 		Pa.I4 = ((dv.RNum(92) + dv.RNum(100))/2) * 0.75;
 		
 		Pa.puntuacion = ((B*Pa.I2)+(D*Pa.I4))*(rango.valen2A/3);
@@ -163,7 +176,7 @@ public class ValenciasRubrica{
 		///////////Participacion y aportacion a reuniones...////////
 		/////////Servicio en comites y en organizaciones.../////////
 		
-		Pb.I2 = dv.RNum(54);
+		Pb.I2 = dv.EvidenceCalc((int)(dv.RNum(54)));
 		Pb.I4 = ((dv.RNum(87)+dv.RNum(88)+dv.RNum(93))/3)*0.75;
 		
 		Pc.I2 = dv.RNum(54);
@@ -177,7 +190,7 @@ public class ValenciasRubrica{
 		
 		////////////Colaboracion en organizaciones...///////////////
 		///////////Asistencia a actos oficiales/////////////////////
-		Pd.I2 = dv.RNum(55);
+		Pd.I2 = dv.EvidenceCalc((int)(dv.RNum(55)));
 		Pe.I4 = dv.RNum(93)*0.75;
 		
 		Pe.puntuacion = ((B*Pd.I2)+(D*Pe.I4))*(rango.valen2DE/3);
@@ -186,8 +199,8 @@ public class ValenciasRubrica{
 		
 		////////////Designacion como director/a...//////////////////
 		////////Participacion en organismos de gobierno...//////////
-		Pf.I2 = dv.RNum(56);
-		Pg.I2 = dv.RNum(56);
+		Pf.I2 = dv.EvidenceCalc((int)(dv.RNum(56)));
+		Pg.I2 = dv.EvidenceCalc((int)(dv.RNum(56)));
 		
 		Pg.puntuacion = Pg.I2*(rango.valen2FG/3);
 		result[3] = Pg.puntuacion;
@@ -204,7 +217,7 @@ public class ValenciasRubrica{
 		int M = dv.ObSums()[0];
 		int N = dv.ObSums()[1];
 		
-		Pa.I2 = dv.RNum(57);
+		Pa.I2 = dv.EvidenceCalc((int)(dv.RNum(57)));
 		Pb.puntuacion = (B*Pa.I2)*(rango.valen3AB/3);
 		result = Pb.puntuacion;
 		
@@ -220,9 +233,9 @@ public class ValenciasRubrica{
 		int M = dv.ObSums()[0];
 		int N = dv.ObSums()[1];
 		
-		Pa.I2 = dv.RNum(58);
-		Pb.I2 = dv.RNum(59);
-		Pc.I2 = dv.RNum(60);
+		Pa.I2 = dv.EvidenceCalc((int)(dv.RNum(58)));
+		Pb.I2 = dv.EvidenceCalc((int)(dv.RNum(59)));
+		Pc.I2 = dv.EvidenceCalc((int)(dv.RNum(60)));
 		Pb.I4 = dv.RNum(98)*0.75;
 		
 		Pa.puntuacion = Pa.I2*(rango.valen4A/3);
@@ -246,9 +259,9 @@ public class ValenciasRubrica{
 		int M = dv.ObSums()[0];
 		int N = dv.ObSums()[1];
 		
-		Pa.I2 = dv.RNum(61);
-		Pd.I2 = dv.RNum(62);
-		Pe.I2 = dv.RNum(62); // WARNING !!
+		Pa.I2 = dv.EvidenceCalc((int)(dv.RNum(61)));
+		Pd.I2 = dv.EvidenceCalc((int)(dv.RNum(62)));
+		Pe.I2 = dv.EvidenceCalc((int)(dv.RNum(63)));
 		Pf.I4 = dv.RNum(94)*0.75;
 		
 		Pa.puntuacion = Pa.I2*(rango.valen5ABC/3);
@@ -256,38 +269,28 @@ public class ValenciasRubrica{
 		
 		Pd.puntuacion = Pd.I2*(rango.valen5D/3);
 		result[1] = Pd.puntuacion;
-		Pe.puntuacion = ((B*Pe.I2)+(D*Pf.I4))+(rango.valen5EF/3);
-		Pe.puntuacion = Pe.puntuacion > 3 ? 3 : Pe.puntuacion; // Default to max value
+		Pe.puntuacion = ((B*Pe.I2)+(D*Pf.I4))*(rango.valen5EF/3);
 		result[2] = Pe.puntuacion;
 		
 		return result;
 	}
-  double Total(int choice) throws IOException {
+  double Total(int choice, int status) throws IOException {
 		
 		double sum = 0;
 		
-		sum += CalidadDocente(choice)[0];
-		sum += CalidadDocente(choice)[1];
-		sum += CalidadDocente(choice)[2];
-		sum += CalidadDocente(choice)[3];
-		sum += CalidadDocente(choice)[4];
-		sum += CalidadDocente(choice)[5];
-		sum += CalidadDocente(choice)[6];
+		for(int i = 0; i < 7; i++)
+			sum += CalidadDocente(choice,status)[i];
 		
-		sum += ServicioInstitucion(choice)[0];
-		sum += ServicioInstitucion(choice)[1];
-		sum += ServicioInstitucion(choice)[2];
-		sum += ServicioInstitucion(choice)[3];
+		for(int i = 0; i < 4; i++)
+			sum += ServicioInstitucion(choice)[i];
 		
 		sum += ServicioComunidad(choice);
 		
-		sum += InvestigacionTrabajo(choice)[0];
-		sum += InvestigacionTrabajo(choice)[1];
-		sum += InvestigacionTrabajo(choice)[2];
+		for(int i = 0; i < 3; i++)
+			sum += InvestigacionTrabajo(choice)[i];
 		
-		sum += CrecimientoDesarrollo(choice)[0];
-		sum += CrecimientoDesarrollo(choice)[1];
-		sum += CrecimientoDesarrollo(choice)[2];
+		for(int i = 0; i < 3; i++)
+			sum += CrecimientoDesarrollo(choice)[i];
 		
 		return sum;
 	}
