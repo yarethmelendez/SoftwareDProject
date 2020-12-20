@@ -8,7 +8,6 @@ public class fileManager {
 
 
 	public int login(String IDT , String passT ) {
-		//Scanner in=new Scanner(System.in);
 
 		String Id = "";
 		String pass = "";
@@ -24,13 +23,13 @@ public class fileManager {
 			while(scanner.hasNextLine() && found != 1) {
 				String data = scanner.nextLine();
 				String[] params = data.split(",", 20);
-				//System.out.print("reading ");
+			
 				Id= params[0];
 				pass = params[1];
 
 				if (Id.trim().equals(IDT) && pass.trim().equals(passT))
 				{
-					//System.out.print("i found it");
+				
 					found = 1;
 				}
 
@@ -76,7 +75,7 @@ public class fileManager {
 		File instru;
 		int found = 0;
 		String NIDE ;
-		//System.out.print("\n yo soy una pera");
+		
 
 		String[] ap = new String[162] ;
 
@@ -91,9 +90,9 @@ public class fileManager {
 			while(scanner.hasNextLine()) {
 				String data = scanner.nextLine();
 				ops = data.split(",", 170);
-				System.out.print("reading ");
+				
 
-				if (ops[2].trim().equals(ID) && ops[0].trim().equals("FALSE") && ops[1].trim().equals("FALSE") && ops[15].trim().equals(NIDE) )
+				if (ops[2].trim().equals(ID) && ops[1].trim().equals("FALSE") && ops[15].trim().equals(NIDE) )
 				{
 
 					int j = 3;
@@ -140,14 +139,14 @@ public class fileManager {
 			while(scanner.hasNextLine()) {
 				String data = scanner.nextLine();
 				ops = data.split(",", 170);
-				System.out.print("reading ");
+				
 
 				if (!ops[15].trim().equals(NIDE) )
 				{
 
 					for(int i = 0 ; i < ops.length ;i++) {
 						pw.print(ops[i]+",");	
-						//System.out.println("num"+i+" "+ops[i]+"");
+					
 					}
 					pw.println(" ");
 
@@ -174,7 +173,7 @@ public class fileManager {
 			while(scanner.hasNextLine()) {
 				String data = scanner.nextLine();
 				ops = data.split(",", 170);
-				System.out.print("reading ");
+			
 
 
 				for(int i = 0 ; i < ops.length ;i++) {
@@ -215,7 +214,7 @@ public class fileManager {
 			while(scanner.hasNextLine()) {
 				String data = scanner.nextLine();
 				ops = data.split(",", 170);
-				System.out.print("reading ");
+				
 
 
 
@@ -223,9 +222,6 @@ public class fileManager {
 				
 					ap[i]  = ops[15];
 					j++;
-
-					System.out.println(ap[i]+" soy el array ap ");
-				
 
 				i++;
 			}

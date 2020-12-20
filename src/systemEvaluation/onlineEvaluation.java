@@ -279,7 +279,7 @@ public class onlineEvaluation extends JFrame  {
 		}
 
 		
-		DataView ec = new DataView(nombre_prof_textField.getText());
+	
 
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
 		setTitle("Evaluacion ");
@@ -292,7 +292,7 @@ public class onlineEvaluation extends JFrame  {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		tabbedPane.setBounds(10, 9, 1884, 972);
+		tabbedPane.setBounds(10, 21, 1884, 960);
 		contentPane.add(tabbedPane);
 
 		//////////////////////////////////// Info a ingresar ////////////////////////////////////////////
@@ -321,6 +321,7 @@ public class onlineEvaluation extends JFrame  {
 		nombre_prof_textField.setBounds(920, 207, 253, 30);
 		panel.add(nombre_prof_textField);
 		nombre_prof_textField.setColumns(10);
+		DataView ec = new DataView(nombre_prof_textField.getText());
 
 		JLabel rango_lblNewLabel = new JLabel("Rango acad\u00E9mico que solicita");
 		rango_lblNewLabel.setBounds(680, 264, 226, 20);
@@ -4383,67 +4384,6 @@ public class onlineEvaluation extends JFrame  {
 		fileMenu.add(eMenuItem1_1);
 
 		setJMenuBar(menuBar);
-		JMenu  submenu;  
-		submenu=new JMenu("Imprimir");
-		JMenuItem i1,i2 ; 
-		i1=new JMenuItem("Evaluacion");
-		i1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
-				{
-					Results2 x = null;
-					try {
-						x = new Results2();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					x.setVisible(true);
-
-				}
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
-
-					Results1 w = null;
-					try {
-						w = new Results1();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					w.setVisible(true);
-				}
-
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Auxiliar"){
-					Results3 n = null;
-					try {
-						n = new Results3();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					n.setVisible(true);
-				}
-				
-			}
-		});
-		i2=new JMenuItem("Comentarios");
-		i2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				Comentarios e = null;
-				try {
-					e = new Comentarios();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				e.setVisible(true)
-;			}
-		});
-		submenu.add(i1);
-		submenu.add(i2);  
-		fileMenu.add(submenu); 
 		 
 		////////////////////////////Menu bar finish//////////////////////////////////////////////////
 
@@ -5035,23 +4975,23 @@ public class onlineEvaluation extends JFrame  {
 		
 		JLabel lblNewLabel_46 = new JLabel("Terminados:");
 		lblNewLabel_46.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel_46.setBounds(1195, 9, 93, 14);
+		lblNewLabel_46.setBounds(1195, 0, 93, 14);
 		contentPane.add(lblNewLabel_46);
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Instrumento 1");
-		chckbxNewCheckBox.setBounds(1294, 7, 119, 23);
+		chckbxNewCheckBox.setBounds(1294, -2, 119, 23);
 		contentPane.add(chckbxNewCheckBox);
 		
 		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Instrumento 2");
-		chckbxNewCheckBox_1.setBounds(1415, 7, 112, 23);
+		chckbxNewCheckBox_1.setBounds(1415, -2, 112, 23);
 		contentPane.add(chckbxNewCheckBox_1);
 		
 		JCheckBox chckbxNewCheckBox_2 = new JCheckBox("Instrumento 3");
-		chckbxNewCheckBox_2.setBounds(1529, 7, 112, 23);
+		chckbxNewCheckBox_2.setBounds(1529, -2, 112, 23);
 		contentPane.add(chckbxNewCheckBox_2);
 		
 		JCheckBox chckbxNewCheckBox_3 = new JCheckBox("Instrumento 4");
-		chckbxNewCheckBox_3.setBounds(1643, 7, 119, 23);
+		chckbxNewCheckBox_3.setBounds(1643, -2, 119, 23);
 		contentPane.add(chckbxNewCheckBox_3);
 
 

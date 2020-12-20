@@ -295,177 +295,177 @@ public class Evaluation extends JFrame  {
 		contentPane.setLayout(null);
 		tabbedPane.setBounds(0, 21, 1915, 962);
 		contentPane.add(tabbedPane);
-
-		//////////////////////////////////// Info a ingresar ////////////////////////////////////////////
-		JPanel panel = new JPanel();
-		tabbedPane.addTab("Informaci\u00F3n a Ingresar", null, panel, null);
-		panel.setLayout(null);
-
-		JLabel unidad_academica_lblNewLabel = new JLabel("Unidad acad\u00E9mica ");
-		unidad_academica_lblNewLabel.setBounds(680, 167, 277, 20);
-		unidad_academica_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		panel.add(unidad_academica_lblNewLabel);
-
-		Unidadacademica_textField = new JTextField(); 
-		Unidadacademica_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		Unidadacademica_textField.setBounds(920, 162, 253, 30);
-		panel.add(Unidadacademica_textField);
-		Unidadacademica_textField.setColumns(10);
-
-		JLabel nombre_profedor_lblNewLabel = new JLabel("Nombre del profesor");
-		nombre_profedor_lblNewLabel.setBounds(680, 212, 238, 20);
-		nombre_profedor_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		panel.add(nombre_profedor_lblNewLabel);
-
-		nombre_prof_textField = new JTextField();
-		nombre_prof_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		nombre_prof_textField.setBounds(920, 207, 253, 30);
-		panel.add(nombre_prof_textField);
-		nombre_prof_textField.setColumns(10);
-
-		DataView ec = new DataView(nombre_prof_textField.getText());
 		
-		JLabel rango_lblNewLabel = new JLabel("Rango acad\u00E9mico que solicita");
-		rango_lblNewLabel.setBounds(680, 264, 226, 20);
-		rango_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		panel.add(rango_lblNewLabel);
-
-		JLabel departamento_lblNewLabel = new JLabel("Departamento");
-		departamento_lblNewLabel.setBounds(680, 318, 185, 20);
-		departamento_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		panel.add(departamento_lblNewLabel);
-
-		departamento_textField = new JTextField();
-		departamento_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		departamento_textField.setBounds(920, 308, 253, 30);
-		panel.add(departamento_textField);
-		departamento_textField.setColumns(10);
-
-		JLabel disciplina_lblNewLabel = new JLabel("Disciplina que ense\u00F1a");
-		disciplina_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		disciplina_lblNewLabel.setBounds(680, 371, 152, 20);
-		panel.add(disciplina_lblNewLabel);
-
-		disiplina_textField = new JTextField();
-		disiplina_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		disiplina_textField.setBounds(920, 366, 253, 30);
-		panel.add(disiplina_textField);
-		disiplina_textField.setColumns(10);
-
-		JLabel objetivo_evaluacion_lblNewLabel = new JLabel("Objetivo de la evaluaci\u00F3n");
-		objetivo_evaluacion_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		objetivo_evaluacion_lblNewLabel.setBounds(680, 418, 185, 20);
-		panel.add(objetivo_evaluacion_lblNewLabel);
-
-
-
-		objetivo_eval_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		objetivo_eval_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Formativa", "Sumativa"}));
-		objetivo_eval_comboBox.setBounds(920, 416, 253, 25);
-		panel.add(objetivo_eval_comboBox);
-
-
-		JLabel periodo_evaluado_lblNewLabel = new JLabel("Per\u00EDodo evaluado");
-		periodo_evaluado_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		periodo_evaluado_lblNewLabel.setBounds(680, 472, 122, 20);
-		panel.add(periodo_evaluado_lblNewLabel);
-
-		periodo_evaluado_textField = new JTextField();
-		periodo_evaluado_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		periodo_evaluado_textField.setBounds(920, 467, 253, 30);
-		panel.add(periodo_evaluado_textField);
-		periodo_evaluado_textField.setColumns(10);
-
-		JLabel anos_servicio_lblNewLabel = new JLabel("A\u00F1os de servicio como profesor");
-		anos_servicio_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		anos_servicio_lblNewLabel.setBounds(818, 522, 277, 25);
-		panel.add(anos_servicio_lblNewLabel);
-
-		JLabel jornada_comple_lblNewLabel = new JLabel("Jornada completa");
-		jornada_comple_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		jornada_comple_lblNewLabel.setBounds(692, 561, 134, 20);
-		panel.add(jornada_comple_lblNewLabel);
-
-
-
-		jornada_comple_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		jornada_comple_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
-		jornada_comple_comboBox.setBounds(836, 558, 74, 27);
-		panel.add(jornada_comple_comboBox);
-
-
-		JLabel jornada_parcial_lblNewLabel = new JLabel("Jornada parcial");
-
-		jornada_parcial_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		jornada_parcial_lblNewLabel.setBounds(969, 561, 107, 20);
-		panel.add(jornada_parcial_lblNewLabel);
-
-
-		jornada_parcial_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		jornada_parcial_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
-		jornada_parcial_comboBox.setBounds(1111, 558, 74, 27);
-		panel.add(jornada_parcial_comboBox);
-
-
-		JLabel tipo_de_contrato_lblNewLabel = new JLabel("Tipo de contrato");
-		tipo_de_contrato_lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		tipo_de_contrato_lblNewLabel.setBounds(871, 596, 157, 20);
-		panel.add(tipo_de_contrato_lblNewLabel);
-
-		contrato_comboBox = new JComboBox();
-
-		contrato_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		contrato_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto", "Temporero", "Probatorio", "Permanente"}));
-		contrato_comboBox.setBounds(871, 629, 139, 27);
-		panel.add(contrato_comboBox);
-		contrato_comboBox.setSelectedItem("Temporero"); // SETTER TEST !!!!!!!!!!
-
-
-		JLabel lblNewLabel_9 = new JLabel("Especifique los cursos ofrecidos ");
-		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_9.setBounds(689, 667, 255, 22);
-		panel.add(lblNewLabel_9);
-
-		JLabel lblNewLabel_10 = new JLabel("durante el per\u00EDodo evaluado:");
-		lblNewLabel_10.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_10.setBounds(941, 667, 226, 22);
-		panel.add(lblNewLabel_10);
-
-		JLabel codigo_lblNewLabel = new JLabel("C\u00F3digo");
-		codigo_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		codigo_lblNewLabel.setBounds(779, 717, 50, 20);
-		panel.add(codigo_lblNewLabel);
-
-		codigo_textField = new JTextField();
-		codigo_textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		codigo_textField.setBounds(893, 715, 226, 25);
-		panel.add(codigo_textField);
-		codigo_textField.setColumns(10);
-
-		titulo_curso_lblNewLabel = new JLabel("T\u00EDtulo del Curso ");
-		titulo_curso_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		titulo_curso_lblNewLabel.setBounds(747, 770, 118, 20);
-		panel.add(titulo_curso_lblNewLabel);
-
-		tutulo_del_curso_textField = new JTextField();
-		tutulo_del_curso_textField.setColumns(10);
-		tutulo_del_curso_textField.setBounds(893, 769, 226, 26);
-		panel.add(tutulo_del_curso_textField);
-
-		JSeparator separator = new JSeparator();
-		separator.setBounds(779, 144, 0, 12);
-		panel.add(separator);
-
-		rangoAcademico_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Rango Catedratico", "Rango Catedratico Asociado", "Rango Catedratico Auxiliar"}));
-		rangoAcademico_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		rangoAcademico_comboBox.setBounds(920, 261, 253, 27);
-		panel.add(rangoAcademico_comboBox);
-
-		JLabel lblNewLabel_44 = new JLabel("Informaci\u00F3n a Ingresar");
-		lblNewLabel_44.setForeground(new Color(0, 100, 0));
-		lblNewLabel_44.setFont(new Font("Tahoma", Font.BOLD, 55));
-		lblNewLabel_44.setBounds(619, 11, 720, 123);
-		panel.add(lblNewLabel_44);
+				//////////////////////////////////// Info a ingresar ////////////////////////////////////////////
+				JPanel panel = new JPanel();
+				tabbedPane.addTab("Informaci\u00F3n a Ingresar", null, panel, null);
+				panel.setLayout(null);
+				
+						JLabel unidad_academica_lblNewLabel = new JLabel("Unidad acad\u00E9mica ");
+						unidad_academica_lblNewLabel.setBounds(680, 167, 277, 20);
+						unidad_academica_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+						panel.add(unidad_academica_lblNewLabel);
+						
+								Unidadacademica_textField = new JTextField(); 
+								Unidadacademica_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+								Unidadacademica_textField.setBounds(920, 162, 253, 30);
+								panel.add(Unidadacademica_textField);
+								Unidadacademica_textField.setColumns(10);
+								
+										JLabel nombre_profedor_lblNewLabel = new JLabel("Nombre del profesor");
+										nombre_profedor_lblNewLabel.setBounds(680, 212, 238, 20);
+										nombre_profedor_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+										panel.add(nombre_profedor_lblNewLabel);
+										
+												nombre_prof_textField = new JTextField();
+												nombre_prof_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+												nombre_prof_textField.setBounds(920, 207, 253, 30);
+												panel.add(nombre_prof_textField);
+												nombre_prof_textField.setColumns(10);
+												
+														DataView ec = new DataView(nombre_prof_textField.getText());
+														
+														JLabel rango_lblNewLabel = new JLabel("Rango acad\u00E9mico que solicita");
+														rango_lblNewLabel.setBounds(680, 264, 226, 20);
+														rango_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+														panel.add(rango_lblNewLabel);
+														
+																JLabel departamento_lblNewLabel = new JLabel("Departamento");
+																departamento_lblNewLabel.setBounds(680, 318, 185, 20);
+																departamento_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																panel.add(departamento_lblNewLabel);
+																
+																		departamento_textField = new JTextField();
+																		departamento_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																		departamento_textField.setBounds(920, 308, 253, 30);
+																		panel.add(departamento_textField);
+																		departamento_textField.setColumns(10);
+																		
+																				JLabel disciplina_lblNewLabel = new JLabel("Disciplina que ense\u00F1a");
+																				disciplina_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																				disciplina_lblNewLabel.setBounds(680, 371, 152, 20);
+																				panel.add(disciplina_lblNewLabel);
+																				
+																						disiplina_textField = new JTextField();
+																						disiplina_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																						disiplina_textField.setBounds(920, 366, 253, 30);
+																						panel.add(disiplina_textField);
+																						disiplina_textField.setColumns(10);
+																						
+																								JLabel objetivo_evaluacion_lblNewLabel = new JLabel("Objetivo de la evaluaci\u00F3n");
+																								objetivo_evaluacion_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																								objetivo_evaluacion_lblNewLabel.setBounds(680, 418, 185, 20);
+																								panel.add(objetivo_evaluacion_lblNewLabel);
+																								
+																								
+																								
+																										objetivo_eval_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																										objetivo_eval_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Formativa", "Sumativa"}));
+																										objetivo_eval_comboBox.setBounds(920, 416, 253, 25);
+																										panel.add(objetivo_eval_comboBox);
+																										
+																										
+																												JLabel periodo_evaluado_lblNewLabel = new JLabel("Per\u00EDodo evaluado");
+																												periodo_evaluado_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																												periodo_evaluado_lblNewLabel.setBounds(680, 472, 122, 20);
+																												panel.add(periodo_evaluado_lblNewLabel);
+																												
+																														periodo_evaluado_textField = new JTextField();
+																														periodo_evaluado_textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																														periodo_evaluado_textField.setBounds(920, 467, 253, 30);
+																														panel.add(periodo_evaluado_textField);
+																														periodo_evaluado_textField.setColumns(10);
+																														
+																																JLabel anos_servicio_lblNewLabel = new JLabel("A\u00F1os de servicio como profesor");
+																																anos_servicio_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+																																anos_servicio_lblNewLabel.setBounds(818, 522, 277, 25);
+																																panel.add(anos_servicio_lblNewLabel);
+																																
+																																		JLabel jornada_comple_lblNewLabel = new JLabel("Jornada completa");
+																																		jornada_comple_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																		jornada_comple_lblNewLabel.setBounds(692, 561, 134, 20);
+																																		panel.add(jornada_comple_lblNewLabel);
+																																		
+																																		
+																																		
+																																				jornada_comple_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																				jornada_comple_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
+																																				jornada_comple_comboBox.setBounds(836, 558, 74, 27);
+																																				panel.add(jornada_comple_comboBox);
+																																				
+																																				
+																																						JLabel jornada_parcial_lblNewLabel = new JLabel("Jornada parcial");
+																																						
+																																								jornada_parcial_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																								jornada_parcial_lblNewLabel.setBounds(969, 561, 107, 20);
+																																								panel.add(jornada_parcial_lblNewLabel);
+																																								
+																																								
+																																										jornada_parcial_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																										jornada_parcial_comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "41", "42", "43", "44", "45"}));
+																																										jornada_parcial_comboBox.setBounds(1111, 558, 74, 27);
+																																										panel.add(jornada_parcial_comboBox);
+																																										
+																																										
+																																												JLabel tipo_de_contrato_lblNewLabel = new JLabel("Tipo de contrato");
+																																												tipo_de_contrato_lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
+																																												tipo_de_contrato_lblNewLabel.setBounds(871, 596, 157, 20);
+																																												panel.add(tipo_de_contrato_lblNewLabel);
+																																												
+																																														contrato_comboBox = new JComboBox();
+																																														
+																																																contrato_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																																contrato_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sustituto", "Temporero", "Probatorio", "Permanente"}));
+																																																contrato_comboBox.setBounds(871, 629, 139, 27);
+																																																panel.add(contrato_comboBox);
+																																																contrato_comboBox.setSelectedItem("Temporero"); // SETTER TEST !!!!!!!!!!
+																																																
+																																																
+																																																		JLabel lblNewLabel_9 = new JLabel("Especifique los cursos ofrecidos ");
+																																																		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 18));
+																																																		lblNewLabel_9.setBounds(689, 667, 255, 22);
+																																																		panel.add(lblNewLabel_9);
+																																																		
+																																																				JLabel lblNewLabel_10 = new JLabel("durante el per\u00EDodo evaluado:");
+																																																				lblNewLabel_10.setFont(new Font("Tahoma", Font.PLAIN, 18));
+																																																				lblNewLabel_10.setBounds(941, 667, 226, 22);
+																																																				panel.add(lblNewLabel_10);
+																																																				
+																																																						JLabel codigo_lblNewLabel = new JLabel("C\u00F3digo");
+																																																						codigo_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																																						codigo_lblNewLabel.setBounds(779, 717, 50, 20);
+																																																						panel.add(codigo_lblNewLabel);
+																																																						
+																																																								codigo_textField = new JTextField();
+																																																								codigo_textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																																																								codigo_textField.setBounds(893, 715, 226, 25);
+																																																								panel.add(codigo_textField);
+																																																								codigo_textField.setColumns(10);
+																																																								
+																																																										titulo_curso_lblNewLabel = new JLabel("T\u00EDtulo del Curso ");
+																																																										titulo_curso_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																																										titulo_curso_lblNewLabel.setBounds(747, 770, 118, 20);
+																																																										panel.add(titulo_curso_lblNewLabel);
+																																																										
+																																																												tutulo_del_curso_textField = new JTextField();
+																																																												tutulo_del_curso_textField.setColumns(10);
+																																																												tutulo_del_curso_textField.setBounds(893, 769, 226, 26);
+																																																												panel.add(tutulo_del_curso_textField);
+																																																												
+																																																														JSeparator separator = new JSeparator();
+																																																														separator.setBounds(779, 144, 0, 12);
+																																																														panel.add(separator);
+																																																														
+																																																																rangoAcademico_comboBox.setModel(new DefaultComboBoxModel(new String[] {"Rango Catedratico", "Rango Catedratico Asociado", "Rango Catedratico Auxiliar"}));
+																																																																rangoAcademico_comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																																																																rangoAcademico_comboBox.setBounds(920, 261, 253, 27);
+																																																																panel.add(rangoAcademico_comboBox);
+																																																																
+																																																																		JLabel lblNewLabel_44 = new JLabel("Informaci\u00F3n a Ingresar");
+																																																																		lblNewLabel_44.setForeground(new Color(0, 100, 0));
+																																																																		lblNewLabel_44.setFont(new Font("Tahoma", Font.BOLD, 55));
+																																																																		lblNewLabel_44.setBounds(619, 11, 720, 123);
+																																																																		panel.add(lblNewLabel_44);
 
 		/////////////////////////////// INSTRUMENTO I ///////////////////////////////////////////
 
@@ -4380,68 +4380,6 @@ public class Evaluation extends JFrame  {
 		setJMenuBar(menuBar);
 
 
-		JMenu  submenu;  
-		submenu=new JMenu("Imprimir");
-		JMenuItem i1,i2 ; 
-		i1=new JMenuItem("Evaluacion");
-		i1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
-				{
-					Results2 x = null;
-					try {
-						x = new Results2();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					x.setVisible(true);
-
-				}
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
-
-					Results1 w = null;
-					try {
-						w = new Results1();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					w.setVisible(true);
-				}
-
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Auxiliar"){
-					Results3 n = null;
-					try {
-						n = new Results3();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					n.setVisible(true);
-				}
-
-			}
-		});
-		i2=new JMenuItem("Comentarios");
-		i2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-				Comentarios e = null;
-				try {
-					new Comentarios();
-				}catch (IOException e1 ) {
-					e1.printStackTrace();
-				}
-				e.setVisible(true)
-				;			}
-		});
-		submenu.add(i1);
-		submenu.add(i2);  
-		fileMenu.add(submenu); 
-
-
 
 		//////////////////////////////Menu bar finish//////////////////////////////////////////////////
 
@@ -5061,7 +4999,7 @@ public class Evaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		chckbxNewCheckBox_2.setBounds(1549, -1, 103, 23);
+		chckbxNewCheckBox_2.setBounds(1544, -1, 103, 23);
 		contentPane.add(chckbxNewCheckBox_2);
 
 		chckbxNewCheckBox_3 = new JCheckBox("Instrumento 4");

@@ -81,6 +81,11 @@ public class BorrarEvaluacion extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
+		JPanel panel = new JPanel();
+		panel.setBounds(455, 121, 945, 713);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
 String[] ag = new String[160];
 		
 		int j = 40;
@@ -118,10 +123,10 @@ String[] ag = new String[160];
 			if(ag[1] != null) {
 				textField_1 = new JTextField("    Numero de evaluacion: "+ag[12]+" \tProfesor evaluado: "+ag[1]+" \tModalidad: "+ag[13]+ " \tPeriodo: "+ag[6]);
 				textField_1.setEditable(false);
-				textField_1.setBounds(667, j +177, 594, 39);
-				contentPane.add(textField_1);
+				textField_1.setBounds(100, j +5, 933, 26);
+				panel.add(textField_1);
 				textField_1.setColumns(10);
-				j = j+40;
+				j = j+30;
 			}
 
 

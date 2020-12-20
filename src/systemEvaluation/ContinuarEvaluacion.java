@@ -62,7 +62,7 @@ public class ContinuarEvaluacion extends JFrame {
 		btnCargar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-
+				
 				IDEBox = textField.getText();
 				String[] ag = new String[164] ;
 
@@ -102,7 +102,7 @@ public class ContinuarEvaluacion extends JFrame {
 
 						fileManager continuar = new fileManager();
 						ag = continuar.combobox(User,h);
-						System.out.print(ag[12]+ "owowowowowowowowowowowowo");
+					
 
 
 						if ( Integer.parseInt(IDEBox) > 0 && IDEBox.trim().equals(ag[12])) {
@@ -111,12 +111,15 @@ public class ContinuarEvaluacion extends JFrame {
 								u.comboboxItems(User, Integer.parseInt(IDEBox));
 								u.setVisible(true);
 								dispose();
+								MainMenu.type = 2;
+								
 							}
 
 							if(ag[13].equals("Manual")) {
 								i.comboboxItems(User, Integer.parseInt(IDEBox));
 								i.setVisible(true);
 								dispose();
+								MainMenu.type = 1;
 							}
 						}
 					}
