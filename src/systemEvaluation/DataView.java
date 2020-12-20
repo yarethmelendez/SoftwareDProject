@@ -67,7 +67,7 @@ public class DataView {
 	int ISum(int start,int end) { // Sums a row of Manual questions
 		int sum = 0;
 		int questions = (end+1) - start;
-		int count = 0;
+		int count = 1;
 
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Manual")) {
@@ -87,7 +87,7 @@ public class DataView {
 	int RNum(int num) { // Sum a single Manual question
 		int sum = 0;
 		int k = num;
-		int count = 0;
+		int count = 1;
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Manual")){
 				sum += Integer.parseInt(data[i][k]); // Convert string to int
@@ -102,7 +102,7 @@ public class DataView {
 	int RNumO(int num) { // Sum a single Online question
 		int sum = 0;
 		int k = num;
-		int count = 0;
+		int count = 1;
 		
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Online")){
@@ -117,7 +117,7 @@ public class DataView {
 		int ISumO(int start,int end) { // Sums a row of Online questions
 			int sum = 0;
 			int questions = (end+1) - start;
-			int count = 0;
+			int count = 1;
 			
 			for(int i = 0; i < data.length;i++) {
 				if(data[i][16].equals("Online")) {

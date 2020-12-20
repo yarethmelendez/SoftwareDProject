@@ -188,7 +188,7 @@ public class ComentariosOnline extends JFrame {
 				+ "otros).\r\nComentarios:\r\n"+values[128]+"\r\n\r\n\r\n\r\n\r\n\r\n9. Est\u00E1 disponible para ofrecer cursos, seg\u00FAn "
 				+ "las necesidades establecidas en el\r\nhorario de clases para la oferta acad\u00E9mica del t\u00E9rmino.\r\nCom"
 				+ "entarios:\r\n"+values[129]+"\r\n\r\n\r\n\r\n\r\n\r\n10. Participa en comit\u00E9s departamentales, de la unidad acad\u00E9mica, "
-				+ "institucional o en\r\norganismos universitarios cuando as\u00ED se le solicita.\r\nComentarios:\r\n<dynamic>\r\n\r\n\r\n\r\n\r\n\r\n"
+				+ "institucional o en\r\norganismos universitarios cuando as\u00ED se le solicita.\r\nComentarios:\r\n"+values[130]+"\r\n\r\n\r\n\r\n\r\n\r\n"
 				+ "11. Asiste a las convocatorias de facultad, tales como actividades de reconocimientos\r\nacad\u00E9micos a estudiantes, el Servicio "
 				+ "de Graduaci\u00F3n, la Graduaci\u00F3n, entre otros.\r\nComentarios:\r\n"+values[131]+"\r\n\r\n\r\n\r\n\r\n\r\n12. Asiste a activid"
 				+ "ades de desarrollo profesional como congresos, seminarios, cursos\r\nde educaci\u00F3n continuada, entre otros.\r\nCom"

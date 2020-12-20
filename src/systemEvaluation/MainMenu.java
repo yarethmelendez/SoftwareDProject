@@ -27,7 +27,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(-7, -7, 1920, 1080);
-		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	
 		contentPane = new JPanel();
 		contentPane.setForeground(Color.ORANGE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
