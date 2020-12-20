@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 import javax.swing.JButton;
@@ -58,7 +59,15 @@ public class BorrarEvaluacion extends JFrame {
 				fileManager borrar = new fileManager();
 				String IDEBox = textField.getText();
 				
-				borrar.borrarEV(User,Integer.parseInt(IDEBox));
+				try {
+					borrar.borrarEV3(Integer.parseInt(IDEBox));
+				} catch (NumberFormatException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				
 			}
