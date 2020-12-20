@@ -20,7 +20,7 @@ public class DataView {
 		
 		while(counter.readLine() != null) { // Count observations
 			test = counter.readLine(); // Read line
-			splitter = test.split(",",162); // Split line
+			splitter = test.split(",",165); // Split line
 			if(splitter[0].equals("FALSE")) { // If not-deletable, add to temp
 				sum++;
 				writer.write(test+"\n");
@@ -29,7 +29,7 @@ public class DataView {
 		
 		counter.close();
 		writer.close();
-		data = new String[sum][162];
+		data = new String[sum][165];
 		System.out.println("Number of evals: "+data.length);
 		
 		/////////////////////////////////////////////////////////////////////
@@ -40,8 +40,8 @@ public class DataView {
 		while(reader.readLine() != null) { // Iterate lines
 			for(int i = 0; i < data.length; i++) {
 				test = reader.readLine(); // Read line
-				splitter = test.split(",",162); // Split line
-				for(int j = 0; j < 162; j++) {
+				splitter = test.split(",",165); // Split line
+				for(int j = 0; j < 165; j++) {
 					data[i][j] = splitter[j]; // Assign values
 				}
 			}

@@ -43,7 +43,7 @@ public class ValenciasRubrica{
 		Pa.I3A = (dv.ISum(64,67))*0.75;
 		Pa.I4 = dv.RNum(99)*0.75;
 		
-		I3 = status == 0 ? Pa.I3 : Pa.I3A;
+		I3 = status == 1 ? Pa.I3 : Pa.I3A;
 		Pa.puntuacion = ((A*Pa.I1P)+(B*Pa.I2)+(C*I3)+(D*Pa.I4))*(rango.valen1A / 3);
 		result[0] = Pa.puntuacion;
 		//////////////////////////////////////////////////////////////
@@ -57,7 +57,7 @@ public class ValenciasRubrica{
 		Pb.I3 = dv.ISum(70,74)*0.75;
 		Pb.I3A = dv.ISum(68,77)*0.75;
 		
-		I3 = status == 0 ? Pb.I3 : Pb.I3A;
+		I3 = status == 1 ? Pb.I3 : Pb.I3A;
 		
 		Pb.puntuacion = (((A*Pb.I1P)+(B*Pb.I2)+(C*I3))*(rango.valen1B / 3)) / (1-D);
 		result[1] = Pb.puntuacion;
@@ -69,7 +69,7 @@ public class ValenciasRubrica{
 		Pc.I3A = 0;
 		Pc.I4 = dv.RNum(99)*0.75;
 		
-		I3 = status == 0 ? Pc.I3 : Pc.I3A;
+		I3 = status == 1 ? Pc.I3 : Pc.I3A;
 		
 		Pc.puntuacion = status == 0 ? (((B*Pc.I2)+(C*I3)+(D*Pc.I4))*(rango.valen1C / 3))/(1-A): (((B*Pc.I2)+(D*Pc.I4))*(rango.valen1C / 3))/(1-A-C);
 		result[2] = Pc.puntuacion;
@@ -84,7 +84,7 @@ public class ValenciasRubrica{
 		Pd.I3 = ((dv.RNum(66)+dv.RNum(67))/2)*0.75;
 		Pd.I3A = ((dv.RNum(65)+dv.RNum(66)+dv.RNum(67))/3)*0.75;
 		
-		I3 = status == 0 ? Pd.I3 : Pd.I3A;
+		I3 = status == 1 ? Pd.I3 : Pd.I3A;
 		
 		Pd.puntuacion = (((A*Pd.I1P*(rango.valen1D / 3))+(B*Pd.I2)+(C*I3*(rango.valen1D / 3))) / (1-D))+1;
 		result[3] = Pd.puntuacion;
@@ -100,7 +100,7 @@ public class ValenciasRubrica{
 		Pe.I3A = dv.ISum(78,82)*0.75;
 		Pe.I4 = dv.RNum(99) * 0.75;
 		
-		I3 = status == 0 ? Pe.I3 : Pe.I3A;
+		I3 = status == 1 ? Pe.I3 : Pe.I3A;
 		
 		Pe.puntuacion = ((A*Pe.I1P)+(B*Pe.I2)+(C*I3)+(D*Pe.I4))*(rango.valen1E / 3);
 		result[4] = Pe.puntuacion;
@@ -116,7 +116,7 @@ public class ValenciasRubrica{
 		Pf.I3A = ((dv.RNum(67)+dv.RNum(70)+dv.RNum(71)+dv.RNum(72)+dv.RNum(76)+dv.ISum(79,82))/6)*0.75;
 		Pf.I4 = ((dv.RNum(99)+dv.RNum(102)+dv.RNum(103))/3)*0.75;
 		
-		I3 = status == 0 ? Pf.I3 : Pf.I3A;
+		I3 = status == 1 ? Pf.I3 : Pf.I3A;
 		
 		Pf.puntuacion = ((A*Pf.I1P)+(B*Pf.I2)+(C*I3)+(D*Pf.I4))*(rango.valen1F / 3);
 		result[5] = Pf.puntuacion;
@@ -149,7 +149,7 @@ public class ValenciasRubrica{
 		Ph.I4 = ((dv.RNum(86)+dv.RNum(87)+dv.ISum(89,94)+dv.RNum(96)+dv.RNum(97)+dv.RNum(101)+dv.RNum(103))/7) * 0.75;
 		double I4 = (Pg.I4 + Ph.I4)/2;
 		
-		I3 = status == 0 ? Ph.I3 : (Pg.I3A + Ph.I3A)/2;
+		I3 = status == 1 ? Ph.I3 : (Pg.I3A + Ph.I3A)/2;
 		
 		Ph.puntuacion = ((A*Ph.I1P)+(B*Ph.I2)+(C*I3)+(D*I4))*(rango.valen1GH / 3);
 		result[6] = Ph.puntuacion;
