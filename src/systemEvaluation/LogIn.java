@@ -2,6 +2,7 @@ package systemEvaluation;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +13,7 @@ import javax.swing.JFrame;
 //import register;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -185,7 +187,14 @@ public class LogIn implements ActionListener{
 					MainMenu e = new MainMenu();
 					e.setVisible(true);
 
+				}else
+				{
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"Contrase\u00F1a o Nombre de usuario esta incorrecto","ERROR",JOptionPane.ERROR_MESSAGE);
+				
 				}
+				
 			}
 		});
 		botonInicioSesion.setFont(new Font("Tahoma", Font.BOLD, 14));

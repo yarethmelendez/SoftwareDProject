@@ -79,6 +79,14 @@ public class MainMenu extends JFrame implements ActionListener {
 		contentPane.add(erase_btnNewButton);
 
 		JButton configurations_btnNewButton = new JButton("Configuraciones");
+		configurations_btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Configuraciones c = new Configuraciones();
+						c.setVisible(true);
+						dispose();
+				
+			}
+		});
 		configurations_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
 		configurations_btnNewButton.setBounds(741, 538, 397, 23);
 		contentPane.add(configurations_btnNewButton);
