@@ -33,7 +33,7 @@ public class BorrarEvaluacion extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblSelecionaUnaEvaluacion = new JLabel("Seleciona una Evaluacion para Borrar");
-		lblSelecionaUnaEvaluacion.setBounds(643, 66, 1590, 74);
+		lblSelecionaUnaEvaluacion.setBounds(674, 67, 1590, 74);
 		lblSelecionaUnaEvaluacion.setFont(new Font("Tahoma", Font.BOLD, 30));
 		contentPane.add(lblSelecionaUnaEvaluacion);
 
@@ -49,7 +49,7 @@ public class BorrarEvaluacion extends JFrame {
 
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton.setBounds(1081, 901, 145, 46);
+		btnNewButton.setBounds(1719, 27, 145, 46);
 		contentPane.add(btnNewButton);
 
 		JButton btnCargar = new JButton("Borrar");
@@ -73,11 +73,11 @@ public class BorrarEvaluacion extends JFrame {
 			}
 		});
 		btnCargar.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnCargar.setBounds(745, 901, 145, 46);
+		btnCargar.setBounds(893, 951, 145, 46);
 		contentPane.add(btnCargar);
 		
 		textField = new JTextField();
-		textField.setBounds(581, 901, 124, 46);
+		textField.setBounds(903, 898, 124, 46);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
