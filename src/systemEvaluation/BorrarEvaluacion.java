@@ -113,10 +113,10 @@ String[] ag = new String[160];
 			fileManager continuar = new fileManager();
 			ag = continuar.combobox(User,i);
 
-			System.out.println("ID DE Evaluacion"+ag[12]+" "+ag[1]+" "+ag[13]);
+			System.out.println("Numero de evaluacion: "+ag[12]+" \tProfesor evaluado: "+ag[1]+" \tModalidad: "+ag[13]+ " \tPeriodo: "+ag[6]);
 
 			if(ag[1] != null) {
-				textField_1 = new JTextField("ID DE Evaluacion"+ag[12]+" "+ag[1]+" "+ag[13]);
+				textField_1 = new JTextField("    Numero de evaluacion: "+ag[12]+" \tProfesor evaluado: "+ag[1]+" \tModalidad: "+ag[13]+ " \tPeriodo: "+ag[6]);
 				textField_1.setEditable(false);
 				textField_1.setBounds(667, j +177, 594, 39);
 				contentPane.add(textField_1);

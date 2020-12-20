@@ -124,18 +124,7 @@ public class ContinuarEvaluacion extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-<<<<<<< HEAD
 
-
-
-
-
-
-
-=======
-				
-				
->>>>>>> 9fa44a4a47d24178af2a001a88cc82f7ed379685
 			}
 		});
 		btnCargar.setBounds(745, 901, 145, 46);

@@ -17,6 +17,10 @@ public class MainMenu extends JFrame implements ActionListener {
 
 	public JPanel contentPane;
 	static int type;
+	public static void setType(int type) {
+		MainMenu.type = type;
+	}
+
 	static Boolean continuar = false;
 	public MainMenu() {
 		
