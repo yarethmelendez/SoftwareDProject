@@ -503,7 +503,7 @@ public class onlineEvaluation extends JFrame  {
 		lblNewLabel_42.setBounds(10, 97, 956, 38);
 		panel_16.add(lblNewLabel_42);
 
-		JLabel lblNewLabel_43 = new JLabel("2. ¿Cu\u00E1ntas veces te comunicas con tu profesor a trav\u00E9s de los medios");
+		JLabel lblNewLabel_43 = new JLabel("2. ï¿½Cu\u00E1ntas veces te comunicas con tu profesor a trav\u00E9s de los medios");
 		lblNewLabel_43.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_43.setBounds(10, 297, 970, 26);
 		panel_16.add(lblNewLabel_43);
@@ -1036,17 +1036,17 @@ public class onlineEvaluation extends JFrame  {
 		panel_21.add(lblNewLabel_40_1_1_1_1_1);
 
 		////////
-		JLabel lblNewLabel_25_A = new JLabel("25. ¿Qu\u00E9 fue lo que m\u00E1s te gust\u00F3 del curso?");
+		JLabel lblNewLabel_25_A = new JLabel("25. ï¿½Qu\u00E9 fue lo que m\u00E1s te gust\u00F3 del curso?");
 		lblNewLabel_25_A.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_25_A.setBounds(145, 225, 536, 42);
 		panel_21.add(lblNewLabel_25_A);
 
-		JLabel lblNewLabel_41_1_1_1_1_16 = new JLabel("26. ¿Qu\u00E9 fue lo que menos te gust\u00F3 del curso?");
+		JLabel lblNewLabel_41_1_1_1_1_16 = new JLabel("26. ï¿½Qu\u00E9 fue lo que menos te gust\u00F3 del curso?");
 		lblNewLabel_41_1_1_1_1_16.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_41_1_1_1_1_16.setBounds(1060, 225, 797, 42);
 		panel_21.add(lblNewLabel_41_1_1_1_1_16);
 
-		JLabel lblNewLabel_41_1_1_1_1_17 = new JLabel("27. ¿Tomar\u00EDas otro curso en l\u00EDnea con el mismo profesor o  ");
+		JLabel lblNewLabel_41_1_1_1_1_17 = new JLabel("27. ï¿½Tomar\u00EDas otro curso en l\u00EDnea con el mismo profesor o  ");
 		lblNewLabel_41_1_1_1_1_17.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_41_1_1_1_1_17.setBounds(145, 564, 696, 42);
 		panel_21.add(lblNewLabel_41_1_1_1_1_17);
@@ -1056,7 +1056,7 @@ public class onlineEvaluation extends JFrame  {
 		lblNewLabel_41_1_1_1_1_177.setBounds(145, 584, 1141, 42);
 		panel_21.add(lblNewLabel_41_1_1_1_1_177);
 
-		JLabel lblNewLabel_41_1_1_1_1_18 = new JLabel("28. ¿Qu\u00E9 sugerencias har\u00EDas para que el profesor mejore su ense\u00F1anza ");
+		JLabel lblNewLabel_41_1_1_1_1_18 = new JLabel("28. ï¿½Qu\u00E9 sugerencias har\u00EDas para que el profesor mejore su ense\u00F1anza ");
 		lblNewLabel_41_1_1_1_1_18.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblNewLabel_41_1_1_1_1_18.setBounds(1060, 564, 818, 42);
 		panel_21.add(lblNewLabel_41_1_1_1_1_18);
@@ -2952,7 +2952,7 @@ public class onlineEvaluation extends JFrame  {
 		lblNewLabel_48_3_1_5_2_2.setBounds(236, 588, 742, 41);
 		panel_2.add(lblNewLabel_48_3_1_5_2_2);
 
-		
+		//online
 		textPane_2.setBounds(248, 258, 712, 191);
 		panel_2.add(textPane_2);
 
