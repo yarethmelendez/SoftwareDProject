@@ -4291,46 +4291,9 @@ public class Evaluation extends JFrame  {
 				values [160] = textArea_8_2_1_1.getText();
 				values [161] = textArea_8_2_1_1_1.getText();
 
-
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico") 
-				{
-					Results1 w = null;
-					try {
-						w = new Results1();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					w.setVisible(true);
-
-				}
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado")  { 
-
-					Results2 w = null;
-					try {
-						w = new Results2();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					w.setVisible(true);
-				}
-
-				if(rangoAcademico_comboBox.getSelectedItem()== "Rango Catedratico Asociado"){
-					Results3 w = null;
-					try {
-						w = new Results3();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					w.setVisible(true);
-				}
-
-
-
-
-
+				Component frame = null;
+				JOptionPane.showMessageDialog(frame,
+						"Los valores han sido guardados para continuar luego","Success",JOptionPane.PLAIN_MESSAGE);
 
 				/////////////////TESTING//////////////////////////////
 				for (int i = 0; i < values.length; i++) {
@@ -4359,6 +4322,7 @@ public class Evaluation extends JFrame  {
 					pw.flush();
 					pw.close();
 
+					
 
 				}catch(Exception ex) {
 

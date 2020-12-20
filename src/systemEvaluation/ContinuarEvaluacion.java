@@ -120,11 +120,6 @@ public class ContinuarEvaluacion extends JFrame {
 				}
 				
 				
-				
-				
-				
-				
-				
 			}
 		});
 		btnCargar.setBounds(871, 955, 145, 46);
