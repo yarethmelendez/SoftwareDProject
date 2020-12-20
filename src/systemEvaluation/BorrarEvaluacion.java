@@ -60,7 +60,7 @@ public class BorrarEvaluacion extends JFrame {
 				String IDEBox = textField.getText();
 				
 				try {
-					borrar.borrarEV3(User,Integer.parseInt(IDEBox));
+					borrar.borrarEV3(Integer.parseInt(IDEBox));
 				} catch (NumberFormatException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

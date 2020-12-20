@@ -33,6 +33,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.*;
+import java.util.Scanner;
 
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -50,7 +51,7 @@ import javax.swing.JScrollPane;
 
 public class onlineEvaluation extends JFrame  {
 
-	String[] values = new String[162];
+	static String[] values = new String[162];
 	int[] I2re = new int[21];
 
 
@@ -3030,7 +3031,28 @@ public class onlineEvaluation extends JFrame  {
 				int valueID;
 				int value ;
 				String[] ag = new String[162];
-
+				int j = 0;
+				String[] ops;
+				File instru;
+				int size = 0;
+				Boolean IN = false;
+				Boolean type = false;
+				int IDEInt = 0;
+				ContinuarEvaluacion IDE = new ContinuarEvaluacion();
+				fileManager borrar = new fileManager();
+				MainMenu typeM = new MainMenu();
+				type = typeM.getContinuar(); 
+				
+				if(type == true) {
+				IDEInt = Integer.valueOf(IDE.getIDEBox());
+				
+				try {
+					borrar.borrarEV3(IDEInt);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				}
 				fileManager IDgen = new fileManager();
 				ag = IDgen.IDGen();
 
@@ -3053,9 +3075,46 @@ public class onlineEvaluation extends JFrame  {
 				values [9] = contrato_comboBox.getSelectedItem().toString();
 				values [10] = codigo_textField.getText();
 				values [11] = tutulo_del_curso_textField.getText();
-				value = Integer.valueOf(ag[12]);
-				valueID = value + 1; 
-				values [12] =  String.valueOf(valueID);
+				
+				try {
+					instru = new File("./instrumentos.csv");
+					Scanner scanner = new Scanner(instru);
+
+					while(scanner.hasNextLine()) {
+						String data = scanner.nextLine();
+						ops = data.split(",", 170);
+						size++;
+
+					}
+					scanner.close();
+
+
+				}catch(Exception ex) {
+
+					System.out.print("404 "+ ex);
+				}
+
+				do 
+				{
+					IN = false;
+					j++;
+				for (int i = 1 ;i < size ;i++ ){
+					
+					System.out.println(" esta es la J y AG "+j+" " + ag[i]);
+					if (Integer.valueOf(ag[i]).equals(j)){
+						
+						
+						IN = true;
+						
+					}
+					
+				}
+				}while(IN == true ) ;
+				
+				
+				
+				values [12] =  String.valueOf(j);
+				
 				values [13] = "Online";
 
 
@@ -3637,7 +3696,29 @@ public class onlineEvaluation extends JFrame  {
 				int valueID;
 				int value ;
 				String[] ag = new String[162];
-
+				int j = 0;
+				Boolean IN = false;
+				String[] ops;
+				File instru;
+				int size = 0;
+				Boolean type = false;
+				int IDEInt = 0;
+				ContinuarEvaluacion IDE = new ContinuarEvaluacion();
+				fileManager borrar = new fileManager();
+				MainMenu typeM = new MainMenu();
+				type = typeM.getContinuar(); 
+				
+				if(type == true) {
+				IDEInt = Integer.valueOf(IDE.getIDEBox());
+				
+				try {
+					borrar.borrarEV3(IDEInt);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				}
+				
 				fileManager IDgen = new fileManager();
 				ag = IDgen.IDGen();
 
@@ -3660,9 +3741,44 @@ public class onlineEvaluation extends JFrame  {
 				values [9] = contrato_comboBox.getSelectedItem().toString();
 				values [10] = codigo_textField.getText();
 				values [11] = tutulo_del_curso_textField.getText();
-				value = Integer.valueOf(ag[12]);
-				valueID = value + 1; 
-				values [12] =  String.valueOf(valueID);
+				
+				try {
+					instru = new File("./instrumentos.csv");
+					Scanner scanner = new Scanner(instru);
+
+					while(scanner.hasNextLine()) {
+						String data = scanner.nextLine();
+						ops = data.split(",", 170);
+						size++;
+
+					}
+					scanner.close();
+
+
+				}catch(Exception ex) {
+
+					System.out.print("404 "+ ex);
+				}
+
+				do 
+				{
+					IN = false;
+					j++;
+				for (int i = 1 ;i < size ;i++ ){
+					
+					System.out.println(" esta es la J y AG "+j+" " + ag[i]);
+					if (Integer.valueOf(ag[i]).equals(j)){
+						
+						
+						IN = true;
+						
+					}
+					
+				}
+				}while(IN == true ) ;
+				
+				
+				values [12] =  String.valueOf(j);
 				values [13] = "Online";
 
 
@@ -5367,5 +5483,10 @@ public class onlineEvaluation extends JFrame  {
 
 
 
+	}
+	
+	public String[] getvalue() {
+		return values;
+		
 	}
 }

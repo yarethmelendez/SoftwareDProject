@@ -40,7 +40,13 @@ public class Comentarios extends JFrame {
 	 */
 	public Comentarios() throws IOException  {
 		
+		String[] values = new String[162];
+		
 		Evaluation e = new Evaluation();
+		values = e.getvalue();
+		//101-120 comentarios del instrument 3
+		//121-143 comentrios del instrumento 4
+		//144-161 comentarios del instrumento 2
 		
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

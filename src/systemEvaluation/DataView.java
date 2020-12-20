@@ -2,6 +2,8 @@
 
 package systemEvaluation;
 import java.io.*;
+import java.util.*;
+
 
 public class DataView {
 	File file = new File("./instrumentos.csv");
@@ -11,23 +13,27 @@ public class DataView {
 	DataView() throws IOException{
 		int sum = 0;
 		FileReader freader = new FileReader(file);
-		BufferedReader counter = new BufferedReader(freader); // counts evaluations
+		//BufferedReader counter = new BufferedReader(freader); // counts evaluations
 		String test;
 		String splitter[] = null; // Split lines
+		Scanner counter ;
+		counter = new Scanner(file);
 		
 		FileWriter writer = new FileWriter(file2);
 		writer.write("header\n");
 		
-		while(counter.readLine() != null) { // Count observations
-			test = counter.readLine(); // Read line
+		while(counter.hasNextLine()) { // Count observations
+			test = counter.nextLine();; // Read line
 			splitter = test.split(",",165); // Split line
+			//System.out.print("\n");
+			//System.out.println(test+" yooooooo im the test you lil b \n ");
 			if(splitter[0].equals("FALSE")) { // If not-deletable, add to temp
 				sum++;
 				writer.write(test+"\n");
 			}
 		}
 		
-		counter.close();
+		//counter.close();
 		writer.close();
 		data = new String[sum][165];
 		System.out.println("Number of evals: "+data.length);
