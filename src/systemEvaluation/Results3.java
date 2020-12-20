@@ -201,10 +201,44 @@ public class Results3 extends JFrame {
 			}
 		});
 		contentPane.setLayout(null);
-		btnNewButton.setBounds(100, 63, 111, 54);
+		btnNewButton.setBounds(87, 63, 203, 54);
 		contentPane.add(btnNewButton);
 		contentPane.add(btnNewButton);
 		contentPane.add(scrollPane);
+		
+		JButton btnImprimirComentarios = new JButton("Imprimir Comentarios");
+		btnImprimirComentarios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+				
+				if (MainMenu.type == 1 ) 
+				{
+					
+
+					Comentarios e;
+					try {
+						e = new Comentarios();
+						e.setVisible(true);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+						
+					
+	
+				}
+				if(MainMenu.type == 2 ) 
+				{
+					ComentariosOnline w = new ComentariosOnline();
+					 w.setVisible(true);
+	
+				}
+			}
+			
+		});
+		btnImprimirComentarios.setBounds(87, 156, 203, 54);
+		contentPane.add(btnImprimirComentarios);
 		
 	}
 }

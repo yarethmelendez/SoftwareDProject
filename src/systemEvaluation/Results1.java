@@ -51,7 +51,7 @@ public class Results1 extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(550, 20, 770, 1000);
 
-		JButton btnNewButton = new JButton("Print");
+		JButton btnNewButton = new JButton("Imprimir");
 
 		JTextArea txtrUniversidadInteramericanaDe = new JTextArea();
 		txtrUniversidadInteramericanaDe.setEditable(false);
@@ -178,10 +178,40 @@ public class Results1 extends JFrame {
 			}
 		});
 		contentPane.setLayout(null);
-		btnNewButton.setBounds(83, 68, 111, 54);
+		btnNewButton.setBounds(83, 68, 194, 54);
 		contentPane.add(btnNewButton);
 		contentPane.add(btnNewButton);
 		contentPane.add(scrollPane);
+		
+		JButton btnImprimirComentarios = new JButton("Imprimir Comentarios");
+		btnImprimirComentarios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (MainMenu.type == 1 ) 
+				{
+					
+
+					Comentarios e;
+					try {
+						e = new Comentarios();
+						e.setVisible(true);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+						
+					
+	
+				}
+				if(MainMenu.type == 2 ) 
+				{
+					ComentariosOnline w = new ComentariosOnline();
+					 w.setVisible(true);
+	
+				}
+			}
+		});
+		btnImprimirComentarios.setBounds(83, 168, 194, 54);
+		contentPane.add(btnImprimirComentarios);
 	}
 
 }
