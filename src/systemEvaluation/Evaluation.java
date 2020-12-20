@@ -4290,7 +4290,13 @@ public class Evaluation extends JFrame  {
 		i2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				Comentarios e = new Comentarios();
+				Comentarios e = null;
+				try {
+					e = new Comentarios();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				e.setVisible(true)
 ;			}
 		});
