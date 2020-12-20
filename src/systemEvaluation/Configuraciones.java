@@ -7,11 +7,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JSeparator;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JTabbedPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -113,6 +117,9 @@ public class Configuraciones extends JFrame {
 	 * Create the frame.
 	 */
 	public Configuraciones() {
+		
+		double [] valen = new double[54];
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1920, 1080);
 		contentPane = new JPanel();
@@ -122,218 +129,6 @@ public class Configuraciones extends JFrame {
 		
 		JTabbedPane tabbedPane_2 = new JTabbedPane(JTabbedPane.TOP);
 		contentPane.add(tabbedPane_2, BorderLayout.CENTER);
-		
-		JPanel panel = new JPanel();
-		tabbedPane_2.addTab("Catedratico", null, panel, null);
-		panel.setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Catedratico");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblNewLabel.setBounds(780, 40, 300, 95);
-		panel.add(lblNewLabel);
-		
-		JLabel lblNewLabel_1 = new JLabel("Calidad Docente");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 17));
-		lblNewLabel_1.setBounds(132, 226, 147, 71);
-		panel.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_2 = new JLabel("A");
-		lblNewLabel_2.setBounds(90, 295, 46, 14);
-		panel.add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_3 = new JLabel("B");
-		lblNewLabel_3.setBounds(90, 344, 46, 14);
-		panel.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("C");
-		lblNewLabel_4.setBounds(90, 395, 46, 14);
-		panel.add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_5 = new JLabel("D");
-		lblNewLabel_5.setBounds(90, 450, 46, 14);
-		panel.add(lblNewLabel_5);
-		
-		JLabel lblNewLabel_6 = new JLabel("E");
-		lblNewLabel_6.setBounds(90, 503, 46, 14);
-		panel.add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("GH");
-		lblNewLabel_7.setBounds(90, 589, 46, 14);
-		panel.add(lblNewLabel_7);
-		
-		JLabel lblNewLabel_1_1 = new JLabel("Servicio a la Institucion");
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
-		lblNewLabel_1_1.setBounds(385, 226, 211, 71);
-		panel.add(lblNewLabel_1_1);
-		
-		JLabel lblNewLabel_2_1 = new JLabel("A");
-		lblNewLabel_2_1.setBounds(385, 295, 46, 14);
-		panel.add(lblNewLabel_2_1);
-		
-		JLabel lblNewLabel_3_1 = new JLabel("BC");
-		lblNewLabel_3_1.setBounds(385, 344, 46, 14);
-		panel.add(lblNewLabel_3_1);
-		
-		JLabel lblNewLabel_5_1 = new JLabel("DE");
-		lblNewLabel_5_1.setBounds(385, 395, 46, 14);
-		panel.add(lblNewLabel_5_1);
-		
-		JLabel lblNewLabel_5_2 = new JLabel("F");
-		lblNewLabel_5_2.setBounds(90, 547, 46, 14);
-		panel.add(lblNewLabel_5_2);
-		
-		JLabel lblNewLabel_8 = new JLabel("FG");
-		lblNewLabel_8.setBounds(385, 450, 46, 14);
-		panel.add(lblNewLabel_8);
-		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Servicio a la Comunidad");
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
-		lblNewLabel_1_1_1.setBounds(697, 226, 211, 71);
-		panel.add(lblNewLabel_1_1_1);
-		
-		JLabel lblNewLabel_3_1_1 = new JLabel("AB");
-		lblNewLabel_3_1_1.setBounds(729, 295, 46, 14);
-		panel.add(lblNewLabel_3_1_1);
-		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Investigacion y Trabajo Creativo");
-		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
-		lblNewLabel_1_1_1_1.setBounds(974, 226, 293, 71);
-		panel.add(lblNewLabel_1_1_1_1);
-		
-		JLabel lblNewLabel_9 = new JLabel("A");
-		lblNewLabel_9.setBounds(1019, 295, 27, 14);
-		panel.add(lblNewLabel_9);
-		
-		JLabel lblNewLabel_10 = new JLabel("B");
-		lblNewLabel_10.setBounds(1019, 344, 46, 14);
-		panel.add(lblNewLabel_10);
-		
-		JLabel lblNewLabel_11 = new JLabel("CDE");
-		lblNewLabel_11.setBounds(1019, 395, 46, 14);
-		panel.add(lblNewLabel_11);
-		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Crecimiento y Desarrollo Profesional");
-		lblNewLabel_1_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
-		lblNewLabel_1_1_1_1_1.setBounds(1402, 226, 342, 71);
-		panel.add(lblNewLabel_1_1_1_1_1);
-		
-		JLabel lblNewLabel_12 = new JLabel("ABC");
-		lblNewLabel_12.setBounds(1456, 295, 46, 14);
-		panel.add(lblNewLabel_12);
-		
-		JLabel lblNewLabel_13 = new JLabel("D");
-		lblNewLabel_13.setBounds(1456, 344, 46, 14);
-		panel.add(lblNewLabel_13);
-		
-		JLabel lblNewLabel_14 = new JLabel("EF");
-		lblNewLabel_14.setBounds(1456, 395, 46, 14);
-		panel.add(lblNewLabel_14);
-		
-		textField = new JTextField();
-		textField.setBounds(146, 292, 86, 20);
-		panel.add(textField);
-		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(146, 341, 86, 20);
-		panel.add(textField_1);
-		textField_1.setColumns(10);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(146, 392, 86, 20);
-		panel.add(textField_2);
-		textField_2.setColumns(10);
-		
-		textField_3 = new JTextField();
-		textField_3.setBounds(146, 447, 86, 20);
-		panel.add(textField_3);
-		textField_3.setColumns(10);
-		
-		textField_4 = new JTextField();
-		textField_4.setBounds(146, 500, 86, 20);
-		panel.add(textField_4);
-		textField_4.setColumns(10);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(146, 544, 86, 20);
-		panel.add(textField_5);
-		textField_5.setColumns(10);
-		
-		textField_6 = new JTextField();
-		textField_6.setBounds(146, 586, 86, 20);
-		panel.add(textField_6);
-		textField_6.setColumns(10);
-		
-		textField_7 = new JTextField();
-		textField_7.setBounds(432, 292, 86, 20);
-		panel.add(textField_7);
-		textField_7.setColumns(10);
-		
-		textField_8 = new JTextField();
-		textField_8.setBounds(432, 341, 86, 20);
-		panel.add(textField_8);
-		textField_8.setColumns(10);
-		
-		textField_9 = new JTextField();
-		textField_9.setBounds(432, 392, 86, 20);
-		panel.add(textField_9);
-		textField_9.setColumns(10);
-		
-		textField_10 = new JTextField();
-		textField_10.setBounds(432, 447, 86, 20);
-		panel.add(textField_10);
-		textField_10.setColumns(10);
-		
-		textField_11 = new JTextField();
-		textField_11.setBounds(780, 292, 86, 20);
-		panel.add(textField_11);
-		textField_11.setColumns(10);
-		
-		textField_12 = new JTextField();
-		textField_12.setBounds(1098, 292, 86, 20);
-		panel.add(textField_12);
-		textField_12.setColumns(10);
-		
-		textField_13 = new JTextField();
-		textField_13.setBounds(1098, 341, 86, 20);
-		panel.add(textField_13);
-		textField_13.setColumns(10);
-		
-		textField_14 = new JTextField();
-		textField_14.setBounds(1098, 392, 86, 20);
-		panel.add(textField_14);
-		textField_14.setColumns(10);
-		
-		textField_15 = new JTextField();
-		textField_15.setBounds(1579, 292, 86, 20);
-		panel.add(textField_15);
-		textField_15.setColumns(10);
-		
-		textField_16 = new JTextField();
-		textField_16.setBounds(1579, 341, 86, 20);
-		panel.add(textField_16);
-		textField_16.setColumns(10);
-		
-		textField_17 = new JTextField();
-		textField_17.setBounds(1579, 389, 86, 20);
-		panel.add(textField_17);
-		textField_17.setColumns(10);
-		
-		JButton btnNewButton = new JButton("Guardar");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnNewButton.setBounds(800, 788, 168, 50);
-		panel.add(btnNewButton);
-		
-		JButton btnRetroceder = new JButton("Retroceder");
-		btnRetroceder.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				MainMenu e = new MainMenu();
-				e.setVisible(true);
-			}
-		});
-		btnRetroceder.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnRetroceder.setBounds(800, 871, 168, 50);
-		panel.add(btnRetroceder);
 		
 		JPanel panel_2 = new JPanel();
 		tabbedPane_2.addTab("Catedratico Asociado", null, panel_2, null);
@@ -537,6 +332,56 @@ public class Configuraciones extends JFrame {
 		panel_5.add(textField_71);
 		
 		JButton btnNewButton_3 = new JButton("Guardar");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				valen[0] = Integer.valueOf(textField_54.getText());
+				valen[1] = Integer.valueOf(textField_55.getText());
+				valen[2] = Integer.valueOf(textField_56.getText());
+				valen[3] = Integer.valueOf(textField_57.getText());
+				valen[4] = Integer.valueOf(textField_58.getText());
+				valen[5] = Integer.valueOf(textField_59.getText());
+				valen[6] = Integer.valueOf(textField_60.getText());
+
+				// Servicio a la institucion
+				valen[7] = Integer.valueOf(textField_61.getText());
+				valen[8] = Integer.valueOf(textField_62.getText());
+				valen[9] = Integer.valueOf(textField_63.getText());
+				valen[10] =Integer.valueOf(textField_64.getText());
+
+				// Servicio a la comunidad
+				valen[11] = Integer.valueOf(textField_65.getText());
+
+				// Investigacion y trabajo creativo
+				valen[12] = Integer.valueOf(textField_66.getText());
+				valen[13] = Integer.valueOf(textField_67.getText());
+				valen[14] = Integer.valueOf(textField_68.getText());
+
+				// Crecimiento y desarrollo profesional
+				valen[15] = Integer.valueOf(textField_69.getText());
+				valen[16] = Integer.valueOf(textField_70.getText());
+				valen[17] = Integer.valueOf(textField_71.getText());
+				
+				double sum = 0.0;
+				 for(int i = 0;i < 18 ;i++) {
+					sum = valen[i] + sum;
+					 
+				 }
+				
+				if(sum == 100){
+					ValenciasRango.setValen(valen);
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"Los valores han sido guardados","Success",JOptionPane.PLAIN_MESSAGE);
+				}else if(sum != 100){
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"La suma total de la valencia no puede exeder ni ser menor de 100 puntos","ERROR",JOptionPane.ERROR_MESSAGE);
+				
+				}
+			}
+		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnNewButton_3.setBounds(800, 788, 168, 50);
 		panel_5.add(btnNewButton_3);
@@ -546,11 +391,273 @@ public class Configuraciones extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				MainMenu e = new MainMenu();
 				e.setVisible(true);
+				dispose();
 			}
 		});
 		btnRetroceder_3.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnRetroceder_3.setBounds(800, 871, 168, 50);
 		panel_5.add(btnRetroceder_3);
+		
+		JPanel panel = new JPanel();
+		tabbedPane_2.addTab("Catedratico", null, panel, null);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Catedratico");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblNewLabel.setBounds(780, 40, 300, 95);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Calidad Docente");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblNewLabel_1.setBounds(132, 226, 147, 71);
+		panel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("A");
+		lblNewLabel_2.setBounds(90, 295, 46, 14);
+		panel.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("B");
+		lblNewLabel_3.setBounds(90, 344, 46, 14);
+		panel.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("C");
+		lblNewLabel_4.setBounds(90, 395, 46, 14);
+		panel.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("D");
+		lblNewLabel_5.setBounds(90, 450, 46, 14);
+		panel.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("E");
+		lblNewLabel_6.setBounds(90, 503, 46, 14);
+		panel.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("GH");
+		lblNewLabel_7.setBounds(90, 589, 46, 14);
+		panel.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Servicio a la Institucion");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblNewLabel_1_1.setBounds(385, 226, 211, 71);
+		panel.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("A");
+		lblNewLabel_2_1.setBounds(385, 295, 46, 14);
+		panel.add(lblNewLabel_2_1);
+		
+		JLabel lblNewLabel_3_1 = new JLabel("BC");
+		lblNewLabel_3_1.setBounds(385, 344, 46, 14);
+		panel.add(lblNewLabel_3_1);
+		
+		JLabel lblNewLabel_5_1 = new JLabel("DE");
+		lblNewLabel_5_1.setBounds(385, 395, 46, 14);
+		panel.add(lblNewLabel_5_1);
+		
+		JLabel lblNewLabel_5_2 = new JLabel("F");
+		lblNewLabel_5_2.setBounds(90, 547, 46, 14);
+		panel.add(lblNewLabel_5_2);
+		
+		JLabel lblNewLabel_8 = new JLabel("FG");
+		lblNewLabel_8.setBounds(385, 450, 46, 14);
+		panel.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Servicio a la Comunidad");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblNewLabel_1_1_1.setBounds(697, 226, 211, 71);
+		panel.add(lblNewLabel_1_1_1);
+		
+		JLabel lblNewLabel_3_1_1 = new JLabel("AB");
+		lblNewLabel_3_1_1.setBounds(729, 295, 46, 14);
+		panel.add(lblNewLabel_3_1_1);
+		
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("Investigacion y Trabajo Creativo");
+		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblNewLabel_1_1_1_1.setBounds(974, 226, 293, 71);
+		panel.add(lblNewLabel_1_1_1_1);
+		
+		JLabel lblNewLabel_9 = new JLabel("A");
+		lblNewLabel_9.setBounds(1019, 295, 27, 14);
+		panel.add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_10 = new JLabel("B");
+		lblNewLabel_10.setBounds(1019, 344, 46, 14);
+		panel.add(lblNewLabel_10);
+		
+		JLabel lblNewLabel_11 = new JLabel("CDE");
+		lblNewLabel_11.setBounds(1019, 395, 46, 14);
+		panel.add(lblNewLabel_11);
+		
+		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Crecimiento y Desarrollo Profesional");
+		lblNewLabel_1_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblNewLabel_1_1_1_1_1.setBounds(1402, 226, 342, 71);
+		panel.add(lblNewLabel_1_1_1_1_1);
+		
+		JLabel lblNewLabel_12 = new JLabel("ABC");
+		lblNewLabel_12.setBounds(1456, 295, 46, 14);
+		panel.add(lblNewLabel_12);
+		
+		JLabel lblNewLabel_13 = new JLabel("D");
+		lblNewLabel_13.setBounds(1456, 344, 46, 14);
+		panel.add(lblNewLabel_13);
+		
+		JLabel lblNewLabel_14 = new JLabel("EF");
+		lblNewLabel_14.setBounds(1456, 395, 46, 14);
+		panel.add(lblNewLabel_14);
+		
+		textField = new JTextField();
+		textField.setBounds(146, 292, 86, 20);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(146, 341, 86, 20);
+		panel.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(146, 392, 86, 20);
+		panel.add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(146, 447, 86, 20);
+		panel.add(textField_3);
+		textField_3.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(146, 500, 86, 20);
+		panel.add(textField_4);
+		textField_4.setColumns(10);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(146, 544, 86, 20);
+		panel.add(textField_5);
+		textField_5.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(146, 586, 86, 20);
+		panel.add(textField_6);
+		textField_6.setColumns(10);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(432, 292, 86, 20);
+		panel.add(textField_7);
+		textField_7.setColumns(10);
+		
+		textField_8 = new JTextField();
+		textField_8.setBounds(432, 341, 86, 20);
+		panel.add(textField_8);
+		textField_8.setColumns(10);
+		
+		textField_9 = new JTextField();
+		textField_9.setBounds(432, 392, 86, 20);
+		panel.add(textField_9);
+		textField_9.setColumns(10);
+		
+		textField_10 = new JTextField();
+		textField_10.setBounds(432, 447, 86, 20);
+		panel.add(textField_10);
+		textField_10.setColumns(10);
+		
+		textField_11 = new JTextField();
+		textField_11.setBounds(780, 292, 86, 20);
+		panel.add(textField_11);
+		textField_11.setColumns(10);
+		
+		textField_12 = new JTextField();
+		textField_12.setBounds(1098, 292, 86, 20);
+		panel.add(textField_12);
+		textField_12.setColumns(10);
+		
+		textField_13 = new JTextField();
+		textField_13.setBounds(1098, 341, 86, 20);
+		panel.add(textField_13);
+		textField_13.setColumns(10);
+		
+		textField_14 = new JTextField();
+		textField_14.setBounds(1098, 392, 86, 20);
+		panel.add(textField_14);
+		textField_14.setColumns(10);
+		
+		textField_15 = new JTextField();
+		textField_15.setBounds(1579, 292, 86, 20);
+		panel.add(textField_15);
+		textField_15.setColumns(10);
+		
+		textField_16 = new JTextField();
+		textField_16.setBounds(1579, 341, 86, 20);
+		panel.add(textField_16);
+		textField_16.setColumns(10);
+		
+		textField_17 = new JTextField();
+		textField_17.setBounds(1579, 389, 86, 20);
+		panel.add(textField_17);
+		textField_17.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Guardar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valen[18] = Integer.valueOf(textField.getText());
+				valen[19] = Integer.valueOf(textField_1.getText());
+				valen[20] = Integer.valueOf(textField_2.getText());
+				valen[21] = Integer.valueOf(textField_3.getText());
+				valen[22] = Integer.valueOf(textField_4.getText());
+				valen[23] = Integer.valueOf(textField_5.getText());
+				valen[24] = Integer.valueOf(textField_6.getText());
+
+				// Servicio a la institucion
+				valen[25] = Integer.valueOf(textField_7.getText());
+				valen[26] = Integer.valueOf(textField_8.getText());
+				valen[27] = Integer.valueOf(textField_9.getText());
+				valen[28] = Integer.valueOf(textField_10.getText());
+
+				// Servicio a la comunidad
+				valen[29] = Integer.valueOf(textField_11.getText());
+
+				// Investigacion y trabajo creativo
+				valen[30] = Integer.valueOf(textField_12.getText());
+				valen[31] = Integer.valueOf(textField_13.getText());
+				valen[32] = Integer.valueOf(textField_14.getText());
+
+				// Crecimiento y desarrollo profesional
+				valen[33] = Integer.valueOf(textField_15.getText());
+				valen[34] = Integer.valueOf(textField_16.getText());
+				valen[35] = Integer.valueOf(textField_17.getText());
+			
+				double sum = 0.0;
+				 for(int i = 18;i < 35 ;i++) {
+					sum = valen[i] + sum;
+					 
+				 }
+				
+				if(sum == 100){
+					ValenciasRango.setValen(valen);
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"Los valores han sido guardados","Success",JOptionPane.PLAIN_MESSAGE);
+				}else if(sum != 100){
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"La suma total de la valencia no puede exeder ni ser menor de 100 puntos","ERROR",JOptionPane.ERROR_MESSAGE);
+				
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnNewButton.setBounds(800, 788, 168, 50);
+		panel.add(btnNewButton);
+		
+		JButton btnRetroceder = new JButton("Retroceder");
+		btnRetroceder.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MainMenu e = new MainMenu();
+				e.setVisible(true);
+				dispose();
+			}
+		});
+		btnRetroceder.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnRetroceder.setBounds(800, 871, 168, 50);
+		panel.add(btnRetroceder);
 		
 		JPanel panel_1 = new JPanel();
 		tabbedPane_2.addTab("Catedratico Auxiliar", null, panel_1, null);
@@ -961,6 +1068,55 @@ public class Configuraciones extends JFrame {
 		panel_4.add(textField_53);
 		
 		JButton btnNewButton_2 = new JButton("Guardar");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// Calidad docente
+				valen[36] = Integer.valueOf(textField_36.getText());
+				valen[37] = Integer.valueOf(textField_37.getText());
+				valen[38] = Integer.valueOf(textField_38.getText());
+				valen[39] = Integer.valueOf(textField_39.getText());
+				valen[40] = Integer.valueOf(textField_40.getText());
+				valen[41] = Integer.valueOf(textField_41.getText());
+				valen[42] = Integer.valueOf(textField_42.getText());
+
+				// Servicio a la institucion
+				valen[43] = Integer.valueOf(textField_43.getText());
+				valen[44] = Integer.valueOf(textField_44.getText());
+				valen[45] = Integer.valueOf(textField_45.getText());
+				valen[46] = Integer.valueOf(textField_46.getText());
+
+				// Servicio a la comunidad
+				valen[47] = Integer.valueOf(textField_47.getText());
+
+				// Investigacion y trabajo creativo
+				valen[48] = Integer.valueOf(textField_48.getText());
+				valen[49] = Integer.valueOf(textField_49.getText());
+				valen[50] = Integer.valueOf(textField_50.getText());
+
+				// Crecimiento y desarrollo profesional
+				valen[51] = Integer.valueOf(textField_51.getText());
+				valen[52] = Integer.valueOf(textField_52.getText());
+				valen[53] = Integer.valueOf(textField_53.getText());
+				
+				double sum = 0.0;
+				 for(int i = 36;i < 53 ;i++) {
+					sum = valen[i] + sum;
+					 
+				 }
+				
+				if(sum == 100){
+					ValenciasRango.setValen(valen);
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"Los valores han sido guardados","Success",JOptionPane.PLAIN_MESSAGE);
+				}else if(sum != 100){
+					Component frame = null;
+					JOptionPane.showMessageDialog(frame,
+							"La suma total de la valencia no puede exeder ni ser menor de 100 puntos","ERROR",JOptionPane.ERROR_MESSAGE);
+				
+				}
+			}
+		});
 		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnNewButton_2.setBounds(800, 788, 168, 50);
 		panel_4.add(btnNewButton_2);
@@ -970,6 +1126,7 @@ public class Configuraciones extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				MainMenu e = new MainMenu();
 				e.setVisible(true);
+				dispose();
 			}
 		});
 		btnRetroceder_2.setFont(new Font("Tahoma", Font.BOLD, 18));
