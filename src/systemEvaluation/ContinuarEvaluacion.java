@@ -35,15 +35,10 @@ public class ContinuarEvaluacion extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblSelecionaUnaEvaluacion = new JLabel("Seleciona una Evaluacion para Continuar");
-		lblSelecionaUnaEvaluacion.setBounds(643, 66, 1590, 74);
-		lblSelecionaUnaEvaluacion.setFont(new Font("Tahoma", Font.BOLD, 30));
-		contentPane.add(lblSelecionaUnaEvaluacion);
-
 
 
 		btnNewButton = new JButton("Retroceder ");
-		btnNewButton.setBounds(1081, 901, 145, 46);
+		btnNewButton.setBounds(1690, 44, 145, 46);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
@@ -132,21 +127,30 @@ public class ContinuarEvaluacion extends JFrame {
 				
 			}
 		});
-		btnCargar.setBounds(745, 901, 145, 46);
+		btnCargar.setBounds(871, 955, 145, 46);
 		btnCargar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		contentPane.add(btnCargar);
 		
 		
 
 		textField = new JTextField();
-		textField.setBounds(581, 901, 124, 46);
+		textField.setBounds(877, 898, 124, 46);
 		contentPane.add(textField);
 		textField.setColumns(10);
 
-		JLabel lblNewLabel = new JLabel("Escoge el numero de evaluacion");
-		lblNewLabel.setBounds(540, 872, 213, 25);
+		JLabel lblNewLabel = new JLabel("Escoge el numero de evaluacion para continuar:");
+		lblNewLabel.setBounds(792, 863, 311, 25);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
 		contentPane.add(lblNewLabel);
+		
+				JLabel lblSelecionaUnaEvaluacion = new JLabel("Seleciona una Evaluacion para Continuar");
+				lblSelecionaUnaEvaluacion.setBounds(676, 66, 777, 74);
+				lblSelecionaUnaEvaluacion.setFont(new Font("Tahoma", Font.BOLD, 30));
+				contentPane.add(lblSelecionaUnaEvaluacion);
+				
+				JScrollPane scrollPane = new JScrollPane();
+				scrollPane.setBounds(0, 0, 1919, 1036);
+				contentPane.add(scrollPane);
 
 		String[] ag = new String[160];
 		

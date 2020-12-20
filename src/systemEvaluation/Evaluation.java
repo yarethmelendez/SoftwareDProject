@@ -289,7 +289,6 @@ public class Evaluation extends JFrame  {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1920, 1080);
-		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -5044,7 +5043,7 @@ public class Evaluation extends JFrame  {
 
 			}
 		});
-		chckbxNewCheckBox.setBounds(1343, -1, 105, 23);
+		chckbxNewCheckBox.setBounds(1315, -1, 123, 23);
 		contentPane.add(chckbxNewCheckBox);
 
 		chckbxNewCheckBox_1 = new JCheckBox("Instrumento 2");
@@ -5052,7 +5051,7 @@ public class Evaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		chckbxNewCheckBox_1.setBounds(1450, -1, 105, 23);
+		chckbxNewCheckBox_1.setBounds(1437, -1, 110, 23);
 		contentPane.add(chckbxNewCheckBox_1);
 
 		chckbxNewCheckBox_2 = new JCheckBox("Instrumento 3");
@@ -5060,7 +5059,7 @@ public class Evaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		chckbxNewCheckBox_2.setBounds(1557, -1, 111, 23);
+		chckbxNewCheckBox_2.setBounds(1549, -1, 103, 23);
 		contentPane.add(chckbxNewCheckBox_2);
 
 		chckbxNewCheckBox_3 = new JCheckBox("Instrumento 4");
@@ -5068,12 +5067,12 @@ public class Evaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		chckbxNewCheckBox_3.setBounds(1668, -1, 105, 23);
+		chckbxNewCheckBox_3.setBounds(1668, -1, 151, 23);
 		contentPane.add(chckbxNewCheckBox_3);
 
 		JLabel lblNewLabel_50 = new JLabel("Terminado:");
 		lblNewLabel_50.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel_50.setBounds(1258, 1, 91, 14);
+		lblNewLabel_50.setBounds(1218, 1, 91, 14);
 		contentPane.add(lblNewLabel_50);
 
 
