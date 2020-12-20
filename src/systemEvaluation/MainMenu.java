@@ -17,7 +17,7 @@ public class MainMenu extends JFrame implements ActionListener {
 
 	public JPanel contentPane;
 	static int type;
-
+	static Boolean continuar = false;
 	public MainMenu() {
 		
 		
@@ -44,7 +44,7 @@ public class MainMenu extends JFrame implements ActionListener {
 				e.setVisible(true);
 				dispose();
 				type = 1;
-
+				continuar = false;
 			}
 		});
 		new_evaluation_btnNewButton.setBounds(741, 399, 397, 23);
@@ -56,6 +56,8 @@ public class MainMenu extends JFrame implements ActionListener {
 				ContinuarEvaluacion W = new ContinuarEvaluacion();
 				W.setVisible(true);
 				dispose();
+				
+				continuar = true;
 			}
 		});
 		continue_btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -120,7 +122,7 @@ public class MainMenu extends JFrame implements ActionListener {
 				e.setVisible(true);
 				dispose();
 				type = 2;
-
+				continuar = false;
 			}
 		});
 		
@@ -129,6 +131,11 @@ public class MainMenu extends JFrame implements ActionListener {
 	}
 	public int gettype() {
 		return type;
+		
+	}
+	
+	public Boolean getContinuar() {
+		return continuar;
 		
 	}
 

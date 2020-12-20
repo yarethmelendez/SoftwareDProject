@@ -25,7 +25,8 @@ public class ContinuarEvaluacion extends JFrame {
 	private JTextField textField_1;
 	LogIn user = new LogIn();
 	String User = user.getID();
-
+	static String IDEBox;
+	
 	public ContinuarEvaluacion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(-7, 0, 1920, 1080);
@@ -60,8 +61,8 @@ public class ContinuarEvaluacion extends JFrame {
 		btnCargar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				Evaluation i = null;
-				String IDEBox = textField.getText();
+				
+				IDEBox = textField.getText();
 				String[] ag = new String[164] ;
 
 				int j = 40;
@@ -70,13 +71,7 @@ public class ContinuarEvaluacion extends JFrame {
 				File instru;
 				int size = 0;
 				
-				try {
-					i = new Evaluation();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
+			
 				
 				try {
 					instru = new File("./instrumentos.csv");
@@ -97,22 +92,30 @@ public class ContinuarEvaluacion extends JFrame {
 				}
 
 				
-				
-				
-				for(int h = 0; h <size ;h++) {
+				Evaluation i ;
+				try {
+					 i = new Evaluation();
+					 
+					 for(int h = 0; h <size ;h++) {
 
-					fileManager continuar = new fileManager();
-					ag = continuar.combobox(User,h);
-					System.out.print(ag[12]+ "owowowowowowowowowowowowo");
-					
+							fileManager continuar = new fileManager();
+							ag = continuar.combobox(User,h);
+							System.out.print(ag[12]+ "owowowowowowowowowowowowo");
+							
 
-					if ( Integer.parseInt(IDEBox) > 0 && IDEBox.trim().equals(ag[12])) {
-						
-						i.comboboxItems(User, Integer.parseInt(IDEBox));
-						i.setVisible(true);
-						dispose();
+							if ( Integer.parseInt(IDEBox) > 0 && IDEBox.trim().equals(ag[12])) {
+								
+								i.comboboxItems(User, Integer.parseInt(IDEBox));
+								i.setVisible(true);
+								dispose();
+								}
 						}
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
+				
+				
 				
 				
 				
@@ -183,6 +186,10 @@ public class ContinuarEvaluacion extends JFrame {
 		}
 
 
+	}
+	public String getIDEBox() {
+		return IDEBox;
+		
 	}
 }
 

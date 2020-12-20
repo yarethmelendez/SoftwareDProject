@@ -24,13 +24,13 @@ public class fileManager {
 			while(scanner.hasNextLine() && found != 1) {
 				String data = scanner.nextLine();
 				String[] params = data.split(",", 20);
-				System.out.print("reading ");
+				//System.out.print("reading ");
 				Id= params[0];
 				pass = params[1];
 
 				if (Id.trim().equals(IDT) && pass.trim().equals(passT))
 				{
-					System.out.print("i found it");
+					//System.out.print("i found it");
 					found = 1;
 				}
 
@@ -76,7 +76,7 @@ public class fileManager {
 		File instru;
 		int found = 0;
 		String NIDE ;
-		System.out.print("\n yo soy una pera");
+		//System.out.print("\n yo soy una pera");
 
 		String[] ap = new String[162] ;
 
@@ -120,7 +120,7 @@ public class fileManager {
 
 	
 
-	public void borrarEV3(String ID , int IDE) throws IOException {
+	public void borrarEV3( int IDE) throws IOException {
 
 
 		String[] ops;
@@ -147,7 +147,7 @@ public class fileManager {
 
 					for(int i = 0 ; i < ops.length ;i++) {
 						pw.print(ops[i]+",");	
-						System.out.println("num"+i+" "+ops[i]+"");
+						//System.out.println("num"+i+" "+ops[i]+"");
 					}
 					pw.println(" ");
 
@@ -204,7 +204,7 @@ public class fileManager {
 		String[] ops;
 		File instru;
 		int found = 0;
-
+		int i = 0;
 
 		String[] ap = new String[162] ;
 
@@ -220,13 +220,14 @@ public class fileManager {
 
 
 				int j = 3;
-				for (int i = 0;i < 162; i++ ) {
+				
 					ap[i]  = ops[15];
 					j++;
 
-				}
+					System.out.println(ap[i]+" soy el array ap ");
+				
 
-				System.out.println(ap[12]);
+				i++;
 			}
 			scanner.close();
 
