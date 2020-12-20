@@ -37,8 +37,6 @@ public class ValenciasRango extends ValenciasCapsule{
 		}
 	}
 	
-	
-	
 	void auxiliar() { // Catedratico auxiliar
 		
 		

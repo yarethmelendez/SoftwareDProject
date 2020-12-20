@@ -46,20 +46,7 @@ public class Results1 extends JFrame {
 		onlineEvaluation d = new onlineEvaluation();
 		String[] fac = new String[162];
 		fac = mm.gettype() == 1 ? e.getvalue() : d.getvalue();
-		int i = 0;
-		
-		if(fac[2].equals("Rango Catedratico")) {
-			i = 3;
-		}
-		
-		else if(fac[2].equals("Rango Catedratico Asociado")) {
-			i = 2;
-		}
-		
-		else if(fac[2].equals("Rango Catedratico Auxiliar")) {
-			i = 3;
-		}
-		
+		int i = 3;
 		
 		ValenciasRubrica vr =new ValenciasRubrica();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,7 +73,7 @@ public class Results1 extends JFrame {
 				+ "                                                            RANGO CATEDR\u00C1TICO ASOCIADO\r\n_____________________________________________________________________________________________________________________________________________________\r\n "
 				+ "I. Experiencia y Calidad Docente                        | Catedr\u00E1tico Asociado Valencia (65%) |  "
 				+ "  Puntuaci\u00F3n   obtenida\r\n_____________________________________________________________________________________________________________________________________________________\r\n"
-				+ "a. ominio de la disciplina que ense\u00F1a.                                                    15                                       "+vr.CalidadDocente(i,mm.gettype())[0]+"                    "
+				+ "a. ominio de la disciplina que ense\u00F1a.                                                    15                                       "+vr.CalidadDocente(i,1)[0]+"                    "
 				+ "        \r\n_____________________________________________________________________________________________________________________________________________________\r\nb. Habilidad para organizar el contenido \r                  "
 				+ "                                                               \r\ny presentarlo en forma clara, l\u00F3gica                                                       10             "
 				+ "                        "+vr.CalidadDocente(i,mm.gettype())[1]+"                \r\n e imaginativa.                                                    "
