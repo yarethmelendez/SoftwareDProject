@@ -91,11 +91,12 @@ public class ContinuarEvaluacion extends JFrame {
 					System.out.print("404 "+ ex);
 				}
 
-				
+					onlineEvaluation u ;
+			
 				Evaluation i ;
 				try {
 					 i = new Evaluation();
-					 
+					u = new onlineEvaluation();
 					 for(int h = 0; h <size ;h++) {
 
 							fileManager continuar = new fileManager();
@@ -105,9 +106,17 @@ public class ContinuarEvaluacion extends JFrame {
 
 							if ( Integer.parseInt(IDEBox) > 0 && IDEBox.trim().equals(ag[12])) {
 								
+								if(ag[13].equals("Online")) {
+								u.comboboxItems(User, Integer.parseInt(IDEBox));
+								u.setVisible(true);
+								dispose();
+								}
+								
+								if(ag[13].equals("Manual")) {
 								i.comboboxItems(User, Integer.parseInt(IDEBox));
 								i.setVisible(true);
 								dispose();
+								}
 								}
 						}
 				} catch (IOException e1) {
