@@ -21,10 +21,12 @@ public class DataView {
 		FileWriter writer = new FileWriter(file2);
 		writer.write("header\n");
 		
+		fac = "juan del pueblo";
+		
 		while(counter.hasNextLine()) { // Count observations
-			test = counter.nextLine();; // Read line
+			test = counter.nextLine(); // Read line
 			splitter = test.split(",",165); // Split line
-			if(splitter[16].equals(fac)) { // If not-deletable, add to temp
+			if(splitter[4].equals(fac)) { // If not-deletable, add to temp
 				sum++;
 				writer.write(test+"\n");
 			}
@@ -67,7 +69,7 @@ public class DataView {
 	int ISum(int start,int end) { // Sums a row of Manual questions
 		int sum = 0;
 		int questions = (end+1) - start;
-		int count = 1;
+		int count = 0;
 
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Manual")) {
@@ -87,7 +89,7 @@ public class DataView {
 	int RNum(int num) { // Sum a single Manual question
 		int sum = 0;
 		int k = num;
-		int count = 1;
+		int count = 0;
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Manual")){
 				sum += Integer.parseInt(data[i][k]); // Convert string to int
@@ -102,7 +104,7 @@ public class DataView {
 	int RNumO(int num) { // Sum a single Online question
 		int sum = 0;
 		int k = num;
-		int count = 1;
+		int count = 0;
 		
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Online")){
@@ -117,7 +119,7 @@ public class DataView {
 		int ISumO(int start,int end) { // Sums a row of Online questions
 			int sum = 0;
 			int questions = (end+1) - start;
-			int count = 1;
+			int count = 0;
 			
 			for(int i = 0; i < data.length;i++) {
 				if(data[i][16].equals("Online")) {

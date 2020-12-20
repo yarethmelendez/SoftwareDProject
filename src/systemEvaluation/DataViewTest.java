@@ -8,7 +8,8 @@ public class DataViewTest {
 
 	public static void main(String[] args) throws IOException {
 		ValenciasRubrica vr = new ValenciasRubrica();
-		System.out.println(vr.Total(2,0));
+		
+		System.out.println(vr.CalidadDocente(3,1)[0]);
 		
 	}
 
