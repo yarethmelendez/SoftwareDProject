@@ -279,7 +279,7 @@ public class onlineEvaluation extends JFrame  {
 		}
 
 		
-		DataView ec = new DataView();
+		DataView ec = new DataView(nombre_prof_textField.getText());
 
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
 		setTitle("Evaluacion ");
@@ -1895,7 +1895,7 @@ public class onlineEvaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					DataView DV = new DataView();
+					DataView DV = new DataView(nombre_prof_textField.getText());
 					int r =0;
 					//r = Integer.parseInt(spinner.getValue());
 					System.out.println(spinner.getValue()+ "soy yo tu padre ");

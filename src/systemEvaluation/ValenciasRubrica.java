@@ -20,8 +20,14 @@ public class ValenciasRubrica{
 	}
 	
 	double[] CalidadDocente(int choice, int status)  throws IOException{
+		Evaluation e = new Evaluation();
+		onlineEvaluation d = new onlineEvaluation();
+		String[] fac = new String[162];
+		fac = status == 1 ? e.getvalue() : d.getvalue();
+		
+		// v
 		rango = new ValenciasRango(choice);
-		dv = new DataView();
+		dv = new DataView(fac[1]);
 		double result[] = new double[7];
 		A = 0.25;
 		B = 0.25;
@@ -34,13 +40,16 @@ public class ValenciasRubrica{
 		
 		//////////////////Dominio de la disciplina////////////////////
 		Pa.I1 = dv.ISum(22,31) - 1;
-		Pa.I1A = dv.ISum(21,27) - 1;
+		Pa.I1A = dv.ISumO(21,27) - 1;
+		
+		System.out.println("I1: "+Pa.I1);
+		System.out.println("I1A: "+Pa.I1A);
 		
 		Pa.I1P = ((M/(M+N))*Pa.I1)+((N/(M+N))*Pa.I1A);
 		
 		Pa.I2 = dv.EvidenceCalc((int)(dv.RNum(46)));
 		Pa.I3 = (dv.ISum(64,69))*0.75;
-		Pa.I3A = (dv.ISum(64,67))*0.75;
+		Pa.I3A = (dv.ISumO(64,67))*0.75;
 		Pa.I4 = dv.RNum(99)*0.75;
 		
 		I3 = status == 1 ? Pa.I3 : Pa.I3A;
@@ -50,12 +59,12 @@ public class ValenciasRubrica{
 		
 		//////////Habilidad para organizar el contenido...///////////
 		Pb.I1 = ((dv.ISum(23,27)+dv.RNum(27)+dv.RNum(34)+dv.RNum(35))/4) - 1;
-		Pb.I1A = ((dv.RNum(23)+dv.RNum(25)+dv.RNum(27)+dv.RNum(28)+dv.RNum(40))/5) - 1;
+		Pb.I1A = ((dv.RNumO(23)+dv.RNumO(25)+dv.RNumO(27)+dv.RNumO(28)+dv.RNumO(40))/5) - 1;
 		Pb.I1P = ((M/(M+N))*Pb.I1)+((N/(M+N))*Pb.I1A);
 		
 		Pb.I2 = dv.EvidenceCalc((int)(dv.RNum(47)));
 		Pb.I3 = dv.ISum(70,74)*0.75;
-		Pb.I3A = dv.ISum(68,77)*0.75;
+		Pb.I3A = dv.ISumO(68,77)*0.75;
 		
 		I3 = status == 1 ? Pb.I3 : Pb.I3A;
 		
@@ -77,12 +86,12 @@ public class ValenciasRubrica{
 		
 		////////Habilidad para relacionar la disciplina...//////////
 		Pd.I1 = dv.RNum(31) - 1;
-		Pd.I1A = dv.RNum(27) - 1;
+		Pd.I1A = dv.RNumO(27) - 1;
 		Pd.I1P = ((M/(M+N))*Pd.I1)+((N/(M+N))*Pd.I1A);
 		
 		Pd.I2 = dv.EvidenceCalc((int)(dv.RNum(49)));
 		Pd.I3 = ((dv.RNum(66)+dv.RNum(67))/2)*0.75;
-		Pd.I3A = ((dv.RNum(65)+dv.RNum(66)+dv.RNum(67))/3)*0.75;
+		Pd.I3A = ((dv.RNumO(65)+dv.RNumO(66)+dv.RNumO(67))/3)*0.75;
 		
 		I3 = status == 1 ? Pd.I3 : Pd.I3A;
 		
@@ -92,12 +101,12 @@ public class ValenciasRubrica{
 		
 		//////////Habilidad para promover y ampliar...////////////////
 		Pe.I1 = ((dv.RNum(21)+dv.RNum(23)+dv.RNum(31)+dv.RNum(33))/4)-1;
-		Pe.I1A = ((dv.RNum(22)+dv.RNum(25)+dv.RNum(28)+dv.RNum(29))/4)-1;
+		Pe.I1A = ((dv.RNumO(22)+dv.RNumO(25)+dv.RNumO(28)+dv.RNumO(29))/4)-1;
 		Pe.I1P = ((M/(M+N))*Pe.I1)+((N/(M+N))*Pe.I1A);
 		
 		Pe.I2 = dv.EvidenceCalc((int)(dv.RNum(50)));
 		Pe.I3 = dv.ISum(75,79) * 0.75;
-		Pe.I3A = dv.ISum(78,82)*0.75;
+		Pe.I3A = dv.ISumO(78,82)*0.75;
 		Pe.I4 = dv.RNum(99) * 0.75;
 		
 		I3 = status == 1 ? Pe.I3 : Pe.I3A;
@@ -108,12 +117,12 @@ public class ValenciasRubrica{
 		
 		/////////Habilidad para desarrollar y utilizar.../////////////
 		Pf.I1 = ((dv.ISum(26,30)+dv.RNum(39))/2) - 1;
-		Pf.I1A = ((dv.RNum(28)+dv.RNum(32)+dv.RNum(33)+dv.RNum(38))/4) - 1;
+		Pf.I1A = ((dv.RNumO(28)+dv.RNumO(32)+dv.RNumO(33)+dv.RNumO(38))/4) - 1;
 		Pf.I1P = ((M/(M+N))*Pf.I1)+((N/(M+N))*Pf.I1A);
 		
 		Pf.I2 = dv.EvidenceCalc((int)(dv.RNum(51)));
 		Pf.I3 = dv.ISum(80,83)*0.75;
-		Pf.I3A = ((dv.RNum(67)+dv.RNum(70)+dv.RNum(71)+dv.RNum(72)+dv.RNum(76)+dv.ISum(79,82))/6)*0.75;
+		Pf.I3A = ((dv.RNumO(67)+dv.RNumO(70)+dv.RNumO(71)+dv.RNumO(72)+dv.RNumO(76)+dv.ISumO(79,82))/6)*0.75;
 		Pf.I4 = ((dv.RNum(99)+dv.RNum(102)+dv.RNum(103))/3)*0.75;
 		
 		I3 = status == 1 ? Pf.I3 : Pf.I3A;
@@ -124,19 +133,19 @@ public class ValenciasRubrica{
 		
 		//////Disponibilidad y eficacia en la orientacion...//////////
 		Pg.I1 = ((dv.RNum(41)+dv.RNum(44)+dv.RNum(45))/3)-1;
-		Pg.I1A = ((dv.RNum(29)+dv.RNum(30)+dv.RNum(31)+dv.RNum(37))/4)-1;
+		Pg.I1A = ((dv.RNumO(29)+dv.RNumO(30)+dv.RNumO(31)+dv.RNumO(37))/4)-1;
 		
 		double I1g = ((M/(M+N))*Pg.I1)+((N/(M+N))*Pg.I1A);
 		
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Instrumento 1h
 		double I1C = (dv.RNum(19)+dv.RNum(20))/2;
 		Ph.I1 = (((I1C-2)*4 < 0 ? 2 : (I1C-2)*4)+(((dv.RNum(29)+dv.ISum(36,38)+dv.RNum(40)+dv.RNum(42))/4))/2) - 1;
-		Ph.I1A = (((I1C-2)*4 < 2 ? 2 : (I1C-2)*4)+(((dv.RNum(31)+dv.RNum(34)+dv.RNum(35)+dv.RNum(36))/4))/2) - 1;
+		Ph.I1A = (((I1C-2)*4 < 2 ? 2 : (I1C-2)*4)+(((dv.RNumO(31)+dv.RNumO(34)+dv.RNumO(35)+dv.RNumO(36))/4))/2) - 1;
 		double I1h = ((M/(M+N))*Ph.I1)+((N/(M+N))*Ph.I1A) - 2; // Change this
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		
 		Pg.I3 = 0;
-		Pg.I3A = dv.RNum(75)*0.75;
+		Pg.I3A = dv.RNumO(75)*0.75;
 		Pg.I4 = ((dv.RNum(84)+dv.RNum(85))/2)*0.75;
 		//////////////////////////////////////////////////////////////
 		
@@ -145,7 +154,7 @@ public class ValenciasRubrica{
 
 		Ph.I2 = dv.EvidenceCalc((int)(dv.RNum(52)));
 		Ph.I3 = dv.RNum(76)*0.75;
-		Ph.I3A = ((dv.RNum(74)+dv.RNum(75)+dv.RNum(77))/3)*0.75;
+		Ph.I3A = ((dv.RNumO(74)+dv.RNumO(75)+dv.RNumO(77))/3)*0.75;
 		Ph.I4 = ((dv.RNum(86)+dv.RNum(87)+dv.ISum(89,94)+dv.RNum(96)+dv.RNum(97)+dv.RNum(101)+dv.RNum(103))/7) * 0.75;
 		double I4 = (Pg.I4 + Ph.I4)/2;
 		
@@ -158,9 +167,14 @@ public class ValenciasRubrica{
 		return result;
 	}
 	
-	double[] ServicioInstitucion(int choice) throws IOException {
+	double[] ServicioInstitucion(int choice, int status) throws IOException {
+		Evaluation e = new Evaluation();
+		onlineEvaluation d = new onlineEvaluation();
+		String[] fac = new String[162];
+		fac = status == 1 ? e.getvalue() : d.getvalue();
+		
 		rango = new ValenciasRango(choice);
-		dv = new DataView();
+		dv = new DataView(fac[1]);
 		double result[] = new double[4];
 		B = 0.8; // Autoevaluacion narrativa
 		D = 0.2; // Evaluacion del director
@@ -209,9 +223,14 @@ public class ValenciasRubrica{
 		return result;
 	}
 	
-	double ServicioComunidad(int choice) throws IOException {
+	double ServicioComunidad(int choice, int status) throws IOException {
+		Evaluation e = new Evaluation();
+		onlineEvaluation d = new onlineEvaluation();
+		String[] fac = new String[162];
+		fac = status == 1 ? e.getvalue() : d.getvalue();
+		
 		rango = new ValenciasRango(choice);
-		dv = new DataView();
+		dv = new DataView(fac[1]);
 		double result;
 		B = 1.0; // Autoevaluacion narrativa
 		int M = dv.ObSums()[0];
@@ -224,9 +243,14 @@ public class ValenciasRubrica{
 		return result;
 	}
 	
-	double[] InvestigacionTrabajo(int choice) throws IOException {
+	double[] InvestigacionTrabajo(int choice, int status) throws IOException {
+		Evaluation e = new Evaluation();
+		onlineEvaluation d = new onlineEvaluation();
+		String[] fac = new String[162];
+		fac = status == 1 ? e.getvalue() : d.getvalue();
+		
 		rango = new ValenciasRango(choice);
-		dv = new DataView();
+		dv = new DataView(fac[1]);
 		double result[] = new double[3];
 		B = 0.9; // Autoevaluacion narrativa
 		D = 0.1; //Evaluacion del director
@@ -250,9 +274,14 @@ public class ValenciasRubrica{
 		return result;
 	}
 	
-	double[] CrecimientoDesarrollo(int choice) throws IOException {
+	double[] CrecimientoDesarrollo(int choice, int status) throws IOException {
+		Evaluation e = new Evaluation();
+		onlineEvaluation d = new onlineEvaluation();
+		String[] fac = new String[162];
+		fac = status == 1 ? e.getvalue() : d.getvalue();
+		
 		rango = new ValenciasRango(choice);
-		dv = new DataView();
+		dv = new DataView(fac[1]);
 		double result[] = new double[3];
 		B = 0.9; // Autoevaluacion narrativa
 		D = 0.1; //Evaluacion del director
@@ -282,15 +311,15 @@ public class ValenciasRubrica{
 			sum += CalidadDocente(choice,status)[i];
 		
 		for(int i = 0; i < 4; i++)
-			sum += ServicioInstitucion(choice)[i];
+			sum += ServicioInstitucion(choice, status)[i];
 		
-		sum += ServicioComunidad(choice);
-		
-		for(int i = 0; i < 3; i++)
-			sum += InvestigacionTrabajo(choice)[i];
+		sum += ServicioComunidad(choice, status);
 		
 		for(int i = 0; i < 3; i++)
-			sum += CrecimientoDesarrollo(choice)[i];
+			sum += InvestigacionTrabajo(choice, status)[i];
+		
+		for(int i = 0; i < 3; i++)
+			sum += CrecimientoDesarrollo(choice, status)[i];
 		
 		return sum;
 	}
