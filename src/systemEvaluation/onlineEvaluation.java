@@ -278,7 +278,7 @@ public class onlineEvaluation extends JFrame  {
 			I2re[i]= 0;
 		}
 
-
+		
 		DataView ec = new DataView();
 
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
