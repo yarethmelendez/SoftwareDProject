@@ -280,7 +280,7 @@ public class Evaluation extends JFrame  {
 		}
 
 
-		DataView ec = new DataView(nombre_prof_textField.getText());
+		
 
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./Rubrica.jpeg"));
 		setTitle("Evaluacion ");
@@ -323,6 +323,8 @@ public class Evaluation extends JFrame  {
 		panel.add(nombre_prof_textField);
 		nombre_prof_textField.setColumns(10);
 
+		DataView ec = new DataView(nombre_prof_textField.getText());
+		
 		JLabel rango_lblNewLabel = new JLabel("Rango acad\u00E9mico que solicita");
 		rango_lblNewLabel.setBounds(680, 264, 226, 20);
 		rango_lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
