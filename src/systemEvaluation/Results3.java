@@ -20,6 +20,7 @@ import java.awt.Font;
 public class Results3 extends JFrame {
 
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -38,8 +39,31 @@ public class Results3 extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	public JPanel contentPane;
-	ValenciasRubrica vr =new ValenciasRubrica();
+	
 	public Results3() throws IOException {
+		
+		
+			
+			MainMenu mm = new MainMenu();
+			
+			Evaluation e = new Evaluation();
+			onlineEvaluation d = new onlineEvaluation();
+			String[] fac = new String[162];
+			fac = mm.gettype() == 1 ? e.getvalue() : d.getvalue();
+			int i = 0;
+			
+			if(fac[2].equals("Rango Catedratico")) {
+				i = 3;
+			}
+			
+			else if(fac[2].equals("Rango Catedratico Asociado")) {
+				i = 2;
+			}
+			
+			else if(fac[2].equals("Rango Catedratico Auxiliar")) {
+				i = 3;
+			}
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1920, 1080);
 		contentPane = new JPanel();
@@ -49,7 +73,7 @@ public class Results3 extends JFrame {
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(550, 20, 770, 1000);
-
+		ValenciasRubrica vr =new ValenciasRubrica();
 		JButton btnNewButton = new JButton("Print");
 
 		JTextArea txtrUniversidadInteramericanaDe = new JTextArea();
@@ -67,73 +91,73 @@ public class Results3 extends JFrame {
 				+ "co Auxiliar Valencia (67%) |    Puntuaci\u00F3n   obtenida\r\n_________________________________________________"
 				+ "____________________________________________________________________________________________________\r\na. omini"
 				+ "o de la disciplina que ense\u00F1a.                                                 16                          "
-				+ "  "+vr.CalidadDocente(1,0)[0]+" \r\n______________________________________________________________________________________________________"
+				+ "  "+vr.CalidadDocente(i,mm.gettype())[0]+" \r\n______________________________________________________________________________________________________"
 				+ "_______________________________________________\r\nb. Habilidad para organizar el contenido \r                   "
 				+ "                                                        \r\ny presentarlo en forma clara, l\u00F3gica            "
-				+ "                                           12                      "+vr.CalidadDocente(1,0)[1]+"                        \r\n e imaginat"
+				+ "                                           12                      "+vr.CalidadDocente(i,mm.gettype())[1]+"                        \r\n e imaginat"
 				+ "iva.                                                                                                              "
 				+ "                    \r\n__________________________________________________________________________________________"
 				+ "___________________________________________________________\r\r\nc. Conocimiento de los desarrollos actuales de la "
-				+ "disciplina.                 8                          "+vr.CalidadDocente(1,0)[2]+"\r\n_________________________________________________"
+				+ "disciplina.                 8                          "+vr.CalidadDocente(i,mm.gettype())[2]+"\r\n_________________________________________________"
 				+ "____________________________________________________________________________________________________\r\r\nd. Habili"
 				+ "dad para relacionar la disciplina con otras esferas de               6                          \r\nconocimiento.  "
 				+ "                                                                                                                   "
-				+ "   "+vr.CalidadDocente(1,0)[3]+"        \r\n__________________________________________________________________________________________________"
+				+ "   "+vr.CalidadDocente(i,mm.gettype())[3]+"        \r\n__________________________________________________________________________________________________"
 				+ "___________________________________________________\r\r\ne. Habilidad para promover y ampliar el inter\u00E9s del es"
 				+ "tudiante             6                           \r\nen la disciplina.                                               "
-				+ "                                                                        "+vr.CalidadDocente(1,0)[4]+"    \r\n___________________________________"
+				+ "                                                                        "+vr.CalidadDocente(i,mm.gettype())[4]+"    \r\n___________________________________"
 				+ "__________________________________________________________________________________________________________________\r\r\n"
 				+ "f. Habilidad para desarrollar y utilizar m\u00E9todos y estrategias                9                               "
-				+ ""+vr.CalidadDocente(1,0)[5]+"\r\nadecuadas, incluyendo el \u201Cassessment\u201D para una ense\u00F1anza       \r\nefectiva.                   "
+				+ ""+vr.CalidadDocente(i,mm.gettype())[5]+"\r\nadecuadas, incluyendo el \u201Cassessment\u201D para una ense\u00F1anza       \r\nefectiva.                   "
 				+ "                                                              \r\n__________________________________________________"
 				+ "___________________________________________________________________________________________________\r\r\ng. Disponibi"
 				+ "lidad y eficacia en la orientaci\u00F3n acad\u00E9mica del                                             \r\nestudiante."
 				+ "                                                                                                                      "
 				+ "      \r\n                                                                                                            "
-				+ "  10                             "+vr.CalidadDocente(1,0)[6]+"\r\r\nh. Posesi\u00F3n de los atributos de integridad, laboriosidad,              "
+				+ "  10                             "+vr.CalidadDocente(i,mm.gettype())[6]+"\r\r\nh. Posesi\u00F3n de los atributos de integridad, laboriosidad,              "
 				+ "                                                      \r\nliberalidad y objetividad en la ense\u00F1anza.              "
 				+ "                                                                             \r\n______________________________________"
 				+ "_______________________________________________________________________________________________________________\r\nII. "
 				+ "Servicio a la Instituci\u00F3n                             | Catedr\u00E1tico Auxiliar Valencia (12%)\r|     Puntuaci\u00F3n"
 				+ "   obtenida\r\n______________________________________________________________________________________________________________"
 				+ "_______________________________________\r\na. Trabajo en comit\u00E9s de facultad a nivel departamental.                   3 "
-				+ "                                "+vr.ServicioInstitucion(1)[0]+"\r\n________________________________________________________________________________________"
+				+ "                                "+vr.ServicioInstitucion(i,mm.gettype())[0]+"\r\n________________________________________________________________________________________"
 				
 				+ "_____________________________________________________________                                                                      "
 				+ "                                   \r\nb. Participaci\u00F3n y aportaci\u00F3n a reuniones de facultad y de                       "
 				+ "                      \r\ncomit\u00E9s a nivel de Recinto.                                                                     "
 				+ "                                               \r\n                                                                            "
-				+ "                              4                            " +vr.ServicioInstitucion(1)[1]+"\r\nc. Servicio en comit\u00E9s y en organizaciones a nivel "
+				+ "                              4                            " +vr.ServicioInstitucion(i,mm.gettype())[1]+"\r\nc. Servicio en comit\u00E9s y en organizaciones a nivel "
 				+ "                                                             \r\ninstitucional.                                                   "
 				+ "                                                                           \r\n_________________________________________________"
 				+ "____________________________________________________________________________________________________\r\nd. Colaboraci\u00F3n en "
 				+ "actividades estudiantiles.                                                                     \r\n                              "
-				+ "                                                                            2                     "+vr.ServicioInstitucion(1)[2]+"\r\ne. Asisten"
+				+ "                                                                            2                     "+vr.ServicioInstitucion(i,mm.gettype())[2]+"\r\ne. Asisten"
 				+ "cia a actos oficiales                                                                   \r\n____________________________________"
 				+ "_________________________________________________________________________________________________________________\r\nf. Designac"
 				+ "i\u00F3n como director/a de departamento, presidente                                                                  \r\nde "
 				+ "comit\u00E9 y otras.\r\n                                                                                                     "
-				+ "     3                                   "+vr.ServicioInstitucion(1)[3]+"\r\ng. Participaci\u00F3n en organismos de gobierno; tales como: el             "
+				+ "     3                                   "+vr.ServicioInstitucion(i,mm.gettype())[3]+"\r\ng. Participaci\u00F3n en organismos de gobierno; tales como: el             "
 				+ "                                                      \r\nSenado y el Consejo Universitario.\r\r\n____________________________"
 				+ "_________________________________________________________________________________________________________________________\r\n"
 				+ "III. Servicio a la Comunidad                        |    Catedr\u00E1tico Auxiliar Valencia (2%)   | Puntuaci\u00F3n obtenida "
 				+ "      \r\n____________________________________________________________________________________________________________________"
 				+ "_________________________________\r\na. Servicio en el campo profesional del profesor como                                "
 				+ " \r\nconsultor o investigador.                                \r\n                                                          "
-				+ "                                                2                                    "+vr.ServicioComunidad(1)+"\r\nb. Servicio como recurso: "
+				+ "                                                2                                    "+vr.ServicioComunidad(i,mm.gettype())+"\r\nb. Servicio como recurso: "
 				+ "conferenciante de grupos de la                            \r\ncomunidad, participaci\u00F3n activa en gestiones pol\u00ED"
 				+ "ticas,\r\nreligiosas o c\u00EDvicas.                              \r\n_____________________________________________________"
 				+ "________________________________________________________________________________________________\r\nIV. Investigaci\u00F3n y"
 				+ " Trabajo Creativo             |     Catedr\u00E1tico Auxiliar Valencia (10%)  | Puntuaci\u00F3n obtenida                     "
 				+ "  \r\n_______________________________________________________________________________________________________________________"
 				+ "______________________________\r\na. Publicaciones                                                                             "
-				+ "      2                                "+vr.InvestigacionTrabajo(1)[0]+"r\n______________________________________________________________________________"
+				+ "      2                                "+vr.InvestigacionTrabajo(i,mm.gettype())[0]+"r\n______________________________________________________________________________"
 				+ "_______________________________________________________________________\r\nb. Presentaciones y trabajos creativos relacionados "
-				+ "con la                 4                           "+vr.InvestigacionTrabajo(1)[1]+"r\ndisciplina que ense\u00F1a.                     \r\n________"
+				+ "con la                 4                           "+vr.InvestigacionTrabajo(i,mm.gettype())[1]+"r\ndisciplina que ense\u00F1a.                     \r\n________"
 				+ "_______________________________________________________________________________________________________________________________"
 				+ "_____________\r\nc. Propuestas dise\u00F1adas y presentadas.                                                                    "
 				+ "                                                                                                         \r\nd. Concesi\u00F3n de "
-				+ "ayudas para investigaci\u00F3n y proyectos.                    4                                "+vr.InvestigacionTrabajo(1)[2]+"        "
+				+ "ayudas para investigaci\u00F3n y proyectos.                    4                                "+vr.InvestigacionTrabajo(i,mm.gettype())[2]+"        "
 				+ "\r\ne. Invenciones, patentes, labor art\u00EDstica y actuaci\u00F3n.                                                 "
 				+ "                 \r\n_________________________________________________________________________________________________"
 				+ "____________________________________________________\r\nVI. Crecimiento y Desarrollo Profesional       |    "
@@ -142,14 +166,14 @@ public class Results3 extends JFrame {
 				+ "______________________\r\na. Obtenci\u00F3n de premios, ayudas y becas.\r                                      "
 				+ "                           \r\nb. Nombramiento como asesor/a en agencias de gobierno\r                          "
 				+ "          \r\nestatal o federal.                                                                                 "
-				+ " 3                                "+vr.CrecimientoDesarrollo(1)[0]+" \r\nc. Participaci\u00F3n activa en organizaciones profesionales.         "
+				+ " 3                                "+vr.CrecimientoDesarrollo(i,mm.gettype())[0]+" \r\nc. Participaci\u00F3n activa en organizaciones profesionales.         "
 				+ "                                                     \r\n__________________________________________________________"
 				+ "___________________________________________________________________________________________\r\nd. Recurso en conferencia"
-				+ " y charlas.                                                    3                              "+vr.CrecimientoDesarrollo(1)[1]+"\r\n______________"
+				+ " y charlas.                                                    3                              "+vr.CrecimientoDesarrollo(i,mm.gettype())[1]+"\r\n______________"
 				+ "_________________________________________________________________________________________________________________________"
 				+ "______________\r\ne. Participaci\u00F3n en conferencias, congresos o institutos.                                          "
 				+ "                      \r\nf. Educaci\u00F3n post doctoral, educaci\u00F3n continua.                                 3     "
-				+ "                              "+vr.CrecimientoDesarrollo(1)[2]+"\r\n_____________________________________________________________________________________"
+				+ "                              "+vr.CrecimientoDesarrollo(i,mm.gettype())[2]+"\r\n_____________________________________________________________________________________"
 				+ "________________________________________________________________\r\n\r\n\r\n______________________________________________"
 				+ "____________________________________________________________________\r\n|                      CRITERIOS                 "
 				+ "                        |                  VALENCIAS                      |      DEL PROFESOR   |\r\n_____________________"
@@ -164,7 +188,7 @@ public class Results3 extends JFrame {
 				+ "                       9%                                   _______________________                                      "
 				+ "          \r\n___________________________________________________________________________________________________________"
 				+ "________\r\n                                                                                  "
-				+ "Evaluaci\u00F3n Promedio Final:  "+vr.Total(1,0)+" \r\n\r\n\r\n\r\nEl/la profesor/a ________________________________________________ "
+				+ "Evaluaci\u00F3n Promedio Final:  "+vr.Total(i,mm.gettype())+" \r\n\r\n\r\n\r\nEl/la profesor/a ________________________________________________ "
 				+ "cumple con los criterios requeridos para\r\nRango de Catedr\u00E1tico Auxiliar, seg\u00FAn consta en la Parte II, 2.2.2"
 				+ " del Manual de Facultad y cumple con los\r\ncriterios de Experiencia y Calidad Docente, Servicio a la Instituci\u00F3n "
 				+ "y Servicio a la Comunidad, seg\u00FAn descritos en\r\nla Parte V, 5.6 y en las Gu\u00EDas para la Evaluaci\u00F3n del "
@@ -212,7 +236,7 @@ public class Results3 extends JFrame {
 				
 				
 				
-				if (MainMenu.type == 1 ) 
+				if (mm.gettype() == 1 ) 
 				{
 					
 
@@ -228,7 +252,7 @@ public class Results3 extends JFrame {
 					
 	
 				}
-				if(MainMenu.type == 2 ) 
+				else
 				{
 					ComentariosOnline w = new ComentariosOnline();
 					 w.setVisible(true);
