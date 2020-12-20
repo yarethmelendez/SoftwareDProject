@@ -166,28 +166,8 @@ public class Results2 extends JFrame {
 		
 		scrollPane.setViewportView(txtrUniversidadInteramericanaDe);
 		
-		GroupLayout gl_panel_2 = new GroupLayout(contentPane);
-		gl_panel_2.setHorizontalGroup(
-			gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_2.createSequentialGroup()
-					.addGap(78)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
-					.addGap(203)
-					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 1231, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(281, Short.MAX_VALUE))
-		);
-		gl_panel_2.setVerticalGroup(
-			gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_2.createSequentialGroup()
-					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel_2.createSequentialGroup()
-							.addGap(23)
-							.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 1000, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_panel_2.createSequentialGroup()
-							.addGap(63)
-							.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(83, Short.MAX_VALUE))
-		);
+		JButton button = new JButton("New button");
+		button.setBounds(0, 0, 0, 0);
 
 		
 		btnNewButton.addActionListener(new ActionListener() {
@@ -205,10 +185,44 @@ public class Results2 extends JFrame {
 			}
 		});
 		contentPane.setLayout(null);
-		btnNewButton.setBounds(83, 68, 111, 54);
+		btnNewButton.setBounds(83, 68, 209, 54);
 		contentPane.add(btnNewButton);
 		contentPane.add(btnNewButton);
 		contentPane.add(scrollPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnNewButton);
+		contentPane.add(scrollPane);
+		contentPane.add(button);
+		
+		JButton btnImprimirComentarios = new JButton("Imprimir Comentarios");
+		btnImprimirComentarios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (MainMenu.type == 1 ) 
+				{
+					
+
+					Comentarios e;
+					try {
+						e = new Comentarios();
+						e.setVisible(true);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+						
+					
+	
+				}
+				if(MainMenu.type == 2 ) 
+				{
+					ComentariosOnline w = new ComentariosOnline();
+					 w.setVisible(true);
+	
+				}
+			}
+		});
+		btnImprimirComentarios.setBounds(83, 157, 209, 54);
+		contentPane.add(btnImprimirComentarios);
 	}
 
 }
