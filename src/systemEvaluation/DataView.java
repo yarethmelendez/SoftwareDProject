@@ -6,10 +6,16 @@ import java.util.*;
 
 
 public class DataView {
+	Evaluation ev = new Evaluation();
+	onlineEvaluation ov = new onlineEvaluation();
+	
+	MainMenu mm = new MainMenu();
+	
 	File file = new File("./instrumentos.csv");
 	File file2 = new File("./temp.csv"); // Holds non-deletable data
 	String data[][]; // Data holder
 	
+	@SuppressWarnings("resource")
 	DataView(String fac) throws IOException{
 		int sum = 0;
 		FileReader freader = new FileReader(file);
@@ -18,10 +24,11 @@ public class DataView {
 		Scanner counter ;
 		counter = new Scanner(file);
 		
+		fac = mm.gettype() == 1 ? ev.values[1] : ov.values[1];
+		
 		FileWriter writer = new FileWriter(file2);
 		writer.write("header\n");
-		
-		fac = "juan del pueblo";
+		System.out.println("Name: "+fac);
 		
 		while(counter.hasNextLine()) { // Count observations
 			test = counter.nextLine(); // Read line
@@ -69,7 +76,7 @@ public class DataView {
 	int ISum(int start,int end) { // Sums a row of Manual questions
 		int sum = 0;
 		int questions = (end+1) - start;
-		int count = 0;
+		int count = 1;
 
 		for(int i = 0; i < data.length;i++) {
 			if(data[i][16].equals("Manual")) {

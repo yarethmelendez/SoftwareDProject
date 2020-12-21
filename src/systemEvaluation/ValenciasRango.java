@@ -22,8 +22,6 @@ public class ValenciasRango extends ValenciasCapsule{
 
 	ValenciasRango(int choice){
 		
-		
-		
 		switch(choice) {
 		case 1:
 			auxiliar();

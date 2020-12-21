@@ -321,7 +321,6 @@ public class onlineEvaluation extends JFrame  {
 		nombre_prof_textField.setBounds(920, 207, 253, 30);
 		panel.add(nombre_prof_textField);
 		nombre_prof_textField.setColumns(10);
-		DataView ec = new DataView(nombre_prof_textField.getText());
 
 		JLabel rango_lblNewLabel = new JLabel("Rango acad\u00E9mico que solicita");
 		rango_lblNewLabel.setBounds(680, 264, 226, 20);
@@ -1896,7 +1895,8 @@ public class onlineEvaluation extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					DataView DV = new DataView(nombre_prof_textField.getText());
+					System.out.println("DataViewOnline: "+values[1]);
+					DataView DV = new DataView(values[1]);
 					int r =0;
 					//r = Integer.parseInt(spinner.getValue());
 					System.out.println(spinner.getValue()+ "soy yo tu padre ");
@@ -3107,6 +3107,13 @@ public class onlineEvaluation extends JFrame  {
 				values [9] = contrato_comboBox.getSelectedItem().toString();
 				values [10] = codigo_textField.getText();
 				values [11] = tutulo_del_curso_textField.getText();
+				
+				try {
+					DataView ec = new DataView(values[1]);
+				} catch (IOException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
 				
 				try {
 					instru = new File("./instrumentos.csv");
